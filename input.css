@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,40..300&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1c75b7;
+  --color-secondary-cyan: #00adee;
+  --color-dropdown: #ebf3fe;
+  --color-tahiti: #3ab7bf;
+  --color-bermuda: #78dcca;
+  --spacing-button: 18px;
+  --tracking-2px: 0.125em;
+  --tracking-4px: 0.25em;
+  --color-btn-hover: #d87a2c;
+  --font-HindMadurai: '"Hind Madurai"', sans-serif;
+  --font-KumbhSans: [ '"Kumbh Sans"', sans-serif];
+  --spacing-container: 1317px;
+  --color-text-dark: #1f2937;
+}
+/* @font-face {
+  font-family: KumbhSans;
+  font-style: normal;
+  font-display: swap;
+  src: url("Public/font/KumbhSans.ttf") format("ttf");
+}
+body {
+  font-family: "KumbhSans";
+} */

@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="relative p-0 m-0 box-border">
+    <!-- ---Topbar--- -->
+    <div class="bg-primary h-[62px] m-auto text-sm leading-6 absolute top-0 w-full ">
+        <div
+            class=" text-white max-w-container mx-auto   text-sm flex flex-col lg:flex-row justify-between items-center  py-5">
+            <ul class="flex space-x-6 justify-between place-items-center">
+                <li class="">Precision</li>
+                <li class="bg-white rounded-full h-1.5 w-1.5"></li>
+                <li>Reliability</li>
+                <li class="bg-white rounded-full h-1.5 w-1.5"></li>
+                <li>Compliance</li>
+            </ul>
+
+            <div class="flex place-items-center justify-around ">
+                <div class="flex mr-11 space-x-3 items-center"><img class="w-3.5 h-3.5 " src="./Public/assets/phone.svg"
+                        alt="">
+                    <div class="">
+                        <p class=" font-bold">Phone<span class="pl-3 font-normal">+44 7570296821</span></p>
+                    </div>
+                </div>
+                <div class="flex space-x-3 items-center"><img class="w-3.5 h-3.5 " src="./Public/assets/location.svg"
+                        alt="">
+                    <div>
+                        <p class=" font-bold">Address<span class="pl-3 font-normal">Newcastle Upon Tyne, UK</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- navbar -->
+
+    <nav class="justify-between absolute top-16 w-full my-12 ">
+        <!-- navbar main -->
+        <div class="max-w-container mx-auto flex justify-between items-center ">
+            <div><img class="w-28  h-10" src="./Public/assets/Nuvonix Logo.svg" alt="Nuvonix Logo"></div>
+            <div>
+                <ul class="flex font-KumbhSans text-white space-x-6 items-center  text-sm leading-6 tracking-2px">
+                    <li class="hover:font-bold cursor-pointer">HOME</li>
+                    <li class="hover:font-bold cursor-pointer">OUR SERVICES</li>
+                    <li class="hover:font-bold cursor-pointer">ABOUT US</li>
+                    <li class="hover:font-bold cursor-pointer">CONTACT</li>
+                    <li class="hover:font-bold cursor-pointer">
+                        <!-- component -->
+                        <!-- This is an example component -->
+                        <div class="max-w-lg mx-auto">
+
+                            <button
+                                class="text-white hover:font-bold  rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                                type="button" data-dropdown-toggle="dropdown">MORE<svg class="w-4 h-4 ml-2" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></button>
+
+                            <!-- Dropdown menu -->
+                            <div class="hidden bg-white text-base z-50 list-none rounded shadow my-4" id="dropdown">
+                                <ul class="py-1" aria-labelledby="dropdown">
+                                    <li>
+                                        <a href="#"
+                                            class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Testimonials</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sectors We
+                                            Serve</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Inventory &
+                                            Life Management</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Training &
+                                            Development
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </li>
+                </ul>
+            </div>
+            <div class=""><button
+                    class="text-white font-KumbhSans hover:bg-btn-hover hover:border-0 cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">BOOK
+                    NOW</button></div>
+        </div>
+
+    </nav>
+
+    <!-- main-landing -->
+    <section
+        class="bg-[#131313]/50 bg-[url('/Public/assets/main-section.webp')] flex items-center justify-center bg-cover bg-blend-overlay  bg-top-right bg-no-repeat h-screen w-full">
+        <div class="max-w-container mx-auto  flex items-start justify-between   w-full">
+            <div class="w-1/2 text-white">
+                <div class="inline-flex items-center"><img class="w-10 h-7" src="./Public/assets/scope.svg"
+                        alt="nuvonix-logo">
+                    <h6 class="text-sm font-KumbhSans tracking-4px ml-3 font-semibold  uppercase">Precision You Can Rely
+                        On</h6>
+                </div>
+                <h6 class="text-7xl leading-20 font-KumbhSans font-medium  my-4">Expert Calibration & Maintenance for
+                    Medical
+                    Equipment</h6>
+                <p class="font-HindMadurai text-lg leading-7">At <strong>Nuvionx</strong> , we don’t just service
+                    medical
+                    equipment—we
+                    safeguard patient
+                    care. From critical
+                    calibrations to timely
+                    certifications, our expert team ensures every device meets the highest standards of accuracy and
+                    compliance. Count on us
+                    to keep your operations seamless and your reputation spotless.</p>
+            </div>
+
+        </div>
+    </section>
+    <!-- why choose nuvonix section-->
+    <section class="h-screen w-full ">
+        <div class="max-w-container h-full mx-auto w-full">
+            <div class="bg-black h-3/4 w-full ">
+                <div class="w-1/2"><img src="" alt=""></div>
+                <div class="w-1/2"></div>
+            </div>
+            <div class="bg-amber-300 h-1/4  w-full"></div>
+        </div>
+    </section>
+</body>
+
+</html>
