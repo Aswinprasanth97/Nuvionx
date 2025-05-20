@@ -7,15 +7,23 @@
   --color-secondary-cyan: #00adee;
   --color-dropdown: #ebf3fe;
   --color-tahiti: #3ab7bf;
+  --color-lightgrey: #f5f7fa;
+  --color-medium-grey: #d1d5db;
   --color-bermuda: #78dcca;
+  --color-paradark: #4b5563;
+  --color-headdark: #1f2937;
+  --leading-card22: 22px;
+  --leading-grid28: 26px;
   --spacing-button: 18px;
   --tracking-2px: 0.125em;
   --tracking-4px: 0.25em;
-  --color-btn-hover: #d87a2c;
+  --color-btn: #d87a2c;
+  --color-btn-hover: #c66b24;
   --font-HindMadurai: '"Hind Madurai"', sans-serif;
   --font-KumbhSans: [ '"Kumbh Sans"', sans-serif];
   --spacing-container: 1317px;
   --color-text-dark: #1f2937;
+  --color-textpara-dark: #1f2937;
 }
 /* @font-face {
   font-family: KumbhSans;
