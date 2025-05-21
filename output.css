@@ -824,6 +824,9 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .bg-\[url\(\'\.\/Public\/assets\/main-section\.webp\'\)\] {
+    background-image: url('./Public/assets/main-section.webp');
+  }
   .bg-\[url\(\'\/Public\/assets\/girlbio\.webp\'\)\] {
     background-image: url('/Public/assets/girlbio.webp');
   }
