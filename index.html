@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="relative p-0 m-0 box-border bg-lightgrey">
+<body class="relative p-0 m-0 box-border bg-lightgrey scroll-smooth overscroll-x-none">
     <!-- ---Topbar--- -->
     <div class="bg-primary h-[62px] m-auto text-sm leading-6 relative top-0 w-full ">
         <div
@@ -41,68 +44,64 @@
     </div>
 
     <!-- navbar -->
-
-    <nav class="justify-between absolute top-16 w-full my-12 ">
-        <!-- navbar main -->
-        <div class="max-w-container mx-auto flex justify-between items-center ">
-            <div><img class="w-28  h-10" src="./Public/assets/Nuvonix Logo.svg" alt="Nuvonix Logo"></div>
-            <div>
-                <ul class="flex font-KumbhSans text-white space-x-6 items-center  text-sm leading-6 tracking-2px">
-                    <li class="hover:font-bold cursor-pointer">HOME</li>
-                    <li class="hover:font-bold cursor-pointer">OUR SERVICES</li>
-                    <li class="hover:font-bold cursor-pointer">ABOUT US</li>
-                    <li class="hover:font-bold cursor-pointer">CONTACT</li>
-                    <li class="hover:font-bold cursor-pointer">
-                        <!-- component -->
-                        <!-- This is an example component -->
-                        <div class="max-w-lg mx-auto">
-
-                            <button
-                                class="text-white hover:font-bold  rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
-                                type="button" data-dropdown-toggle="dropdown">MORE<svg class="w-4 h-4 ml-2" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7"></path>
-                                </svg></button>
-
-                            <!-- Dropdown menu -->
-                            <div class="hidden bg-white text-base z-50 list-none rounded shadow my-4" id="dropdown">
-                                <ul class="py-1" aria-labelledby="dropdown">
-                                    <li>
-                                        <a href="#"
-                                            class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Testimonials</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sectors We
-                                            Serve</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Inventory &
-                                            Life Management</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Training &
-                                            Development
-                                        </a>
-                                    </li>
-                                </ul>
+    <header>
+        <nav class="justify-between absolute top-16 w-full my-12 ">
+            <!-- navbar main -->
+            <div class="max-w-container mx-auto flex justify-between items-center ">
+                <div><img class="w-28  h-10" src="./Public/assets/Nuvonix Logo.svg" alt="Nuvonix Logo"></div>
+                <div class="">
+                    <ul
+                        class="flex font-KumbhSans text-white gap-6 items-center justify-evenly  text-sm leading-6 tracking-2px">
+                        <li class=""><span
+                                class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer">HOME</span>
+                        </li>
+                        <li class=""><span
+                                class="inline-block w-full  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer">OUR
+                                SERVICES</span></li>
+                        <li><span
+                                class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer">ABOUT
+                                US</span></li>
+                        <li><span
+                                class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer">CONTACT</span>
+                        </li>
+                        <li>
+                            <div class="relative inline-block text-center ">
+                                <button
+                                    class="inline-flex items-center text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:font-bold hover:scale-110 text-sm px-4 py-2.5 rounded-lg"
+                                    type="button" data-dropdown-toggle="dropdown">
+                                    MORE
+                                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="hidden absolute right-0 mt-2 w-56 bg-white text-base z-50 list-none rounded shadow"
+                                    id="dropdown">
+                                    <ul class="py-1 text-gray-700" aria-labelledby="dropdown">
+                                        <li><a href="#"
+                                                class="block px-4 py-2 text-sm hover:bg-gray-100">Testimonials</a></li>
+                                        <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Sectors We
+                                                Serve</a></li>
+                                        <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Inventory &
+                                                Life Management</a>
+                                        </li>
+                                        <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Training &
+                                                Development</a></li>
+                                    </ul>
+                                </div>
                             </div>
-
-                        </div>
-
-
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class=""><button
+                        class="text-white font-KumbhSans hover:bg-white   hover:text-transparent/0 cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">BOOK
+                        NOW</button></div>
             </div>
-            <div class=""><button
-                    class="text-white font-KumbhSans hover:bg-white  hover:border-0 hover:text-black/20 cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">BOOK
-                    NOW</button></div>
-        </div>
 
-    </nav>
+        </nav>
+    </header>
+
+
 
     <!-- main-landing -->
     <section
@@ -303,7 +302,7 @@
     </section>
     <!-- our features  -->
     <section class="w-full  pb-16  my-[120px]">
-        <div class="max-w-container  mx-auto w-full h-[900px] flex justify-around items-end ">
+        <div class="max-w-container  mx-auto w-full h-[900px] flex justify-around items-start ">
             <div class=" w-1/2">
                 <div class="mb-8">
                     <div class="  ">
@@ -430,8 +429,13 @@
                     </div>
                 </div>
             </div>
-            <div class=" w-1/2 h-full relative ml-[60px]"><img class="absolute -right-8 bottom-16 rounded-xl"
-                    src="./Public/assets/feature-side.webp" alt=""><img src="./Public/assets/feature-main.webp" alt="">
+            <div class=" w-1/2 h-full  ml-[60px]">
+                <div class="relative">
+                    <img class="relative" src="./Public/assets/feature-main.webp" alt="">
+                    <img class="absolute left-[202px] bottom-[77px] rounded-xl" src="./Public/assets/feature-side.webp"
+                        alt="">
+                </div>
+
             </div>
 
         </div>
@@ -618,6 +622,330 @@
             </div>
         </div>
     </section>
+    <!-- image view  -->
+    <section class="w-full my-28 h-screen">
+        <div
+            class="mx-auto w-container max-w-container relative h-full bg-cover rounded-xl bg-no-repeat bg-[url('/Public/assets/oproom.webp')]">
+            <div
+                class="absolute w-[86px] h-[86px] hover:bg-secondary-cyan left-[313px] top-[105px] bg-primary rounded-full  flex items-center justify-center">
+
+                <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
+            </div>
+            <div
+                class="absolute w-[86px] h-[86px] hover:bg-secondary-cyan left-[872px] top-[214px] bg-primary rounded-full  flex items-center justify-center">
+
+                <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
+            </div>
+            <div
+                class="absolute w-[86px] h-[86px] hover:bg-secondary-cyan right-[114px] top-[352px] bg-primary rounded-full  flex items-center justify-center">
+
+                <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
+            </div>
+            <div
+                class="absolute w-[86px] h-[86px] hover:bg-secondary-cyan left-[313px] top-[105px] bg-primary rounded-full  flex items-center justify-center">
+
+                <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
+            </div>
+            <div
+                class="absolute w-[86px] h-[86px] hover:bg-secondary-cyan right-[440px] bottom-[149px] bg-primary rounded-full  flex items-center justify-center">
+
+                <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
+            </div>
+            <div class="w-full h-full flex items-end justify-between">
+                <div class=" w-[55%] text-wrap  rounded-xl mb-11 ml-12 bg-primary/80">
+                    <div class=" h-full p-12 text-white">
+                        <div class="inline-flex items-center   mb-3">
+                            <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-white"></div>
+                            <h6 class="text-white  font-semibold tracking-4px leading-6 uppercase">Top Rated
+                            </h6>
+                        </div>
+                        <h1 class="font-medium  text-[3.5em] leading-16 capitalize ">Unmatched Expertise,
+                            Unparalleled Performance
+                        </h1>
+                        <p class="mt-8 leading-6 ">Our commitment to excellence has earned us top
+                            ratings from clients who rely on our expertise. With a focus on
+                            precision, safety, and regulatory compliance, we deliver outstanding results that exceed
+                            expectations. Experience the
+                            quality that has made us a trusted choice in medical equipment maintenance.
+                        </p>
+                        <div class="my-12 uppercase">
+                            <a href="./aboutus.html"
+                                class="text-white font-KumbhSans bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer leading-6 rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">Find
+                                Out more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mr-11 mb-[42px] text-right"><img src="./Public//assets/Nuvonix Logo.svg" alt=""></div>
+
+            </div>
+        </div>
+    </section>
+    <!-- our Testimonials  -->
+    <section class="w-full py-28">
+        <div class="max-w-container mx-auto">
+            <!-- testimonials heading -->
+            <div class=" text-center mx-auto ">
+
+                <div class="inline-flex items-center  mb-3 ">
+                    <div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
+                    <h6 class="text-primary font-KumbhSans  font-semibold tracking-4px leading-6 uppercase">our
+                        testimonials
+                    </h6>
+                </div>
+                <h1
+                    class="font-medium text-wrap tracking-wide font-KumbhSans text-text-dark text-6xl leading-16 capitalize ">
+                    Hear It From Our Clients
+                </h1>
+
+                <p class="mt-8 w-3/5 font-HindMadurai mx-auto text-base text-paradark    leading-6 ">Healthcare
+                    providers
+                    across the UK trust <strong>Nuvionx</strong> for reliable service, fast response, and technical<br>
+                    excellence. See what
+                    our clients have to say.
+                </p>
+
+            </div>
+            <!-- cards-testimonials -->
+            <div class="grid grid-cols-3 gap-8">
+                <div class="text-left max-w-[416px] w-full p-8 relative rounded-[14px] bg-dropdown">
+                    <!-- card title  -->
+                    <div class="">
+
+                        <h3 class="font-KumbhSans font-medium text-2xl leading-8 mb-4 text-headdark">Nuvionx is the
+                            Trusted
+                            Pros</h3>
+                        <p class="font-HindMadurai font-medium leading-6 text-paradark text-sm "><strong>Nuvionx
+                            </strong> has consistently delivered exceptional service with a high level of
+                            professionalism. Their team ensures all work
+                            is completed within quality
+                            timelines,
+                            adhering strictly to safety regulations. Their attention to detail and
+                            commitment to
+                            excellence have made them a trusted partner in maintaining our medical equipment.</p>
+                    </div>
+                    <!-- rating  -->
+                    <div class="py-9 flex items-center"><i class="fa-solid fa-star text-star"></i>
+                        <i class="fa-solid fa-star text-star"></i>
+                        <i class="fa-solid fa-star text-star"></i>
+                        <i class="fa-solid fa-star text-star"></i>
+                        <i class="fa-solid fa-star text-star"></i>
+                        <p class="pl-2 font-KumbhSans font-semibold text-lg leading-7">5.0</p>
+                    </div>
+                    <!-- card name  -->
+                    <div class="w-full bg-white p-3 rounded-xl flex items-center justify-between">
+                        <div class="w-2/3 flex items-center justify-around">
+                            <!-- card img  -->
+                            <div class="bg-imgbg w-16 h-16 rounded-xl"></div>
+                            <!-- card-name  -->
+                            <div class="">
+                                <h3
+                                    class=" font-semibold font-KumbhSans text-sm leading-6 tracking-2px uppercase text-headdark ">
+                                    SARAJ
+                                    J.</h3>
+                                <p class="font-HindMadurai leading-6 text-primary text-sm">Homeowner</p>
+                            </div>
+                        </div>
+                        <div class=""><svg width="32" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.661 2.188l3 2.16.837.603-.628.818c-.458.597-1.041 1.564-1.75 2.937l-.005.007-.003.007c-.684 1.274-1.277 2.705-1.773 4.299l-.002.008a13.23 13.23 0 00-.622 3.13c.197-.025.394-.038.593-.038 1.599 0 3.044.48 4.3 1.44h-.002c1.41 1.023 2.01 2.666 2.01 4.652 0 1.786-.603 3.38-1.782 4.741l.001.001c-1.187 1.378-2.806 2.038-4.737 2.043v.001c-2.6.057-4.708-.777-6.123-2.63l-.005-.006-.005-.006C1.638 24.56 1 22.388 1 19.896c0-1.75.273-3.589.806-5.513l.213-.725c.525-1.697 1.25-3.424 2.172-5.181l.005-.01.428-.773A39.427 39.427 0 018.301 2.37l.595-.731.765.55zm15.385 0l3 2.16.836.603-.627.818c-.459.597-1.041 1.564-1.751 2.937l-.008.014c-.684 1.274-1.276 2.705-1.772 4.299l-.002.008a13.232 13.232 0 00-.622 3.13c.197-.025.394-.038.592-.038 1.6 0 3.045.48 4.3 1.44h0C30.4 18.582 31 20.225 31 22.21c0 1.786-.602 3.38-1.781 4.741v.001c-1.186 1.378-2.806 2.038-4.737 2.043l.001.001c-2.6.057-4.708-.777-6.124-2.63l-.005-.006-.004-.006c-1.327-1.795-1.965-3.967-1.965-6.459 0-1.75.272-3.589.805-5.513.535-1.93 1.332-3.898 2.386-5.906l.004-.01.429-.773a39.43 39.43 0 013.677-5.325l.594-.731.766.55z"
+                                    fill="#000" stroke-width="2" />
+                            </svg></div>
+                    </div>
+                </div>
+                <div class="text-left max-w-[416px] w-full p-8 relative rounded-[14px] bg-dropdown">
+                    <!-- card title  -->
+                    <div class="">
+
+                        <h3 class="font-KumbhSans font-medium text-2xl leading-8 mb-4 text-headdark">Stress Free
+                            Experience</h3>
+                        <p class="font-HindMadurai font-medium leading-6 text-paradark text-sm "><strong>Nuvionx
+                            </strong> has consistently delivered exceptional service with a high level of
+                            professionalism. Their team ensures all work
+                            is completed within quality
+                            timelines,
+                            adhering strictly to safety regulations. Their attention to detail and
+                            commitment to
+                            excellence have made them a trusted partner in maintaining our medical equipment.</p>
+                    </div>
+                    <!-- rating  -->
+                    <div class="py-9 flex items-center"><i class="fa-solid fa-star text-star"></i>
+                        <i class="fa-solid fa-star text-star"></i>
+                        <i class="fa-solid fa-star text-star"></i>
+                        <i class="fa-solid fa-star text-star"></i>
+                        <i class="fa-solid fa-star text-star"></i>
+                        <p class="pl-2 font-KumbhSans font-semibold text-lg leading-7">5.0</p>
+                    </div>
+                    <!-- card name  -->
+                    <div class="w-full bg-white p-3 rounded-xl flex items-center justify-between">
+                        <div class="w-2/3 flex items-center justify-around">
+                            <!-- card img  -->
+                            <div class="bg-imgbg w-16 h-16 rounded-xl"></div>
+                            <!-- card-name  -->
+                            <div class="">
+                                <h3
+                                    class=" font-semibold font-KumbhSans text-sm leading-6 tracking-2px uppercase text-headdark ">
+                                    Emily R.</h3>
+                                <p class="font-HindMadurai leading-6 text-primary text-sm">Apartment Tenant </p>
+                            </div>
+                        </div>
+                        <div class=""><svg width="32" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.661 2.188l3 2.16.837.603-.628.818c-.458.597-1.041 1.564-1.75 2.937l-.005.007-.003.007c-.684 1.274-1.277 2.705-1.773 4.299l-.002.008a13.23 13.23 0 00-.622 3.13c.197-.025.394-.038.593-.038 1.599 0 3.044.48 4.3 1.44h-.002c1.41 1.023 2.01 2.666 2.01 4.652 0 1.786-.603 3.38-1.782 4.741l.001.001c-1.187 1.378-2.806 2.038-4.737 2.043v.001c-2.6.057-4.708-.777-6.123-2.63l-.005-.006-.005-.006C1.638 24.56 1 22.388 1 19.896c0-1.75.273-3.589.806-5.513l.213-.725c.525-1.697 1.25-3.424 2.172-5.181l.005-.01.428-.773A39.427 39.427 0 018.301 2.37l.595-.731.765.55zm15.385 0l3 2.16.836.603-.627.818c-.459.597-1.041 1.564-1.751 2.937l-.008.014c-.684 1.274-1.276 2.705-1.772 4.299l-.002.008a13.232 13.232 0 00-.622 3.13c.197-.025.394-.038.592-.038 1.6 0 3.045.48 4.3 1.44h0C30.4 18.582 31 20.225 31 22.21c0 1.786-.602 3.38-1.781 4.741v.001c-1.186 1.378-2.806 2.038-4.737 2.043l.001.001c-2.6.057-4.708-.777-6.124-2.63l-.005-.006-.004-.006c-1.327-1.795-1.965-3.967-1.965-6.459 0-1.75.272-3.589.805-5.513.535-1.93 1.332-3.898 2.386-5.906l.004-.01.429-.773a39.43 39.43 0 013.677-5.325l.594-.731.766.55z"
+                                    fill="#000" stroke-width="2" />
+                            </svg></div>
+                    </div>
+                </div>
+                <div class="text-left max-w-[416px] w-full p-8 relative rounded-[14px] bg-dropdown">
+                    <!-- card title  -->
+                    <div class="">
+
+                        <h3 class="font-KumbhSans font-medium text-2xl leading-8 mb-4 text-headdark">Excellent Emergency
+                            Response</h3>
+                        <p class="font-HindMadurai font-medium leading-6 text-paradark text-sm "><strong>Nuvionx
+                            </strong> has consistently delivered exceptional service with a high level of
+                            professionalism. Their team ensures all work
+                            is completed within quality
+                            timelines,
+                            adhering strictly to safety regulations. Their attention to detail and
+                            commitment to
+                            excellence have made them a trusted partner in maintaining our medical equipment.</p>
+                    </div>
+                    <!-- rating  -->
+                    <div class="py-9 flex items-center"><i class="fa-solid fa-star text-star"></i>
+                        <i class="fa-solid fa-star text-star"></i>
+                        <i class="fa-solid fa-star text-star"></i>
+                        <i class="fa-solid fa-star text-star"></i>
+                        <i class="fa-solid fa-star text-star"></i>
+                        <p class="pl-2 font-KumbhSans font-semibold text-lg leading-7">5.0</p>
+                    </div>
+                    <!-- card name  -->
+                    <div class="w-full bg-white p-3 rounded-xl flex items-center justify-between">
+                        <div class="w-2/3 flex items-center justify-around">
+                            <!-- card img  -->
+                            <div class="bg-imgbg w-16 h-16 rounded-xl"></div>
+                            <!-- card-name  -->
+                            <div class="">
+                                <h3
+                                    class=" font-semibold font-KumbhSans text-sm leading-6 tracking-2px uppercase text-headdark ">
+                                    Mark T.</h3>
+                                <p class="font-HindMadurai leading-6 text-primary text-sm">Business Owner</p>
+                            </div>
+                        </div>
+                        <div class=""><svg width="32" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.661 2.188l3 2.16.837.603-.628.818c-.458.597-1.041 1.564-1.75 2.937l-.005.007-.003.007c-.684 1.274-1.277 2.705-1.773 4.299l-.002.008a13.23 13.23 0 00-.622 3.13c.197-.025.394-.038.593-.038 1.599 0 3.044.48 4.3 1.44h-.002c1.41 1.023 2.01 2.666 2.01 4.652 0 1.786-.603 3.38-1.782 4.741l.001.001c-1.187 1.378-2.806 2.038-4.737 2.043v.001c-2.6.057-4.708-.777-6.123-2.63l-.005-.006-.005-.006C1.638 24.56 1 22.388 1 19.896c0-1.75.273-3.589.806-5.513l.213-.725c.525-1.697 1.25-3.424 2.172-5.181l.005-.01.428-.773A39.427 39.427 0 018.301 2.37l.595-.731.765.55zm15.385 0l3 2.16.836.603-.627.818c-.459.597-1.041 1.564-1.751 2.937l-.008.014c-.684 1.274-1.276 2.705-1.772 4.299l-.002.008a13.232 13.232 0 00-.622 3.13c.197-.025.394-.038.592-.038 1.6 0 3.045.48 4.3 1.44h0C30.4 18.582 31 20.225 31 22.21c0 1.786-.602 3.38-1.781 4.741v.001c-1.186 1.378-2.806 2.038-4.737 2.043l.001.001c-2.6.057-4.708-.777-6.124-2.63l-.005-.006-.004-.006c-1.327-1.795-1.965-3.967-1.965-6.459 0-1.75.272-3.589.805-5.513.535-1.93 1.332-3.898 2.386-5.906l.004-.01.429-.773a39.43 39.43 0 013.677-5.325l.594-.731.766.55z"
+                                    fill="#000" stroke-width="2" />
+                            </svg></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- let work together  -->
+    <section class="w-full my-16 bg-lightgrey ">
+        <div
+            class="mx-auto rounded-xl py-[38px] pl-12 max-w-container bg-center bg-[url('/Public/assets/pexels-kseniachernaya-5752282.webp')] bg-no-repeat bg-cover ">
+            <div class="w-2/5 h-full">
+                <h4 class="text-white font-KumbhSans font-medium text-[32px] leading-10 ">Let's work together
+                    to enhance
+                    the reliability and performance
+                    of your medical equipment!</h4>
+                <div class="my-12">
+                    <a href="./aboutus.html"
+                        class="text-white font-KumbhSans bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer leading-6 rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">FIND
+                        OUT MORE</a>
+                </div>
+            </div>
+            <div></div>
+        </div>
+    </section>
+    <!-- go up -->
+    <section class="w-full flex items-center bg-lightgrey justify-center py-14 bg-">
+        <div class="w-12 mx-auto ">
+            <div
+                class="text-white py-4 flex items-center group justify-center px-4 font-KumbhSans bg-primary -rotate-90 hover:bg-white hover:border-0 cursor-pointer  rounded-full text-center font-semibold">
+                <svg class="" width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M15.523 8.559l-5.625 5.625a1.09 1.09 0 01-.773.316c-.316 0-.598-.105-.809-.316a1.084 1.084 0 010-1.582l3.692-3.727H1.25A1.11 1.11 0 01.125 7.75c0-.598.492-1.125 1.125-1.125h10.758L8.316 2.934a1.084 1.084 0 010-1.582 1.084 1.084 0 011.582 0l5.625 5.625c.457.421.457 1.16 0 1.582z"
+                        class="fill-white group-hover:fill-primary " />
+                </svg>
+            </div>
+    </section>
+    <!-- footer section  -->
+    <footer class="w-full  bg-white">
+        <div class="max-w-container mx-auto bg-white">
+            <!-- footer menus  -->
+            <div class="  py-16 grid grid-cols-4 gap-8 mx-auto">
+                <!-- contact -->
+                <div class="">
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8">CONTACT</h3>
+                    <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
+                        <li>5 Rialto Building<br> NE1 2JR</li>
+                        <li><a href="tel:07768151690 ">
+                                Phone: 07768151690 </a></li>
+                        <li><a href="mailto:info@nuvionx.co.uk">Email: info@nuvionx.co.uk</a></li>
+                        <li class="space-x-6 text-headdark text-3xl">
+                            <a href=""><i
+                                    class="fa-brands cursor-pointer transform transition-transform duration-200 hover:scale-125 fa-linkedin-in"></i>
+                            </a>
+                            <a href=""><i
+                                    class="fa-brands cursor-pointer transform transition-transform duration-200 hover:scale-125 fa-x-twitter"></i>
+                            </a>
+                            <a href=""><i
+                                    class="fa-brands cursor-pointer transform transition-transform duration-200 hover:scale-125 fa-instagram"></i>
+                            </a>
+                            <a href=""><i
+                                    class="fa-brands cursor-pointer transform transition-transform duration-200 hover:scale-125 fa-facebook"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="">
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8">HELP</h3>
+                    <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
+                        <li><a href="#">Aboout Company</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Help Center</a></li>
+
+                    </ul>
+                </div>
+                <div class="">
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8">QUICK MENU</h3>
+                    <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Sectors We Serve</a></li>
+                        <li><a href="#">Inventory & Lifecycle Management</a></li>
+                        <li><a href="#">Training & Development</a></li>
+
+                    </ul>
+                </div>
+                <div class="">
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8">COMPANY</h3>
+                    <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
+                        <li><a href="#">Bookings & Cancellations </a></li>
+                        <li><a href="#">Website Terms</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="h-[1px] bg-[#D0D0D0]  w-full"></div>
+
+            <div class="flex justify-between items-center py-10">
+                <div class="font-HindMadurai text-headdark leading-6">2025 © Nuvionx. All Rights Reserved.</div>
+                <div class="font-HindMadurai text-headdark leading-6 space-x-12">
+                    <a href="">Privacy & Policy</a>
+                    <a href="">Terms & Condition</a>
+                </div>
+            </div>
+        </div>
+        <div class="py-1.5 bg-primary w-full"></div>
+    </footer>
 </body>
 
 </html>
