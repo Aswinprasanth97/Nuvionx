@@ -869,11 +869,23 @@
   .bg-\[url\(\'\/assets\/main-section\.webp\'\)\] {
     background-image: url('/assets/main-section.webp');
   }
+  .bg-\[url\(\'Public\/assets\/girlbio\.webp\'\)\] {
+    background-image: url('Public/assets/girlbio.webp');
+  }
   .bg-\[url\(\'Public\/assets\/main-section\.webp\'\)\] {
     background-image: url('Public/assets/main-section.webp');
   }
   .bg-\[url\(\'Public\/assets\/man-screw\.webp\'\)\] {
     background-image: url('Public/assets/man-screw.webp');
+  }
+  .bg-\[url\(\'Public\/assets\/oproom\.webp\'\)\] {
+    background-image: url('Public/assets/oproom.webp');
+  }
+  .bg-\[url\(\'Public\/assets\/pexels-kseniachernaya-5752282\.webp\'\)\] {
+    background-image: url('Public/assets/pexels-kseniachernaya-5752282.webp');
+  }
+  .bg-\[url\(\'Public\/assets\/ultrasound\.webp\'\)\] {
+    background-image: url('Public/assets/ultrasound.webp');
   }
   .bg-contain {
     background-size: contain;
