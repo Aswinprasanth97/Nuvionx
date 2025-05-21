@@ -830,11 +830,20 @@
   .bg-\[url\(\"\/Public\/assets\/ultrasound\.webp\"\)\] {
     background-image: url("/Public/assets/ultrasound.webp");
   }
+  .bg-\[url\(\'\.\.\/Nuvionx\/assets\/main-section\.webp\'\)\] {
+    background-image: url('../Nuvionx/assets/main-section.webp');
+  }
   .bg-\[url\(\'\.\.\/Public\/assets\/main-section\.webp\'\)\] {
     background-image: url('../Public/assets/main-section.webp');
   }
+  .bg-\[url\(\'\.\.\/assets\/main-section\.webp\'\)\] {
+    background-image: url('../assets/main-section.webp');
+  }
   .bg-\[url\(\'\.\/Public\/assets\/main-section\.webp\'\)\] {
     background-image: url('./Public/assets/main-section.webp');
+  }
+  .bg-\[url\(\'\/Nuvionx\/assets\/main-section\.webp\'\)\] {
+    background-image: url('/Nuvionx/assets/main-section.webp');
   }
   .bg-\[url\(\'\/Public\/assets\/girlbio\.webp\'\)\] {
     background-image: url('/Public/assets/girlbio.webp');
@@ -856,6 +865,9 @@
   }
   .bg-\[url\(\'\/Public\/assets\/ultrasound\.webp\'\)\] {
     background-image: url('/Public/assets/ultrasound.webp');
+  }
+  .bg-\[url\(\'\/assets\/main-section\.webp\'\)\] {
+    background-image: url('/assets/main-section.webp');
   }
   .bg-\[url\(\'Public\/assets\/man-screw\.webp\'\)\] {
     background-image: url('Public/assets/man-screw.webp');
