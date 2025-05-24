@@ -1,0 +1,500 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Nuvonix-Homepage</title>
+    <link rel="shortcut icon" href="./Public/assets/scope.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="relative p-0 m-0 box-border bg-lightgrey scroll-smooth ">
+    <!-- ---Topbar--- -->
+    <div class="bg-primary  h-[62px] m-auto text-sm leading-6 relative top-0 w-full ">
+        <div
+            class=" text-white  lg:max-w-5xl xl:max-w-container mx-auto   text-sm flex flex-col lg:flex-row justify-between items-center  py-5">
+
+            <ul class="flex space-x-6 justify-between place-items-center">
+                <li class="">Precision</li>
+                <li class="bg-white rounded-full h-1.5 w-1.5"></li>
+                <li>Reliability</li>
+                <li class="bg-white rounded-full h-1.5 w-1.5"></li>
+                <li>Compliance</li>
+            </ul>
+
+            <div class="flex place-items-center justify-around ">
+                <div class="flex mr-11 space-x-3 items-center"><img class="w-3.5 h-3.5 " src="./Public/assets/phone.svg"
+                        alt="">
+                    <div class="">
+                        <p class=" font-bold">Phone<span class="pl-3 font-normal">+44 7570296821</span></p>
+                    </div>
+                </div>
+                <div class="flex space-x-3 items-center"><img class="w-3.5 h-3.5 " src="./Public/assets/location.svg"
+                        alt="">
+                    <div>
+                        <p class=" font-bold">Address<span class="pl-3 font-normal">Newcastle Upon Tyne, UK</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- navbar -->
+    <header class="">
+        <nav class="justify-between z-20  absolute lg:my-8 xl:top-16 w-full xl:my-12 ">
+            <!-- navbar main -->
+            <div class="lg:max-w-5xl xl:max-w-container mx-auto flex justify-between items-center ">
+                <div><img class="w-28  h-10" src="./Public/assets/Nuvonix Logo.svg" alt="Nuvonix Logo"></div>
+                <div class="">
+                    <ul
+                        class="flex font-KumbhSans text-white gap-6 items-center justify-evenly  text-sm leading-6 tracking-2px">
+                        <li class=""><span
+                                class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer"><a
+                                    href="./aboutus.html">HOME</a></span>
+                        </li>
+                        <li class=""><span
+                                class="inline-block w-full  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer">OUR
+                                SERVICES</span></li>
+                        <li><span
+                                class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer">ABOUT
+                                US</span></li>
+                        <li><span
+                                class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer">CONTACT</span>
+                        </li>
+                        <li>
+                            <div class="relative inline-block text-center ">
+                                <button id="nav-main"
+                                    class="inline-flex  items-center text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:font-bold hover:scale-110 text-sm  rounded-lg"
+                                    type="button" data-dropdown-toggle="dropdown">
+                                    MORE
+                                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div id="nav-drop"
+                                    class="hidden  absolute -left-full mt-2 w-56 bg-white text-base z-50 list-none rounded shadow"
+                                    id="dropdown">
+                                    <ul class="py-1 text-gray-700" aria-labelledby="dropdown">
+                                        <li><a href="#"
+                                                class="block px-4 py-2 text-sm hover:bg-gray-100">Testimonials</a></li>
+                                        <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Sectors We
+                                                Serve</a></li>
+                                        <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Inventory &
+                                                Life Management</a>
+                                        </li>
+                                        <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Training &
+                                                Development</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="">
+                    <button
+                        class="  z-0 font-KumbhSans  hover:bg-white text-white cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">
+                        <span class="hover:text-transparent hover:bg-clip-text hover:mix-blend-multiply">BOOK NOW</span>
+                    </button>
+                </div>
+
+        </nav>
+    </header>
+
+
+
+    <!-- main-landing -->
+    <!-- bg-[url('Public/assets/main-section.webp')] -->
+    <section
+        class="bg-[#131313]/50  relative flex  items-end bg-[url('Public/assets/main-section-bg.webp')] justify-end bg-cover  bg-blend-overlay  bg-center bg-no-repeat h-[600px] w-full">
+        <!-- Background Video -->
+
+        <div
+            class="lg:max-w-5xl xl:max-w-container   mx-auto  flex lg:items-end xl:items-end justify-between mb-16   w-full">
+            <div class="w-1/2 text-white flex flex-col items-start justify-center lg:max-xl:h-full ">
+                <div class="inline-flex items-center">
+                    <img class="w-10 h-7" src="./Public/assets/scope.svg" alt="nuvonix-logo">
+                    <h6 class="text-sm font-KumbhSans tracking-4px ml-3 font-semibold  uppercase">Precision You Can
+                        Rely
+                        On</h6>
+                </div>
+                <h6
+                    class="xl:text-[56px] lg:text-5xl lg:leading-14 xl:leading-16 font-KumbhSans tracking-wide font-medium lg:my-2  xl:my-4">
+                    At the Heart <span class="">O</span>f Trusted Healthcare Support</h6>
+
+
+            </div>
+            <div
+                class="w-1/2 text-white flex justify-end my-auto items-center  font-KumbhSans font-semibold leading-6 tracking-4px ">
+                <ul class="flex items-center space-x-6">
+                    <li><i class="fa-solid fa-house mr-1.5 "></i>HOME</li>
+                    <li><i class="fa-solid fa-chevron-right"></i></li>
+                    <li>ABOUT US</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- about us-->
+    <section class=" w-full my-28 ">
+        <div class="lg:max-w-5xl xl:max-w-container h-full mx-auto w-full">
+            <div class=" w-full mb-20 h-full   flex items-start justify-between font-KumbhSans">
+
+                <img class="w-1/2 rounded-xl h-[519px]  object-cover" src="./Public/assets/aboutus-bg.webp"
+                    alt="girl-microscope">
+
+                <div class="w-1/2 h-full ml-10 ">
+                    <div class="inline-flex items-center lg:mb-1  xl:mb-3">
+                        <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-primary"></div>
+                        <h6 class="text-primary  font-semibold tracking-4px xl:leading-6 uppercase">about us
+                        </h6>
+                    </div>
+                    <h1
+                        class="font-medium mb-9 text-text-dark lg:text-4xl xl:text-56px lg:leading-12 xl:leading-16 capitalize ">
+                        Committed to Clinical Excellence and Care
+                    </h1>
+                    <p class=" leading-6 text-textpara-dark"><strong>Nuvionx</strong> was born from a simple
+                        observation—too much vital medical equipment ends up discarded due to poor maintenance or
+                        a lack of timely servicing. As biomedical engineers, we saw the impact this had not only on
+                        hospital operations but on
+                        patient care and the environment.
+                    </p>
+                    <p class=" my-3 leading-6 text-textpara-dark">
+                        We knew there had to be a better way. So we started <strong>Nuvionx</strong>—with sustainability
+                        at its core—to
+                        extend the life of
+                        medical devices by focusing on what truly matters: routine inspections, early fault detection,
+                        proper calibration,
+                        timely repairs, and ongoing technical support. It’s about preventing problems before they
+                        escalate, keeping equipment
+                        reliable and ready when it matters most.
+
+
+                    </p>
+                    <p class=" leading-6 text-textpara-dark">
+                        By offering solutions that are both effective and practical, we help healthcare providers reduce
+                        waste, avoid
+                        unnecessary replacements, and get the most out of their equipment investments.
+                    </p>
+
+
+                </div>
+            </div>
+            <div class="xl:h-1/4 lg:h-2/12 w-full flex justify-between  ">
+
+
+                <div
+                    class="w-1/2 mr-10  h-full rounded-xl  bg-primary z-10 min-w-2xl flex items-center justify-evenly  relative px-10 py-9  ">
+                    <img class=" absolute top-0 left-0 z-20 mix-blend-multiply" src="./Public/assets/s1.svg" alt="">
+                    <img class="absolute  bottom-3 right-0 z-20 mix-blend-multiply" src="./Public/assets/s2.svg" alt="">
+                    <div class=" text-center text-white">
+                        <h5 class="font-medium text-xl leading-6">Our Mission</h5>
+                        <p class="leading-6 font-HindMadurai mt-6 text-justify">To improve the reliability and longevity
+                            of
+                            biomedical
+                            equipment through
+                            proactive
+                            servicing, early intervention, and
+                            close collaboration with healthcare providers—making healthcare more sustainable,
+                            accessible, and efficient for all.</p>
+
+                    </div>
+                </div>
+
+                <div
+                    class="w-1/2  h-full rounded-xl bg-secondary-cyan z-10 min-w-2xl  flex items-center justify-evenly  relative px-10 py-9  ">
+                    <img class=" absolute top-0 left-0 z-20 mix-blend-multiply" src="./Public/assets/s1.svg" alt="">
+                    <img class="absolute  bottom-3 right-0 z-20 mix-blend-multiply" src="./Public/assets/s2.svg" alt="">
+                    <div class=" text-center text-white">
+                        <h5 class="font-medium text-xl leading-6">Our Vision</h5>
+                        <p class="leading-6 font-HindMadurai mt-6 ">To become a global leader in sustainable biomedical
+                            services and solutions, reducing medical equipment waste and
+                            ensuring every healthcare facility has access to safe, well-maintained devices that support
+                            better patient care.</p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- our team -->
+    <section class="w-full py-[120px]">
+        <div class="max-w-container mx-auto flex flex-row-reverse items-start justify-between ">
+            <div class="w-1/2 h-full relative flex items-end">
+                <div class="w-full"><img src="./Public/assets/our-team.webp"
+                        class="w-full rounded-xl max-h-80 min-w-xl object-cover mb-8" alt="a lady in a nuvinix lab">
+                </div>
+                <div class="absolute bottom-0 mx-9">
+                    <div class=" lg:h-2/12 justify-center w-full flex ">
+
+                        <div
+                            class="h-full max-w-xl w-11/12 rounded-xl bg-dropdown z-10  flex items-center justify-evenly  relative lg:max-xl:p-3">
+                            <img class=" absolute top-0 left-0 z-20 mix-blend-multiply" src="./Public/assets/s1.svg"
+                                alt="">
+                            <img class="absolute  bottom-3 right-0 z-20 mix-blend-multiply" src="./Public/assets/s2.svg"
+                                alt="">
+
+                            <div class=" px-6  pb-6 lg:w-full lg:ml-3 xl:ml-0 text-center">
+                                <h3 class="py-6 font-semibold text-xl">Nationwide Coverage consistent Quality</h3>
+                                <p class="font-HindMadurai xl:leading-6  lg:text-sm xl:text-base">We offer nationwide
+                                    service coverage across the UK. <br> Our OEM-certified engineers are trained to
+                                    service
+                                    all NHS-supplied
+                                    equipment with precision and care.</p>
+
+                            </div>
+                        </div>
+                        <!-- <div
+                                        class="bg-black/20  w-1/2 bg-no-repeat rounded-xl bg-[url('/Public/assets/s1.svg'),url('/Public/assets/s2.svg')] bg-[left_top\2c_right_bottom] bg-blend-overlay bg-center bg-contain  h-full">
+                                    </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class=" w-1/2 h-full mr-14">
+                <div class="inline-flex items-center   mb-3">
+                    <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-primary"></div>
+                    <h6 class="text-primary  font-semibold tracking-4px leading-6 uppercase">our team
+                    </h6>
+                </div>
+                <h1 class="font-medium w-3/4 text-text-dark text-56px leading-16 capitalize ">Expertise You Can Count On
+                </h1>
+                <p class="mt-8 leading-6 text-textpara-dark">Our team of skilled engineers is the backbone of
+                    <strong>Nuvionx’s</strong>
+                    commitment to healthcare excellence. Strategically located
+                    across the UK, our professionals are trained directly by Original Equipment Manufacturers (OEMs),
+                    ensuring in-depth
+                    technical knowledge and precision. With a focus on safety, compliance, and a proactive
+                    "first-time-right" approach, our
+                    engineers work efficiently to reduce equipment downtime and extend the life of vital medical
+                    devices—so your teams can
+                    focus on what matters most: patient care.
+                </p>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- why choose us  -->
+    <section class="w-full py-28">
+        <div class="max-w-container mx-auto">
+            <!--  heading -->
+            <div class=" text-center mx-auto max-w-5xl">
+
+                <div class="inline-flex items-center  mb-3 ">
+                    <div class="w-2.5 h-2.5 mr-2.5 rounded-full bg-primary"></div>
+                    <h6 class="text-primary font-KumbhSans   font-semibold tracking-4px leading-6 uppercase">
+                        why choose us
+                    </h6>
+                </div>
+                <h1
+                    class="font-medium text-wrap tracking-wide font-KumbhSans text-text-dark text-6xl leading-16 capitalize ">
+                    Raising the Standard in Clinical Engineering
+                </h1>
+
+                <p class="mt-8  font-HindMadurai mx-auto text-base text-paradark    leading-6 ">With deep industry
+                    expertise and a commitment to compliance, sustainability, and innovation, <strong>Nuvionx</strong>
+                    delivers tailored
+                    biomedical service solutions that healthcare providers can truly rely on. From precision maintenance
+                    to responsive
+                    support, we prioritize equipment performance and patient care at every step.
+                </p>
+
+            </div>
+            <!-- cards-testimonials -->
+            <div class="grid grid-cols-3 gap-2 lg:gap-8 py-16 text-white ">
+                <div
+                    class="text-left max-w-[416px] bg-[url('Public/assets/_Clip Group_.svg')] w-full p-8 relative rounded-[14px] bg-primary ">
+                    <!-- card title  -->
+                    <div class="w-full text-center">
+                        <div class="inline-flex items-center  mb-3 ">
+                            <div class="w-2.5 min-w-2.5 h-2.5 mr-2.5 rounded-full bg-white"></div>
+                            <h6 class=" font-KumbhSans   font-semibold tracking-4px leading-6 uppercase">
+                                Industry expertise
+                            </h6>
+                        </div>
+
+                        <p class="font-HindMadurai font-medium leading-6  text-sm ">Led by experienced biomedical
+                            engineers, we deliver precise calibration, maintenance, and certification tailored to
+                            healthcare standards.</p>
+                    </div>
+
+                    <!-- card name  -->
+
+                </div>
+                <div class="text-left max-w-[416px] w-full p-8 relative rounded-[14px] bg-secondary-cyan">
+                    <!-- card title  -->
+                    <div class="w-full text-center">
+                        <div class="inline-flex items-center  mb-3 ">
+                            <div class="w-2.5 min-w-2.5 h-2.5 mr-2.5 rounded-full bg-white"></div>
+                            <h6 class=" font-KumbhSans   font-semibold tracking-4px leading-6 uppercase">
+                                Tailored Equipment Care
+                            </h6>
+                        </div>
+
+                        <p class="font-HindMadurai font-medium leading-6  text-sm ">From routine inspections to advanced
+                            diagnostics and flexible service plans, we ensure performance, reliability, and
+                            scalability for every facility. </p>
+                    </div>
+                </div>
+                <div class="text-left max-w-[416px] w-full p-8 relative rounded-[14px] bg-primary">
+                    <!-- card title  -->
+                    <div class="w-full text-center ">
+                        <div class="inline-flex items-center  mb-3 ">
+                            <div class="w-2.5 min-w-2.5 h-2.5 mr-2.5 rounded-full bg-white"></div>
+                            <h6 class=" font-KumbhSans   font-semibold tracking-4px leading-6 uppercase">
+                                Sustainability Commitment
+                            </h6>
+                        </div>
+
+                        <p class="font-HindMadurai font-medium leading-6  text-sm ">We extend the operational life of
+                            medical devices, minimizing waste and supporting eco-friendly healthcare practices.</p>
+                    </div>
+                </div>
+                <div class="text-left max-w-[416px] w-full p-8 relative rounded-[14px] bg-secondary-cyan">
+                    <!-- card title  -->
+                    <div class="w-full text-center">
+                        <div class="inline-flex items-center  mb-3 ">
+                            <div class="w-2.5 min-w-2.5 h-2.5 mr-2.5 rounded-full bg-white"></div>
+                            <h6 class=" font-KumbhSans   font-semibold tracking-4px leading-6 uppercase">
+                                Regulatory Compliance
+                            </h6>
+                        </div>
+
+                        <p class="font-HindMadurai font-medium leading-6  text-sm ">All services meet stringent
+                            regulatory and safety standards, ensuring every device is safe and audit-ready.</p>
+                    </div>
+                </div>
+                <div class="text-left max-w-[416px] w-full p-8 relative rounded-[14px] bg-primary">
+                    <!-- card title  -->
+                    <div class="w-full text-center">
+                        <div class="inline-flex items-center  mb-3 ">
+                            <div class="w-2.5 min-w-2.5 h-2.5 mr-2.5 rounded-full bg-white"></div>
+                            <h6 class=" font-KumbhSans   font-semibold tracking-4px leading-6 uppercase">
+                                Innovative Technologies
+                            </h6>
+                        </div>
+
+                        <p class="font-HindMadurai font-medium leading-6  text-sm ">We leverage the latest tools and
+                            techniques to deliver efficient, accurate, and forward-thinking service.</p>
+                    </div>
+                </div>
+                <div class="text-left max-w-[416px] w-full p-8 relative rounded-[14px] bg-secondary-cyan">
+                    <!-- card title  -->
+                    <div class="w-full text-center">
+                        <div class="inline-flex items-center  mb-3 ">
+                            <div class="w-2.5 min-w-2.5 h-2.5 mr-2.5 rounded-full bg-white"></div>
+                            <h6 class=" font-KumbhSans   font-semibold tracking-4px leading-6 uppercase">
+                                Customer-Centric Support
+                            </h6>
+                        </div>
+
+                        <p class="font-HindMadurai font-medium leading-6  text-sm ">Dedicated technical support and
+                            responsive service delivery focused on minimizing downtime and maximizing patient care.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- go up -->
+    <section id="scroll-to-top" class="w-full flex items-center bg-lightgrey justify-center py-14 bg-">
+        <div class="w-12 mx-auto ">
+            <div
+                class="text-white py-4 flex items-center group justify-center px-4 font-KumbhSans bg-primary -rotate-90 hover:bg-white hover:border-0 cursor-pointer  rounded-full text-center font-semibold">
+                <svg class="" width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M15.523 8.559l-5.625 5.625a1.09 1.09 0 01-.773.316c-.316 0-.598-.105-.809-.316a1.084 1.084 0 010-1.582l3.692-3.727H1.25A1.11 1.11 0 01.125 7.75c0-.598.492-1.125 1.125-1.125h10.758L8.316 2.934a1.084 1.084 0 010-1.582 1.084 1.084 0 011.582 0l5.625 5.625c.457.421.457 1.16 0 1.582z"
+                        class="fill-white group-hover:fill-primary " />
+                </svg>
+            </div>
+    </section>
+    <!-- footer section  -->
+    <footer class="w-full  bg-white">
+        <div class="max-w-container mx-auto bg-white">
+            <!-- footer menus  -->
+            <div class="  py-16 grid grid-cols-4 gap-8 mx-auto">
+                <!-- contact -->
+                <div class="">
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8">CONTACT</h3>
+                    <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
+                        <li>5 Rialto Building<br> NE1 2JR</li>
+                        <li><a href="tel:07768151690 ">
+                                Phone: 07768151690 </a></li>
+                        <li><a href="mailto:info@nuvionx.co.uk">Email: info@nuvionx.co.uk</a></li>
+                        <li class="space-x-6 text-headdark text-3xl">
+                            <a href=""><i
+                                    class="fa-brands cursor-pointer transform transition-transform duration-200 hover:scale-125 fa-linkedin-in"></i>
+                            </a>
+                            <a href=""><i
+                                    class="fa-brands cursor-pointer transform transition-transform duration-200 hover:scale-125 fa-x-twitter"></i>
+                            </a>
+                            <a href=""><i
+                                    class="fa-brands cursor-pointer transform transition-transform duration-200 hover:scale-125 fa-instagram"></i>
+                            </a>
+                            <a href=""><i
+                                    class="fa-brands cursor-pointer transform transition-transform duration-200 hover:scale-125 fa-facebook"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="">
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8">HELP</h3>
+                    <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
+                        <li><a href="#">Aboout Company</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Help Center</a></li>
+
+                    </ul>
+                </div>
+                <div class="">
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8">QUICK MENU</h3>
+                    <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Sectors We Serve</a></li>
+                        <li><a href="#">Inventory & Lifecycle Management</a></li>
+                        <li><a href="#">Training & Development</a></li>
+
+                    </ul>
+                </div>
+                <div class="">
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8">COMPANY</h3>
+                    <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
+                        <li><a href="#">Bookings & Cancellations </a></li>
+                        <li><a href="#">Website Terms</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="h-[1px] bg-[#D0D0D0]  w-full"></div>
+
+            <div class="flex justify-between items-center py-10">
+                <div class="font-HindMadurai text-headdark leading-6">2025 © Nuvionx. All Rights Reserved.</div>
+                <div class="font-HindMadurai text-headdark leading-6 space-x-12">
+                    <a href="">Privacy & Policy</a>
+                    <a href="">Terms & Condition</a>
+                </div>
+            </div>
+        </div>
+        <div class="py-1.5 bg-primary w-full"></div>
+    </footer>
+</body>
+<script src="./main.js"></script>
+
+</html>
