@@ -27,6 +27,7 @@
   --color-star: #f2c94c;
   --color-imgbg: #bdbdbd;
   --text-56px: 56px;
+  --breakpoint-xl: 81rem;
 }
 /* @font-face {
   font-family: KumbhSans;
