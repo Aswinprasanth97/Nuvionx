@@ -58,19 +58,56 @@
                         <li class=""><span
                                 class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer">HOME</span>
                         </li>
-                        <li class=""><span
-                                class="inline-block w-full  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer">OUR
-                                SERVICES</span></li>
+                        <li class="">
+                            <div class="relative inline-block text-center ">
+                                <button id="service-main"
+                                    class="inline-flex  items-center text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-sm  rounded-lg"
+                                    type="button" data-dropdown-toggle="dropdown">
+                                    OUR SERVICES
+                                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div id="service-drop"
+                                    class="hidden   absolute transform -translate-x-1/4  mt-2 w-[305px] bg-white text-base z-50 list-none rounded-xl shadow"
+                                    id="dropdown">
+                                    <ul class=" py-1 !text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
+                                        aria-labelledby="dropdown">
+                                        <li><a href="./our-services-medical-equipment-maintenance.html"
+                                                class="block pl-6 py-6 text-sm hover:bg-gray-100">Medical
+                                                Equipment Maintenance</a></li>
+                                        <li><a href="./our-services-clinical-engineering-support.html"
+                                                class="block pl-6 py-6 text-sm hover:bg-gray-100">Clinical
+                                                Engineering Support</a></li>
+                                        <li><a href="./our-services-asset-management-audit-support.html"
+                                                class="block  pl-6 py-6 text-sm hover:bg-gray-100">Asset
+                                                Management & Audit Support</a>
+                                        </li>
+                                        <li><a href="./our-services-ultrasound-probe-repair.html"
+                                                class="block pl-6 py-6 text-sm hover:bg-gray-100">Ultrasound
+                                                Probe Repair</a>
+                                        </li>
+                                        <li><a href="./our-services-bed-maintenance.html"
+                                                class="block pl-6 py-6 text-sm hover:bg-gray-100">Bed
+                                                Maintenance</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
                         <li><span
                                 class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
                                     href="./aboutus.html">ABOUT US</a></span></li>
                         <li><span
-                                class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer">CONTACT</span>
+                                class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
+                                    href="./contactus.html">CONTACT</a></span>
                         </li>
                         <li>
                             <div class="relative inline-block text-center ">
                                 <button id="nav-main"
-                                    class="inline-flex  items-center text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:font-bold hover:scale-110 text-sm  rounded-lg"
+                                    class="inline-flex  items-center text-white transition duration-300 ease-in-out transform hover:-translate-y-1  hover:scale-110 text-sm  rounded-lg"
                                     type="button" data-dropdown-toggle="dropdown">
                                     MORE
                                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,18 +116,20 @@
                                     </svg>
                                 </button>
                                 <div id="nav-drop"
-                                    class="hidden  absolute -left-full mt-2 w-56 bg-white text-base z-50 list-none rounded shadow"
+                                    class="hidden  absolute transform -translate-x-1/4  mt-2 w-[305px] bg-white text-base z-50 list-none rounded-xl shadow"
                                     id="dropdown">
-                                    <ul class="py-1 text-gray-700" aria-labelledby="dropdown">
+                                    <ul class="py-1 !text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
+                                        aria-labelledby="dropdown">
                                         <li><a href="#"
-                                                class="block px-4 py-2 text-sm hover:bg-gray-100">Testimonials</a></li>
-                                        <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Sectors We
+                                                class="block pl-6 py-6 text-sm hover:bg-gray-100">Testimonials</a></li>
+                                        <li><a href="./more-sectors-we-serve.html"
+                                                class="block pl-6 py-6 text-sm hover:bg-gray-100">Sectors We
                                                 Serve</a></li>
-                                        <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Inventory &
-                                                Life Management</a>
+                                        <li><a href="./more-Inventory-life-cycle-mangement.html"
+                                                class="block pl-6 py-6 text-sm hover:bg-gray-100">Inventory &
+                                                Lifecycle Management</a>
                                         </li>
-                                        <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Training &
-                                                Development</a></li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -99,8 +138,9 @@
                 </div>
                 <div class="">
                     <button
-                        class="  z-0 font-KumbhSans  hover:bg-white text-white cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">
-                        <span class="hover:text-transparent hover:bg-clip-text hover:mix-blend-multiply">BOOK NOW</span>
+                        class="  z-0 font-KumbhSans hover:text-black  hover:bg-white text-white cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">
+
+                        BOOK NOW
                     </button>
                 </div>
 
@@ -119,8 +159,8 @@
             Your browser does not support the video tag.
         </video>
         <div
-            class="lg:max-w-5xl xl:max-w-container lg:mb-16 mx-auto  flex lg:items-end xl:items-start justify-between lg:h-full xl:h-fit  w-full">
-            <div class="w-1/2 text-white">
+            class="lg:max-w-5xl xl:max-w-container lg:mb-12 mx-auto xl:mb-0  flex lg:items-end xl:items-start justify-between lg:h-full xl:h-fit  w-full">
+            <div class="xl:w-1/2 lg:w-2/3  text-white">
                 <div class="inline-flex items-center">
                     <img class="w-10 h-7" src="./Public/assets/scope.svg" alt="nuvonix-logo">
                     <h6 class="text-sm font-KumbhSans tracking-4px ml-3 font-semibold  uppercase">Precision You Can
@@ -674,7 +714,9 @@
                                 </div>
 
                             </div>
-                            <h3 class="font-KumbhSans ml-6 font-medium lg:text-lg xl:text-xl leading-grid28 text-headdark">Trusted
+                            <h3
+                                class="font-KumbhSans ml-6 font-medium lg:text-lg xl:text-xl leading-grid28 text-headdark">
+                                Trusted
                                 Industry
                                 Expertise
                             </h3>
@@ -727,9 +769,9 @@
 
             </div>
             <div class="mt-[60px] grid grid-cols-3 gap-8">
-                <div class="relative text-center min-w-[413px] rounded-md w-full max-w-[416px] h-full bg-white ">
+                <div class="relative text-center  rounded-md w-full max-w-[416px] h-full bg-white ">
                     <div
-                        class="absolute p-8   left-[40%] top-[45%] bg-primary rounded-xl  flex items-center justify-center">
+                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
                         <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
                         <!-- <svg width="31" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M.45 1.303v1.878H2.36V1.303H.45zM7.532 1.32v1.844h1.912V1.32H7.532z" fill="#fff" />
@@ -756,7 +798,7 @@
                 </div>
                 <div class="bg-white relative text-center rounded-md w-full max-w-[416px] h-full">
                     <div
-                        class="absolute p-8 left-[40%] top-[45%] bg-primary rounded-xl  flex items-center justify-center">
+                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
 
                         <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
                     </div>
@@ -774,7 +816,7 @@
                 </div>
                 <div class="bg-white relative text-center rounded-md w-full max-w-[416px] h-full">
                     <div
-                        class="absolute p-8 left-[40%] top-[45%] bg-primary rounded-xl  flex items-center justify-center">
+                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
 
                         <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
                     </div>
@@ -793,7 +835,7 @@
                 </div>
                 <div class="bg-white relative text-center rounded-md w-full max-w-[416px] h-full">
                     <div
-                        class="absolute p-8 left-[40%] top-[45%] bg-primary rounded-xl  flex items-center justify-center">
+                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
 
                         <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
                     </div>
@@ -812,7 +854,7 @@
                 </div>
                 <div class="bg-white relative text-center rounded-md w-full max-w-[416px] h-full">
                     <div
-                        class="absolute p-8 left-[40%] top-[45%] bg-primary rounded-xl  flex items-center justify-center">
+                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
 
                         <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
                     </div>
@@ -831,7 +873,7 @@
                 </div>
                 <div class="bg-white relative text-center rounded-md w-full max-w-[416px] h-full">
                     <div
-                        class="absolute p-8 left-[40%] top-[45%] bg-primary rounded-xl  flex items-center justify-center">
+                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
 
                         <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
                     </div>
@@ -886,9 +928,10 @@
         </div>
     </section>
     <!-- image view  -->
-    <section class="w-full my-28 h-screen">
-        <div
-            class="mx-auto w-container xl:max-w-container lg:max-w-5xl relative h-full bg-cover rounded-xl bg-no-repeat bg-[url('Public/assets/oproom.webp')]">
+    <section class="w-full h-[875px] ">
+        <!-- bg-no-repeat bg-[url('Public/assets/oproom.webp')] -->
+        <div class="mx-auto  xl:max-w-container lg:max-w-5xl h-full relative  bg-fill rounded-xl ">
+            <img class="absolute h-[875px] w-full object-fill rounded-xl z-0" src="./Public/assets/oproom.webp" alt="">
             <div
                 class="absolute w-[86px] h-[86px] hover:bg-secondary-cyan left-[313px] top-[105px] bg-primary rounded-full  flex items-center justify-center">
 
@@ -914,15 +957,18 @@
 
                 <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
             </div>
-            <div class="w-full h-full flex items-end justify-between">
-                <div class=" w-[55%] text-wrap  rounded-xl mb-11 ml-12 bg-primary/80">
+            <div class="w-full h-full flex items-end justify-between z-10">
+                <div
+                    class="  w-[55%] max-w-[70%] text-wrap  rounded-xl xl:mb-11 z-10 xl:ml-12 lg:mb-6 lg:ml-6 bg-primary/80">
                     <div class=" h-full p-12 text-white">
                         <div class="inline-flex items-center   mb-3">
                             <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-white"></div>
                             <h6 class="text-white  font-semibold tracking-4px leading-6 uppercase">Top Rated
                             </h6>
                         </div>
-                        <h1 class="font-medium  text-[3.5em] leading-16 capitalize ">Unmatched Expertise,
+                        <!-- lg:text-5xl xl:text-6xl lg:leading-12 xl:leading-16 -->
+                        <h1 class="font-medium  text-[min(10vw,3.5rem)] lg:leading-12 xl:leading-16 capitalize ">
+                            Unmatched Expertise,
                             Unparalleled Performance
                         </h1>
                         <p class="mt-8 leading-6 ">Our commitment to excellence has earned us top
@@ -931,7 +977,7 @@
                             expectations. Experience the
                             quality that has made us a trusted choice in medical equipment maintenance.
                         </p>
-                        <div class="my-12 uppercase">
+                        <div class="xl:my-12 lg:my-6 uppercase">
                             <a href="./aboutus.html"
                                 class="text-white font-KumbhSans bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer leading-6 rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">Find
                                 Out more</a>
@@ -1169,7 +1215,7 @@
                 <div class="">
                     <h3 class="font-semibold leading-6 tracking-4px mb-8">HELP</h3>
                     <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
-                        <li><a href="#">Aboout Company</a></li>
+                        <li><a href="#">About Company</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">Help Center</a></li>
 

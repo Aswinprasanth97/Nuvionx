@@ -28,6 +28,10 @@
   --color-imgbg: #bdbdbd;
   --text-56px: 56px;
   --breakpoint-xl: 81rem;
+  --spacing-h320: 320px;
+  --text-parasize: 32px;
+  --spacing-servicecontainer: 976px;
+  --color-dropdown-text: #1b1c21;
 }
 /* @font-face {
   font-family: KumbhSans;
@@ -38,3 +42,10 @@
 body {
   font-family: "KumbhSans";
 } */
+
+.heading {
+  @apply font-KumbhSans text-headdark font-medium text-parasize leading-10;
+}
+.paras {
+  @apply font-HindMadurai leading-6 text-paradark;
+}
