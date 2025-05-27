@@ -12,11 +12,11 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="relative p-0 m-0 box-border bg-lightgrey scroll-smooth ">
+<body class="relative p-0 m-0 box-border text-base bg-lightgrey scroll-smooth ">
     <!-- ---Topbar--- -->
     <div class="bg-primary  h-[62px] m-auto text-sm leading-6 relative top-0 w-full ">
         <div
-            class=" text-white  lg:max-w-5xl xl:max-w-container mx-auto   text-sm flex flex-col lg:flex-row justify-between items-center  py-5">
+            class=" text-white  lg:max-w-5xl xl:max-w-container mx-auto w-[95%]  text-sm flex flex-col lg:flex-row justify-between items-center  py-5">
 
             <ul class="flex space-x-6 justify-between place-items-center">
                 <li class="">Precision</li>
@@ -47,15 +47,15 @@
     </div>
 
     <!-- navbar -->
-    <header class="">
-        <nav class="justify-between z-20  absolute lg:top-10 lg:my-8 xl:top-16 w-full xl:my-12 ">
+    <header class=" ">
+        <nav class="justify-between z-20  absolute lg:top-10 lg:my-8 xl:top-16 w-full 2xl:my-12 ">
             <!-- navbar main -->
-            <div class="lg:max-w-5xl xl:max-w-container mx-auto flex justify-between items-center ">
+            <div class="lg:max-w-5xl xl:max-w-container mx-auto flex w-[95%] justify-between items-center ">
                 <div><img class="w-28  h-10" src="./Public/assets/Nuvonix Logo.svg" alt="Nuvonix Logo"></div>
                 <div class="">
                     <ul
                         class="flex font-KumbhSans text-white gap-6 items-center justify-evenly  text-sm leading-6 tracking-2px">
-                        <li class=""><span
+                        <li class="font-bold"><span
                                 class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer">HOME</span>
                         </li>
                         <li class="">
@@ -73,24 +73,24 @@
                                 <div id="service-drop"
                                     class="hidden   absolute transform -translate-x-1/4  mt-2 w-[305px] bg-white text-base z-50 list-none rounded-xl shadow"
                                     id="dropdown">
-                                    <ul class=" py-1 !text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
+                                    <ul class="!text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
                                         aria-labelledby="dropdown">
                                         <li><a href="./our-services-medical-equipment-maintenance.html"
-                                                class="block pl-6 py-6 text-sm hover:bg-gray-100">Medical
+                                                class="block dropdown-item pl-6 py-6 text-sm hover:text-white rounded-t-xl">Medical
                                                 Equipment Maintenance</a></li>
                                         <li><a href="./our-services-clinical-engineering-support.html"
-                                                class="block pl-6 py-6 text-sm hover:bg-gray-100">Clinical
+                                                class="block dropdown-item pl-6 py-6 text-sm hover:text-white ">Clinical
                                                 Engineering Support</a></li>
                                         <li><a href="./our-services-asset-management-audit-support.html"
-                                                class="block  pl-6 py-6 text-sm hover:bg-gray-100">Asset
+                                                class="block dropdown-item  pl-6 py-6 text-sm hover:text-white ">Asset
                                                 Management & Audit Support</a>
                                         </li>
                                         <li><a href="./our-services-ultrasound-probe-repair.html"
-                                                class="block pl-6 py-6 text-sm hover:bg-gray-100">Ultrasound
+                                                class="block dropdown-item pl-6 py-6 text-sm hover:text-white ">Ultrasound
                                                 Probe Repair</a>
                                         </li>
                                         <li><a href="./our-services-bed-maintenance.html"
-                                                class="block pl-6 py-6 text-sm hover:bg-gray-100">Bed
+                                                class="block dropdown-item pl-6 py-6 text-sm hover:text-white rounded-b-xl">Bed
                                                 Maintenance</a>
                                         </li>
 
@@ -108,7 +108,7 @@
                         <li>
                             <div class="relative inline-block text-center ">
                                 <button id="nav-main"
-                                    class="inline-flex  items-center cursor-pointer text-white transition duration-300 ease-in-out transform hover:-translate-y-1  hover:scale-110 text-sm  rounded-lg"
+                                    class="inline-flex ring-0  items-center cursor-pointer text-white transition duration-300 ease-in-out transform hover:-translate-y-1  hover:scale-110 text-sm  rounded-lg"
                                     type="button" data-dropdown-toggle="dropdown">
                                     MORE
                                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -117,17 +117,22 @@
                                     </svg>
                                 </button>
                                 <div id="nav-drop"
-                                    class="hidden  absolute transform -translate-x-1/4  mt-2 w-[305px] bg-white text-base z-50 list-none rounded-xl shadow"
+                                    class="hidden absolute transform -translate-x-1/4  mt-2 min-w-[300px] w-full bg-white text-base z-50 list-none rounded-xl shadow"
                                     id="dropdown">
-                                    <ul class="py-1 !text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
+                                    <ul class=" !text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
                                         aria-labelledby="dropdown">
-                                        <li><a href="#"
-                                                class="block pl-6 py-6 text-sm hover:bg-gray-100">Testimonials</a></li>
-                                        <li><a href="./more-sectors-we-serve.html"
-                                                class="block pl-6 py-6 text-sm hover:bg-gray-100">Sectors We
+
+                                        <li class=" hover:text-white"><a href="#"
+                                                class="block  dropdown-item  box pl-6 py-6 rounded-t-xl text-sm ">Testimonials</a>
+                                        </li>
+                                        <li class="hover:text-white"><a href="./more-sectors-we-serve.html"
+                                                class="block  dropdown-item  pl-6 py-6 text-sm ">Sectors
+                                                We
                                                 Serve</a></li>
-                                        <li><a href="./more-Inventory-life-cycle-mangement.html"
-                                                class="block pl-6 py-6 text-sm hover:bg-gray-100">Inventory &
+                                        <li class="hover:text-white"><a
+                                                href="./more-Inventory-life-cycle-mangement.html"
+                                                class="block  dropdown-item pl-6 py-6 text-sm  rounded-b-xl">Inventory
+                                                &
                                                 Lifecycle Management</a>
                                         </li>
 
@@ -153,15 +158,15 @@
     <!-- main-landing -->
     <!-- bg-[url('Public/assets/main-section.webp')] -->
     <section
-        class="bg-[#131313]/50  relative flex items-center justify-center bg-cover bg-blend-overlay  bg-top-right bg-no-repeat h-screen w-full">
+        class="bg-[#131313]/50  relative flex items-center justify-center bg-cover bg-blend-overlay  bg-top-right bg-no-repeat lg:max-2xl:py-28 2xl:h-screen w-full">
         <!-- Background Video -->
         <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
             <source src="./Public/assets/bg-final.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div
-            class="lg:max-w-5xl xl:max-w-container lg:mb-12 mx-auto xl:mb-0  flex lg:items-end xl:items-start justify-between lg:h-full xl:h-fit  w-full">
-            <div class="xl:w-1/2 lg:w-2/3  text-white">
+            class="lg:max-w-5xl xl:max-w-container lg:mb-12 mx-auto xl:mb-0 w-[95%]  flex lg:items-end xl:items-start justify-between lg:h-full xl:h-fit  ">
+            <div class="xl:w-1/2 lg:w-3/5  text-white">
                 <div class="inline-flex items-center">
                     <img class="w-10 h-7" src="./Public/assets/scope.svg" alt="nuvonix-logo">
                     <h6 class="text-sm font-KumbhSans tracking-4px ml-3 font-semibold  uppercase">Precision You Can
@@ -169,13 +174,13 @@
                         On</h6>
                 </div>
                 <h6
-                    class="xl:text-7xl lg:text-5xl lg:leading-14 xl:leading-20 font-KumbhSans font-medium lg:my-2  xl:my-4">
+                    class="xl:text-[4.5rem] lg:text-4xl 2xl:text-  lg:leading-14 xl:leading-20 font-KumbhSans font-medium lg:my-2  xl:my-4">
                     Expert
                     Calibration &
                     Maintenance for
                     Medical
                     Equipment</h6>
-                <p class="font-HindMadurai lg:text-md xl:text-lg leading-7">At <strong>Nuvionx</strong> , we don’t just
+                <p class="font-HindMadurai lg:text-sm xl:text-lg leading-7">At <strong>Nuvionx</strong> , we don’t just
                     service
                     medical
                     equipment—we
@@ -197,7 +202,7 @@
     </section>
     <!-- why choose nuvonix section-->
     <section class=" w-full my-28 ">
-        <div class="lg:max-w-5xl xl:max-w-container h-full mx-auto w-full">
+        <div class="lg:max-w-5xl xl:max-w-container w-[95%] h-full mx-auto">
             <div class=" w-full h-full mb-4  flex items-start justify-between font-KumbhSans">
                 <div class="w-1/2 h-full">
                     <img class="rounded-xl h-full w-full object-contain" src="./Public/assets/lab-view.webp"
@@ -210,8 +215,7 @@
                             Choose Nuvionx
                         </h6>
                     </div>
-                    <h1
-                        class="font-medium text-text-dark lg:text-4xl xl:text-6xl lg:leading-12 xl:leading-16 capitalize ">
+                    <h1 class="main-heading ">
                         Specialised
                         <br class="lg:hidden xl:block">
                         maintenance
@@ -221,7 +225,7 @@
                         hospitals and
                         healthcare centres
                     </h1>
-                    <p class="xl:mt-8 lg:mt-3 leading-6 text-textpara-dark">Whether it’s calibration, certification, or
+                    <p class="xl:mt-8 lg:mt-3 main-para">Whether it’s calibration, certification, or
                         preventative maintenance,
                         <strong>Nuvionx</strong> is
                         dedicated to keeping your biomedical
@@ -276,9 +280,9 @@
     </section>
     <!-- popular service 2  -->
     <section class="w-full ">
-        <div class="  flex justify-end ">
-            <div class="w-full  realtive  h-full  grid grid-cols-4">
-                <div class="col-span-2 lg:flex lg:justify-center xl:justify-center">
+        <div class="flex justify-end ">
+            <div class="w-full  realtive  h-full  grid grid-cols-4 ">
+                <div class="col-span-2  lg:flex lg:justify-center xl:justify-center">
                     <div class="h-full xl:w-full lg:w-2/3   xl:pr-0 lg:pr-6 xl:flex xl:justify-end">
 
                         <div class=" xl:w-2/3 xl:ml-24  ">
@@ -289,15 +293,14 @@
                                     Services
                                 </h6>
                             </div>
-                            <h1
-                                class="font-medium w-full text-text-dark lg:text-5xl xl:text-6xl lg:leading-12 xl:leading-16 capitalize ">
+                            <h1 class=" w-full main-heading ">
                                 Trusted
                                 Services
                                 Healthcare
                                 Providers Rely On Most
                             </h1>
 
-                            <p class="mt-8 leading-6 text-textpara-dark w-xl">
+                            <p class="mt-8 main-para px-2">
                                 Discover the services healthcare providers rely on most. From essential equipment upkeep
                                 to
                                 specialized repairs,<strong>Nuvionx</strong>
@@ -326,14 +329,16 @@
                             minimizing the risk of issues
                             and meeting all necessary safety standards.</p>
                         <div class="w-12 mx-auto lg:mt-4 xl:mt-12">
-                            <div
-                                class="text-white py-4 flex items-center justify-center px-4 font-KumbhSans bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer  rounded-full text-center font-semibold">
-                                <svg width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M15.523 8.559l-5.625 5.625a1.09 1.09 0 01-.773.316c-.316 0-.598-.105-.809-.316a1.084 1.084 0 010-1.582l3.692-3.727H1.25A1.11 1.11 0 01.125 7.75c0-.598.492-1.125 1.125-1.125h10.758L8.316 2.934a1.084 1.084 0 010-1.582 1.084 1.084 0 011.582 0l5.625 5.625c.457.421.457 1.16 0 1.582z"
-                                        fill="#fff" />
-                                </svg>
-                            </div>
+                            <a href="./our-services-medical-equipment-maintenance.html">
+                                <div
+                                    class="text-white py-4 flex items-center justify-center px-4 font-KumbhSans bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer  rounded-full text-center font-semibold">
+                                    <svg width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.523 8.559l-5.625 5.625a1.09 1.09 0 01-.773.316c-.316 0-.598-.105-.809-.316a1.084 1.084 0 010-1.582l3.692-3.727H1.25A1.11 1.11 0 01.125 7.75c0-.598.492-1.125 1.125-1.125h10.758L8.316 2.934a1.084 1.084 0 010-1.582 1.084 1.084 0 011.582 0l5.625 5.625c.457.421.457 1.16 0 1.582z"
+                                            fill="#fff" />
+                                    </svg>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -365,14 +370,16 @@
                             maintaining the high standards
                             of your equipment.</p>
                         <div class="w-12 mx-auto lg:mt-4 xl:mt-12">
-                            <div
-                                class="text-white py-4 flex items-center justify-center px-4 font-KumbhSans bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer  rounded-full text-center font-semibold">
-                                <svg width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M15.523 8.559l-5.625 5.625a1.09 1.09 0 01-.773.316c-.316 0-.598-.105-.809-.316a1.084 1.084 0 010-1.582l3.692-3.727H1.25A1.11 1.11 0 01.125 7.75c0-.598.492-1.125 1.125-1.125h10.758L8.316 2.934a1.084 1.084 0 010-1.582 1.084 1.084 0 011.582 0l5.625 5.625c.457.421.457 1.16 0 1.582z"
-                                        fill="#fff" />
-                                </svg>
-                            </div>
+                            <a href="/our-services-ultrasound-probe-repair.html">
+                                <div
+                                    class="text-white py-4 flex items-center justify-center px-4 font-KumbhSans bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer  rounded-full text-center font-semibold">
+                                    <svg width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.523 8.559l-5.625 5.625a1.09 1.09 0 01-.773.316c-.316 0-.598-.105-.809-.316a1.084 1.084 0 010-1.582l3.692-3.727H1.25A1.11 1.11 0 01.125 7.75c0-.598.492-1.125 1.125-1.125h10.758L8.316 2.934a1.084 1.084 0 010-1.582 1.084 1.084 0 011.582 0l5.625 5.625c.457.421.457 1.16 0 1.582z"
+                                            fill="#fff" />
+                                    </svg>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -598,9 +605,9 @@
         </div>
     </section>
     <!-- our features  -->
-    <section class="w-full  pb-16  my-[120px]  overflow-hidden
+    <section class="w-full  pb-16  my-[120px]  overflow-x-hidden
       ">
-        <div class="xl:max-w-container lg:max-w-5xl  mx-auto w-full h-[900px] flex justify-around items-start ">
+        <div class="xl:max-w-container lg:max-w-5xl w-[95%]  mx-auto  h-[900px] flex justify-around items-start ">
             <div class=" w-1/2">
                 <div class="mb-8">
                     <div class="  ">
@@ -610,13 +617,12 @@
                                 features
                             </h6>
                         </div>
-                        <h1
-                            class="font-medium w-full text-text-dark lg:text-5xl xl:text-6xl lg:leading-12 xl:leading-16 capitalize  ">
+                        <h1 class="w-full main-heading  ">
                             Innovative Features
                             Engineered for Healthcare Excellence
                         </h1>
 
-                        <p class="mt-8 leading-6 text-textpara-dark ">
+                        <p class="mt-8 main-para">
                             At <strong>Nuvionx</strong> , we go beyond basic service. Our commitment to precision,
                             responsiveness, and
                             regulatory excellence ensures
@@ -626,9 +632,22 @@
                         </p>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-8  ">
-                    <div class="  rounded-xl p-6 bg-white">
-                        <div class="flex items-start justify-around w-full">
+                <div class="grid grid-cols-2 lg:gap-2 xl:gap-8  ">
+                    <div class="  rounded-xl p-6 bg-white relative z-20">
+                        <svg class="absolute right-0 z-10" width="70" height="80" viewBox="0 0 70 80" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode:plus-darker">
+                                <path d="M0.482178 3.88203L0.482178 12.5894L9.34784 12.5894V3.88203L0.482178 3.88203Z"
+                                    fill="#EBF3FE" />
+                                <path d="M33.3322 3.96109V12.5101L42.1978 12.5101V3.96109L33.3322 3.96109Z"
+                                    fill="#EBF3FE" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M139.691 17.7332C140.218 19.8441 140.482 22.1661 140.482 24.6991C140.482 27.1266 140.218 29.3958 139.691 31.5067C139.268 33.7231 138.582 35.7284 137.633 37.5226C136.683 39.4224 135.522 41.0583 134.15 42.4304C132.883 43.908 131.405 45.1218 129.717 46.0717C128.028 47.1271 126.181 47.9187 124.176 48.4464C123.437 48.6575 122.698 48.8158 121.959 48.9213C121.484 65.7027 107.711 79.1595 90.7712 79.1595H49.0059C32.2245 79.1595 18.451 65.861 17.8178 49.2379C17.7122 49.2379 17.6595 49.2379 17.6595 49.2379C15.0209 49.2379 12.6462 48.7102 10.5353 47.6548C9.47987 47.2326 8.52997 46.6522 7.68563 45.9133C6.73573 45.1745 5.89138 44.3302 5.15257 43.3803C3.67497 41.4805 2.56677 39.2113 1.82797 36.5727C0.983623 33.8286 0.561444 30.7678 0.561444 27.3905V21.3745H9.26878V27.3905C9.26878 32.0344 10.2714 35.5701 12.2768 37.9976C12.91 38.8419 13.7544 39.528 14.8098 40.0557C15.1264 40.2668 15.4431 40.4251 15.7597 40.5306C16.9207 40.9528 18.24 41.2694 19.7176 41.4805C20.2453 41.4805 20.7202 41.4805 21.1424 41.4805H21.459C21.9868 41.4805 22.4617 41.4805 22.8839 41.4805C24.3615 41.2694 25.7335 40.9528 27.0001 40.5306C27.2112 40.4251 27.475 40.2668 27.7916 40.0557C28.8471 39.528 29.7442 38.8419 30.483 37.9976C32.4883 35.5701 33.491 32.0344 33.491 27.3905V21.3745H42.04V27.3905C42.04 30.7678 41.6179 33.8286 40.7735 36.5727C40.0347 39.2113 38.9265 41.4805 37.4489 43.3803C36.7101 44.3302 35.8657 45.1745 34.9158 45.9133C34.0715 46.6522 33.1744 47.2326 32.2245 47.6548C30.4302 48.4991 28.4777 48.9741 26.3668 49.0797C27.0001 61.1116 36.9739 70.6105 49.0059 70.6105H90.7712C102.961 70.6105 112.935 60.9533 113.41 48.763C112.671 48.6575 111.933 48.5519 111.194 48.4464C109.189 47.9187 107.342 47.1271 105.653 46.0717C103.964 45.1218 102.487 43.908 101.22 42.4304C99.848 41.0583 98.687 39.4224 97.7371 37.5226C96.7872 35.7284 96.1012 33.7231 95.679 31.5067C95.1513 29.3958 94.8874 27.1266 94.8874 24.6991C94.8874 22.1661 95.1513 19.8441 95.679 17.7332C96.1012 15.5168 96.7872 13.5115 97.7371 11.7173C98.687 9.92303 99.848 8.28709 101.22 6.80949C102.487 5.33188 103.964 4.11815 105.653 3.16826C107.342 2.11282 109.189 1.32125 111.194 0.793529C113.199 0.265812 115.363 0.00195312 117.685 0.00195312C120.007 0.00195312 122.17 0.265812 124.176 0.793529C126.181 1.32125 128.028 2.11282 129.717 3.16826C131.405 4.11815 132.883 5.33188 134.15 6.80949C135.522 8.28709 136.683 9.92303 137.633 11.7173C138.582 13.5115 139.268 15.5168 139.691 17.7332ZM131.933 24.6991C131.933 22.0605 131.617 19.6858 130.983 17.5749C130.244 15.5696 129.295 13.8281 128.134 12.3505C126.867 10.8729 125.389 9.76472 123.701 9.02591C121.907 8.18156 119.901 7.75939 117.685 7.75939C115.468 7.75939 113.516 8.18156 111.827 9.02591C110.033 9.76472 108.503 10.8729 107.236 12.3505C106.075 13.8281 105.125 15.5696 104.386 17.5749C103.753 19.6858 103.436 22.0605 103.436 24.6991C103.436 27.2321 103.753 29.5541 104.386 31.665C105.125 33.7759 106.075 35.5701 107.236 37.0477C108.503 38.4198 110.033 39.528 111.827 40.3723C113.516 41.1111 115.468 41.4805 117.685 41.4805C119.901 41.4805 121.907 41.1111 123.701 40.3723C125.389 39.528 126.867 38.4198 128.134 37.0477C129.295 35.5701 130.244 33.7759 130.983 31.665C131.617 29.5541 131.933 27.2321 131.933 24.6991Z"
+                                    fill="#EBF3FE" />
+                            </g>
+                        </svg>
+
+                        <div class="flex items-start justify-around w-full z-20">
                             <div class="w-12 mx-auto ">
                                 <div
                                     class="text-white py-4 flex group items-center justify-center px-4 font-KumbhSans bg-primary hover:bg-white hover:border-0 cursor-pointer  rounded-full text-center font-semibold">
@@ -640,19 +659,37 @@
                                 </div>
 
                             </div>
-                            <h3 class="font-KumbhSans ml-6 font-medium text-xl leading-grid28 text-headdark">Trusted
+                            <h3
+                                class="font-KumbhSans ml-6 font-medium lg:text-sm xl:text-xl leading-grid28 text-headdark z-20">
+                                Trusted
                                 Industry
                                 Expertise
                             </h3>
+
                         </div>
-                        <p class="font-HindMadurai pt-6 text-sm leading-6 text-paradark">We deliver reliable,
+                        <p class="font-HindMadurai pt-6 lg:text-xs xl:text-sm leading-6 text-paradark">We deliver
+                            reliable,
                             specialized
                             support built on
                             deep
                             healthcare service
                             experience.</p>
                     </div>
-                    <div class="bg-primary text-white  rounded-xl p-6">
+                    <div class="bg-primary text-white rounded-xl p-6 relative ">
+                        <svg class="absolute right-0 bottom-3 z-10" width="70" height="80" viewBox="0 0 70 80"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode:plus-darker">
+                                <path
+                                    d="M140.482 75.2793L140.482 66.572L131.617 66.572L131.617 75.2793L140.482 75.2793Z"
+                                    fill="#EBF3FE" />
+                                <path
+                                    d="M107.632 75.2003L107.632 66.6513L98.7668 66.6513L98.7668 75.2003L107.632 75.2003Z"
+                                    fill="#EBF3FE" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M1.27402 61.4281C0.746294 59.3173 0.482424 56.9953 0.482424 54.4623C0.482424 52.0348 0.746295 49.7656 1.27402 47.6547C1.69619 45.4383 2.38219 43.433 3.33208 41.6387C4.28197 39.7389 5.44298 38.103 6.81505 36.731C8.08156 35.2534 9.55915 34.0396 11.2478 33.0897C12.9365 32.0343 14.7836 31.2427 16.7889 30.715C17.5277 30.5039 18.2665 30.3456 19.0053 30.24C19.4802 13.4586 33.2537 0.00183694 50.1934 0.00183842L91.9587 0.00184207C108.74 0.00184354 122.514 13.3003 123.147 29.9234C123.252 29.9234 123.305 29.9234 123.305 29.9234C125.944 29.9234 128.318 30.4511 130.429 31.5066C131.485 31.9288 132.435 32.5092 133.279 33.248C134.229 33.9868 135.073 34.8312 135.812 35.7811C137.29 37.6809 138.398 39.9501 139.137 42.5886C139.981 45.3328 140.403 48.3935 140.403 51.7709L140.403 57.7869L131.696 57.7869L131.696 51.7709C131.696 47.127 130.693 43.5913 128.688 41.1638C128.055 40.3194 127.21 39.6334 126.155 39.1057C125.838 38.8946 125.522 38.7363 125.205 38.6308C124.044 38.2086 122.725 37.8919 121.247 37.6809C120.719 37.6809 120.244 37.6809 119.822 37.6809L119.506 37.6809C118.978 37.6809 118.503 37.6809 118.081 37.6809C116.603 37.8919 115.231 38.2086 113.965 38.6308C113.753 38.7363 113.49 38.8946 113.173 39.1057C112.118 39.6334 111.22 40.3194 110.482 41.1638C108.476 43.5913 107.474 47.127 107.474 51.7709L107.474 57.7869L98.9246 57.7869L98.9246 51.7709C98.9246 48.3935 99.3467 45.3328 100.191 42.5886C100.93 39.95 102.038 37.6809 103.516 35.7811C104.255 34.8312 105.099 33.9868 106.049 33.248C106.893 32.5092 107.79 31.9288 108.74 31.5066C110.534 30.6622 112.487 30.1873 114.598 30.0817C113.965 18.0498 103.991 8.55088 91.9587 8.55088L50.1934 8.55087C38.0031 8.55087 28.0293 18.2081 27.5543 30.3984C28.2931 30.5039 29.0319 30.6094 29.7707 30.715C31.7761 31.2427 33.6231 32.0343 35.3118 33.0897C37.0005 34.0396 38.478 35.2534 39.7446 36.731C41.1166 38.103 42.2776 39.7389 43.2275 41.6387C44.1774 43.433 44.8634 45.4383 45.2856 47.6547C45.8133 49.7656 46.0772 52.0348 46.0772 54.4623C46.0772 56.9953 45.8133 59.3173 45.2856 61.4281C44.8634 63.6445 44.1774 65.6499 43.2275 67.4441C42.2776 69.2383 41.1166 70.8743 39.7446 72.3519C38.478 73.8295 37.0005 75.0432 35.3118 75.9931C33.6231 77.0485 31.7761 77.8401 29.7707 78.3678C27.7654 78.8956 25.6018 79.1594 23.2798 79.1594C20.9578 79.1594 18.7942 78.8956 16.7889 78.3678C14.7835 77.8401 12.9365 77.0485 11.2478 75.9931C9.55914 75.0432 8.08156 73.8295 6.81505 72.3519C5.44298 70.8743 4.28197 69.2383 3.33208 67.4441C2.38219 65.6499 1.69618 63.6445 1.27402 61.4281ZM9.03144 54.4623C9.03144 57.1008 9.34807 59.4756 9.98134 61.5864C10.7201 63.5918 11.67 65.3332 12.831 66.8108C14.0975 68.2885 15.5751 69.3966 17.2638 70.1355C19.0581 70.9798 21.0634 71.402 23.2798 71.402C25.4962 71.402 27.4488 70.9798 29.1375 70.1355C30.9317 69.3967 32.4621 68.2885 33.7286 66.8109C34.8896 65.3332 35.8395 63.5918 36.5783 61.5864C37.2115 59.4756 37.5282 57.1008 37.5282 54.4623C37.5282 51.9292 37.2115 49.6073 36.5783 47.4964C35.8395 45.3855 34.8896 43.5913 33.7286 42.1137C32.4621 40.7416 30.9317 39.6334 29.1375 38.789C27.4488 38.0502 25.4962 37.6808 23.2798 37.6808C21.0634 37.6808 19.0581 38.0502 17.2638 38.789C15.5751 39.6334 14.0975 40.7416 12.831 42.1137C11.67 43.5913 10.7201 45.3855 9.98134 47.4964C9.34807 49.6072 9.03144 51.9292 9.03144 54.4623Z"
+                                    fill="#EBF3FE" />
+                            </g>
+                        </svg>
                         <div class="flex items-start justify-around w-full">
                             <div class="w-12 mx-auto ">
                                 <div
@@ -665,19 +702,31 @@
                                 </div>
 
                             </div>
-                            <h3 class="font-KumbhSans ml-6 font-medium text-xl leading-grid28 text-headdark">Trusted
-                                Industry
-                                Expertise
+                            <h3 class="font-KumbhSans ml-6 font-medium lg:text-sm xl:text-xl leading-grid28 text-white">
+                                Fast
+                                Response Times
                             </h3>
                         </div>
-                        <p class="font-HindMadurai  pt-6 text-sm leading-6 text-white">We deliver reliable,
-                            specialized
-                            support built on
-                            deep
-                            healthcare service
-                            experience.</p>
+                        <p class="font-HindMadurai  pt-6 lg:text-xs xl:text-sm leading-6 text-cardtext">We act quickly
+                            to minimize
+                            downtime, helping you maintain uninterrupted patient care.</p>
                     </div>
-                    <div class="bg-primary text-white rounded-xl p-6">
+                    <div class="bg-primary bg-blend-multiply text-white rounded-xl p-6 relative ">
+                        <svg class="absolute bg-blend-multiply right-0 bottom-3 z-10" width="70" height="80"
+                            viewBox="0 0 70 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode:plus-darker">
+                                <path
+                                    d="M140.482 75.2793L140.482 66.572L131.617 66.572L131.617 75.2793L140.482 75.2793Z"
+                                    fill="#EBF3FE" />
+                                <path
+                                    d="M107.632 75.2003L107.632 66.6513L98.7668 66.6513L98.7668 75.2003L107.632 75.2003Z"
+                                    fill="#EBF3FE" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M1.27402 61.4281C0.746294 59.3173 0.482424 56.9953 0.482424 54.4623C0.482424 52.0348 0.746295 49.7656 1.27402 47.6547C1.69619 45.4383 2.38219 43.433 3.33208 41.6387C4.28197 39.7389 5.44298 38.103 6.81505 36.731C8.08156 35.2534 9.55915 34.0396 11.2478 33.0897C12.9365 32.0343 14.7836 31.2427 16.7889 30.715C17.5277 30.5039 18.2665 30.3456 19.0053 30.24C19.4802 13.4586 33.2537 0.00183694 50.1934 0.00183842L91.9587 0.00184207C108.74 0.00184354 122.514 13.3003 123.147 29.9234C123.252 29.9234 123.305 29.9234 123.305 29.9234C125.944 29.9234 128.318 30.4511 130.429 31.5066C131.485 31.9288 132.435 32.5092 133.279 33.248C134.229 33.9868 135.073 34.8312 135.812 35.7811C137.29 37.6809 138.398 39.9501 139.137 42.5886C139.981 45.3328 140.403 48.3935 140.403 51.7709L140.403 57.7869L131.696 57.7869L131.696 51.7709C131.696 47.127 130.693 43.5913 128.688 41.1638C128.055 40.3194 127.21 39.6334 126.155 39.1057C125.838 38.8946 125.522 38.7363 125.205 38.6308C124.044 38.2086 122.725 37.8919 121.247 37.6809C120.719 37.6809 120.244 37.6809 119.822 37.6809L119.506 37.6809C118.978 37.6809 118.503 37.6809 118.081 37.6809C116.603 37.8919 115.231 38.2086 113.965 38.6308C113.753 38.7363 113.49 38.8946 113.173 39.1057C112.118 39.6334 111.22 40.3194 110.482 41.1638C108.476 43.5913 107.474 47.127 107.474 51.7709L107.474 57.7869L98.9246 57.7869L98.9246 51.7709C98.9246 48.3935 99.3467 45.3328 100.191 42.5886C100.93 39.95 102.038 37.6809 103.516 35.7811C104.255 34.8312 105.099 33.9868 106.049 33.248C106.893 32.5092 107.79 31.9288 108.74 31.5066C110.534 30.6622 112.487 30.1873 114.598 30.0817C113.965 18.0498 103.991 8.55088 91.9587 8.55088L50.1934 8.55087C38.0031 8.55087 28.0293 18.2081 27.5543 30.3984C28.2931 30.5039 29.0319 30.6094 29.7707 30.715C31.7761 31.2427 33.6231 32.0343 35.3118 33.0897C37.0005 34.0396 38.478 35.2534 39.7446 36.731C41.1166 38.103 42.2776 39.7389 43.2275 41.6387C44.1774 43.433 44.8634 45.4383 45.2856 47.6547C45.8133 49.7656 46.0772 52.0348 46.0772 54.4623C46.0772 56.9953 45.8133 59.3173 45.2856 61.4281C44.8634 63.6445 44.1774 65.6499 43.2275 67.4441C42.2776 69.2383 41.1166 70.8743 39.7446 72.3519C38.478 73.8295 37.0005 75.0432 35.3118 75.9931C33.6231 77.0485 31.7761 77.8401 29.7707 78.3678C27.7654 78.8956 25.6018 79.1594 23.2798 79.1594C20.9578 79.1594 18.7942 78.8956 16.7889 78.3678C14.7835 77.8401 12.9365 77.0485 11.2478 75.9931C9.55914 75.0432 8.08156 73.8295 6.81505 72.3519C5.44298 70.8743 4.28197 69.2383 3.33208 67.4441C2.38219 65.6499 1.69618 63.6445 1.27402 61.4281ZM9.03144 54.4623C9.03144 57.1008 9.34807 59.4756 9.98134 61.5864C10.7201 63.5918 11.67 65.3332 12.831 66.8108C14.0975 68.2885 15.5751 69.3966 17.2638 70.1355C19.0581 70.9798 21.0634 71.402 23.2798 71.402C25.4962 71.402 27.4488 70.9798 29.1375 70.1355C30.9317 69.3967 32.4621 68.2885 33.7286 66.8109C34.8896 65.3332 35.8395 63.5918 36.5783 61.5864C37.2115 59.4756 37.5282 57.1008 37.5282 54.4623C37.5282 51.9292 37.2115 49.6073 36.5783 47.4964C35.8395 45.3855 34.8896 43.5913 33.7286 42.1137C32.4621 40.7416 30.9317 39.6334 29.1375 38.789C27.4488 38.0502 25.4962 37.6808 23.2798 37.6808C21.0634 37.6808 19.0581 38.0502 17.2638 38.789C15.5751 39.6334 14.0975 40.7416 12.831 42.1137C11.67 43.5913 10.7201 45.3855 9.98134 47.4964C9.34807 49.6072 9.03144 51.9292 9.03144 54.4623Z"
+                                    fill="#EBF3FE" />
+                            </g>
+                        </svg>
+
                         <div class="flex items-start justify-around w-full">
                             <div class="w-12 mx-auto ">
                                 <div
@@ -690,19 +739,30 @@
                                 </div>
 
                             </div>
-                            <h3 class="font-KumbhSans ml-6 font-medium text-xl leading-grid28 text-headdark">Trusted
-                                Industry
-                                Expertise
+                            <h3
+                                class="font-KumbhSans ml-6 font-medium lg:text-sm xl:text-xl leading-grid28 text-white z-20">
+                                Regulatory
+                                Compliance
                             </h3>
                         </div>
-                        <p class="font-HindMadurai pt-6 text-sm leading-6">We deliver reliable,
-                            specialized
-                            support built on
-                            deep
-                            healthcare service
-                            experience.</p>
+                        <p class="font-HindMadurai pt-6 lg:text-xs xl:text-sm text-cardtext leading-6 z-20">We ensure
+                            every device
+                            meets UK
+                            and international healthcare standards for safety and accuracy.</p>
                     </div>
-                    <div class="p-6 rounded-xl bg-white">
+                    <div class="p-6 rounded-xl bg-white relative bg-blend-multiply">
+                        <svg class="absolute right-0 z-10 bg-blend-multiply" width="70" height="80" viewBox="0 0 70 80"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode:plus-darker">
+                                <path d="M0.482178 3.88203L0.482178 12.5894L9.34784 12.5894V3.88203L0.482178 3.88203Z"
+                                    fill="#EBF3FE" />
+                                <path d="M33.3322 3.96109V12.5101L42.1978 12.5101V3.96109L33.3322 3.96109Z"
+                                    fill="#EBF3FE" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M139.691 17.7332C140.218 19.8441 140.482 22.1661 140.482 24.6991C140.482 27.1266 140.218 29.3958 139.691 31.5067C139.268 33.7231 138.582 35.7284 137.633 37.5226C136.683 39.4224 135.522 41.0583 134.15 42.4304C132.883 43.908 131.405 45.1218 129.717 46.0717C128.028 47.1271 126.181 47.9187 124.176 48.4464C123.437 48.6575 122.698 48.8158 121.959 48.9213C121.484 65.7027 107.711 79.1595 90.7712 79.1595H49.0059C32.2245 79.1595 18.451 65.861 17.8178 49.2379C17.7122 49.2379 17.6595 49.2379 17.6595 49.2379C15.0209 49.2379 12.6462 48.7102 10.5353 47.6548C9.47987 47.2326 8.52997 46.6522 7.68563 45.9133C6.73573 45.1745 5.89138 44.3302 5.15257 43.3803C3.67497 41.4805 2.56677 39.2113 1.82797 36.5727C0.983623 33.8286 0.561444 30.7678 0.561444 27.3905V21.3745H9.26878V27.3905C9.26878 32.0344 10.2714 35.5701 12.2768 37.9976C12.91 38.8419 13.7544 39.528 14.8098 40.0557C15.1264 40.2668 15.4431 40.4251 15.7597 40.5306C16.9207 40.9528 18.24 41.2694 19.7176 41.4805C20.2453 41.4805 20.7202 41.4805 21.1424 41.4805H21.459C21.9868 41.4805 22.4617 41.4805 22.8839 41.4805C24.3615 41.2694 25.7335 40.9528 27.0001 40.5306C27.2112 40.4251 27.475 40.2668 27.7916 40.0557C28.8471 39.528 29.7442 38.8419 30.483 37.9976C32.4883 35.5701 33.491 32.0344 33.491 27.3905V21.3745H42.04V27.3905C42.04 30.7678 41.6179 33.8286 40.7735 36.5727C40.0347 39.2113 38.9265 41.4805 37.4489 43.3803C36.7101 44.3302 35.8657 45.1745 34.9158 45.9133C34.0715 46.6522 33.1744 47.2326 32.2245 47.6548C30.4302 48.4991 28.4777 48.9741 26.3668 49.0797C27.0001 61.1116 36.9739 70.6105 49.0059 70.6105H90.7712C102.961 70.6105 112.935 60.9533 113.41 48.763C112.671 48.6575 111.933 48.5519 111.194 48.4464C109.189 47.9187 107.342 47.1271 105.653 46.0717C103.964 45.1218 102.487 43.908 101.22 42.4304C99.848 41.0583 98.687 39.4224 97.7371 37.5226C96.7872 35.7284 96.1012 33.7231 95.679 31.5067C95.1513 29.3958 94.8874 27.1266 94.8874 24.6991C94.8874 22.1661 95.1513 19.8441 95.679 17.7332C96.1012 15.5168 96.7872 13.5115 97.7371 11.7173C98.687 9.92303 99.848 8.28709 101.22 6.80949C102.487 5.33188 103.964 4.11815 105.653 3.16826C107.342 2.11282 109.189 1.32125 111.194 0.793529C113.199 0.265812 115.363 0.00195312 117.685 0.00195312C120.007 0.00195312 122.17 0.265812 124.176 0.793529C126.181 1.32125 128.028 2.11282 129.717 3.16826C131.405 4.11815 132.883 5.33188 134.15 6.80949C135.522 8.28709 136.683 9.92303 137.633 11.7173C138.582 13.5115 139.268 15.5168 139.691 17.7332ZM131.933 24.6991C131.933 22.0605 131.617 19.6858 130.983 17.5749C130.244 15.5696 129.295 13.8281 128.134 12.3505C126.867 10.8729 125.389 9.76472 123.701 9.02591C121.907 8.18156 119.901 7.75939 117.685 7.75939C115.468 7.75939 113.516 8.18156 111.827 9.02591C110.033 9.76472 108.503 10.8729 107.236 12.3505C106.075 13.8281 105.125 15.5696 104.386 17.5749C103.753 19.6858 103.436 22.0605 103.436 24.6991C103.436 27.2321 103.753 29.5541 104.386 31.665C105.125 33.7759 106.075 35.5701 107.236 37.0477C108.503 38.4198 110.033 39.528 111.827 40.3723C113.516 41.1111 115.468 41.4805 117.685 41.4805C119.901 41.4805 121.907 41.1111 123.701 40.3723C125.389 39.528 126.867 38.4198 128.134 37.0477C129.295 35.5701 130.244 33.7759 130.983 31.665C131.617 29.5541 131.933 27.2321 131.933 24.6991Z"
+                                    fill="#EBF3FE" />
+                            </g>
+                        </svg>
                         <div class="flex items-start justify-around w-full">
                             <div class="xl:w-12 mx-auto ">
                                 <div
@@ -716,24 +776,19 @@
 
                             </div>
                             <h3
-                                class="font-KumbhSans ml-6 font-medium lg:text-lg xl:text-xl leading-grid28 text-headdark">
-                                Trusted
-                                Industry
-                                Expertise
+                                class="font-KumbhSans ml-6 font-medium lg:text-sm xl:text-xl leading-grid28 text-headdark z-20">
+                                Custom Service Plans
                             </h3>
                         </div>
-                        <p class="font-HindMadurai pt-6 text-sm leading-6 text-paradark">We deliver reliable,
-                            specialized
-                            support built on
-                            deep
-                            healthcare service
-                            experience.</p>
+                        <p class="font-HindMadurai pt-6 lg:text-xs xl:text-sm leading-6 text-paradark">Flexible
+                            maintenance contracts
+                            tailored to your equipment, schedule, and compliance needs.</p>
                     </div>
                 </div>
             </div>
-            <div class=" w-1/2 h-full  ml-[60px] relative ">
+            <div class=" w-1/2 h-[739px]  ml-[60px] relative ">
                 <div class="w-full h-full object-cover">
-                    <img class="h-full object-center rounded-xl " src="./Public/assets/feature-main.webp" alt="">
+                    <img class=" object-center rounded-xl h-full  " src="./Public/assets/feature-main.webp" alt="">
                     <img class="absolute object-contain h-1/3 w-10/12  lg:bottom-14 lg:-right-18 xl:left-[202px] xl:bottom-[77px]  rounded-xl"
                         src="./Public/assets/feature-side.webp" alt="">
                 </div>
@@ -744,7 +799,7 @@
     </section>
     <!-- our services -->
     <section id="our-service" class="py-24 bg-lightgrey">
-        <div class="xl:max-w-container lg:max-w-5xl mx-auto">
+        <div class="xl:max-w-container lg:max-w-5xl mx-auto w-[95%]">
             <div class=" text-center mx-auto ">
 
                 <div class="inline-flex items-center  mb-3 ">
@@ -752,14 +807,13 @@
                     <h6 class="text-primary font-KumbhSans  font-semibold tracking-4px leading-6 uppercase">our services
                     </h6>
                 </div>
-                <h1
-                    class="font-medium text-wrap tracking-wide font-KumbhSans text-text-dark text-6xl leading-16 capitalize ">
+                <h1 class=" text-wrap tracking-wide font-KumbhSans text-text-dark text-6xl leading-16 capitalize ">
                     Comprehensive Medical
                     <br>Equipment
                     Services You Can Trust
                 </h1>
 
-                <p class="mt-8 font-HindMadurai mx-auto text-base text-paradark   w-5xl leading-6 ">
+                <p class="mt-8 mx-auto   main-para  ">
                     From routine maintenance to emergency repairs, <strong>Nuvionx</strong> delivers reliable,
                     expert-driven services tailored for healthcare
                     environments. <br>Our end-to-end solutions ensure your medical equipment remains safe, compliant,
@@ -772,7 +826,7 @@
             <div class="mt-[60px] grid grid-cols-3 gap-8">
                 <div class="relative text-center  rounded-md w-full max-w-[416px] h-full bg-white ">
                     <div
-                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
+                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 md:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
                         <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
                         <!-- <svg width="31" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M.45 1.303v1.878H2.36V1.303H.45zM7.532 1.32v1.844h1.912V1.32H7.532z" fill="#fff" />
@@ -799,7 +853,7 @@
                 </div>
                 <div class="bg-white relative text-center rounded-md w-full max-w-[416px] h-full">
                     <div
-                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
+                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 md:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
 
                         <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
                     </div>
@@ -817,7 +871,7 @@
                 </div>
                 <div class="bg-white relative text-center rounded-md w-full max-w-[416px] h-full">
                     <div
-                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
+                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 md:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
 
                         <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
                     </div>
@@ -836,7 +890,7 @@
                 </div>
                 <div class="bg-white relative text-center rounded-md w-full max-w-[416px] h-full">
                     <div
-                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
+                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 md:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
 
                         <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
                     </div>
@@ -855,7 +909,7 @@
                 </div>
                 <div class="bg-white relative text-center rounded-md w-full max-w-[416px] h-full">
                     <div
-                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
+                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 md:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
 
                         <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
                     </div>
@@ -874,7 +928,7 @@
                 </div>
                 <div class="bg-white relative text-center rounded-md w-full max-w-[416px] h-full">
                     <div
-                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
+                        class="absolute p-8  transform -translate-x-1/2 -translate-y-1/2 md:top-[40%] left-[50%] xl:top-[50%] bg-primary rounded-xl  flex items-center justify-center">
 
                         <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
                     </div>
@@ -895,8 +949,8 @@
     </section>
     <!-- multi vendor service -->
     <section class="w-full py-[120px]">
-        <div class="xl:max-w-container lg:max-w-5xl mx-auto flex items-start justify-evenly">
-            <img class="object-fill w-1/2 h-full rounded-xl"
+        <div class="xl:max-w-container lg:max-w-5xl mx-auto flex items-start justify-evenly w-[95%]">
+            <img class="object-fill h-[473px] w-1/2  rounded-xl"
                 src="./Public/assets/doctor-is-checking-monitor-intensive-care-unit 1.webp" alt="">
             <div class=" h-full ml-10">
                 <div class="inline-flex items-center   mb-3">
@@ -904,14 +958,13 @@
                     <h6 class="text-primary  font-semibold tracking-4px leading-6 uppercase">Multi-Vendor services
                     </h6>
                 </div>
-                <h1
-                    class="font-medium w-full text-text-dark lg:text-5xl xl:text-6xl lg:leading-12 xl:leading-16 capitalize  ">
+                <h1 class="w-full main-heading ">
                     Streamlined
                     Support for All
                     Your
                     Equipment Brands
                 </h1>
-                <p class="mt-8 leading-6 text-textpara-dark">Managing multiple service providers can be time-consuming
+                <p class="mt-8 main-para">Managing multiple service providers can be time-consuming
                     and inefficient. With <strong>Nuvionx’s</strong> Multi-Vendor Services, you get
                     a single, reliable partner for the maintenance and repair of equipment from various manufacturers.
                     Our skilled engineers
@@ -919,7 +972,7 @@
                     more on delivering
                     exceptional patient care.
                 </p>
-                <div class="my-12 uppercase">
+                <div class="mt-12 uppercase">
                     <a href="./aboutus.html"
                         class="text-white font-KumbhSans bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer leading-6 rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">Request
                         a Quote</a>
@@ -931,7 +984,7 @@
     <!-- image view  -->
     <section class="w-full h-[875px] ">
         <!-- bg-no-repeat bg-[url('Public/assets/oproom.webp')] -->
-        <div class="mx-auto  xl:max-w-container lg:max-w-5xl h-full relative  bg-fill rounded-xl ">
+        <div class="mx-auto  xl:max-w-container lg:max-w-5xl h-full relative  bg-fill rounded-xl w-[98%] ">
             <img class="absolute h-[875px] w-full object-fill rounded-xl z-0" src="./Public/assets/oproom.webp" alt="">
             <div
                 class="absolute w-[86px] h-[86px] hover:bg-secondary-cyan left-[313px] top-[105px] bg-primary rounded-full  flex items-center justify-center">
@@ -939,7 +992,7 @@
                 <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
             </div>
             <div
-                class="absolute w-[86px] h-[86px] hover:bg-secondary-cyan left-[872px] top-[214px] bg-primary rounded-full  flex items-center justify-center">
+                class="absolute w-[86px] h-[86px] hover:bg-secondary-cyan lg:left-[700px] xl:left-[872px] top-[214px] bg-primary rounded-full  flex items-center justify-center">
 
                 <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
             </div>
@@ -954,7 +1007,7 @@
                 <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
             </div>
             <div
-                class="absolute w-[86px] h-[86px] hover:bg-secondary-cyan right-[440px] bottom-[149px] bg-primary rounded-full  flex items-center justify-center">
+                class="absolute w-[86px] h-[86px] hover:bg-secondary-cyan lg:right-[340px] xl:right-[440px] bottom-[149px] bg-primary rounded-full  flex items-center justify-center">
 
                 <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
             </div>
@@ -967,8 +1020,9 @@
                             <h6 class="text-white  font-semibold tracking-4px leading-6 uppercase">Top Rated
                             </h6>
                         </div>
+                        <!-- text-[min(10vw,3.5rem)] lg:leading-12 xl:leading-16 capitalize -->
                         <!-- lg:text-5xl xl:text-6xl lg:leading-12 xl:leading-16 -->
-                        <h1 class="font-medium  text-[min(10vw,3.5rem)] lg:leading-12 xl:leading-16 capitalize ">
+                        <h1 class="font-medium  main-heading !text-white">
                             Unmatched Expertise,
                             Unparalleled Performance
                         </h1>
@@ -992,7 +1046,7 @@
     </section>
     <!-- our Testimonials  -->
     <section class="w-full py-28">
-        <div class="xl:max-w-container lg:max-w-5xl mx-auto">
+        <div class="xl:max-w-container lg:max-w-5xl mx-auto w-[95%]">
             <!-- testimonials heading -->
             <div class=" text-center mx-auto ">
 
@@ -1008,7 +1062,7 @@
                     Hear It From Our Clients
                 </h1>
 
-                <p class="mt-8 w-3/5 font-HindMadurai mx-auto text-base text-paradark    leading-6 ">Healthcare
+                <p class="mt-8 xl:w-3/5 main-para ">Healthcare
                     providers
                     across the UK trust <strong>Nuvionx</strong> for reliable service, fast response, and technical<br>
                     excellence. See what
@@ -1066,7 +1120,7 @@
                 <div
                     class="text-left max-w-[416px] w-full lg:p-4 xl:p-8 relative min-w-[200px] rounded-[14px] bg-dropdown">
                     <!-- card title  -->
-                    <div class="min-h-72">
+                    <div class="">
 
                         <h3 class="font-KumbhSans font-medium text-2xl leading-8 mb-4 text-headdark">Stress Free
                             Experience</h3>
@@ -1156,7 +1210,7 @@
     <!-- let work together  -->
     <section class="w-full my-16 bg-lightgrey ">
         <div
-            class="mx-auto rounded-xl py-[38px] pl-12 lg:max-w-5xl xl:max-w-container bg-center bg-[url('Public/assets/pexels-kseniachernaya-5752282.webp')] bg-no-repeat bg-cover ">
+            class="mx-auto rounded-xl py-[38px] w-[95%] pl-12 lg:max-w-5xl xl:max-w-container bg-center bg-[url('Public/assets/pexels-kseniachernaya-5752282.webp')] bg-no-repeat bg-cover ">
             <div class="w-2/5 h-full">
                 <h4 class="text-white font-KumbhSans font-medium text-[32px] leading-10 ">Let's work together
                     to enhance
@@ -1185,7 +1239,7 @@
     </section>
     <!-- footer section  -->
     <footer class="w-full  bg-white">
-        <div class="max-w-container lg:max-w-5xl mx-auto bg-white">
+        <div class="max-w-container md:max-w-5xl mx-auto w-[95%] bg-white">
             <!-- footer menus  -->
             <div class="  py-16 grid grid-cols-4 gap-8 mx-auto">
                 <!-- contact -->
@@ -1197,16 +1251,16 @@
                                 Phone: 07768151690 </a></li>
                         <li><a href="mailto:info@nuvionx.co.uk">Email: info@nuvionx.co.uk</a></li>
                         <li class="space-x-6 text-headdark text-3xl">
-                            <a href=""><i
+                            <a href="https://www.linkedin.com/company/nuvionx/"><i
                                     class="fa-brands cursor-pointer transform transition-transform duration-200 hover:scale-125 fa-linkedin-in"></i>
                             </a>
-                            <a href=""><i
+                            <a href="https://x.com/nuvionx?s=11"><i
                                     class="fa-brands cursor-pointer transform transition-transform duration-200 hover:scale-125 fa-x-twitter"></i>
                             </a>
-                            <a href=""><i
+                            <a href="https://www.instagram.com/nuvionx.ltd?utm_source=qr&igsh=MThwMmE4ajloZnYzdQ=="><i
                                     class="fa-brands cursor-pointer transform transition-transform duration-200 hover:scale-125 fa-instagram"></i>
                             </a>
-                            <a href=""><i
+                            <a href="https://www.facebook.com/share/1EKsT31R8k/"><i
                                     class="fa-brands cursor-pointer transform transition-transform duration-200 hover:scale-125 fa-facebook"></i>
                             </a>
                         </li>

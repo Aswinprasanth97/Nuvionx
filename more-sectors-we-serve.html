@@ -47,32 +47,68 @@
     </div>
 
     <!-- navbar -->
-    <header class="">
-        <nav class="justify-between z-20  absolute lg:my-8 xl:top-16 w-full xl:my-12 ">
+    <header class=" ">
+        <nav class="justify-between z-20  absolute lg:top-10 lg:my-8 xl:top-16 w-full 2xl:my-12 ">
             <!-- navbar main -->
-            <div class="lg:max-w-5xl xl:max-w-container mx-auto flex justify-between items-center ">
+            <div class="lg:max-w-5xl xl:max-w-container mx-auto flex w-[95%] justify-between items-center ">
                 <div><img class="w-28  h-10" src="./Public/assets/Nuvonix Logo.svg" alt="Nuvonix Logo"></div>
                 <div class="">
                     <ul
                         class="flex font-KumbhSans text-white gap-6 items-center justify-evenly  text-sm leading-6 tracking-2px">
                         <li class=""><span
                                 class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer"><a
-                                    href="./index.html">HOME</a></span>
+                                    href="./index.html">HOME</a></span></li>
+                        <li class="">
+                            <div class="relative inline-block text-center ">
+                                <button id="service-main"
+                                    class="inline-flex cursor-pointer
+                                      items-center  text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-sm  rounded-lg"
+                                    type="button" data-dropdown-toggle="dropdown">
+                                    OUR SERVICES
+                                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div id="service-drop"
+                                    class="hidden   absolute transform -translate-x-1/4  mt-2 w-[305px] bg-white text-base z-50 list-none rounded-xl shadow"
+                                    id="dropdown">
+                                    <ul class="!text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
+                                        aria-labelledby="dropdown">
+                                        <li><a href="./our-services-medical-equipment-maintenance.html"
+                                                class="block dropdown-item pl-6 py-6 text-sm hover:text-white rounded-t-xl">Medical
+                                                Equipment Maintenance</a></li>
+                                        <li><a href="./our-services-clinical-engineering-support.html"
+                                                class="block dropdown-item pl-6 py-6 text-sm hover:text-white ">Clinical
+                                                Engineering Support</a></li>
+                                        <li><a href="./our-services-asset-management-audit-support.html"
+                                                class="block dropdown-item  pl-6 py-6 text-sm hover:text-white ">Asset
+                                                Management & Audit Support</a>
+                                        </li>
+                                        <li><a href="./our-services-ultrasound-probe-repair.html"
+                                                class="block dropdown-item pl-6 py-6 text-sm hover:text-white ">Ultrasound
+                                                Probe Repair</a>
+                                        </li>
+                                        <li><a href="./our-services-bed-maintenance.html"
+                                                class="block dropdown-item pl-6 py-6 text-sm hover:text-white rounded-b-xl">Bed
+                                                Maintenance</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
                         </li>
-                        <li class=""><span
-                                class="inline-block w-full  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer">OUR
-                                SERVICES</span></li>
                         <li><span
                                 class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
-                                    href="./aboutus.html">ABOUT</a>
-                                US</span></li>
+                                    href="./aboutus.html">ABOUT US</a></span></li>
                         <li><span
-                                class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer">CONTACT</span>
+                                class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
+                                    href="./contactus.html">CONTACT</a></span>
                         </li>
                         <li>
                             <div class="relative inline-block text-center ">
                                 <button id="nav-main"
-                                    class="inline-flex  items-center text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:font-bold hover:scale-110 text-sm  rounded-lg"
+                                    class="inline-flex ring-0 font-bold  items-center cursor-pointer text-white transition duration-300 ease-in-out transform hover:-translate-y-1  hover:scale-110 text-sm  rounded-lg"
                                     type="button" data-dropdown-toggle="dropdown">
                                     MORE
                                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,18 +117,25 @@
                                     </svg>
                                 </button>
                                 <div id="nav-drop"
-                                    class="hidden  absolute -left-full mt-2 w-56 bg-white text-base z-50 list-none rounded shadow"
+                                    class="hidden absolute transform -translate-x-1/4  mt-2 min-w-[300px] w-full bg-white text-base z-50 list-none rounded-xl shadow"
                                     id="dropdown">
-                                    <ul class="py-1 text-gray-700" aria-labelledby="dropdown">
-                                        <li><a href="#"
-                                                class="block px-4 py-2 text-sm hover:bg-gray-100">Testimonials</a></li>
-                                        <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Sectors We
-                                                Serve</a></li>
-                                        <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Inventory &
-                                                Life Management</a>
+                                    <ul class=" !text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
+                                        aria-labelledby="dropdown">
+
+                                        <li class=" hover:text-white"><a href="#"
+                                                class="block  dropdown-item  box pl-6 py-6 rounded-t-xl text-sm ">Testimonials</a>
                                         </li>
-                                        <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Training &
-                                                Development</a></li>
+                                        <li class="hover:text-white"><a href="./more-sectors-we-serve.html"
+                                                class="block  dropdown-item  pl-6 py-6 text-sm ">Sectors
+                                                We
+                                                Serve</a></li>
+                                        <li class="hover:text-white"><a
+                                                href="./more-Inventory-life-cycle-mangement.html"
+                                                class="block  dropdown-item pl-6 py-6 text-sm  rounded-b-xl">Inventory
+                                                &
+                                                Lifecycle Management</a>
+                                        </li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -101,8 +144,9 @@
                 </div>
                 <div class="">
                     <button
-                        class="  z-0 font-KumbhSans  hover:bg-white text-white cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">
-                        <span class="hover:text-transparent hover:bg-clip-text hover:mix-blend-multiply">BOOK NOW</span>
+                        class="  z-0 font-KumbhSans hover:text-black  hover:bg-white text-white cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">
+
+                        BOOK NOW
                     </button>
                 </div>
 
@@ -279,16 +323,16 @@
                                 Phone: 07768151690 </a></li>
                         <li><a href="mailto:info@nuvionx.co.uk">Email: info@nuvionx.co.uk</a></li>
                         <li class="space-x-6 text-headdark text-3xl">
-                            <a href=""><i
+                            <a href="https://www.linkedin.com/company/nuvionx/"><i
                                     class="fa-brands cursor-pointer transform transition-transform duration-200 hover:scale-125 fa-linkedin-in"></i>
                             </a>
-                            <a href=""><i
+                            <a href="https://x.com/nuvionx?s=11"><i
                                     class="fa-brands cursor-pointer transform transition-transform duration-200 hover:scale-125 fa-x-twitter"></i>
                             </a>
-                            <a href=""><i
+                            <a href="https://www.instagram.com/nuvionx.ltd?utm_source=qr&igsh=MThwMmE4ajloZnYzdQ=="><i
                                     class="fa-brands cursor-pointer transform transition-transform duration-200 hover:scale-125 fa-instagram"></i>
                             </a>
-                            <a href=""><i
+                            <a href="https://www.facebook.com/share/1EKsT31R8k/"><i
                                     class="fa-brands cursor-pointer transform transition-transform duration-200 hover:scale-125 fa-facebook"></i>
                             </a>
                         </li>

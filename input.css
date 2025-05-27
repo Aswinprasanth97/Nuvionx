@@ -26,12 +26,13 @@
   --color-textpara-dark: #1f2937;
   --color-star: #f2c94c;
   --color-imgbg: #bdbdbd;
-  --text-56px: 56px;
+  --text-56px: 3.5rem;
   --breakpoint-xl: 81rem;
   --spacing-h320: 320px;
   --text-parasize: 32px;
   --spacing-servicecontainer: 976px;
   --color-dropdown-text: #1b1c21;
+  --color-cardtext: #d0d0d0;
 }
 /* @font-face {
   font-family: KumbhSans;
@@ -48,4 +49,64 @@ body {
 }
 .paras {
   @apply font-HindMadurai leading-6 text-paradark;
+}
+.main-heading {
+  @apply font-KumbhSans font-medium lg:text-[2.5rem] xl:text-56px lg:leading-12 xl:leading-16 tracking-wide text-text-dark capitalize;
+}
+.main-para {
+  @apply font-HindMadurai font-normal text-base leading-6 text-paradark;
+}
+.center-heading {
+  @apply font-KumbhSans font-medium text-56px tracking-wide text-center text-text-dark capitalize;
+}
+
+.center-para {
+  @apply font-HindMadurai font-normal text-base leading-6 text-center text-paradark;
+}
+
+.about-card-title {
+  @apply font-KumbhSans   font-semibold tracking-4px leading-6 uppercase text-sm;
+}
+.about-card-para {
+  @apply font-HindMadurai font-medium leading-6  lg:text-sm;
+}
+.input-choose::before {
+  @apply mr-4;
+}
+
+.dropdown-item {
+  position: relative;
+  display: block;
+  padding: 1.5rem 1.5rem;
+  font-size: 0.875rem;
+  overflow: hidden;
+  z-index: 0;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.dropdown-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  width: 0;
+  height: 0;
+  background-color: #00adee;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 2s ease, opacity 0.6s ease;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.dropdown-item:hover::before {
+  width: 200%;
+  height: 500%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.dropdown-item:hover {
+  color: white;
 }
