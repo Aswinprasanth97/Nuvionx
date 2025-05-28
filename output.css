@@ -469,6 +469,9 @@
   .h-1\.5 {
     height: calc(var(--spacing) * 1.5);
   }
+  .h-1\/2 {
+    height: calc(1/2 * 100%);
+  }
   .h-1\/3 {
     height: calc(1/3 * 100%);
   }
@@ -537,6 +540,9 @@
   }
   .h-\[900px\] {
     height: 900px;
+  }
+  .h-fit {
+    height: fit-content;
   }
   .h-full {
     height: 100%;
@@ -912,6 +918,18 @@
   .bg-\[url\(\'\/Public\/assets\/s1\.svg\'\)\,url\(\'\/Public\/assets\/s2\.svg\'\)\] {
     background-image: url('/Public/assets/s1.svg'),url('/Public/assets/s2.svg');
   }
+  .bg-\[url\(\'Public\/assets\/conta\.webp\'\)\] {
+    background-image: url('Public/assets/conta.webp');
+  }
+  .bg-\[url\(\'Public\/assets\/contact-de\.webp\'\)\] {
+    background-image: url('Public/assets/contact-de.webp');
+  }
+  .bg-\[url\(\'Public\/assets\/contact-downld\.webp\'\)\] {
+    background-image: url('Public/assets/contact-downld.webp');
+  }
+  .bg-\[url\(\'Public\/assets\/contact-dw\.webp\'\)\] {
+    background-image: url('Public/assets/contact-dw.webp');
+  }
   .bg-\[url\(\'Public\/assets\/contact-main-bg\.webp\'\)\] {
     background-image: url('Public/assets/contact-main-bg.webp');
   }
@@ -944,6 +962,12 @@
   }
   .bg-center {
     background-position: center;
+  }
+  .bg-left {
+    background-position: left;
+  }
+  .bg-top-left {
+    background-position: left top;
   }
   .bg-top-right {
     background-position: right top;
@@ -1149,6 +1173,9 @@
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
+  .\!text-56px {
+    font-size: var(--text-56px) !important;
+  }
   .text-56px {
     font-size: var(--text-56px);
   }
@@ -1160,6 +1187,10 @@
   }
   .text-\[min\(10vw\,3\.5rem\)\] {
     font-size: min(10vw, 3.5rem);
+  }
+  .\!leading-16 {
+    --tw-leading: calc(var(--spacing) * 16) !important;
+    line-height: calc(var(--spacing) * 16) !important;
   }
   .leading-6 {
     --tw-leading: calc(var(--spacing) * 6);
