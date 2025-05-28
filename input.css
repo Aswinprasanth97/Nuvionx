@@ -19,8 +19,8 @@
   --tracking-4px: 0.25em;
   --color-btn: #d87a2c;
   --color-btn-hover: #c66b24;
-  --font-HindMadurai: [ '"Hind Madurai"', sans-serif];
-  --font-kumbhSans  kumbhfont: [ '"Kumbh Sans"'];
+  --font-HindMadurai: '"Hind Madurai"', sans-serif;
+  --font-kumbhSans: [ '"Kumbh Sans"'];
   --spacing-container: 1317px;
   --color-text-dark: #1f2937;
   --color-textpara-dark: #1f2937;
