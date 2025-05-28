@@ -1,6 +1,6 @@
 /*! tailwindcss v4.1.6 | MIT License | https://tailwindcss.com */
 @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,40..300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -65,8 +65,8 @@
     --tracking-4px: 0.25em;
     --color-btn: #d87a2c;
     --color-btn-hover: #c66b24;
-    --font-HindMadurai: []'"Hind Madurai"', sans-serif;
-    --font-KumbhSans: [ '"Kumbh Sans"', sans-serif];
+    --font-HindMadurai: [ '"Hind Madurai"', sans-serif];
+    --font-kumbhSans: [ '"Kumbh Sans"'];
     --spacing-container: 1317px;
     --color-text-dark: #1f2937;
     --color-textpara-dark: #1f2937;
@@ -238,9 +238,6 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
-  .top-1 {
-    top: calc(var(--spacing) * 1);
-  }
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
@@ -331,9 +328,6 @@
   .my-28 {
     margin-block: calc(var(--spacing) * 28);
   }
-  .my-\[120px\] {
-    margin-block: 120px;
-  }
   .my-auto {
     margin-block: auto;
   }
@@ -363,9 +357,6 @@
   }
   .mt-\[120px\] {
     margin-top: 120px;
-  }
-  .mr-1 {
-    margin-right: calc(var(--spacing) * 1);
   }
   .mr-1\.5 {
     margin-right: calc(var(--spacing) * 1.5);
@@ -460,12 +451,6 @@
   .inline-flex {
     display: inline-flex;
   }
-  .table {
-    display: table;
-  }
-  .h-1 {
-    height: calc(var(--spacing) * 1);
-  }
   .h-1\.5 {
     height: calc(var(--spacing) * 1.5);
   }
@@ -475,14 +460,8 @@
   .h-1\/3 {
     height: calc(1/3 * 100%);
   }
-  .h-2 {
-    height: calc(var(--spacing) * 2);
-  }
   .h-2\.5 {
     height: calc(var(--spacing) * 2.5);
-  }
-  .h-3 {
-    height: calc(var(--spacing) * 3);
   }
   .h-3\.5 {
     height: calc(var(--spacing) * 3.5);
@@ -541,9 +520,6 @@
   .h-\[900px\] {
     height: 900px;
   }
-  .h-fit {
-    height: fit-content;
-  }
   .h-full {
     height: 100%;
   }
@@ -553,17 +529,11 @@
   .max-h-\[379px\] {
     max-height: 379px;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\.5 {
     width: calc(var(--spacing) * 1.5);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
-  }
-  .w-2 {
-    width: calc(var(--spacing) * 2);
   }
   .w-2\.5 {
     width: calc(var(--spacing) * 2.5);
@@ -574,9 +544,6 @@
   .w-2\/5 {
     width: calc(2/5 * 100%);
   }
-  .w-3 {
-    width: calc(var(--spacing) * 3);
-  }
   .w-3\.5 {
     width: calc(var(--spacing) * 3.5);
   }
@@ -585,9 +552,6 @@
   }
   .w-4 {
     width: calc(var(--spacing) * 4);
-  }
-  .w-5 {
-    width: calc(var(--spacing) * 5);
   }
   .w-5\/6 {
     width: calc(5/6 * 100%);
@@ -643,14 +607,8 @@
   .max-w-\[426px\] {
     max-width: 426px;
   }
-  .max-w-container {
-    max-width: var(--spacing-container);
-  }
   .max-w-servicecontainer {
     max-width: var(--spacing-servicecontainer);
-  }
-  .min-w-2 {
-    min-width: calc(var(--spacing) * 2);
   }
   .min-w-2\.5 {
     min-width: calc(var(--spacing) * 2.5);
@@ -667,23 +625,12 @@
   .min-w-md {
     min-width: var(--container-md);
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .-translate-x-1 {
-    --tw-translate-x: calc(var(--spacing) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-x-1\/4 {
     --tw-translate-x: calc(calc(1/4 * 100%) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-y-1 {
-    --tw-translate-y: calc(var(--spacing) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1\/2 {
@@ -706,9 +653,6 @@
   }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .list-none {
     list-style-type: none;
@@ -757,6 +701,9 @@
   }
   .justify-evenly {
     justify-content: space-evenly;
+  }
+  .justify-start {
+    justify-content: flex-start;
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
@@ -867,9 +814,6 @@
   .bg-\[left_top\\2c_right_bottom\] {
     background-color: left top\2c right bottom;
   }
-  .bg-black {
-    background-color: var(--color-black);
-  }
   .bg-black\/20 {
     background-color: color-mix(in srgb, #000 20%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -918,17 +862,8 @@
   .bg-\[url\(\'\/Public\/assets\/s1\.svg\'\)\,url\(\'\/Public\/assets\/s2\.svg\'\)\] {
     background-image: url('/Public/assets/s1.svg'),url('/Public/assets/s2.svg');
   }
-  .bg-\[url\(\'Public\/assets\/conta\.webp\'\)\] {
-    background-image: url('Public/assets/conta.webp');
-  }
-  .bg-\[url\(\'Public\/assets\/contact-de\.webp\'\)\] {
-    background-image: url('Public/assets/contact-de.webp');
-  }
   .bg-\[url\(\'Public\/assets\/contact-downld\.webp\'\)\] {
     background-image: url('Public/assets/contact-downld.webp');
-  }
-  .bg-\[url\(\'Public\/assets\/contact-dw\.webp\'\)\] {
-    background-image: url('Public/assets/contact-dw.webp');
   }
   .bg-\[url\(\'Public\/assets\/contact-main-bg\.webp\'\)\] {
     background-image: url('Public/assets/contact-main-bg.webp');
@@ -962,12 +897,6 @@
   }
   .bg-center {
     background-position: center;
-  }
-  .bg-left {
-    background-position: left;
-  }
-  .bg-top-left {
-    background-position: left top;
   }
   .bg-top-right {
     background-position: right top;
@@ -1035,9 +964,6 @@
   .px-14 {
     padding-inline: calc(var(--spacing) * 14);
   }
-  .py-1 {
-    padding-block: calc(var(--spacing) * 1);
-  }
   .py-1\.5 {
     padding-block: calc(var(--spacing) * 1.5);
   }
@@ -1076,6 +1002,9 @@
   }
   .py-\[38px\] {
     padding-block: 38px;
+  }
+  .py-\[58px\] {
+    padding-block: 58px;
   }
   .py-\[120px\] {
     padding-block: 120px;
@@ -1134,8 +1063,8 @@
   .font-HindMadurai {
     font-family: var(--font-HindMadurai);
   }
-  .font-KumbhSans {
-    font-family: var(--font-KumbhSans);
+  .font-kumbhSans {
+    font-family: var(--font-kumbhSans);
   }
   .\!text-lg {
     font-size: var(--text-lg) !important;
@@ -1301,9 +1230,6 @@
   .uppercase {
     text-transform: uppercase;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .bg-blend-multiply {
     background-blend-mode: multiply;
   }
@@ -1320,10 +1246,6 @@
   .ring-0 {
     --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
@@ -2074,23 +1996,31 @@
     }
   }
 }
+@font-face {
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  src: url("Public/font/KumbhSans-VariableFont") format("ttf");
+}
+.kumbhfont {
+  font-family: "Kumbh Sans", sans-serif !important;
+}
 .heading {
-  font-family: var(--font-KumbhSans);
+  font-family: var(--font-kumbhSans) !important;
   font-size: var(--text-parasize);
   --tw-leading: calc(var(--spacing) * 10);
   line-height: calc(var(--spacing) * 10);
-  --tw-font-weight: var(--font-weight-medium);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-headdark);
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
 }
 .paras {
-  font-family: var(--font-HindMadurai);
+  font-family: var(--font-HindMadurai) !important;
   --tw-leading: calc(var(--spacing) * 6);
   line-height: calc(var(--spacing) * 6);
   color: var(--color-paradark);
 }
 .main-heading {
-  font-family: var(--font-KumbhSans);
+  font-family: "Kumbh Sans", sans-serif !important;
   --tw-font-weight: var(--font-weight-medium);
   font-weight: var(--font-weight-medium);
   --tw-tracking: var(--tracking-wide);
@@ -2123,8 +2053,8 @@
   color: var(--color-paradark);
 }
 .center-heading {
+  font-family: "Kumbh Sans", sans-serif !important;
   text-align: center;
-  font-family: var(--font-KumbhSans);
   font-size: var(--text-56px);
   --tw-font-weight: var(--font-weight-medium);
   font-weight: var(--font-weight-medium);
@@ -2135,7 +2065,7 @@
 }
 .center-para {
   text-align: center;
-  font-family: var(--font-HindMadurai);
+  font-family: var(--font-HindMadurai) !important;
   font-size: var(--text-base);
   line-height: var(--tw-leading, var(--text-base--line-height));
   --tw-leading: calc(var(--spacing) * 6);
@@ -2145,7 +2075,7 @@
   color: var(--color-paradark);
 }
 .about-card-title {
-  font-family: var(--font-KumbhSans);
+  font-family: "Kumbh Sans", sans-serif !important;
   font-size: var(--text-sm);
   line-height: var(--tw-leading, var(--text-sm--line-height));
   --tw-leading: calc(var(--spacing) * 6);
@@ -2345,11 +2275,6 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-blur {
   syntax: "*";
   inherits: false;
@@ -2445,7 +2370,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;

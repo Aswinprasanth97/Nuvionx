@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,40..300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -19,8 +19,8 @@
   --tracking-4px: 0.25em;
   --color-btn: #d87a2c;
   --color-btn-hover: #c66b24;
-  --font-HindMadurai: ['"Hind Madurai"', sans-serif;]
-  --font-KumbhSans: ['"Kumbh Sans"', sans-serif];
+  --font-HindMadurai: [ '"Hind Madurai"', sans-serif];
+  --font-kumbhSans  kumbhfont: [ '"Kumbh Sans"'];
   --spacing-container: 1317px;
   --color-text-dark: #1f2937;
   --color-textpara-dark: #1f2937;
@@ -34,38 +34,42 @@
   --color-dropdown-text: #1b1c21;
   --color-cardtext: #d0d0d0;
 }
-/* @font-face {
-  font-family: KumbhSans;
+@font-face {
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
   font-style: normal;
-  font-display: swap;
-  src: url("Public/font/KumbhSans.ttf") format("ttf");
+  src: url("Public/font/KumbhSans-VariableFont") format("ttf");
 }
 body {
-  font-family: "KumbhSans";
-} */
-
+}
+.kumbhfont {
+  font-family: "Kumbh Sans", sans-serif !important;
+}
 .heading {
-  @apply font-KumbhSans text-headdark font-medium text-parasize leading-10;
+  @apply !font-kumbhSans  kumbhfont  font-normal text-parasize leading-10;
 }
 .paras {
-  @apply font-HindMadurai leading-6 text-paradark;
+  @apply !font-HindMadurai leading-6 text-paradark;
 }
 .main-heading {
-  @apply font-KumbhSans font-medium lg:text-[2.5rem] xl:text-56px lg:leading-12 xl:leading-16 tracking-wide text-text-dark capitalize;
+  font-family: "Kumbh Sans", sans-serif !important;
+  @apply font-medium lg:text-[2.5rem] xl:text-56px lg:leading-12 xl:leading-16 tracking-wide text-text-dark capitalize;
 }
 .main-para {
   @apply font-HindMadurai font-normal text-base leading-6 text-paradark;
 }
 .center-heading {
-  @apply font-KumbhSans font-medium text-56px tracking-wide text-center text-text-dark capitalize;
+  font-family: "Kumbh Sans", sans-serif !important;
+  @apply font-medium text-56px tracking-wide text-center text-text-dark capitalize;
 }
 
 .center-para {
-  @apply font-HindMadurai font-normal text-base leading-6 text-center text-paradark;
+  @apply !font-HindMadurai font-normal text-base leading-6 text-center text-paradark;
 }
 
 .about-card-title {
-  @apply font-KumbhSans   font-semibold tracking-4px leading-6 uppercase text-sm;
+  font-family: "Kumbh Sans", sans-serif !important;
+  @apply font-semibold tracking-4px leading-6 uppercase text-sm;
 }
 .about-card-para {
   @apply font-HindMadurai font-medium leading-6  lg:text-sm;
