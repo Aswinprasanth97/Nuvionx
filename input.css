@@ -55,7 +55,7 @@ body {
 }
 .main-heading {
   font-family: "Kumbh Sans", sans-serif !important;
-  @apply font-medium lg:text-[2.5rem] xl:text-56px lg:leading-12 xl:leading-16 tracking-wide text-text-dark capitalize;
+  @apply font-medium lg:text-[2.5rem] xl:text-56px md:max-lg:text-2xl lg:leading-12 xl:leading-16 tracking-wide text-text-dark capitalize;
 }
 .main-para {
   @apply font-HindMadurai font-normal text-base leading-6 text-paradark;
@@ -86,6 +86,9 @@ body {
 }
 .feature-card p {
   @apply font-HindMadurai pt-6 lg:text-xs xl:text-sm leading-6 mx-auto;
+}
+.our-service-card {
+  @apply absolute p-8 md:max-lg:top-[45%] transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%]  bg-primary rounded-xl  flex items-center justify-center;
 }
 .dropdown-item {
   position: relative;
