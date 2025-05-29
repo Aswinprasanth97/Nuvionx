@@ -47,7 +47,8 @@ body {
   font-family: "Kumbh Sans", sans-serif !important;
 }
 .heading {
-  @apply !font-kumbhSans  font-normal text-parasize leading-10;
+  font-family: "Kumbh Sans", sans-serif !important;
+  @apply font-normal text-parasize leading-10;
 }
 .paras {
   @apply !font-HindMadurai leading-6 text-paradark;
@@ -61,7 +62,7 @@ body {
 }
 .center-heading {
   font-family: "Kumbh Sans", sans-serif !important;
-  @apply font-medium text-56px tracking-wide text-center text-text-dark capitalize;
+  @apply font-medium text-56px tracking-wide text-center text-text-dark capitalize  md:max-lg:leading-14;
 }
 
 .center-para {
@@ -79,6 +80,13 @@ body {
   @apply mr-4;
 }
 
+.feature-card h3 {
+  font-family: "Kumbh Sans", sans-serif !important;
+  @apply ml-6 font-medium md:max-lg:text-2xl lg:text-sm xl:text-xl leading-grid28 z-20;
+}
+.feature-card p {
+  @apply font-HindMadurai pt-6 lg:text-xs xl:text-sm leading-6 mx-auto;
+}
 .dropdown-item {
   position: relative;
   display: block;
