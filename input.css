@@ -14,6 +14,7 @@
   --color-headdark: #1f2937;
   --leading-card22: 22px;
   --leading-grid28: 26px;
+  --leading-mob34: 34px;
   --spacing-button: 18px;
   --tracking-2px: 0.125em;
   --tracking-4px: 0.25em;
@@ -27,6 +28,7 @@
   --color-star: #f2c94c;
   --color-imgbg: #bdbdbd;
   --text-56px: 3.5rem;
+  --text-28px: 28px;
   --breakpoint-xl: 80rem;
   --spacing-h320: 320px;
   --text-parasize: 32px;
@@ -48,47 +50,49 @@ body {
 }
 .heading {
   font-family: "Kumbh Sans", sans-serif !important;
-  @apply font-normal text-parasize leading-10;
+  @apply font-medium  tracking-wide text-28px lg:text-parasize leading-10;
 }
 .paras {
-  @apply !font-HindMadurai leading-6 text-paradark;
+  @apply !font-HindMadurai text-base  leading-6 text-paradark;
 }
 .main-heading {
   font-family: "Kumbh Sans", sans-serif !important;
-  @apply font-medium lg:text-[2.5rem] xl:text-56px md:max-lg:text-2xl lg:leading-12 xl:leading-16 tracking-wide text-text-dark capitalize;
+  @apply font-medium lg:text-[2.5rem] xl:text-56px text-[28px] leading-mob34 lg:leading-12 xl:leading-16 tracking-wide text-text-dark capitalize;
 }
 .main-para {
-  @apply font-HindMadurai font-normal text-base leading-6 text-paradark;
+  @apply font-HindMadurai font-normal text-base !leading-6 text-paradark max-lg:mt-4 max-lg:mb-6;
 }
 .center-heading {
   font-family: "Kumbh Sans", sans-serif !important;
-  @apply font-medium text-56px tracking-wide text-center text-text-dark capitalize  md:max-lg:leading-14;
+  @apply font-medium text-28px lg:text-56px tracking-wide lg:text-center text-text-dark capitalize max-lg:leading-mob34;
 }
 
 .center-para {
-  @apply !font-HindMadurai font-normal text-base leading-6 text-center text-paradark;
+  @apply !font-HindMadurai font-normal text-base leading-6 lg:text-center text-paradark;
 }
 
 .about-card-title {
   font-family: "Kumbh Sans", sans-serif !important;
-  @apply font-semibold tracking-4px leading-6 uppercase text-sm;
+  @apply font-semibold lg:tracking-4px leading-6 uppercase text-base  lg:text-sm;
 }
 .about-card-para {
-  @apply font-HindMadurai font-medium leading-6  lg:text-sm;
+  @apply font-HindMadurai font-medium leading-6 text-base lg:text-sm;
 }
 .input-choose::before {
   @apply mr-4;
 }
-
+.feature-card {
+  @apply rounded-xl  text-white p-4  lg:p-6 relative z-20;
+}
 .feature-card h3 {
   font-family: "Kumbh Sans", sans-serif !important;
-  @apply ml-6 font-medium md:max-lg:text-2xl lg:text-sm xl:text-xl leading-grid28 z-20;
+  @apply ml-6 font-medium text-xl lg:text-sm xl:text-xl leading-grid28 z-20  max-lg:my-2;
 }
 .feature-card p {
-  @apply font-HindMadurai pt-6 lg:text-xs xl:text-sm leading-6 mx-auto;
+  @apply font-HindMadurai pt-4 lg:pt-6 text-sm lg:text-sm xl:text-sm leading-card22 lg:leading-6 mx-auto;
 }
 .our-service-card {
-  @apply absolute p-8 md:max-lg:top-[45%] transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%]  bg-primary rounded-xl  flex items-center justify-center;
+  @apply absolute p-8 top-[50%] transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%]  bg-primary rounded-xl  flex items-center justify-center;
 }
 .dropdown-item {
   position: relative;

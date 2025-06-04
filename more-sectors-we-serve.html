@@ -8,7 +8,7 @@
         content="We offer top-quality medical equipment maintenance, asset management, and clinical engineering support. Discover our services today.">
 
     <link href="./output.css" rel="stylesheet">
-    <title>Nuvonix-Clinical Engineering Support</title>
+    <title>Nuvonix-Sectors We Serve</title>
     <link rel="shortcut icon" href="./Public/assets/scope.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -17,7 +17,7 @@
 
 <body class="relative p-0 m-0 box-border bg-lightgrey scroll-smooth ">
     <!-- ---Topbar--- -->
-    <div class="bg-primary  h-[62px] m-auto text-sm leading-6 relative top-0 w-full ">
+    <div class="bg-primary hidden lg:block  h-[62px] m-auto text-sm leading-6 relative top-0 w-full ">
         <div
             class=" text-white  lg:max-w-5xl xl:max-w-container mx-auto   text-sm flex flex-col lg:flex-row justify-between items-center  py-5">
 
@@ -51,21 +51,22 @@
 
     <!-- navbar -->
     <header class=" ">
-        <nav class="justify-between z-20  absolute lg:top-10 lg:my-8 xl:top-16 w-full 2xl:my-12 ">
+        <nav id="main-nav"
+            class="justify-between z-20 max-lg:fixed bg-transparent absolute lg:top-10 max-lg:pt-2 lg:my-8 xl:top-16 w-full 2xl:my-12  ">
             <!-- navbar main -->
             <div class="lg:max-w-5xl xl:max-w-container mx-auto flex w-[95%] justify-between items-center ">
                 <div><img class="w-28  h-10" src="./Public/assets/Nuvonix Logo.svg" alt="Nuvonix Logo"></div>
-                <div class="">
+                <div class="hidden lg:block">
                     <ul
                         class="flex font-kumbhSans  kumbhfont  text-white gap-6 items-center justify-evenly  text-sm leading-6 tracking-2px">
-                        <li class=""><span
-                                class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer"><a
-                                    href="./index.html">HOME</a></span></li>
+                        <li class="font-bold"><span
+                                class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer">HOME</span>
+                        </li>
                         <li class="">
                             <div class="relative inline-block text-center ">
                                 <button id="service-main"
                                     class="inline-flex cursor-pointer
-                                      items-center  text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-sm  rounded-lg"
+                                          items-center text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-sm  rounded-lg"
                                     type="button" data-dropdown-toggle="dropdown">
                                     OUR SERVICES
                                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,7 +112,7 @@
                         <li>
                             <div class="relative inline-block text-center ">
                                 <button id="nav-main"
-                                    class="inline-flex ring-0 font-bold  items-center cursor-pointer text-white transition duration-300 ease-in-out transform hover:-translate-y-1  hover:scale-110 text-sm  rounded-lg"
+                                    class="inline-flex ring-0  items-center cursor-pointer text-white transition duration-300 ease-in-out transform hover:-translate-y-1  hover:scale-110 text-sm  rounded-lg"
                                     type="button" data-dropdown-toggle="dropdown">
                                     MORE
                                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -120,12 +121,12 @@
                                     </svg>
                                 </button>
                                 <div id="nav-drop"
-                                    class="hidden absolute transform -translate-x-1/4  mt-2 min-w-[300px] w-full bg-white text-base z-50 list-none rounded-xl shadow"
+                                    class="hidden absolute md:max-lg:right-0  transform lg:-translate-x-1/4  mt-2 min-w-[300px] w-full bg-white text-base z-50 list-none rounded-xl shadow"
                                     id="dropdown">
                                     <ul class=" !text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
                                         aria-labelledby="dropdown">
 
-                                        <li class=" hover:text-white"><a href="#"
+                                        <li class=" hover:text-white"><a href="#testimonials"
                                                 class="block  dropdown-item  box pl-6 py-6 rounded-t-xl text-sm ">Testimonials</a>
                                         </li>
                                         <li class="hover:text-white"><a href="./more-sectors-we-serve.html"
@@ -145,13 +146,250 @@
                         </li>
                     </ul>
                 </div>
-                <div class="">
+                <div class="hidden  lg:block">
+
                     <button
                         class="  z-0 font-kumbhSans  kumbhfont  hover:text-black  hover:bg-white text-white cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">
 
                         BOOK NOW
                     </button>
                 </div>
+                <div class="mob-nav  lg:hidden">
+                    <svg id="mob-nav" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect x="11" y="25" width="4" height="4" fill="white" />
+                        <rect x="25" y="25" width="4" height="4" fill="white" />
+                        <rect x="11" y="11" width="4" height="4" fill="white" />
+                        <rect x="25" y="11" width="4" height="4" fill="white" />
+                    </svg>
+                    <div id="mob-nav-drop" class=" absolute hidden  top-0 max-lg:pt-2 right-0 w-full flex-col h-screen flex justify-between items-center
+                            bg-primary">
+                        <div class="mx-auto flex w-[95%] justify-between items-center ">
+                            <div><img class="w-28  h-10" src="./Public/assets/Nuvonix Logo.svg" alt="Nuvonix Logo">
+                            </div>
+                            <div id="mob-nav-close"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="40" height="40" rx="20" fill="white" fill-opacity="0.04" />
+                                    <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="white"
+                                        stroke-opacity="0.6" />
+                                    <path d="M12 12L28 28" stroke="white" stroke-linecap="square"
+                                        stroke-linejoin="round" />
+                                    <path d="M12 28L28 12" stroke="white" stroke-linecap="square"
+                                        stroke-linejoin="round" />
+                                </svg></div>
+                        </div>
+                        <div class="">
+                            <ul
+                                class="flex hidden font-kumbhSans flex-col  kumbhfont  text-white gap-6 items-center justify-evenly  text-sm leading-6 tracking-2px">
+                                <li class="font-bold"><span
+                                        class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer">HOME</span>
+                                </li>
+                                <li class="">
+                                    <div class="relative inline-block text-center ">
+                                        <button id="service-main"
+                                            class="inline-flex cursor-pointer
+                                                                          items-center text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-sm  rounded-lg"
+                                            type="button" data-dropdown-toggle="dropdown">
+                                            OUR SERVICES
+                                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg>
+                                        </button>
+                                        <div id="service-drop"
+                                            class="hidden   absolute transform -translate-x-1/4  mt-2 w-[305px] bg-white text-base z-50 list-none rounded-xl shadow"
+                                            id="dropdown">
+                                            <ul class="!text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
+                                                aria-labelledby="dropdown">
+                                                <li><a href="./our-services-medical-equipment-maintenance.html"
+                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white rounded-t-xl">Medical
+                                                        Equipment Maintenance</a></li>
+                                                <li><a href="./our-services-clinical-engineering-support.html"
+                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white ">Clinical
+                                                        Engineering Support</a></li>
+                                                <li><a href="./our-services-asset-management-audit-support.html"
+                                                        class="block dropdown-item  pl-6 py-6 text-sm hover:text-white ">Asset
+                                                        Management & Audit Support</a>
+                                                </li>
+                                                <li><a href="./our-services-ultrasound-probe-repair.html"
+                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white ">Ultrasound
+                                                        Probe Repair</a>
+                                                </li>
+                                                <li><a href="./our-services-bed-maintenance.html"
+                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white rounded-b-xl">Bed
+                                                        Maintenance</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><span
+                                        class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
+                                            href="./aboutus.html">ABOUT US</a></span></li>
+                                <li><span
+                                        class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
+                                            href="./contactus.html">CONTACT</a></span>
+                                </li>
+                                <li>
+                                    <div class="relative inline-block text-center ">
+                                        <button id="nav-main-mobile"
+                                            class="inline-flex ring-0  items-center cursor-pointer text-white transition duration-300 ease-in-out transform hover:-translate-y-1  hover:scale-110 text-sm  rounded-lg"
+                                            type="button" data-dropdown-toggle="dropdown">
+                                            MORE
+                                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg>
+                                        </button>
+                                        <div id="nav-drop-mobile "
+                                            class="absolute hidden w-full right-[50%] transform mt-2 min-w-[300px] bg-white text-base z-50 list-none rounded-xl shadow"
+                                            id="dropdown">
+                                            <ul class=" !text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
+                                                aria-labelledby="dropdown">
+
+                                                <li class=" hover:text-white"><a href="#testimonials"
+                                                        class="block  dropdown-item  box pl-6 py-6 rounded-t-xl text-sm ">Testimonials</a>
+                                                </li>
+                                                <li class="hover:text-white"><a href="./more-sectors-we-serve.html"
+                                                        class="block  dropdown-item  pl-6 py-6 text-sm ">Sectors
+                                                        We
+                                                        Serve</a></li>
+                                                <li class="hover:text-white"><a
+                                                        href="./more-Inventory-life-cycle-mangement.html"
+                                                        class="block  dropdown-item pl-6 py-6 text-sm  rounded-b-xl">Inventory
+                                                        &
+                                                        Lifecycle Management</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul
+                                class="flex flex-col  kumbhfont text-white gap-8 items-center justify-evenly text-sm leading-6 tracking-2px font-kumbhSans">
+                                <li class="font-bold cursor-pointer text-xl hover:scale-110 transition"><span
+                                        class="inline-flex items-center my-auto">
+                                        <div class="bg-white rounded-full h-4 w-4 mr-3 ">
+                                        </div>HOME
+                                    </span>
+
+                                </li>
+
+                                <!-- OUR SERVICES Dropdown -->
+                                <li class="w-full text-center">
+                                    <button id="service-toggle"
+                                        class="text-white font-normal text-xl  hover:scale-105 transition">
+                                        <span class="inline-flex items-center"> OUR SERVICES <svg class="w-4 h-4 ml-3 "
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg></span>
+                                    </button>
+                                    <ul id="service-dropdown"
+                                        class="hidden overflow-hidden max-h-0 transition-all text-base duration-300 ease-in-out bg-white/6 rounded-xl  mx-auto uppercase  mt-2 w-[80%]">
+                                        <li><a href="./our-services-medical-equipment-maintenance.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Medical
+                                                Equipment Maintenance</a></li>
+                                        <li><a href="./our-services-clinical-engineering-support.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Clinical
+                                                Engineering Support</a></li>
+                                        <li><a href="./our-services-asset-management-audit-support.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Asset
+                                                Management & Audit Support</a></li>
+                                        <li><a href="./our-services-ultrasound-probe-repair.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Ultrasound
+                                                Probe Repair</a></li>
+                                        <li><a href="./our-services-bed-maintenance.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Bed
+                                                Maintenance</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- ABOUT -->
+                                <li class="hover:scale-110 transition text-xl"><a href="./aboutus.html">ABOUT US</a>
+                                </li>
+
+                                <!-- CONTACT -->
+                                <li class="hover:scale-110 transition text-xl"><a href="./contactus.html">CONTACT</a>
+                                </li>
+
+                                <!-- MORE Dropdown -->
+                                <li class="w-full text-center">
+                                    <button id="more-toggle"
+                                        class="text-white font-normal text-xl hover:scale-105 transition">
+                                        <span class="inline-flex items-center"> MORE <svg class="w-4 h-4 ml-3 "
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg></span>
+                                    </button>
+                                    <ul id="more-dropdown"
+                                        class="hidden overflow-hidden max-h-0 text-base transition-all duration-300 ease-in-out bg-white/6 rounded-xl  mx-auto uppercase  w-[80%]  mt-2 ">
+                                        <li><a href="#testimonials"
+                                                class="block px-6 py-3 hover:bg-primary  hover:text-white">Testimonials</a>
+                                        </li>
+                                        <li><a href="./more-sectors-we-serve.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Sectors
+                                                We Serve</a></li>
+                                        <li><a href="./more-Inventory-life-cycle-mangement.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Inventory &
+                                                Lifecycle Management</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div>
+
+                            <div
+                                class=" text-white  text-sm flex max-lg:gap-4 flex-col-reverse justify-between items-center ">
+
+                                <ul class="flex max-lg:text-lg mb-6  space-x-6 justify-between place-items-center">
+                                    <li class="">Precision</li>
+                                    <li class="bg-white rounded-full h-1.5 w-1.5"></li>
+                                    <li>Reliability</li>
+                                    <li class="bg-white rounded-full h-1.5 w-1.5"></li>
+                                    <li>Compliance</li>
+                                </ul>
+                                <div class=" border border-b-[1px] border-white w-full"></div>
+                                <div
+                                    class="flex flex-col place-items-center max-lg:text-lg max-lg:space-y-3 justify-around ">
+                                    <div class="flex mr-11 space-x-3 items-center"><img class="w-3.5 h-3.5 "
+                                            src="./Public/assets/phone.svg" alt="">
+                                        <div class="">
+                                            <p class=" font-bold">Phone<span class="pl-3 font-normal">+44
+                                                    7570296821</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex space-x-3 items-center"><img class="w-3.5 h-3.5 "
+                                            src="./Public/assets/location.svg" alt="">
+                                        <div>
+                                            <p class=" font-bold">Address<span class="pl-3 font-normal">Newcastle Upon
+                                                    Tyne,
+                                                    UK</span>
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <button
+                                    class="  z-0 font-kumbhSans  kumbhfont  hover:text-black  hover:bg-white text-white cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">
+
+                                    BOOK NOW
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
 
         </nav>
     </header>
@@ -161,48 +399,53 @@
     <!-- main-landing -->
     <!-- bg-[url('Public/assets/main-section.webp')] -->
     <section
-        class="bg-[#131313]/50  relative flex  items-end bg-[url('Public/assets/main-section-bg.webp')] justify-end bg-cover  bg-blend-overlay  bg-center bg-no-repeat h-[600px] w-full">
+        class="bg-[#131313]/50 max-lg:h-[430px] relative flex  items-end bg-[url('Public/assets/lab.webp')] justify-end bg-cover  bg-blend-overlay  bg-center bg-no-repeat h-[600px] w-full">
         <!-- Background Video -->
 
         <div
-            class="max-w-servicecontainer mb-20  mx-auto flex-col  flex lg:items-end xl:items-center text-center justify-center    w-full">
-            <div class="w-full text-white flex flex-col items-center justify-center lg:max-xl:h-full min-w-2xl ">
-                <div class="inline-flex items-center justify-center w-full mx-auto ">
+            class="max-w-servicecontainer max-sm:mb-28 sm:mb-44 lg:mb-20 max-lg:pl-4  mx-auto flex-col  flex lg:items-end xl:items-center lg:text-center justify-start lg:justify-center    w-full">
+            <div
+                class="lg:w-full w-5/6 text-white flex flex-col lg:items-center justify-start lg:justify-center lg:max-xl:h-full lg:min-w-2xl ">
+                <div class="inline-flex lg:items-center lg:justify-center w-full mx-auto ">
                     <img class="w-10 h-7" src="./Public/assets/scope.svg" alt="nuvonix-logo">
                     <h6 class="text-sm font-kumbhSans  kumbhfont  tracking-4px ml-3 font-semibold  uppercase">
-                        Sectors We
-                        Serve</h6>
+                        services
+                        we offer</h6>
                 </div>
                 <h6
-                    class="xl:text-[56px]  text-56px w-5/6 mt-4 lg:leading-14 xl:leading-16 font-kumbhSans  kumbhfont  tracking-wide font-medium lg:my-2  xl:my-4">
+                    class="text-28px lg:text-56px lg:w-5/6 mt-4 lg:leading-14 xl:leading-16 font-kumbhSans  kumbhfont  tracking-wide font-medium lg:my-2  xl:my-4">
                     Empowering Healthcare Environments Nationwide</h6>
 
 
             </div>
             <div
-                class="w-full text-white text-nowrap mt-8 flex text-sm justify-center my-auto items-center  font-kumbhSans  kumbhfont  font-semibold leading-6 tracking-4px ">
-                <ul class="flex items-center space-x-6">
-                    <li><i class="fa-solid fa-house mr-1.5 "></i><a href="./index.html">HOME</a></li>
+                class="lg:w-full text-white text-nowrap mt-8 flex text-sm justify-center my-auto items-center font-kumbhSans kumbhfont font-semibold leading-6 tracking-4px">
+                <ul class="flex flex-wrap lg:flex-nowrap items-center lg:justify-around space-x-6 text-center">
+                    <li><i class="fa-solid fa-house mr-1.5"></i><a href="./index.html">HOME</a></li>
                     <li><i class="fa-solid fa-chevron-right"></i></li>
-                    <li>MORE</li>
+                    <li>OUR SERVICES</li>
                     <li><i class="fa-solid fa-chevron-right"></i></li>
-                    <li class="uppercase">Sectors We Serve</li>
+                    <li class="uppercase text-left text-wrap">Empowering Healthcare Environments Nationwide
+                    </li>
                 </ul>
             </div>
+
 
 
         </div>
     </section>
     <!-- 2nd page-->
-    <section class=" w-full ">
-        <div class="max-w-servicecontainer  h-full mx-auto w-full">
-            <img class="w-full h-h320 rounded-xl object-center object-cover transform -translate-y-12"
-                src="./Public/assets/old-bed.webp" alt="">
-            <div class="w-full my-10">
+    <section class=" w-full mb-6 lg:mb-28">
+        <div class="sm:max-w-servicecontainer  h-full sm:w-full  px-4 sm:mx-auto "><img
+                class="sm:w-full max-sm:aspect-video   sm:h-h320 rounded-xl object-center object-cover -translate-y-1/2 transform lg:-translate-y-12"
+                src="./Public/assets/old-bed.webp" alt=""></div>
+        <div
+            class="sm:max-w-servicecontainer transform max-lg:-translate-y-28 lg:-translate-y-12   h-full sm:w-full  px-4 sm:mx-auto ">
+
+            <div class="w-full lg:my-10">
                 <h6 class="heading">Bringing technical expertise to the frontlines of care</h6>
-                <p class="mt-6 paras mb-4">At <strong>Nuvionx</strong> Ltd, we are committed to supporting the
-                    healthcare sector with
-                    precision-driven clinical engineering
+                <p class="lg:mt-6 paras mt-4 mb-4">At Nuvionx Ltd, we are committed to supporting the healthcare sector
+                    with precision-driven clinical engineering
                     services. From hospitals and clinics to specialist care units and diagnostic centres, we ensure that
                     essential medical
                     equipment operates at peak performance—because in healthcare, every moment matters. By delivering
@@ -211,17 +454,17 @@
                     outcomes and safety.</p>
 
             </div>
-            <div class="flex justify-between items-start ">
-                <div class="w-full mr-10">
+            <div class="flex max-sm:flex-col justify-between items-start ">
+                <div class="sm:w-1/2 max-lg:pr-4">
                     <div class="inline-flex items-center lg:mb-1  xl:mb-3">
                         <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-primary"></div>
-                        <h6 class="text-primary  font-semibold tracking-4px xl:leading-6 uppercase">Hospitals & NHS
-                            Trusts
+                        <h6 class="text-primary max-lg:text-xs font-semibold tracking-4px xl:leading-6 uppercase">
+                            Hospitals & NHS Trusts
                         </h6>
                     </div>
                     <h6 class="heading">Trusted Engineering Support for Hospitals & NHS Trusts</h6>
-                    <p class="mt-6 paras">We proudly collaborate with private hospitals and NHS Trusts throughout the
-                        UK, delivering reliable and responsive
+                    <p class=" lg:lg:mt-6 paras my-4">We proudly collaborate with private hospitals and NHS Trusts
+                        throughout the UK, delivering reliable and responsive
                         clinical engineering services tailored to the demands of modern healthcare. Our expert team
                         provides routine
                         maintenance, urgent breakdown repairs, and comprehensive compliance testing to ensure that
@@ -230,23 +473,23 @@
                         frameworks and hospital
                         workflows, we help healthcare providers meet regulatory requirements while minimizing downtime
                         and enhancing patient
-                        care quality.se.
+                        care quality.
 
                     </p>
                 </div>
-                <img class="rounded-xl  object-cover object-top w-full h-[339px]  max-w-[426px]  "
-                    src="./Public/assets/old-inwheelchair.webp" alt="old lady in wheel chair helped by nurse">
+                <img class="rounded-xl sm:w-1/2 lg:w-full  object-cover object-top w-full sm:max-lg:h-[265px] h-full sm:max-w-[426px] "
+                    src="./Public/assets/lady-mask.webp" alt="lady in lab with mask,ppe kit">
             </div>
-            <div class="flex flex-row-reverse justify-between items-start mt-10 ">
-                <div class="w-full mr-10 ml-10">
+            <div class="flex max-sm:flex-col flex-row-reverse justify-between  items-start mt-10 ">
+                <div class="sm:w-1/2 sm:pl-4">
                     <div class="inline-flex items-center lg:mb-1  xl:mb-3">
                         <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-primary"></div>
-                        <h6 class="text-primary  font-semibold tracking-4px xl:leading-6 uppercase">Clinics & Private
-                            Practices
+                        <h6 class="text-primary max-lg:text-xs font-semibold tracking-4px xl:leading-6 uppercase">
+                            Clinics & Private Practices
                         </h6>
                     </div>
                     <h6 class="heading">Tailored Solutions for Clinics</h6>
-                    <p class="mt-6 paras">From local GPs to specialized private clinics, we provide flexible and
+                    <p class="lg:mt-6 paras mt-4">From local GPs to specialized private clinics, we provide flexible and
                         tailored service plans designed to support
                         uninterrupted patient care. Our prompt response times, OEM-trained engineers, and cost-effective
                         solutions help ensure
@@ -256,47 +499,82 @@
 
                     </p>
                 </div>
-                <img class="rounded-xl  object-cover object-center w-full h-full max-w-[426px] "
-                    src="./Public/assets/lab-equipment.webp" alt="girl typing on equipment">
+                <img class="rounded-xl sm:w-1/2 lg:w-full object-cover object-center w-full sm:h-[265px] lg:h-full lg:max-w-[426px] "
+                    src="./Public/assets/girl-typing.webp" alt="girl typing on equipment">
             </div>
-            <div class="flex justify-between items-start mt-10 ">
-                <div class="w-full mr-10">
-                    <div class="inline-flex items-center lg:mb-1  xl:mb-3">
+            <div class="flex max-sm:flex-col justify-between items-start mt-10">
+                <div class="sm:w-1/2 max-lg:pr-4 w-full h-full">
+                    <div class="inline-flex items-center lg:mb-1 xl:mb-3">
                         <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-primary"></div>
-                        <h6 class="text-primary  font-semibold tracking-4px xl:leading-6 uppercase">Care Homes
+                        <h6 class="text-primary max-lg:text-xs font-semibold tracking-4px xl:leading-6 uppercase">
+                            Customised Service Contracts
+                        </h6>
                     </div>
-                    <h6 class="heading w-full">Supporting Safe and Comfortable Living in Care Homes</h6>
-                    <p class="mt-6 paras">We understand that every healthcare facility has unique needs. That’s why our
-                        flexible service contracts are designed to
+                    <h6 class="heading">Built around your specific needs</h6>
+                    <p class="lg:mt-6 paras mt-4">
+                        We understand that every healthcare facility has unique needs. That’s why our flexible service
+                        contracts are
+                        designed to
                         give you full control—choose the devices you want covered, set service intervals that match your
-                        operations, and define
+                        operations,
+                        and define
                         the level of support that works best for your team. Whether you’re managing a single department
-                        or an entire trust,
+                        or an entire
+                        trust,
                         Nuvionx delivers scalable, cost-effective solutions aligned with your goals and budget.
-
                     </p>
                 </div>
-                <img class="rounded-xl   object-cover  w-full   max-w-[426px]  h-[339px] "
-                    src="./Public/assets/old-helping.webp" alt="lady in lab with mask,ppe kit">
+                <div class="sm:w-1/2 sm:max-w-[426px] w-full h-full sm:max-lg:aspect-square">
+                    <img class="rounded-xl w-full h-full object-cover object-top"
+                        src="./Public/assets/men-toolinhand.webp" alt="lady in lab with mask,ppe kit">
+                </div>
             </div>
 
+            <div class="flex max-sm:flex-col flex-row-reverse justify-between items-start mt-10 ">
+                <div class="sm:w-1/2 sm:max-lg:pl-4">
+                    <div class="inline-flex items-center lg:mb-1  xl:mb-3">
+                        <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-primary"></div>
+                        <h6 class="text-primary max-lg:text-xs font-semibold tracking-4px xl:leading-6 uppercase">
+                            Care Homes
+                        </h6>
+                    </div>
+                    <h6 class="heading">Supporting Safe and Comfortable Living in Care Homes</h6>
+                    <p class="lg:mt-6 paras mt-4">Residential care facilities require a special level of attention when
+                        it comes to medical equipment maintenance. At
+                        Nuvionx, we understand the importance of ensuring that residents receive consistent,
+                        high-quality care in a safe and
+                        comfortable environment. Our experienced engineers provide routine servicing and rapid repairs
+                        for essential equipment
+                        such as ambulatory infusion pumps, patient beds, monitoring devices, and more. With a focus on
+                        safety, compliance, and
+                        minimal disruption, we help care homes maintain operational readiness and uphold the dignity and
+                        well-being of every
+                        resident.
+                    </p>
+                </div>
+                <div class="sm:w-1/2 sm:max-w-[426px] w-full h-full sm:max-lg:aspect-square">
+                    <img class="rounded-xl w-full h-full object-cover object-top"
+                        src="./Public/assets/men-handling.webp" alt="lady in lab with mask,ppe kit">
+                </div>
+            </div>
             <div class="h-[1px] bg-[#D0D0D0] my-10  w-full"></div>
 
-            <div class="rounded-xl relative   bg-headdark w-full flex justify-around items-center">
-                <img class="absolute w-full h-full object-cover z-10" src="./Public/assets/clip-primar.svg" alt="">
-                <div>
-                    <h1 class="font-kumbhSans  kumbhfont  uppercase z-20  text-white tracking-2px text-[13px]">Find
-                        out
-                        more about
-                        <span class=" font-bold tracking-2px">Sectors we serve</span>
-                    </h1>
-                </div>
-                <div class="z-20"><button
-                        class=" text-white  font-kumbhSans  kumbhfont  my-8 bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer leading-6 rounded-xl py-6 px-14 tracking-2px text-xs font-semibold uppercase col-span-2 ">
-                        POST REQUEST
-                    </button></div>
-            </div>
 
+        </div>
+        <div
+            class="sm:rounded-xl   relative sm:max-w-servicecontainer sm:max-lg:w-[95%]   mx-auto  max-sm:flex-col  bg-headdark lg:w-full flex sm:justify-around sm:items-center">
+            <img class="absolute w-full h-full object-cover z-10" src="./Public/assets/clip-primar.svg" alt="">
+            <div class="max-sm:px-6 max-sm:mt-6 max-sm:w-3/4">
+                <h1 class="font-kumbhSans  kumbhfont  uppercase z-20  text-white tracking-2px text-[13px]">Find
+                    out
+                    more about
+                    <span class=" font-bold tracking-2px">Clinical Engineering Support</span>
+                </h1>
+            </div>
+            <div class="z-20 max-sm:px-6 max-sm:mb-6"><button
+                    class=" text-white max-lg:w-[160px]  font-kumbhSans  kumbhfont mt-4  sm:my-8 bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer leading-6 rounded-xl py-4 px-6 lg:px-14 tracking-2px text-xs font-semibold uppercase col-span-2 ">
+                    POST REQUEST
+                </button></div>
         </div>
     </section>
 
@@ -320,10 +598,11 @@
     <footer class="w-full  bg-white">
         <div class="xl:max-w-container md:max-w-5xl mx-auto w-[95%] bg-white">
             <!-- footer menus  -->
-            <div class="  py-16 grid grid-cols-4 gap-8 mx-auto">
+            <div
+                class="  py-16 grid max-sm:grid-rows-3 sm:max-lg:grid-cols-3 gap-10 lg:grid-cols-4 sm:max-lg:gap-8 mx-auto">
                 <!-- contact -->
-                <div class="">
-                    <h3 class="font-semibold leading-6 tracking-4px mb-8">CONTACT</h3>
+                <div class="sm:max-lg:order-4 sm:max-lg:col-span-3 sm:max-lg:mx-auto sm:max-lg:text-center">
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8 ">CONTACT</h3>
                     <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
                         <li>5 Rialto Building<br> NE1 2JR</li>
                         <li><a href="tel:07768151690 ">
@@ -370,7 +649,7 @@
                     </ul>
                 </div>
                 <div class="">
-                    <h3 class="font-semibold leading-6 tracking-4px mb-8">COMPANY</h3>
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8 ">COMPANY</h3>
                     <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
                         <li><a href="#">Bookings & Cancellations </a></li>
                         <li><a href="#">Website Terms</a></li>
@@ -383,9 +662,9 @@
             </div>
             <div class="h-[1px] bg-[#D0D0D0]  w-full"></div>
 
-            <div class="flex justify-between items-center py-10">
+            <div class="flex max-sm:flex-col justify-between items-center py-6 lg:py-10">
                 <div class="font-HindMadurai text-headdark leading-6">2025 © Nuvionx. All Rights Reserved.</div>
-                <div class="font-HindMadurai text-headdark leading-6 space-x-12">
+                <div class="font-HindMadurai text-headdark leading-6 space-x-12 max-sm:mt-6">
                     <a href="">Privacy & Policy</a>
                     <a href="">Terms & Condition</a>
                 </div>

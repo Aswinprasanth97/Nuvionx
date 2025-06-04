@@ -17,7 +17,7 @@
 
 <body class="relative p-0 m-0 box-border  bg-lightgrey scroll-smooth ">
     <!-- ---Topbar--- -->
-    <div class="bg-primary  h-[62px] m-auto text-sm leading-6 relative top-0 w-full ">
+    <div class="bg-primary hidden lg:block h-[62px] m-auto text-sm leading-6 relative top-0 w-full ">
         <div
             class=" text-white  lg:max-w-5xl xl:max-w-container mx-auto   text-sm flex flex-col lg:flex-row justify-between items-center  py-5">
 
@@ -51,16 +51,16 @@
 
     <!-- navbar -->
     <header class=" ">
-        <nav class="justify-between z-20  absolute lg:top-10 lg:my-8 xl:top-16 w-full 2xl:my-12 ">
+        <nav id="main-nav"
+            class="justify-between z-20 max-lg:fixed bg-transparent absolute lg:top-10 max-lg:pt-2 lg:my-8 xl:top-16 w-full 2xl:my-12  ">
             <!-- navbar main -->
             <div class="lg:max-w-5xl xl:max-w-container mx-auto flex w-[95%] justify-between items-center ">
                 <div><img class="w-28  h-10" src="./Public/assets/Nuvonix Logo.svg" alt="Nuvonix Logo"></div>
-                <div class="">
+                <div class="hidden lg:block">
                     <ul
-                        class="flex font-kumbhSans kumbhfont  text-white gap-6 items-center justify-evenly  text-sm leading-6 tracking-2px">
-                        <li class=""><span
-                                class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer"><a
-                                    href="./index.html">HOME</a></span>
+                        class="flex font-kumbhSans  kumbhfont  text-white gap-6 items-center justify-evenly  text-sm leading-6 tracking-2px">
+                        <li class="font-bold"><span
+                                class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer">HOME</span>
                         </li>
                         <li class="">
                             <div class="relative inline-block text-center ">
@@ -103,7 +103,7 @@
                             </div>
                         </li>
                         <li><span
-                                class="inline-block text-center font-bold transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
+                                class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
                                     href="./aboutus.html">ABOUT US</a></span></li>
                         <li><span
                                 class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
@@ -112,7 +112,7 @@
                         <li>
                             <div class="relative inline-block text-center ">
                                 <button id="nav-main"
-                                    class="inline-flex ring-0   items-center cursor-pointer text-white transition duration-300 ease-in-out transform hover:-translate-y-1  hover:scale-110 text-sm  rounded-lg"
+                                    class="inline-flex ring-0  items-center cursor-pointer text-white transition duration-300 ease-in-out transform hover:-translate-y-1  hover:scale-110 text-sm  rounded-lg"
                                     type="button" data-dropdown-toggle="dropdown">
                                     MORE
                                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -121,12 +121,12 @@
                                     </svg>
                                 </button>
                                 <div id="nav-drop"
-                                    class="hidden absolute transform -translate-x-1/4  mt-2 min-w-[300px] w-full bg-white text-base z-50 list-none rounded-xl shadow"
+                                    class="hidden absolute md:max-lg:right-0  transform lg:-translate-x-1/4  mt-2 min-w-[300px] w-full bg-white text-base z-50 list-none rounded-xl shadow"
                                     id="dropdown">
                                     <ul class=" !text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
                                         aria-labelledby="dropdown">
 
-                                        <li class=" hover:text-white"><a href="#"
+                                        <li class=" hover:text-white"><a href="#testimonials"
                                                 class="block  dropdown-item  box pl-6 py-6 rounded-t-xl text-sm ">Testimonials</a>
                                         </li>
                                         <li class="hover:text-white"><a href="./more-sectors-we-serve.html"
@@ -146,13 +146,250 @@
                         </li>
                     </ul>
                 </div>
-                <div class="">
+                <div class="hidden  lg:block">
+
                     <button
                         class="  z-0 font-kumbhSans  kumbhfont  hover:text-black  hover:bg-white text-white cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">
 
                         BOOK NOW
                     </button>
                 </div>
+                <div class="mob-nav  lg:hidden">
+                    <svg id="mob-nav" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect x="11" y="25" width="4" height="4" fill="white" />
+                        <rect x="25" y="25" width="4" height="4" fill="white" />
+                        <rect x="11" y="11" width="4" height="4" fill="white" />
+                        <rect x="25" y="11" width="4" height="4" fill="white" />
+                    </svg>
+                    <div id="mob-nav-drop" class=" absolute hidden  top-0 max-lg:pt-2 right-0 w-full flex-col h-screen flex justify-between items-center
+                            bg-primary">
+                        <div class="mx-auto flex w-[95%] justify-between items-center ">
+                            <div><img class="w-28  h-10" src="./Public/assets/Nuvonix Logo.svg" alt="Nuvonix Logo">
+                            </div>
+                            <div id="mob-nav-close"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="40" height="40" rx="20" fill="white" fill-opacity="0.04" />
+                                    <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="white"
+                                        stroke-opacity="0.6" />
+                                    <path d="M12 12L28 28" stroke="white" stroke-linecap="square"
+                                        stroke-linejoin="round" />
+                                    <path d="M12 28L28 12" stroke="white" stroke-linecap="square"
+                                        stroke-linejoin="round" />
+                                </svg></div>
+                        </div>
+                        <div class="">
+                            <ul
+                                class="flex hidden font-kumbhSans flex-col  kumbhfont  text-white gap-6 items-center justify-evenly  text-sm leading-6 tracking-2px">
+                                <li class="font-bold"><span
+                                        class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer">HOME</span>
+                                </li>
+                                <li class="">
+                                    <div class="relative inline-block text-center ">
+                                        <button id="service-main"
+                                            class="inline-flex cursor-pointer
+                                                                          items-center text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-sm  rounded-lg"
+                                            type="button" data-dropdown-toggle="dropdown">
+                                            OUR SERVICES
+                                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg>
+                                        </button>
+                                        <div id="service-drop"
+                                            class="hidden   absolute transform -translate-x-1/4  mt-2 w-[305px] bg-white text-base z-50 list-none rounded-xl shadow"
+                                            id="dropdown">
+                                            <ul class="!text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
+                                                aria-labelledby="dropdown">
+                                                <li><a href="./our-services-medical-equipment-maintenance.html"
+                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white rounded-t-xl">Medical
+                                                        Equipment Maintenance</a></li>
+                                                <li><a href="./our-services-clinical-engineering-support.html"
+                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white ">Clinical
+                                                        Engineering Support</a></li>
+                                                <li><a href="./our-services-asset-management-audit-support.html"
+                                                        class="block dropdown-item  pl-6 py-6 text-sm hover:text-white ">Asset
+                                                        Management & Audit Support</a>
+                                                </li>
+                                                <li><a href="./our-services-ultrasound-probe-repair.html"
+                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white ">Ultrasound
+                                                        Probe Repair</a>
+                                                </li>
+                                                <li><a href="./our-services-bed-maintenance.html"
+                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white rounded-b-xl">Bed
+                                                        Maintenance</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><span
+                                        class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
+                                            href="./aboutus.html">ABOUT US</a></span></li>
+                                <li><span
+                                        class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
+                                            href="./contactus.html">CONTACT</a></span>
+                                </li>
+                                <li>
+                                    <div class="relative inline-block text-center ">
+                                        <button id="nav-main-mobile"
+                                            class="inline-flex ring-0  items-center cursor-pointer text-white transition duration-300 ease-in-out transform hover:-translate-y-1  hover:scale-110 text-sm  rounded-lg"
+                                            type="button" data-dropdown-toggle="dropdown">
+                                            MORE
+                                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg>
+                                        </button>
+                                        <div id="nav-drop-mobile "
+                                            class="absolute hidden w-full right-[50%] transform mt-2 min-w-[300px] bg-white text-base z-50 list-none rounded-xl shadow"
+                                            id="dropdown">
+                                            <ul class=" !text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
+                                                aria-labelledby="dropdown">
+
+                                                <li class=" hover:text-white"><a href="#testimonials"
+                                                        class="block  dropdown-item  box pl-6 py-6 rounded-t-xl text-sm ">Testimonials</a>
+                                                </li>
+                                                <li class="hover:text-white"><a href="./more-sectors-we-serve.html"
+                                                        class="block  dropdown-item  pl-6 py-6 text-sm ">Sectors
+                                                        We
+                                                        Serve</a></li>
+                                                <li class="hover:text-white"><a
+                                                        href="./more-Inventory-life-cycle-mangement.html"
+                                                        class="block  dropdown-item pl-6 py-6 text-sm  rounded-b-xl">Inventory
+                                                        &
+                                                        Lifecycle Management</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul
+                                class="flex flex-col  kumbhfont text-white gap-8 items-center justify-evenly text-sm leading-6 tracking-2px font-kumbhSans">
+                                <li class="font-bold cursor-pointer text-xl hover:scale-110 transition"><span
+                                        class="inline-flex items-center my-auto">
+                                        <div class="bg-white rounded-full h-4 w-4 mr-3 ">
+                                        </div>HOME
+                                    </span>
+
+                                </li>
+
+                                <!-- OUR SERVICES Dropdown -->
+                                <li class="w-full text-center">
+                                    <button id="service-toggle"
+                                        class="text-white font-normal text-xl  hover:scale-105 transition">
+                                        <span class="inline-flex items-center"> OUR SERVICES <svg class="w-4 h-4 ml-3 "
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg></span>
+                                    </button>
+                                    <ul id="service-dropdown"
+                                        class="hidden overflow-hidden max-h-0 transition-all text-base duration-300 ease-in-out bg-white/6 rounded-xl  mx-auto uppercase  mt-2 w-[80%]">
+                                        <li><a href="./our-services-medical-equipment-maintenance.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Medical
+                                                Equipment Maintenance</a></li>
+                                        <li><a href="./our-services-clinical-engineering-support.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Clinical
+                                                Engineering Support</a></li>
+                                        <li><a href="./our-services-asset-management-audit-support.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Asset
+                                                Management & Audit Support</a></li>
+                                        <li><a href="./our-services-ultrasound-probe-repair.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Ultrasound
+                                                Probe Repair</a></li>
+                                        <li><a href="./our-services-bed-maintenance.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Bed
+                                                Maintenance</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- ABOUT -->
+                                <li class="hover:scale-110 transition text-xl"><a href="./aboutus.html">ABOUT US</a>
+                                </li>
+
+                                <!-- CONTACT -->
+                                <li class="hover:scale-110 transition text-xl"><a href="./contactus.html">CONTACT</a>
+                                </li>
+
+                                <!-- MORE Dropdown -->
+                                <li class="w-full text-center">
+                                    <button id="more-toggle"
+                                        class="text-white font-normal text-xl hover:scale-105 transition">
+                                        <span class="inline-flex items-center"> MORE <svg class="w-4 h-4 ml-3 "
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg></span>
+                                    </button>
+                                    <ul id="more-dropdown"
+                                        class="hidden overflow-hidden max-h-0 text-base transition-all duration-300 ease-in-out bg-white/6 rounded-xl  mx-auto uppercase  w-[80%]  mt-2 ">
+                                        <li><a href="#testimonials"
+                                                class="block px-6 py-3 hover:bg-primary  hover:text-white">Testimonials</a>
+                                        </li>
+                                        <li><a href="./more-sectors-we-serve.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Sectors
+                                                We Serve</a></li>
+                                        <li><a href="./more-Inventory-life-cycle-mangement.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Inventory &
+                                                Lifecycle Management</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div>
+
+                            <div
+                                class=" text-white  text-sm flex max-lg:gap-4 flex-col-reverse justify-between items-center ">
+
+                                <ul class="flex max-lg:text-lg mb-6  space-x-6 justify-between place-items-center">
+                                    <li class="">Precision</li>
+                                    <li class="bg-white rounded-full h-1.5 w-1.5"></li>
+                                    <li>Reliability</li>
+                                    <li class="bg-white rounded-full h-1.5 w-1.5"></li>
+                                    <li>Compliance</li>
+                                </ul>
+                                <div class=" border border-b-[1px] border-white w-full"></div>
+                                <div
+                                    class="flex flex-col place-items-center max-lg:text-lg max-lg:space-y-3 justify-around ">
+                                    <div class="flex mr-11 space-x-3 items-center"><img class="w-3.5 h-3.5 "
+                                            src="./Public/assets/phone.svg" alt="">
+                                        <div class="">
+                                            <p class=" font-bold">Phone<span class="pl-3 font-normal">+44
+                                                    7570296821</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex space-x-3 items-center"><img class="w-3.5 h-3.5 "
+                                            src="./Public/assets/location.svg" alt="">
+                                        <div>
+                                            <p class=" font-bold">Address<span class="pl-3 font-normal">Newcastle Upon
+                                                    Tyne,
+                                                    UK</span>
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <button
+                                    class="  z-0 font-kumbhSans  kumbhfont  hover:text-black  hover:bg-white text-white cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">
+
+                                    BOOK NOW
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
 
         </nav>
     </header>
@@ -162,28 +399,29 @@
     <!-- main-landing -->
     <!-- bg-[url('Public/assets/main-section.webp')] -->
     <section
-        class="bg-[#131313]/50  relative flex  items-end bg-[url('Public/assets/main-section-bg.webp')] justify-end bg-cover  bg-blend-overlay  bg-center bg-no-repeat lg:max-xl:h-screen xl:h-[600px] w-full">
+        class="bg-[#131313]/50  relative flex max-lg:h-[300px]  items-end bg-[url('Public/assets/main-section-bg.webp')] justify-end bg-cover  bg-blend-overlay  bg-center bg-no-repeat lg:max-xl:h-screen xl:h-[600px] w-full">
         <!-- Background Video -->
 
         <div
-            class="lg:max-w-5xl xl:max-w-container w-[95%]   mx-auto  flex lg:items-end xl:items-end justify-between mb-16 ">
-            <div class="w-1/2 text-white flex flex-col items-start justify-center lg:max-xl:h-full min-w-2xl ">
+            class="lg:max-w-5xl xl:max-w-container w-[95%] max-lg:ml-4 mx-auto max-lg:flex-col  flex lg:items-end xl:items-end justify-between mb-16 ">
+            <div class="lg:w-1/2 text-white flex flex-col items-start justify-center lg:max-xl:h-full lg:min-w-2xl ">
                 <div class="inline-flex items-center ">
                     <img class="w-10 h-7" src="./Public/assets/scope.svg" alt="nuvonix-logo">
-                    <h6 class="text-sm font-kumbhSans  kumbhfont  tracking-4px ml-3 font-semibold  uppercase">
+                    <h6
+                        class="lg:text-sm text-xs font-kumbhSans  kumbhfont  tracking-4px ml-3 font-semibold  uppercase">
                         Precision
                         You Can
                         Rely
                         On</h6>
                 </div>
                 <h6
-                    class="xl:text-[56px] lg:text-5xl lg:leading-14 xl:leading-16 font-kumbhSans  kumbhfont  tracking-wide font-medium lg:my-2  xl:my-4">
+                    class="xl:text-[56px] lg:text-5xl lg:leading-14 xl:leading-16 font-kumbhSans max-lg:text-28px kumbhfont  tracking-wide font-medium lg:my-2  xl:my-4">
                     At the Heart <span class="">O</span>f Trusted Healthcare Support</h6>
 
 
             </div>
             <div
-                class="w-1/2 text-white flex justify-end my-auto items-center  font-kumbhSans  kumbhfont  font-semibold leading-6 tracking-4px ">
+                class="lg:w-1/2 text-white flex lg:justify-end my-auto items-center max-lg:text-xs max-lg:mt-6  font-kumbhSans  kumbhfont  font-semibold leading-6 tracking-4px ">
                 <ul class="flex items-center space-x-6">
                     <li><i class="fa-solid fa-house mr-1.5 "></i><a href="./index.html">HOME</a></li>
                     <li><i class="fa-solid fa-chevron-right"></i></li>
@@ -195,14 +433,53 @@
         </div>
     </section>
     <!-- about us-->
-    <section class=" w-full my-28 ">
-        <div class="lg:max-w-5xl xl:max-w-container w-[95%] h-full mx-auto">
-            <div class=" w-full mb-20 h-full   flex items-start justify-between font-kumbhSans  kumbhfont ">
+    <section class=" w-full lg:py-14 my-4">
+        <div class="lg:max-w-5xl xl:max-w-container w-[95%] h-full mx-4  lg:mx-auto">
+            <div
+                class=" w-full mb-20 h-full max-sm:flex-col-reverse  flex items-start justify-between font-kumbhSans  kumbhfont ">
+                <div class="sm:w-1/2 lg:hidden max-sm:hidden mr-4"><img class=" rounded-xl lg:h-[519px]  object-cover"
+                        src="./Public/assets/aboutus-bg.webp" alt="girl-microscope">
+                    <div
+                        class="lg:w-1/2 lg:mr-10  h-full rounded-xl  bg-primary z-10  xl:min-w-2xl flex items-center justify-evenly  relative max-lg:mt-4 py-4  ">
+                        <img class=" absolute top-0 left-0 z-20 mix-blend-multiply" src="./Public/assets/s1.svg" alt="">
+                        <img class="absolute  bottom-3 right-0 z-20 mix-blend-multiply" src="./Public/assets/s2.svg"
+                            alt="">
+                        <div class=" text-center text-white">
+                            <h5 class="font-medium text-xl leading-6">Our Mission</h5>
+                            <p class="leading-6 font-HindMadurai mt-6 ">To improve the reliability and longevity
+                                of
+                                biomedical
+                                equipment through
+                                proactive
+                                servicing, early intervention, and
+                                close collaboration with healthcare providers—making healthcare more sustainable,
+                                accessible, and efficient for all.</p>
 
-                <img class="w-1/2 rounded-xl h-[519px]  object-cover" src="./Public/assets/aboutus-bg.webp"
-                    alt="girl-microscope">
+                        </div>
+                    </div>
 
-                <div class="w-1/2 h-full ml-10 ">
+                    <div
+                        class="lg:w-1/2 max-sm:mt-4  h-full rounded-xl bg-secondary-cyan z-10 xl:min-w-2xl  flex items-center justify-evenly  relative max-lg:mt-4 py-4  ">
+                        <img class=" absolute top-0 left-0 z-20 mix-blend-multiply" src="./Public/assets/s1.svg" alt="">
+                        <img class="absolute  bottom-3 right-0 z-20 mix-blend-multiply" src="./Public/assets/s2.svg"
+                            alt="">
+                        <div class=" text-center text-white">
+                            <h5 class="font-medium text-xl leading-6">Our Vision</h5>
+                            <p class="leading-6 font-HindMadurai mt-6 ">To become a global leader in sustainable
+                                biomedical
+                                services and solutions, reducing medical equipment waste and
+                                ensuring every healthcare facility has access to safe, well-maintained devices that
+                                support
+                                better patient care.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <img class="sm:w-1/2 sm:max-lg:hidden  rounded-xl lg:h-[519px]  object-cover"
+                    src="./Public/assets/aboutus-bg.webp" alt="girl-microscope">
+
+                <div class="sm:w-1/2 h-full lg:ml-10 ">
                     <div class="inline-flex items-center lg:mb-1  xl:mb-3">
                         <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-primary"></div>
                         <h6 class="text-primary  font-semibold tracking-4px xl:leading-6 uppercase">about us
@@ -238,11 +515,11 @@
 
                 </div>
             </div>
-            <div class="xl:h-1/4 lg:h-2/12 w-full flex justify-between  ">
+            <div class="xl:h-1/4 lg:h-2/12 w-full max-sm:flex-col flex justify-between  sm:max-lg:hidden  ">
 
 
                 <div
-                    class="w-1/2 mr-10  h-full rounded-xl  bg-primary z-10  xl:min-w-2xl flex items-center justify-evenly  relative lg:px-6 xl:px-10 py-9  ">
+                    class="lg:w-1/2 lg:mr-10  h-full rounded-xl  bg-primary z-10  xl:min-w-2xl flex items-center justify-evenly  relative lg:px-6 xl:px-10 py-9  ">
                     <img class=" absolute top-0 left-0 z-20 mix-blend-multiply" src="./Public/assets/s1.svg" alt="">
                     <img class="absolute  bottom-3 right-0 z-20 mix-blend-multiply" src="./Public/assets/s2.svg" alt="">
                     <div class=" text-center text-white">
@@ -260,7 +537,7 @@
                 </div>
 
                 <div
-                    class="w-1/2  h-full rounded-xl bg-secondary-cyan z-10 xl:min-w-2xl  flex items-center justify-evenly  relative lg:px-6 xl:px-10 py-9  ">
+                    class="lg:w-1/2 max-sm:mt-4  h-full rounded-xl bg-secondary-cyan z-10 xl:min-w-2xl  flex items-center justify-evenly  relative lg:px-6 xl:px-10 py-9  ">
                     <img class=" absolute top-0 left-0 z-20 mix-blend-multiply" src="./Public/assets/s1.svg" alt="">
                     <img class="absolute  bottom-3 right-0 z-20 mix-blend-multiply" src="./Public/assets/s2.svg" alt="">
                     <div class=" text-center text-white">
@@ -278,31 +555,37 @@
     </section>
 
     <!-- our team -->
-    <section class="w-full py-[120px] ">
-        <div class="lg:max-w-5xl xl:max-w-container w-[95%] mx-auto flex flex-row-reverse items-start justify-between ">
-            <div class="w-1/2 h-full relative flex items-end">
+    <section class="w-full lg:py-14 ">
+        <div
+            class="lg:max-w-5xl xl:max-w-container w-[95%] mx-auto flex flex-row-reverse max-lg:flex-col-reverse items-start justify-between ">
+            <div class="lg:w-1/2 h-full relative max-sm:flex-col flex items-end">
                 <div class="w-full"><img src="./Public/assets/our-team.webp"
                         class="w-full rounded-xl  h-full object-cover" alt="a lady in a nuvinix lab">
                 </div>
-                <div class="absolute -bottom-5 left-[50%]  transform -translate-x-1/2 min-w-md xl:min-w-xl">
+                <div
+                    class="absolute -bottom-5 max-sm:-bottom-1/3 left-[50%]  transform -translate-x-1/2 sm:min-w-11/12  lg:min-w-md xl:min-w-xl">
 
-                    <div class="  items-center lg:max-xl:w-5/6  mx-auto justify-center flex ">
+                    <div class="  items-center lg:max-xl:w-5/6 w-full  mx-auto justify-center flex ">
 
                         <div
-                            class="h-full xl:max-w-xl xl:w-11/12  rounded-xl bg-dropdown z-10  flex items-center justify-evenly  relative lg:max-xl:p-3">
+                            class="h-full xl:max-w-xl xl:w-11/12  rounded-xl bg-dropdown z-10  flex items-center justify-evenly p-6  relative lg:max-xl:p-3">
                             <img class=" absolute top-0 left-0 z-20 mix-blend-multiply" src="./Public/assets/s1.svg"
                                 alt="">
                             <img class="absolute  bottom-3 right-0 z-20 mix-blend-multiply" src="./Public/assets/s2.svg"
                                 alt="">
 
-                            <div class=" xl:px-6  xl:pb-6 lg:w-full lg:ml-3 xl:ml-0 text-center">
-                                <h3 class="xl:py-6 lg:py-3 font-semibold  xl:text-xl text-text-dark">Nationwide Coverage
+                            <div class=" xl:px-6  xl:pb-6 max-sm:w-52 lg:w-full lg:ml-3 xl:ml-0 text-center">
+                                <h3 class="xl:py-6 lg:py-3 font-semibold  text-xl text-text-dark">Nationwide Coverage
                                     consistent
                                     Quality
                                 </h3>
-                                <p class="font-HindMadurai xl:leading-6  lg:text-sm xl:text-base text-headdark">We offer
+                                <p
+                                    class="font-HindMadurai xl:leading-6 sm:max-lg:mt-6  text-sm xl:text-base text-headdark">
+                                    We offer
                                     nationwide
-                                    service coverage across the UK. <br> Our OEM-certified engineers are trained to
+                                    service coverage across the UK. <br class="hidden lg:block"> Our OEM-certified
+                                    engineers are
+                                    trained to
                                     service
                                     all NHS-supplied
                                     equipment with precision and care.</p>
@@ -315,7 +598,7 @@
                     </div>
                 </div>
             </div>
-            <div class=" w-1/2 h-full mr-14">
+            <div class=" lg:w-1/2 h-full lg:mr-14 ">
                 <div class="inline-flex items-center   mb-3">
                     <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-primary"></div>
                     <h6 class="text-primary  font-semibold tracking-4px leading-6 uppercase">our team
@@ -324,7 +607,8 @@
                 <h1 class=" main-heading">Expertise You Can Count
                     On
                 </h1>
-                <p class="lg:mt-4 xl:mt-8 leading-6 text-textpara-dark">Our team of skilled engineers is the backbone of
+                <p class="lg:mt-4 xl:mt-8 leading-6 my-4 text-textpara-dark">Our team of skilled engineers is the
+                    backbone of
                     <strong>Nuvionx’s</strong>
                     commitment to healthcare excellence. Strategically located
                     across the UK, our professionals are trained directly by Original Equipment Manufacturers (OEMs),
@@ -342,10 +626,10 @@
     </section>
 
     <!-- why choose us  -->
-    <section class="w-full py-28">
-        <div class="xl:max-w-container lg:max-w-5xl mx-auto">
+    <section class="w-full py-18 lg:py-14 ">
+        <div class="xl:max-w-container lg:max-w-5xl mx-4 lg:mx-auto">
             <!--  heading -->
-            <div class=" text-center mx-auto lg:w-10/12 xl:w-8/12 max-w-5xl">
+            <div class=" lg:text-center mx-auto lg:w-10/12 xl:w-8/12 max-w-5xl">
 
                 <div class="inline-flex items-center  mb-3 ">
                     <div class="w-2.5 h-2.5 mr-2.5 rounded-full bg-primary"></div>
@@ -367,10 +651,11 @@
 
             </div>
             <!-- cards-testimonials -->
-            <div class="grid grid-cols-3 gap-2 lg:gap-4 xl:gap-8  py-16 text-white ">
-                <div class=" text-left max-w-[416px]  w-full p-8 relative rounded-[14px]  bg-primary ">
-                    <img class="absolute w-full h-full object-covers top-0 left-0 "
-                        src="./Public/assets/clip-primar.svg" alt="">
+            <div
+                class="grid max-sm:grid-rows-6 sm:grid-cols-2 lg:grid-cols-3 gap-4 xl:gap-8 max-lg:mt-4 lg:py-16 text-white ">
+                <div class=" text-left max-w-[416px]  w-full px-4 py-6 lg:p-8 relative rounded-[14px]  bg-primary ">
+                    <img class="absolute w-full h-full object-cover top-0 left-0 " src="./Public/assets/clip-primar.svg"
+                        alt="">
                     <!-- card title  -->
                     <div class="w-full text-center">
                         <div class="inline-flex items-center  mb-3 ">
@@ -388,8 +673,8 @@
                     <!-- card name  -->
 
                 </div>
-                <div class="text-left max-w-[416px] w-full p-8 relative rounded-[14px] bg-secondary-cyan">
-                    <img class="absolute w-full h-full object-covers top-0 left-0" src="./Public/assets/card-cyan.svg"
+                <div class="text-left max-w-[416px] w-full px-4 py-6 lg:p-8 relative rounded-[14px] bg-secondary-cyan">
+                    <img class="absolute w-full h-full object-cover top-0 left-0" src="./Public/assets/card-cyan.svg"
                         alt="">
                     <!-- card title  -->
                     <div class="w-full text-center">
@@ -400,13 +685,13 @@
                             </h6>
                         </div>
 
-                        <p class="about-card-para ">From routine inspections to advanced
-                            diagnostics and flexible service plans, we ensure performance, reliability, and
+                        <p class="about-card-para ">From inspections to advanced
+                            diagnostics and flexible plans, we ensure performance, reliability, and
                             scalability for every facility. </p>
                     </div>
                 </div>
-                <div class="text-left max-w-[416px] w-full p-8 relative  rounded-[14px] bg-primary">
-                    <img class="absolute w-full h-full object-covers top-0 left-0" src="./Public/assets/clip-primar.svg"
+                <div class="text-left max-w-[416px] w-full px-4 py-6 lg:p-8 relative  rounded-[14px] bg-primary">
+                    <img class="absolute w-full h-full object-cover top-0 left-0" src="./Public/assets/clip-primar.svg"
                         alt="">
                     <!-- card title  -->
                     <div class="w-full text-center ">
@@ -421,8 +706,8 @@
                             medical devices, minimizing waste and supporting eco-friendly healthcare practices.</p>
                     </div>
                 </div>
-                <div class="text-left max-w-[416px] w-full p-8 relative rounded-[14px] bg-secondary-cyan">
-                    <img class="absolute w-full h-full object-covers top-0 left-0" src="./Public/assets/card-cyan.svg"
+                <div class="text-left max-w-[416px] w-full px-4 py-6 lg:p-8 relative rounded-[14px] bg-secondary-cyan">
+                    <img class="absolute w-full h-full object-cover top-0 left-0" src="./Public/assets/card-cyan.svg"
                         alt="">
                     <!-- card title  -->
                     <div class="w-full text-center">
@@ -437,8 +722,8 @@
                             regulatory and safety standards, ensuring every device is safe and audit-ready.</p>
                     </div>
                 </div>
-                <div class="text-left max-w-[416px] w-full p-8 relative rounded-[14px] bg-primary">
-                    <img class="absolute w-full h-full object-covers top-0 left-0" src="./Public/assets/clip-primar.svg"
+                <div class="text-left max-w-[416px] w-full px-4 py-6 lg:p-8 relative rounded-[14px] bg-primary">
+                    <img class="absolute w-full h-full object-cover top-0 left-0" src="./Public/assets/clip-primar.svg"
                         alt="">
                     <!-- card title  -->
                     <div class="w-full text-center">
@@ -453,8 +738,8 @@
                             techniques to deliver efficient, accurate, and forward-thinking service.</p>
                     </div>
                 </div>
-                <div class="text-left max-w-[416px] w-full p-8 relative rounded-[14px] bg-secondary-cyan">
-                    <img class="absolute w-full h-full object-covers top-0 left-0" src="./Public/assets/card-cyan.svg"
+                <div class="text-left max-w-[416px] w-full px-4 py-6 lg:p-8 relative rounded-[14px] bg-secondary-cyan">
+                    <img class="absolute w-full h-full object-cover top-0 left-0" src="./Public/assets/card-cyan.svg"
                         alt="">
                     <!-- card title  -->
                     <div class="w-full text-center">
@@ -472,13 +757,13 @@
             </div>
         </div>
     </section>
-    <section class="w-full my-16 bg-lightgrey ">
+    <section class="w-full lg:my-16 bg-lightgrey ">
         <div
-            class="mx-auto rounded-xl py-[58px] w-[95%] h-full flex items-center justify-start lg:max-w-5xl xl:max-w-container bg-[url('Public/assets/contact-downld.webp')] bg-no-repeat bg-cover bg-top-right ">
-            <div class="w-3/4 h-full ml-6 ">
-                <h4 class="text-text-dark font-medium text-[32px] leading-10 ">Discover our services and how
+            class="mx-auto sm:rounded-xl py-[58px] sm:w-[95%] h-full flex items-center justify-start lg:max-w-5xl xl:max-w-container bg-[url('Public/assets/contact-downld.webp')] bg-no-repeat bg-fill bg-center lg:bg-cover lg:bg-top-right ">
+            <div class="sm:w-3/4 w- h-full ml-6 ">
+                <h4 class="text-text-dark font-medium text-2xl lg:text-[32px] leading-10 ">Discover our services and how
                     we keep your medical equipment performing at its best — all in one quick download.</h4>
-                <div class="mt-12">
+                <div class="lg:mt-12 mt-4">
                     <a download="Nuvionx brochure" href="./Public/assets/Nuvionx brochure.pdf"
                         class="text-white uppercase font-kumbhSans  kumbhfont  bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer leading-6 rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">Download
                         Our Brochure</a>
@@ -504,10 +789,11 @@
     <footer class="w-full  bg-white">
         <div class="xl:max-w-container md:max-w-5xl mx-auto w-[95%] bg-white">
             <!-- footer menus  -->
-            <div class="  py-16 grid grid-cols-4 gap-8 mx-auto">
+            <div
+                class="  py-16 grid max-sm:grid-rows-3 sm:max-lg:grid-cols-3 gap-10 lg:grid-cols-4 sm:max-lg:gap-8 mx-auto">
                 <!-- contact -->
-                <div class="">
-                    <h3 class="font-semibold leading-6 tracking-4px mb-8">CONTACT</h3>
+                <div class="sm:max-lg:order-4 sm:max-lg:col-span-3 sm:max-lg:mx-auto sm:max-lg:text-center">
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8 ">CONTACT</h3>
                     <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
                         <li>5 Rialto Building<br> NE1 2JR</li>
                         <li><a href="tel:07768151690 ">
@@ -554,7 +840,7 @@
                     </ul>
                 </div>
                 <div class="">
-                    <h3 class="font-semibold leading-6 tracking-4px mb-8">COMPANY</h3>
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8 ">COMPANY</h3>
                     <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
                         <li><a href="#">Bookings & Cancellations </a></li>
                         <li><a href="#">Website Terms</a></li>
@@ -567,9 +853,9 @@
             </div>
             <div class="h-[1px] bg-[#D0D0D0]  w-full"></div>
 
-            <div class="flex justify-between items-center py-10">
+            <div class="flex max-sm:flex-col justify-between items-center py-6 lg:py-10">
                 <div class="font-HindMadurai text-headdark leading-6">2025 © Nuvionx. All Rights Reserved.</div>
-                <div class="font-HindMadurai text-headdark leading-6 space-x-12">
+                <div class="font-HindMadurai text-headdark leading-6 space-x-12 max-sm:mt-6">
                     <a href="">Privacy & Policy</a>
                     <a href="">Terms & Condition</a>
                 </div>

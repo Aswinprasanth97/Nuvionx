@@ -17,7 +17,7 @@
 
 <body class="relative p-0 m-0 box-border bg-lightgrey scroll-smooth ">
     <!-- ---Topbar--- -->
-    <div class="bg-primary  h-[62px] m-auto text-sm leading-6 relative top-0 w-full ">
+    <div class="bg-primary hidden lg:block  h-[62px] m-auto text-sm leading-6 relative top-0 w-full ">
         <div
             class=" text-white  lg:max-w-5xl xl:max-w-container mx-auto   text-sm flex flex-col lg:flex-row justify-between items-center  py-5">
 
@@ -52,22 +52,22 @@
 
     <!-- navbar -->
     <header class=" ">
-        <nav class="justify-between z-20  absolute lg:top-10 lg:my-8 xl:top-16 w-full 2xl:my-12 ">
+        <nav id="main-nav"
+            class="justify-between z-20 max-lg:fixed bg-transparent absolute lg:top-10 max-lg:pt-2 lg:my-8 xl:top-16 w-full 2xl:my-12  ">
             <!-- navbar main -->
             <div class="lg:max-w-5xl xl:max-w-container mx-auto flex w-[95%] justify-between items-center ">
                 <div><img class="w-28  h-10" src="./Public/assets/Nuvonix Logo.svg" alt="Nuvonix Logo"></div>
-                <div class="">
+                <div class="hidden lg:block">
                     <ul
                         class="flex font-kumbhSans  kumbhfont  text-white gap-6 items-center justify-evenly  text-sm leading-6 tracking-2px">
-                        <li class=""><span
-                                class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer"><a
-                                    href="./index.html">HOME</a></span>
+                        <li class="font-bold"><span
+                                class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer">HOME</span>
                         </li>
                         <li class="">
                             <div class="relative inline-block text-center ">
                                 <button id="service-main"
                                     class="inline-flex cursor-pointer
-                                      items-center text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-sm  rounded-lg"
+                                          items-center text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-sm  rounded-lg"
                                     type="button" data-dropdown-toggle="dropdown">
                                     OUR SERVICES
                                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -107,7 +107,7 @@
                                 class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
                                     href="./aboutus.html">ABOUT US</a></span></li>
                         <li><span
-                                class="inline-block text-center font-bold  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
+                                class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
                                     href="./contactus.html">CONTACT</a></span>
                         </li>
                         <li>
@@ -122,12 +122,12 @@
                                     </svg>
                                 </button>
                                 <div id="nav-drop"
-                                    class="hidden absolute transform -translate-x-1/4  mt-2 min-w-[300px] w-full bg-white text-base z-50 list-none rounded-xl shadow"
+                                    class="hidden absolute md:max-lg:right-0  transform lg:-translate-x-1/4  mt-2 min-w-[300px] w-full bg-white text-base z-50 list-none rounded-xl shadow"
                                     id="dropdown">
                                     <ul class=" !text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
                                         aria-labelledby="dropdown">
 
-                                        <li class=" hover:text-white"><a href="#"
+                                        <li class=" hover:text-white"><a href="#testimonials"
                                                 class="block  dropdown-item  box pl-6 py-6 rounded-t-xl text-sm ">Testimonials</a>
                                         </li>
                                         <li class="hover:text-white"><a href="./more-sectors-we-serve.html"
@@ -147,13 +147,250 @@
                         </li>
                     </ul>
                 </div>
-                <div class="">
+                <div class="hidden  lg:block">
+
                     <button
                         class="  z-0 font-kumbhSans  kumbhfont  hover:text-black  hover:bg-white text-white cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">
 
                         BOOK NOW
                     </button>
                 </div>
+                <div class="mob-nav  lg:hidden">
+                    <svg id="mob-nav" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect x="11" y="25" width="4" height="4" fill="white" />
+                        <rect x="25" y="25" width="4" height="4" fill="white" />
+                        <rect x="11" y="11" width="4" height="4" fill="white" />
+                        <rect x="25" y="11" width="4" height="4" fill="white" />
+                    </svg>
+                    <div id="mob-nav-drop" class=" absolute hidden  top-0 max-lg:pt-2 right-0 w-full flex-col h-screen flex justify-between items-center
+                            bg-primary">
+                        <div class="mx-auto flex w-[95%] justify-between items-center ">
+                            <div><img class="w-28  h-10" src="./Public/assets/Nuvonix Logo.svg" alt="Nuvonix Logo">
+                            </div>
+                            <div id="mob-nav-close"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="40" height="40" rx="20" fill="white" fill-opacity="0.04" />
+                                    <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="white"
+                                        stroke-opacity="0.6" />
+                                    <path d="M12 12L28 28" stroke="white" stroke-linecap="square"
+                                        stroke-linejoin="round" />
+                                    <path d="M12 28L28 12" stroke="white" stroke-linecap="square"
+                                        stroke-linejoin="round" />
+                                </svg></div>
+                        </div>
+                        <div class="">
+                            <ul
+                                class="flex hidden font-kumbhSans flex-col  kumbhfont  text-white gap-6 items-center justify-evenly  text-sm leading-6 tracking-2px">
+                                <li class="font-bold"><span
+                                        class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer">HOME</span>
+                                </li>
+                                <li class="">
+                                    <div class="relative inline-block text-center ">
+                                        <button id="service-main"
+                                            class="inline-flex cursor-pointer
+                                                                          items-center text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-sm  rounded-lg"
+                                            type="button" data-dropdown-toggle="dropdown">
+                                            OUR SERVICES
+                                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg>
+                                        </button>
+                                        <div id="service-drop"
+                                            class="hidden   absolute transform -translate-x-1/4  mt-2 w-[305px] bg-white text-base z-50 list-none rounded-xl shadow"
+                                            id="dropdown">
+                                            <ul class="!text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
+                                                aria-labelledby="dropdown">
+                                                <li><a href="./our-services-medical-equipment-maintenance.html"
+                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white rounded-t-xl">Medical
+                                                        Equipment Maintenance</a></li>
+                                                <li><a href="./our-services-clinical-engineering-support.html"
+                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white ">Clinical
+                                                        Engineering Support</a></li>
+                                                <li><a href="./our-services-asset-management-audit-support.html"
+                                                        class="block dropdown-item  pl-6 py-6 text-sm hover:text-white ">Asset
+                                                        Management & Audit Support</a>
+                                                </li>
+                                                <li><a href="./our-services-ultrasound-probe-repair.html"
+                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white ">Ultrasound
+                                                        Probe Repair</a>
+                                                </li>
+                                                <li><a href="./our-services-bed-maintenance.html"
+                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white rounded-b-xl">Bed
+                                                        Maintenance</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><span
+                                        class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
+                                            href="./aboutus.html">ABOUT US</a></span></li>
+                                <li><span
+                                        class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
+                                            href="./contactus.html">CONTACT</a></span>
+                                </li>
+                                <li>
+                                    <div class="relative inline-block text-center ">
+                                        <button id="nav-main-mobile"
+                                            class="inline-flex ring-0  items-center cursor-pointer text-white transition duration-300 ease-in-out transform hover:-translate-y-1  hover:scale-110 text-sm  rounded-lg"
+                                            type="button" data-dropdown-toggle="dropdown">
+                                            MORE
+                                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg>
+                                        </button>
+                                        <div id="nav-drop-mobile "
+                                            class="absolute hidden w-full right-[50%] transform mt-2 min-w-[300px] bg-white text-base z-50 list-none rounded-xl shadow"
+                                            id="dropdown">
+                                            <ul class=" !text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
+                                                aria-labelledby="dropdown">
+
+                                                <li class=" hover:text-white"><a href="#testimonials"
+                                                        class="block  dropdown-item  box pl-6 py-6 rounded-t-xl text-sm ">Testimonials</a>
+                                                </li>
+                                                <li class="hover:text-white"><a href="./more-sectors-we-serve.html"
+                                                        class="block  dropdown-item  pl-6 py-6 text-sm ">Sectors
+                                                        We
+                                                        Serve</a></li>
+                                                <li class="hover:text-white"><a
+                                                        href="./more-Inventory-life-cycle-mangement.html"
+                                                        class="block  dropdown-item pl-6 py-6 text-sm  rounded-b-xl">Inventory
+                                                        &
+                                                        Lifecycle Management</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul
+                                class="flex flex-col  kumbhfont text-white gap-8 items-center justify-evenly text-sm leading-6 tracking-2px font-kumbhSans">
+                                <li class="font-bold cursor-pointer text-xl hover:scale-110 transition"><span
+                                        class="inline-flex items-center my-auto">
+                                        <div class="bg-white rounded-full h-4 w-4 mr-3 ">
+                                        </div>HOME
+                                    </span>
+
+                                </li>
+
+                                <!-- OUR SERVICES Dropdown -->
+                                <li class="w-full text-center">
+                                    <button id="service-toggle"
+                                        class="text-white font-normal text-xl  hover:scale-105 transition">
+                                        <span class="inline-flex items-center"> OUR SERVICES <svg class="w-4 h-4 ml-3 "
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg></span>
+                                    </button>
+                                    <ul id="service-dropdown"
+                                        class="hidden overflow-hidden max-h-0 transition-all text-base duration-300 ease-in-out bg-white/6 rounded-xl  mx-auto uppercase  mt-2 w-[80%]">
+                                        <li><a href="./our-services-medical-equipment-maintenance.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Medical
+                                                Equipment Maintenance</a></li>
+                                        <li><a href="./our-services-clinical-engineering-support.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Clinical
+                                                Engineering Support</a></li>
+                                        <li><a href="./our-services-asset-management-audit-support.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Asset
+                                                Management & Audit Support</a></li>
+                                        <li><a href="./our-services-ultrasound-probe-repair.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Ultrasound
+                                                Probe Repair</a></li>
+                                        <li><a href="./our-services-bed-maintenance.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Bed
+                                                Maintenance</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- ABOUT -->
+                                <li class="hover:scale-110 transition text-xl"><a href="./aboutus.html">ABOUT US</a>
+                                </li>
+
+                                <!-- CONTACT -->
+                                <li class="hover:scale-110 transition text-xl"><a href="./contactus.html">CONTACT</a>
+                                </li>
+
+                                <!-- MORE Dropdown -->
+                                <li class="w-full text-center">
+                                    <button id="more-toggle"
+                                        class="text-white font-normal text-xl hover:scale-105 transition">
+                                        <span class="inline-flex items-center"> MORE <svg class="w-4 h-4 ml-3 "
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg></span>
+                                    </button>
+                                    <ul id="more-dropdown"
+                                        class="hidden overflow-hidden max-h-0 text-base transition-all duration-300 ease-in-out bg-white/6 rounded-xl  mx-auto uppercase  w-[80%]  mt-2 ">
+                                        <li><a href="#testimonials"
+                                                class="block px-6 py-3 hover:bg-primary  hover:text-white">Testimonials</a>
+                                        </li>
+                                        <li><a href="./more-sectors-we-serve.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Sectors
+                                                We Serve</a></li>
+                                        <li><a href="./more-Inventory-life-cycle-mangement.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Inventory &
+                                                Lifecycle Management</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div>
+
+                            <div
+                                class=" text-white  text-sm flex max-lg:gap-4 flex-col-reverse justify-between items-center ">
+
+                                <ul class="flex max-lg:text-lg mb-6  space-x-6 justify-between place-items-center">
+                                    <li class="">Precision</li>
+                                    <li class="bg-white rounded-full h-1.5 w-1.5"></li>
+                                    <li>Reliability</li>
+                                    <li class="bg-white rounded-full h-1.5 w-1.5"></li>
+                                    <li>Compliance</li>
+                                </ul>
+                                <div class=" border border-b-[1px] border-white w-full"></div>
+                                <div
+                                    class="flex flex-col place-items-center max-lg:text-lg max-lg:space-y-3 justify-around ">
+                                    <div class="flex mr-11 space-x-3 items-center"><img class="w-3.5 h-3.5 "
+                                            src="./Public/assets/phone.svg" alt="">
+                                        <div class="">
+                                            <p class=" font-bold">Phone<span class="pl-3 font-normal">+44
+                                                    7570296821</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex space-x-3 items-center"><img class="w-3.5 h-3.5 "
+                                            src="./Public/assets/location.svg" alt="">
+                                        <div>
+                                            <p class=" font-bold">Address<span class="pl-3 font-normal">Newcastle Upon
+                                                    Tyne,
+                                                    UK</span>
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <button
+                                    class="  z-0 font-kumbhSans  kumbhfont  hover:text-black  hover:bg-white text-white cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">
+
+                                    BOOK NOW
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
 
         </nav>
     </header>
@@ -163,26 +400,24 @@
     <!-- main-landing -->
     <!-- bg-[url('Public/assets/main-section.webp')] -->
     <section
-        class="bg-[#131313]/50  relative flex  items-end bg-[url('Public/assets/contact-main-bg.webp')] justify-end bg-cover  bg-blend-overlay  bg-top-right bg-no-repeat lg:h-screen xl:h-[600px] w-full">
+        class="bg-[#131313]/50 max-lg:h-[300px]  relative flex  items-end bg-[url('Public/assets/contact-main-bg.webp')] justify-end bg-cover  bg-blend-overlay  bg-top-right bg-no-repeat lg:h-screen xl:h-[600px] w-full">
         <!-- Background Video -->
-
         <div
-            class="lg:max-w-5xl xl:max-w-container w-[95%]   mx-auto  flex lg:items-end xl:items-end justify-between mb-16  ">
-            <div class="w-1/2 text-white flex flex-col items-start justify-center lg:max-xl:h-full min-w-2xl ">
+            class="lg:max-w-5xl xl:max-w-container w-[95%] max-lg:ml-4 mx-auto max-lg:flex-col  flex lg:items-end xl:items-end justify-between mb-16 ">
+            <div class="lg:w-1/2 text-white flex flex-col items-start justify-center lg:max-xl:h-full lg:min-w-2xl ">
                 <div class="inline-flex items-center ">
                     <img class="w-10 h-7" src="./Public/assets/scope.svg" alt="nuvonix-logo">
-                    <h6 class="text-sm font-kumbhSans  kumbhfont  tracking-4px ml-3 font-semibold  uppercase">
-                        contact us
-                    </h6>
+                    <h6
+                        class="lg:text-sm text-xs font-kumbhSans  kumbhfont  tracking-4px ml-3 font-semibold  uppercase">
+                        contactus</h6>
                 </div>
                 <h6
-                    class="xl:text-[56px] lg:text-5xl lg:leading-14 xl:leading-16 font-kumbhSans  kumbhfont  tracking-wide font-medium lg:my-2  xl:my-4">
-                    Let’s Talk Medical Equipment Services</h6>
-
+                    class="xl:text-[56px] lg:text-5xl lg:leading-14 xl:leading-16 font-kumbhSans max-lg:text-28px kumbhfont  tracking-wide font-medium lg:my-2  xl:my-4">
+                    Let’s Talk Medical Equipment Services
 
             </div>
             <div
-                class="w-1/2 text-white flex justify-end my-auto items-center  font-kumbhSans  kumbhfont  font-semibold leading-6 tracking-4px ">
+                class="lg:w-1/2 text-white flex lg:justify-end my-auto items-center max-lg:text-xs max-lg:mt-6  font-kumbhSans  kumbhfont  font-semibold leading-6 tracking-4px ">
                 <ul class="flex items-center space-x-6">
                     <li><i class="fa-solid fa-house mr-1.5 "></i><a href="./index.html">HOME</a></li>
                     <li><i class="fa-solid fa-chevron-right"></i></li>
@@ -192,21 +427,22 @@
 
 
         </div>
+
     </section>
     <!-- about us-->
-    <section class=" w-full py-28 ">
-        <div class="lg:max-w-5xl xl:max-w-container h-full mx-auto  w-[95%]">
-            <div class=" w-full mb-20 h-full  flex  justify-evenly font-kumbhSans  kumbhfont ">
+    <section class=" w-full lg:py-14 py-4 ">
+        <div class="lg:max-w-5xl xl:max-w-container h-full  sm:mx-auto  sm:w-[95%]">
+            <div class=" w-full mb-20 h-full max-lg:flex-col flex  justify-evenly font-kumbhSans  kumbhfont ">
 
 
-                <div class="w-3/4 h-ful  mr-10 ">
-                    <div class="w-full h-1/2">
+                <div class="lg:w-3/4 h-full  lg:mr-10 ">
+                    <div class="w-full h-1/2  max-sm:px-4">
                         <div class="inline-flex items-center lg:mb-1  xl:mb-3">
                             <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-primary"></div>
                             <h6 class="text-primary  font-semibold tracking-4px xl:leading-6 uppercase">get in touch
                             </h6>
                         </div>
-                        <h1 class="lg:max-xl:mb-4 mb-9 main-heading !text-56px !leading-16">
+                        <h1 class="lg:max-xl:mb-4 lg:mb-9 mb-4 main-heading ">
                             Partner with Us for Expert Clinical Engineering Services
                         </h1>
                         <p class=" main-para my-8">Whether you need preventive maintenance, urgent repairs, or
@@ -219,14 +455,16 @@
                     </div>
 
                     <div
-                        class="bg-primary w-full    text-white rounded-xl  relative  pr-4 flex items-end overflow-x-hidden">
+                        class="bg-primary w-full max-sm:px-4     text-white sm:rounded-xl  relative  sm:pr-4 flex items-end overflow-x-hidden">
                         <img class="absolute w-full h-full object-cover z-10" src="./Public/assets/clip-primar.svg"
                             alt="">
-                        <div class="w-full grid grid-cols-4 items-end justify-end z-20">
-                            <div class="col-span-1 items-end justify-starts lg:w-[200px] xl:w-[320px] flex"><img
-                                    class=" ml-0  object-cover h-full" src="./Public/assets/hand-glove 2.png"
-                                    alt="phone in hand"></div>
-                            <div class="col-span-3 my-11 xl:ml-4">
+                        <div class="w-full sm:grid grid-cols-4 items-end justify-end z-20">
+                            <div
+                                class="col-span-1  max-sm:hidden items-end justify-starts lg:w-[200px] xl:w-[320px] flex">
+                                <img class=" ml-0 object-contain h-fit " src="./Public/assets/hand-glove 2.png"
+                                    alt="phone in hand">
+                            </div>
+                            <div class="max-sm:col-span-4 sm:col-span-3 my-11 xl:ml-4 w-full">
                                 <div class="flex justify-between w-full mb-6 ">
                                     <div class="font-kumbhSans  kumbhfont  font-medium leading-8  text-2xl">
                                         Contact
@@ -255,17 +493,17 @@
 
                                 </div>
                                 <div
-                                    class="border-[1px] mb-4 border-dashed w-full py-3 lg:px-3 xl:px-6 bg-white/10 rounded-4xl lg:text-base xl:text-lg !font-normal font-HindMadurai text-nowrap">
+                                    class="border-[1px] mb-4 border-dashed w-full py-3 lg:px-3 xl:px-6 bg-white/10 rounded-4xl text-base xl:text-lg !font-normal font-HindMadurai lg:text-nowrap px-2">
                                     <i class="fa-solid mr-2 fa-location-dot"></i>5
                                     Rialto
                                     Building, Newcastle Upon
                                     Tyne, NE1 2JR, UK
                                 </div>
-                                <div class="pt-4"><span
-                                        class="border-[1px] mb-4 border-dashed py-3 w-full px-6 bg-white/10 rounded-4xl font-HindMadurai text-nowrap"><i
+                                <div class="pt-4 w-full"><span
+                                        class="border-[1px] mb-4 border-dashed py-3 w-full px-3 bg-white/10 rounded-4xl font-HindMadurai text-nowrap"><i
                                             class="fa-solid mr-2 fa-envelope"></i>info@nuvionx.co.uk</span>
                                     <span
-                                        class="border-[1px] mb-4 border-dashed py-3 w-full px-6 bg-white/10 rounded-4xl font-HindMadurai text-nowrap"><i
+                                        class="border-[1px]  mb-4 border-dashed py-3 w-full px-6 bg-white/10 rounded-4xl font-HindMadurai text-nowrap"><i
                                             class="fa-solid mr-2 fa-phone"></i>+44 7570296821</span>
                                 </div>
                             </div>
@@ -275,8 +513,8 @@
                     </div>
 
                 </div>
-                <div class="lg:w-1/2 xl:w-fit ">
-                    <form class="bg-primary h-full p-10 rounded-xl " action="">
+                <div class="lg:w-1/2 xl:w-fit max-lg:mt-4 px-4">
+                    <form class="bg-primary h-full px-4 py-6 sm:p-10 rounded-xl " action="">
                         <h3 class="font-kumbhSans  kumbhfont  text-white font-medium text-[32px]">We are here to
                             help
                         </h3>
@@ -284,17 +522,20 @@
                             Call, Email or
                             fill out the below
                             contact form.</p>
-                        <div class="grid grid-cols-2 gap-4">
+                        <div class="grid  grid-cols-2 gap-4">
                             <input
-                                class="bg-white py-[22px] px-6 rounded-xl font-HindMadurai text-paradark focus:text-black col-span-2 "
+                                class="bg-white py-[22px] px-6 rounded-xl font-HindMadurai text-paradark focus:text-black sm:max-lg:col-span-1 col-span-2 "
                                 type="text" placeholder="Name" name="Name" id="name">
                             <input
-                                class="bg-white py-[22px] px-6 rounded-xl font-HindMadurai text-paradark focus:text-black col-span-1 "
+                                class="bg-white py-[22px] px-6 rounded-xl font-HindMadurai text-paradark focus:text-black max-sm:col-span-2 sm:col-span-1 "
                                 type="email" placeholder="Email Address" name="email" id="email">
                             <input
-                                class="bg-white py-[22px] px-6 rounded-xl font-HindMadurai text-paradark focus:text-black col-span-1 "
+                                class="bg-white py-[22px] px-6 rounded-xl font-HindMadurai text-paradark focus:text-black max-sm:col-span-2 sm:col-span-1 "
                                 type="text" placeholder="Phone Number" name="Phone number" id="phonenumber">
-                            <div class="relative col-span-2">
+                            <input
+                                class="bg-white py-[22px] px-6 rounded-xl font-HindMadurai text-paradark focus:text-black col-span-2 sm:max-lg:col-span-1 "
+                                type="text" placeholder="Subject" name="Phone number" id="phonenumber">
+                            <div class="relative col-span-2 hidden">
                                 <select id="countries"
                                     class="appearance-none border col-span-2 border-gray-300 text-sm block w-full bg-white py-[22px] px-6 pr-12 rounded-xl font-HindMadurai text-paradark focus:text-black">
                                     <option value="choose service" disabled selected>Choose Service
@@ -338,11 +579,12 @@
     </section>
 
     <!-- let create -->
-    <section class="w-full my-16 bg-lightgrey ">
+    <section class="w-full lg:my-16 bg-lightgrey ">
         <div
-            class="mx-auto rounded-xl py-[38px] w-[95%] pl-12 lg:max-w-5xl xl:max-w-container bg-center bg-[url('Public/assets/pexels-kseniachernaya-5752282.webp')] bg-no-repeat bg-cover ">
-            <div class="xl:w-2/5 lg:w-2/3 h-full">
-                <h4 class="text-white font-kumbhSans  kumbhfont  font-medium text-[32px] leading-10 ">Let's work
+            class="mx-auto sm:rounded-xl py-4 lg:py-[38px] sm:w-[95%] pl-4 sm:pl-12 lg:max-w-5xl xl:max-w-container bg-center bg-[url('Public/assets/pexels-kseniachernaya-5752282.webp')]  bg-no-repeat bg-fill sm:bg-cover ">
+            <div class=" lg:w-2/5 h-full">
+                <h4 class="text-white font-kumbhSans  kumbhfont  font-medium text-2xl lg:text-[32px] leading-10 ">Let's
+                    work
                     together
                     to enhance
                     the reliability and performance
@@ -373,10 +615,11 @@
     <footer class="w-full  bg-white">
         <div class="xl:max-w-container md:max-w-5xl mx-auto w-[95%] bg-white">
             <!-- footer menus  -->
-            <div class="  py-16 grid grid-cols-4 gap-8 mx-auto">
+            <div
+                class="  py-16 grid max-sm:grid-rows-3 sm:max-lg:grid-cols-3 gap-10 lg:grid-cols-4 sm:max-lg:gap-8 mx-auto">
                 <!-- contact -->
-                <div class="">
-                    <h3 class="font-semibold leading-6 tracking-4px mb-8">CONTACT</h3>
+                <div class="sm:max-lg:order-4 sm:max-lg:col-span-3 sm:max-lg:mx-auto sm:max-lg:text-center">
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8 ">CONTACT</h3>
                     <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
                         <li>5 Rialto Building<br> NE1 2JR</li>
                         <li><a href="tel:07768151690 ">
@@ -423,7 +666,7 @@
                     </ul>
                 </div>
                 <div class="">
-                    <h3 class="font-semibold leading-6 tracking-4px mb-8">COMPANY</h3>
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8 ">COMPANY</h3>
                     <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
                         <li><a href="#">Bookings & Cancellations </a></li>
                         <li><a href="#">Website Terms</a></li>
@@ -436,9 +679,9 @@
             </div>
             <div class="h-[1px] bg-[#D0D0D0]  w-full"></div>
 
-            <div class="flex justify-between items-center py-10">
+            <div class="flex max-sm:flex-col justify-between items-center py-6 lg:py-10">
                 <div class="font-HindMadurai text-headdark leading-6">2025 © Nuvionx. All Rights Reserved.</div>
-                <div class="font-HindMadurai text-headdark leading-6 space-x-12">
+                <div class="font-HindMadurai text-headdark leading-6 space-x-12 max-sm:mt-6">
                     <a href="">Privacy & Policy</a>
                     <a href="">Terms & Condition</a>
                 </div>

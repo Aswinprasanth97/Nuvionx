@@ -17,7 +17,7 @@
 
 <body class="relative p-0 m-0 box-border text-base bg-lightgrey scroll-smooth ">
     <!-- ---Topbar--- -->
-    <div class="bg-primary  h-[62px] m-auto text-sm leading-6 relative top-0 w-full ">
+    <div class="bg-primary lg:block hidden h-[62px] m-auto text-sm leading-6 relative top-0 w-full ">
         <div
             class=" text-white  lg:max-w-5xl xl:max-w-container mx-auto w-[95%]  text-sm flex flex-col lg:flex-row justify-between items-center md:max-lg:py-2 py-5">
 
@@ -51,11 +51,12 @@
 
     <!-- navbar -->
     <header class=" ">
-        <nav class="justify-between z-20  absolute lg:top-10 lg:my-8 xl:top-16 w-full 2xl:my-12 ">
+        <nav id="main-nav"
+            class="justify-between z-20 max-lg:fixed bg-transparent absolute lg:top-10 max-lg:pt-2 lg:my-8 xl:top-16 w-full 2xl:my-12  ">
             <!-- navbar main -->
             <div class="lg:max-w-5xl xl:max-w-container mx-auto flex w-[95%] justify-between items-center ">
                 <div><img class="w-28  h-10" src="./Public/assets/Nuvonix Logo.svg" alt="Nuvonix Logo"></div>
-                <div class="">
+                <div class="hidden lg:block">
                     <ul
                         class="flex font-kumbhSans  kumbhfont  text-white gap-6 items-center justify-evenly  text-sm leading-6 tracking-2px">
                         <li class="font-bold"><span
@@ -145,7 +146,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="md:hidden lg:block">
+                <div class="hidden  lg:block">
 
                     <button
                         class="  z-0 font-kumbhSans  kumbhfont  hover:text-black  hover:bg-white text-white cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">
@@ -153,6 +154,242 @@
                         BOOK NOW
                     </button>
                 </div>
+                <div class="mob-nav  lg:hidden">
+                    <svg id="mob-nav" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect x="11" y="25" width="4" height="4" fill="white" />
+                        <rect x="25" y="25" width="4" height="4" fill="white" />
+                        <rect x="11" y="11" width="4" height="4" fill="white" />
+                        <rect x="25" y="11" width="4" height="4" fill="white" />
+                    </svg>
+                    <div id="mob-nav-drop" class=" absolute hidden  top-0 max-lg:pt-2 right-0 w-full flex-col h-screen flex justify-between items-center
+                        bg-primary">
+                        <div class="mx-auto flex w-[95%] justify-between items-center ">
+                            <div><img class="w-28  h-10" src="./Public/assets/Nuvonix Logo.svg" alt="Nuvonix Logo">
+                            </div>
+                            <div id="mob-nav-close"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="40" height="40" rx="20" fill="white" fill-opacity="0.04" />
+                                    <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="white"
+                                        stroke-opacity="0.6" />
+                                    <path d="M12 12L28 28" stroke="white" stroke-linecap="square"
+                                        stroke-linejoin="round" />
+                                    <path d="M12 28L28 12" stroke="white" stroke-linecap="square"
+                                        stroke-linejoin="round" />
+                                </svg></div>
+                        </div>
+                        <div class="">
+                            <ul
+                                class="flex hidden font-kumbhSans flex-col  kumbhfont  text-white gap-6 items-center justify-evenly  text-sm leading-6 tracking-2px">
+                                <li class="font-bold"><span
+                                        class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer">HOME</span>
+                                </li>
+                                <li class="">
+                                    <div class="relative inline-block text-center ">
+                                        <button id="service-main"
+                                            class="inline-flex cursor-pointer
+                                                                      items-center text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-sm  rounded-lg"
+                                            type="button" data-dropdown-toggle="dropdown">
+                                            OUR SERVICES
+                                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg>
+                                        </button>
+                                        <div id="service-drop"
+                                            class="hidden   absolute transform -translate-x-1/4  mt-2 w-[305px] bg-white text-base z-50 list-none rounded-xl shadow"
+                                            id="dropdown">
+                                            <ul class="!text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
+                                                aria-labelledby="dropdown">
+                                                <li><a href="./our-services-medical-equipment-maintenance.html"
+                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white rounded-t-xl">Medical
+                                                        Equipment Maintenance</a></li>
+                                                <li><a href="./our-services-clinical-engineering-support.html"
+                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white ">Clinical
+                                                        Engineering Support</a></li>
+                                                <li><a href="./our-services-asset-management-audit-support.html"
+                                                        class="block dropdown-item  pl-6 py-6 text-sm hover:text-white ">Asset
+                                                        Management & Audit Support</a>
+                                                </li>
+                                                <li><a href="./our-services-ultrasound-probe-repair.html"
+                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white ">Ultrasound
+                                                        Probe Repair</a>
+                                                </li>
+                                                <li><a href="./our-services-bed-maintenance.html"
+                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white rounded-b-xl">Bed
+                                                        Maintenance</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><span
+                                        class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
+                                            href="./aboutus.html">ABOUT US</a></span></li>
+                                <li><span
+                                        class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
+                                            href="./contactus.html">CONTACT</a></span>
+                                </li>
+                                <li>
+                                    <div class="relative inline-block text-center ">
+                                        <button id="nav-main-mobile"
+                                            class="inline-flex ring-0  items-center cursor-pointer text-white transition duration-300 ease-in-out transform hover:-translate-y-1  hover:scale-110 text-sm  rounded-lg"
+                                            type="button" data-dropdown-toggle="dropdown">
+                                            MORE
+                                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg>
+                                        </button>
+                                        <div id="nav-drop-mobile "
+                                            class="absolute hidden w-full right-[50%] transform mt-2 min-w-[300px] bg-white text-base z-50 list-none rounded-xl shadow"
+                                            id="dropdown">
+                                            <ul class=" !text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
+                                                aria-labelledby="dropdown">
+
+                                                <li class=" hover:text-white"><a href="#testimonials"
+                                                        class="block  dropdown-item  box pl-6 py-6 rounded-t-xl text-sm ">Testimonials</a>
+                                                </li>
+                                                <li class="hover:text-white"><a href="./more-sectors-we-serve.html"
+                                                        class="block  dropdown-item  pl-6 py-6 text-sm ">Sectors
+                                                        We
+                                                        Serve</a></li>
+                                                <li class="hover:text-white"><a
+                                                        href="./more-Inventory-life-cycle-mangement.html"
+                                                        class="block  dropdown-item pl-6 py-6 text-sm  rounded-b-xl">Inventory
+                                                        &
+                                                        Lifecycle Management</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul
+                                class="flex flex-col  kumbhfont text-white gap-8 items-center justify-evenly text-sm leading-6 tracking-2px font-kumbhSans">
+                                <li class="font-bold cursor-pointer text-xl hover:scale-110 transition"><span
+                                        class="inline-flex items-center my-auto">
+                                        <div class="bg-white rounded-full h-4 w-4 mr-3 ">
+                                        </div>HOME
+                                    </span>
+
+                                </li>
+
+                                <!-- OUR SERVICES Dropdown -->
+                                <li class="w-full text-center">
+                                    <button id="service-toggle"
+                                        class="text-white font-normal text-xl  hover:scale-105 transition">
+                                        <span class="inline-flex items-center"> OUR SERVICES <svg class="w-4 h-4 ml-3 "
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg></span>
+                                    </button>
+                                    <ul id="service-dropdown"
+                                        class="hidden overflow-hidden max-h-0 transition-all text-base duration-300 ease-in-out bg-white/6 rounded-xl  mx-auto uppercase  mt-2 w-[80%]">
+                                        <li><a href="./our-services-medical-equipment-maintenance.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Medical
+                                                Equipment Maintenance</a></li>
+                                        <li><a href="./our-services-clinical-engineering-support.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Clinical
+                                                Engineering Support</a></li>
+                                        <li><a href="./our-services-asset-management-audit-support.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Asset
+                                                Management & Audit Support</a></li>
+                                        <li><a href="./our-services-ultrasound-probe-repair.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Ultrasound
+                                                Probe Repair</a></li>
+                                        <li><a href="./our-services-bed-maintenance.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Bed
+                                                Maintenance</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- ABOUT -->
+                                <li class="hover:scale-110 transition text-xl"><a href="./aboutus.html">ABOUT US</a>
+                                </li>
+
+                                <!-- CONTACT -->
+                                <li class="hover:scale-110 transition text-xl"><a href="./contactus.html">CONTACT</a>
+                                </li>
+
+                                <!-- MORE Dropdown -->
+                                <li class="w-full text-center">
+                                    <button id="more-toggle"
+                                        class="text-white font-normal text-xl hover:scale-105 transition">
+                                        <span class="inline-flex items-center"> MORE <svg class="w-4 h-4 ml-3 "
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg></span>
+                                    </button>
+                                    <ul id="more-dropdown"
+                                        class="hidden overflow-hidden max-h-0 text-base transition-all duration-300 ease-in-out bg-white/6 rounded-xl  mx-auto uppercase  w-[80%]  mt-2 ">
+                                        <li><a href="#testimonials"
+                                                class="block px-6 py-3 hover:bg-primary  hover:text-white">Testimonials</a>
+                                        </li>
+                                        <li><a href="./more-sectors-we-serve.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Sectors
+                                                We Serve</a></li>
+                                        <li><a href="./more-Inventory-life-cycle-mangement.html"
+                                                class="block px-6 py-3 hover:bg-primary hover:text-white">Inventory &
+                                                Lifecycle Management</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div>
+
+                            <div
+                                class=" text-white  text-sm flex max-lg:gap-4 flex-col-reverse justify-between items-center ">
+
+                                <ul class="flex max-lg:text-lg mb-6  space-x-6 justify-between place-items-center">
+                                    <li class="">Precision</li>
+                                    <li class="bg-white rounded-full h-1.5 w-1.5"></li>
+                                    <li>Reliability</li>
+                                    <li class="bg-white rounded-full h-1.5 w-1.5"></li>
+                                    <li>Compliance</li>
+                                </ul>
+                                <div class=" border border-b-[1px] border-white w-full"></div>
+                                <div
+                                    class="flex flex-col place-items-center max-lg:text-lg max-lg:space-y-3 justify-around ">
+                                    <div class="flex mr-11 space-x-3 items-center"><img class="w-3.5 h-3.5 "
+                                            src="./Public/assets/phone.svg" alt="">
+                                        <div class="">
+                                            <p class=" font-bold">Phone<span class="pl-3 font-normal">+44
+                                                    7570296821</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex space-x-3 items-center"><img class="w-3.5 h-3.5 "
+                                            src="./Public/assets/location.svg" alt="">
+                                        <div>
+                                            <p class=" font-bold">Address<span class="pl-3 font-normal">Newcastle Upon
+                                                    Tyne,
+                                                    UK</span>
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <button
+                                    class="  z-0 font-kumbhSans  kumbhfont  hover:text-black  hover:bg-white text-white cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">
+
+                                    BOOK NOW
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
 
         </nav>
     </header>
@@ -162,31 +399,32 @@
     <!-- main-landing -->
     <!-- bg-[url('Public/assets/main-section.webp')] -->
     <section
-        class="bg-[#131313]/50  relative flex items-center justify-center bg-cover bg-blend-overlay  bg-top-right bg-no-repeat md:max-lg:h-[600px] lg:max-2xl:py-28 2xl:h-screen w-full">
+        class="bg-[#131313]/50 relative flex items-center justify-center bg-cover bg-blend-overlay  bg-top-right bg-no-repeat max-lg:h-[600px] lg:max-2xl:py-28 2xl:h-screen w-full">
         <!-- Background Video -->
         <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
             <source src="./Public/assets/bg-final.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div
-            class="lg:max-w-5xl xl:max-w-container lg:mb-12 mx-auto xl:mb-0 w-[95%]  flex lg:items-end xl:items-start justify-between lg:h-full xl:h-fit  ">
+            class="lg:max-w-5xl max-lg:items-end max-lg:h-full   xl:max-w-container lg:mb-12 mx-auto xl:mb-0 w-[95%]  flex lg:items-end xl:items-start justify-between lg:h-full xl:h-fit  ">
             <div class="xl:w-1/2 lg:w-3/5  text-white flex flex-col justify-center">
-                <div class="inline-flex items-center md:max-lg:justify-center">
+                <div class="inline-flex items-center ">
                     <img class="w-10 h-7" src="./Public/assets/scope.svg" alt="nuvonix-logo">
-                    <h6 class="text-sm font-kumbhSans   kumbhfont  tracking-4px ml-3 font-semibold  uppercase">
+                    <h6
+                        class=" text-xs lg:text-sm  font-kumbhSans   kumbhfont  tracking-4px ml-3 font-semibold  uppercase">
                         Precision
                         You Can
                         Rely
                         On</h6>
                 </div>
                 <h1
-                    class="xl:text-[4.5rem] lg:text-4xl md:max-lg:my-4 md:max-lg:text-5xl md:max-lg:text-center  lg:leading-14 xl:leading-20 font-kumbhSans  kumbhfont  font-medium lg:my-2  xl:my-4">
+                    class="xl:text-[4.5rem] text-3xl lg:text-4xl md:max-lg:my-4 leading-9  lg:leading-14 xl:leading-20 font-kumbhSans  kumbhfont  font-medium lg:my-2  xl:my-4">
                     Expert
                     Calibration &
                     Maintenance for
                     Medical
                     Equipment</h1>
-                <p class="font-HindMadurai lg:text-sm xl:text-lg leading-7 md:max-lg:text-center">At
+                <p class="font-HindMadurai lg:text-sm xl:text-lg leading-card22 lg:leading-7 py-4 text-base">At
                     <strong>Nuvionx</strong> , we don’t just
                     service
                     medical
@@ -198,7 +436,7 @@
                     compliance. Count on us
                     to keep your operations seamless and your reputation spotless.
                 </p>
-                <div class="md:my-8 xl:my-12 md:max-lg:mx-auto">
+                <div class="lg:my-8 xl:my-12 mb-14 sm:mb-9 h-[41px] ">
                     <a href="./aboutus.html"
                         class="text-white font-kumbhSans  kumbhfont  bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer leading-6 rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">FIND
                         OUT MORE</a>
@@ -209,19 +447,27 @@
         </div>
     </section>
     <!-- why choose nuvonix section-->
-    <section class=" w-full my-28 ">
+    <!-- sm-md some have to be finished -->
+    <section class=" w-full lg:my-28 py-4 ">
         <div class="lg:max-w-5xl xl:max-w-container w-[95%] h-full mx-auto">
+            <div class="md:hidden mb-4 w-full rounded-xl overflow-hidden">
+                <img class="w-full h-full object-contain" src="./Public/assets/nuvonix_choose.webp" alt="" />
+            </div>
             <div
-                class=" w-full h-full mb-4  flex md:max-lg:flex-col items-start justify-between font-kumbhSans  kumbhfont ">
+                class=" w-full h-full mb-4  flex max-sm:flex-col-reverse items-start justify-between font-kumbhSans  kumbhfont ">
 
-                <div class="md:max-lg:w-full md:max-lg:aspect-3/2 w-1/2 h-full">
-                    <img class="rounded-xl h-full w-full md:max-lg:object-cover  object-contain"
+                <div class="w-full  sm:w-1/2 h-full">
+                    <img class="rounded-xl h-full hidden lg:block  max-sm:aspect-video w-full object-cover  sm:object-contain"
                         src="./Public/assets/lab-view.webp" alt="girl-microscope">
+                    <img class="rounded-xl h-full  hidden sm:max-lg:block   w-full  object-cover   "
+                        src="./Public/assets/lab-view-mob.webp" alt="girl-microscope">
+                    <img class="rounded-xl h-full aspect-video   object-top sm:hidden  w-full  object-cover   "
+                        src="./Public/assets/lab-view-mobile.webp" alt="girl-microscope">
                 </div>
-                <div class="md:max-lg:w-full md:max-lg:text-center md:max-lg:ml-0 w-1/2 h-full ml-10">
+                <div class="w-full   md:w-1/2 h-full md:ml-10">
                     <div class="inline-flex items-center lg:mb-1  xl:mb-3">
                         <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-primary"></div>
-                        <h6 class="text-primary  font-semibold tracking-4px xl:leading-6 uppercase">Why
+                        <h6 class="text-primary max-lg:text-xs font-semibold tracking-4px xl:leading-6 uppercase">Why
                             Choose Nuvionx
                         </h6>
                     </div>
@@ -248,7 +494,7 @@
                         We deliver high-quality service solutions tailored to the unique needs of clinics, hospitals,
                         and medical facilities.
                     </p>
-                    <div class="xl:my-12 lg:my-10">
+                    <div class="xl:my-12 lg:my-10  my-6 h-[41px]">
                         <a href="./aboutus.html"
                             class="text-white font-kumbhSans  kumbhfont  bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer leading-6 rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">ABOUT
                             US</a>
@@ -256,20 +502,20 @@
 
                 </div>
             </div>
-            <div class="xl:h-1/4 lg:h-2/12 w-full flex justify-between md:max-lg:flex-col  ">
+            <div class="xl:h-1/4 lg:h-2/12 w-full hidden  md:flex justify-between md:max-lg:flex-col  ">
 
-                <div class="md:max-lg:w-full w-1/2 mr-5   rounded-xl overflow-hidden">
+                <div class=" lg:w-1/2 mr-5   rounded-xl overflow-hidden">
                     <img class="w-full h-full object-contain" src="./Public/assets/nuvonix_choose.webp" alt="" />
                 </div>
                 <div
-                    class="w-1/2 ml-5 md:max-lg:w-full  h-sull rounded-xl bg-dropdown z-10  flex items-center justify-evenly  relative lg:p-3 xl:p-6">
+                    class="w-1/2 ml-5 md:max-lg:w-full hidden lg:flex h-sull rounded-xl bg-dropdown z-10   items-center justify-evenly  relative lg:p-3 xl:p-6">
                     <img class=" absolute top-0 left-0 z-20 mix-blend-multiply" src="./Public/assets/s1.svg" alt="">
                     <img class="absolute  bottom-3 right-0 z-20 mix-blend-multiply" src="./Public/assets/s2.svg" alt="">
                     <div class="relative"><img class="absolute  right-0" src="./Public/assets/“.svg" alt=""><img
                             class="lg:h-xl lg:w-28 xl:w-[120px] xl:h-[120px] rounded-full"
                             src="./Public/assets/widimage.png" alt="">
                     </div>
-                    <div class="xl:w-2/3 lg:w-full lg:ml-3 xl:ml-0">
+                    <div class="xl:w-2/3 lg:w-full lg:ml-3 xl:ml-0  ">
                         <p class="font-HindMadurai xl:leading-6  lg:text-sm xl:text-base">“Sed ut perspiciatis
                             unde omnis
                             iste natus
@@ -291,24 +537,24 @@
         </div>
     </section>
     <!-- popular service 2  -->
-    <section class="w-full ">
-        <div class=" text-center mx-auto mb-8  md:max-lg:block hidden ">
+    <section class="w-full  ">
+        <div class="  mx-auto mb-8 md:max-lg:ml-4 md:max-lg:block hidden ">
 
-            <div class="inline-flex items-center  mb-3 ">
+            <div class="inline-flex items-center mb-3 ">
                 <div class="w-2.5 h-2.5 mr-2.5 rounded-full bg-primary"></div>
                 <h6 class="text-primary font-kumbhSans  kumbhfont    font-semibold tracking-4px leading-6 uppercase">
                     Popular
                     Services
                 </h6>
             </div>
-            <h1 class="center-heading text-wrap">
+            <h1 class="main-heading text-wrap">
                 Trusted
                 Services
                 Healthcare
                 Providers Rely On Most
             </h1>
 
-            <p class="mt-8 xl:w-3/5 mx-auto center-para ">Healthcare
+            <p class="mt-8 xl:w-3/5 main-para md:max-lg:w-11/12 ">
                 Discover the services healthcare providers rely on most. From essential equipment upkeep
                 to
                 specialized repairs,<strong>Nuvionx</strong>
@@ -319,12 +565,12 @@
 
         <div class="flex justify-end ">
 
-            <div class="w-full  realtive  h-full   grid grid-cols-4 ">
+            <div class="w-full  realtive  h-full grid-cols-2   grid lg:grid-cols-4 max-sm:grid-rows-3  ">
 
                 <div class="col-span-2  lg:flex lg:justify-center xl:justify-center md:max-lg:hidden ">
                     <div class="h-full xl:w-full lg:w-2/3   xl:pr-0 lg:pr-6 xl:flex xl:justify-end  md:max-lg:hidden">
 
-                        <div class=" xl:w-2/3 xl:ml-24 md:max-lg:ml-5  ">
+                        <div class=" xl:w-2/3 xl:ml-24 ml-4  ">
                             <div class="inline-flex items-center  mb-3 ">
                                 <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-primary"></div>
                                 <h6
@@ -340,7 +586,7 @@
                                 Providers Rely On Most
                             </h1>
 
-                            <p class="mt-8 main-para px-2">
+                            <p class="mt-8 main-para max-sm:p-0 px-2">
                                 Discover the services healthcare providers rely on most. From essential equipment upkeep
                                 to
                                 specialized repairs,<strong>Nuvionx</strong>
@@ -352,15 +598,17 @@
 
                     </div>
                 </div>
-                <div class="md:max-lg:col-span-2 md:max-lg:order-2">
+                <div class="md:max-lg:col-span-1 max-sm:col-span-2 max-sm:order-3 ">
                     <div
-                        class="bg-primary h-full md:max-lg:py-4 md:max-lg:px-1  flex flex-col items-start justify-center  text-white lg:px-4 xl:px-8 lg:pt-4 xl:pt-14 pb-8 text-center">
+                        class="bg-primary h-full   max-lg:py-6 max-lg:px-4 flex flex-col items-start justify-center  text-white lg:px-4 xl:px-8 lg:pt-4 xl:pt-14 pb-8 text-center">
                         <h3
-                            class="font-kumbhSans  kumbhfont  mx-auto w-3/4 xl:mb-8 lg:mb-4 font-semibold tracking-4px leading-7 uppercase">
+                            class="font-kumbhSans  kumbhfont max-lg:w-full  mx-auto w-3/4 xl:mb-8 lg:mb-4 font-semibold tracking-4px leading-7 uppercase">
                             Medical
                             Equipment
                             Maintenance</h3>
-                        <p class="font-HindMadurai text-base w-3/4 mx-auto">Proactive servicing is key to keeping your
+                        <p class=" font-HindMadurai text-base w-3/4 max-lg:w-full  mx-auto">Proactive servicing is key
+                            to
+                            keeping your
                             medical
                             devices
                             running
@@ -368,7 +616,7 @@
                             compliance. Regular maintenance ensures that your equipment operates at peak performance,
                             minimizing the risk of issues
                             and meeting all necessary safety standards.</p>
-                        <div class="w-12 mx-auto lg:mt-4 xl:mt-12">
+                        <div class="w-12 mx-auto mt-6 lg:mt-4 xl:mt-12">
                             <a href="./our-services-medical-equipment-maintenance.html">
                                 <div
                                     class="text-white py-4 flex items-center justify-center px-4 font-kumbhSans  kumbhfont  bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer  rounded-full text-center font-semibold">
@@ -384,7 +632,7 @@
                 </div>
                 <!-- bg-[url('/Public/assets/man-screw.webp')] -->
                 <div
-                    class=" bg-no-repeat bg-cover  md:max-lg:col-span-2  bg-center bg-[url('Public/assets/man-screw.webp')]  ">
+                    class=" bg-no-repeat bg-cover  md:max-lg:col-span-1 max-sm:col-span-2 bg-center bg-[url('Public/assets/man-screw.webp')]  ">
                     <!-- <img class=" w-full h-[415px] object-contain scale-x-110 " src="./Public/assets/man-screw.webp"
                                             alt=""> -->
 
@@ -392,26 +640,27 @@
             </div>
         </div>
         <div class="">
-            <div class="w-full h-full grid grid-cols-4 ">
+            <div class="w-full h-full grid grid-cols-2 max-sm:grid-rows-2 lg:grid-cols-4 ">
                 <div
-                    class="bg-no-repeat bg-cover bg-center md:max-lg:col-span-2 md:max-lg:order-2  bg-[url('Public/assets/ultrasound.webp')]  ">
+                    class="bg-no-repeat bg-cover bg-center max-sm:col-span-2 md:max-lg:col-span-1 md:max-lg:order-1  bg-[url('Public/assets/ultrasound.webp')]  ">
                     <!-- <img class=" w-full h-[415px] object-contain scale-x-110 " src="./Public/assets/man-screw.webp"
                                                                 alt=""> -->
                 </div>
-                <div class="md:max-lg:col-span-2">
+                <div class="md:max-lg:col-span-1 max-sm:col-span-2 md:max-lg:order-2">
                     <div
-                        class="bg-primary h-full md:max-lg:py-4 md:max-lg:px-1 flex flex-col items-start justify-center  text-white lg:px-4 xl:px-8 lg:pt-4 xl:pt-14 pb-8 text-center">
+                        class="bg-primary h-full  max-lg:py-6 max-lg:px-4  flex flex-col items-start justify-center  text-white lg:px-4 xl:px-8 lg:pt-4 xl:pt-14 pb-8 text-center">
                         <h3
-                            class="font-kumbhSans  kumbhfont  mx-auto w-3/4 xl:mb-8 lg:mb-4 font-semibold tracking-4px leading-7 uppercase">
+                            class="font-kumbhSans  kumbhfont max-lg:w-full   mx-auto w-3/4 xl:mb-8 lg:mb-4 font-semibold tracking-4px leading-7 uppercase">
                             Ultrasound
                             Probe Repair</h3>
-                        <p class="font-HindMadurai text-base w-3/4 mx-auto">Expert repairs are designed to restore the
+                        <p class="font-HindMadurai text-base w-3/4 max-lg:w-full  mx-auto">Expert repairs are designed
+                            to restore the
                             accuracy
                             and performance of your medical devices, ensuring they function like
                             new. By opting for professional repairs, you can minimize the cost of replacement while
                             maintaining the high standards
                             of your equipment.</p>
-                        <div class="w-12 mx-auto lg:mt-4 xl:mt-12">
+                        <div class="w-12 mt-6 mx-auto lg:mt-4 xl:mt-12">
                             <a href="/our-services-ultrasound-probe-repair.html">
                                 <div
                                     class="text-white py-4 flex items-center justify-center px-4 font-kumbhSans  kumbhfont  bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer  rounded-full text-center font-semibold">
@@ -425,7 +674,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-span-2 md:max-lg:hidden">
+                <div class="col-span-2 hidden lg:block">
                     <div class="h-full bg-no-repeat bg-cover bg-[url('Public/assets/girlbio.webp')] ">
 
 
@@ -436,132 +685,25 @@
             </div>
         </div>
     </section>
-    <!-- popular services  -->
-    <section class=" w-full  pb-16 my-16 h-[900px] bg-lightgrey hidden">
-        <div class="w-full flex justify-between flex-col items-end">
-            <div class="flex items-center w-full  justify-end max-w-5xl ">
-                <div class="h-full w-1/2 xl:mr-20 pr-6">
 
-                    <div class=" xl:w-2/3 lg:px-20 xl:ml-24  ">
-                        <div class="inline-flex items-center  mb-3 ">
-                            <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-primary"></div>
-                            <h6
-                                class="text-primary font-kumbhSans  kumbhfont   font-semibold tracking-4px leading-6 uppercase">
-                                Popular
-                                Services
-                            </h6>
-                        </div>
-                        <h1
-                            class="font-medium w-full text-text-dark lg:text-5xl xl:text-6xl lg:leading-12 xl:leading-16 capitalize ">
-                            Trusted
-                            Services
-                            Healthcare
-                            Providers Rely On Most
-                        </h1>
-
-                        <p class="mt-8 leading-6 text-textpara-dark w-xl">
-                            Discover the services healthcare providers rely on most. From essential equipment upkeep to
-                            specialized repairs,<strong>Nuvionx</strong>
-                            ensures dependable performance where it matters most.
-                        </p>
-                    </div>
-
-
-
-                </div>
-                <div class="w-1/2 h-full flex  ">
-                    <div class="bg-primary w-1/2 h-full text-white px-8 pt-14 pb-8 text-center">
-                        <h3 class="font-kumbhSans  kumbhfont  mb-8  font-semibold tracking-4px leading-7 uppercase">
-                            Medical
-                            Equipment <br>
-                            Maintenance</h3>
-                        <p class="font-HindMadurai text-base">Proactive servicing is key to keeping your medical devices
-                            running
-                            safely, efficiently, and in full regulatory
-                            compliance. Regular maintenance ensures that your equipment operates at peak performance,
-                            minimizing the risk of issues
-                            and meeting all necessary safety standards.</p>
-                        <div class="w-12 mx-auto mt-12">
-                            <div
-                                class="text-white py-4 flex items-center justify-center px-4 font-kumbhSans  kumbhfont  bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer  rounded-full text-center font-semibold">
-                                <svg width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M15.523 8.559l-5.625 5.625a1.09 1.09 0 01-.773.316c-.316 0-.598-.105-.809-.316a1.084 1.084 0 010-1.582l3.692-3.727H1.25A1.11 1.11 0 01.125 7.75c0-.598.492-1.125 1.125-1.125h10.758L8.316 2.934a1.084 1.084 0 010-1.582 1.084 1.084 0 011.582 0l5.625 5.625c.457.421.457 1.16 0 1.582z"
-                                        fill="#fff" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- bg-[url('/Public/assets/man-screw.webp')] -->
-                    <div class=" w-1/2  bg-no-repeat bg-contain bg-[url('Public/assets/man-screw.webp')]  ">
-                        <!-- <img class=" w-full h-[415px] object-contain scale-x-110 " src="./Public/assets/man-screw.webp"
-                            alt=""> -->
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="h-[423px]  max-w-5xl">
-                <div class="flex items-center h-full w-full justify-center ">
-
-                    <div class="w-1/2 h-full flex">
-
-                        <!-- bg-[url('/Public/assets/man-screw.webp')] -->
-                        <div class=" w-1/2 h-full bg-no-repeat   bg-[url('Public/assets/ultrasound.webp')]  ">
-                            <!-- <img class=" w-full h-[415px] object-contain scale-x-110 " src="./Public/assets/man-screw.webp"
-                                                        alt=""> -->
-                        </div>
-                        <div class="bg-primary w-1/2 h-full text-white px-8 pt-14 pb-8 text-center">
-                            <h3 class="font-kumbhSans  kumbhfont  mb-8  font-semibold tracking-4px leading-7 uppercase">
-                                Ultrasound
-                                Probe Repair</h3>
-                            <p class="font-HindMadurai text-base">Expert repairs are designed to restore the accuracy
-                                and performance of your medical devices, ensuring they function like
-                                new. By opting for professional repairs, you can minimize the cost of replacement while
-                                maintaining the high standards
-                                of your equipment.</p>
-                            <div class="w-12 mx-auto mt-12">
-                                <div
-                                    class="text-white py-4 flex items-center justify-center px-4 font-kumbhSans  kumbhfont  bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer  rounded-full text-center font-semibold">
-                                    <svg width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M15.523 8.559l-5.625 5.625a1.09 1.09 0 01-.773.316c-.316 0-.598-.105-.809-.316a1.084 1.084 0 010-1.582l3.692-3.727H1.25A1.11 1.11 0 01.125 7.75c0-.598.492-1.125 1.125-1.125h10.758L8.316 2.934a1.084 1.084 0 010-1.582 1.084 1.084 0 011.582 0l5.625 5.625c.457.421.457 1.16 0 1.582z"
-                                            fill="#fff" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="h-full w-1/2 bg-no-repeat bg-cover bg-[url('Public/assets/girlbio.webp')] ">
-
-
-
-                        <!-- <img src="./Public/assets/girlbio.webp" alt=""> -->
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
     <!-- our features  -->
-    <section class="w-full  pb-16  mt-[120px]  overflow-x-hidden
+    <section class="w-full h-full  pb-16  mt-[120px]  
     
       ">
-        <div class="max-w-4xl mx-auto hidden md:max-lg:block">
-            <div class="inline-flex items-center mx-auto   justify-center w-full mb-3 ">
+        <div class="max-w-4xl  hidden md:max-lg:block  md:max-lg:ml-4">
+            <div class="inline-flex items-center mx-auto  mb-3 ">
                 <div class="w-2.5 h-2.5 mr-2.5 rounded-full  bg-primary"></div>
                 <h6 class="text-primary font-kumbhSans  kumbhfont    font-semibold tracking-4px leading-6 uppercase">
                     our
                     features
                 </h6>
             </div>
-            <h1 class="center-heading text-wrap">
+            <h1 class="main-heading text-wrap">
                 Innovative Features
                 Engineered for Healthcare Excellence
             </h1>
 
-            <p class="mt-8 xl:w-3/5 mx-auto center-para ">At <strong>Nuvionx</strong> , we go beyond basic service. Our
+            <p class="mt-8 xl:w-3/5 mx-auto main-para ">At <strong>Nuvionx</strong> , we go beyond basic service. Our
                 commitment to precision,
                 responsiveness, and
                 regulatory excellence ensures
@@ -573,9 +715,9 @@
         </div>
         </div>
         <div
-            class="xl:max-w-container lg:max-w-5xl w-[95%]  mx-auto  md:max-lg:h-fit h-[900px] flex justify-around items-start ">
+            class="xl:max-w-container lg:max-w-5xl w-[95%]  max-lg:space-x-4 mx-auto  md:max-lg:h-fit lg:h-[900px] flex flex-col sm:flex-row justify-around items-start ">
 
-            <div class=" w-1/2 md:max-lg:w-full   ">
+            <div class=" md:w-1/2    ">
 
                 <div class="mb-8 ">
                     <div class=" md:max-lg:hidden block ">
@@ -602,8 +744,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 lg:gap-2 xl:gap-8 gap-4 ">
-                    <div class="  rounded-xl p-6 bg-white relative z-20 feature-card">
+                <div class="grid grid-rows-4 lg:grid-cols-2 lg:gap-2 xl:gap-8 gap-4  ">
+                    <div class="   bg-white  feature-card">
                         <svg class="absolute right-0 z-10" width="70" height="80" viewBox="0 0 70 80" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g style="mix-blend-mode:plus-darker">
@@ -617,8 +759,8 @@
                             </g>
                         </svg>
 
-                        <div class="flex md:max-lg:items-center items-start justify-around w-full z-20 ">
-                            <div class="w-12 mx-auto ">
+                        <div class="flex md:max-lg:items-start items-start justify-start w-full z-20 ">
+                            <div class="w-12  ">
                                 <div
                                     class="text-white py-4 flex group items-center justify-center px-4 font-kumbhSans  kumbhfont  bg-primary hover:bg-white hover:border-0 cursor-pointer  rounded-full text-center font-semibold">
                                     <svg class="" width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -645,7 +787,7 @@
                             healthcare service
                             experience.</p>
                     </div>
-                    <div class="bg-primary text-white rounded-xl p-6 relative feature-card ">
+                    <div class="bg-primary feature-card ">
                         <svg class="absolute right-0 bottom-3 z-10" width="70" height="80" viewBox="0 0 70 80"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g style="mix-blend-mode:plus-darker">
@@ -660,8 +802,8 @@
                                     fill="#EBF3FE" />
                             </g>
                         </svg>
-                        <div class="flex items-start justify-around w-full">
-                            <div class="w-12 mx-auto ">
+                        <div class="flex  items-start justify-start w-full">
+                            <div class="w-12  ">
                                 <div
                                     class="text-white py-4 flex items-center group justify-center px-4 font-kumbhSans  kumbhfont  bg-white hover:bg-primary hover:border-0 cursor-pointer  rounded-full text-center font-semibold">
                                     <svg class="" width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -681,7 +823,7 @@
                             to minimize
                             downtime, helping you maintain uninterrupted patient care.</p>
                     </div>
-                    <div class="bg-primary bg-blend-multiply text-white rounded-xl p-6 relative feature-card ">
+                    <div class="bg-primary  max-lg:order-3 text-white feature-card ">
                         <svg class="absolute bg-blend-multiply right-0 bottom-3 z-10" width="70" height="80"
                             viewBox="0 0 70 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g style="mix-blend-mode:plus-darker">
@@ -697,8 +839,8 @@
                             </g>
                         </svg>
 
-                        <div class="flex items-start justify-around w-full">
-                            <div class="w-12 mx-auto ">
+                        <div class="flex items-start justify-start w-full">
+                            <div class="w-12  ">
                                 <div
                                     class="text-white py-4 flex items-center group justify-center px-4 font-kumbhSans  kumbhfont  bg-white hover:bg-primary hover:border-0 cursor-pointer  rounded-full text-center font-semibold">
                                     <svg class="" width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -719,7 +861,7 @@
                             meets UK
                             and international healthcare standards for safety and accuracy.</p>
                     </div>
-                    <div class="p-6 rounded-xl bg-white relative bg-blend-multiply feature-card">
+                    <div class=" bg-white  bg-blend-multiply feature-card">
                         <svg class="absolute right-0 z-10 bg-blend-multiply" width="70" height="80" viewBox="0 0 70 80"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g style="mix-blend-mode:plus-darker">
@@ -732,8 +874,8 @@
                                     fill="#EBF3FE" />
                             </g>
                         </svg>
-                        <div class="flex items-start justify-around w-full">
-                            <div class="xl:w-12 mx-auto ">
+                        <div class="flex items-start justify-start w-full">
+                            <div class="xl:w-12 ">
                                 <div
                                     class="text-white py-4 flex group items-center justify-center px-4 font-kumbhSans  kumbhfont  bg-primary hover:bg-white hover:border-0 cursor-pointer  rounded-full text-center font-semibold">
                                     <svg class="" width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -754,10 +896,11 @@
                     </div>
                 </div>
             </div>
-            <div class=" w-1/2 h-[739px]  ml-[60px] relative md:max-lg:hidden ">
-                <div class="w-full h-full object-cover">
-                    <img class=" object-center rounded-xl h-full  " src="./Public/assets/feature-main.webp" alt="">
-                    <img class="absolute object-cover h-1/3 w-10/12  lg:bottom-14 lg:-right-18 xl:left-[202px] xl:bottom-[77px]  rounded-xl"
+            <div class=" md:w-1/2  lg:h-[739px]  lg:ml-[60px] relative ">
+                <div class="w-full h-full">
+                    <img class=" object-center w-full object-cover rounded-xl  max-lg:h-[650px] "
+                        src="./Public/assets/feature-main.webp" alt="">
+                    <img class="absolute object-cover h-1/3 w-10/12 bottom-0  lg:bottom-14 lg:-right-18 xl:left-[202px] xl:bottom-[77px]  rounded-xl"
                         src="./Public/assets/feature-side.webp" alt="">
                 </div>
 
@@ -766,9 +909,9 @@
         </div>
     </section>
     <!-- our services -->
-    <section id="our-service" class="py-24 bg-lightgrey">
+    <section id="our-service" class="py-24 mt-4 bg-lightgrey">
         <div class="xl:max-w-container lg:max-w-5xl mx-auto w-[95%]">
-            <div class=" text-center mx-auto ">
+            <div class=" lg:text-center lg:mx-auto ">
 
                 <div class="inline-flex items-center  mb-3 ">
                     <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-primary"></div>
@@ -776,10 +919,9 @@
                         our services
                     </h6>
                 </div>
-                <h1
-                    class=" text-wrap tracking-wide font-kumbhSans  kumbhfont  text-text-dark text-6xl leading-16 capitalize ">
+                <h1 class=" lg:text-wrap center-heading ">
                     Comprehensive Medical
-                    <br>Equipment
+                    <br class="max-lg:hidden">Equipment
                     Services You Can Trust
                 </h1>
 
@@ -793,7 +935,7 @@
                 </p>
 
             </div>
-            <div class="mt-[60px] grid grid-cols-3 gap-8 md:max-lg:grid-cols-2">
+            <div class="mt-[60px] grid max-sm:grid-rows-6  sm:grid-cols-3 gap-8 md:max-lg:grid-cols-2">
                 <div class="relative text-center  rounded-md w-full max-w-[416px] h-full bg-white ">
                     <div class="our-service-card">
                         <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
@@ -912,11 +1054,12 @@
         </div>
     </section>
     <!-- multi vendor service -->
-    <section class="w-full py-[120px]">
-        <div class="xl:max-w-container lg:max-w-5xl mx-auto flex items-start justify-evenly w-[95%]">
-            <img class="object-fill h-[473px] w-1/2  rounded-xl"
+    <section class="w-full sm:py-[120px] ">
+        <div
+            class="xl:max-w-container lg:max-w-5xl mx-auto flex max-lg:flex-row-reverse max-sm:flex-col items-start justify-evenly w-[95%]">
+            <img class="max-lg:object-cover max-lg:aspect-square object-fill max-sm:aspect-video sm:h-[473px] sm:w-1/2  rounded-xl"
                 src="./Public/assets/doctor-is-checking-monitor-intensive-care-unit 1.webp" alt="">
-            <div class=" h-full ml-10">
+            <div class=" h-full max-sm:mt-4 lg:ml-10">
                 <div class="inline-flex items-center   mb-3">
                     <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-primary"></div>
                     <h6 class="text-primary  font-semibold tracking-4px leading-6 uppercase">Multi-Vendor services
@@ -936,7 +1079,7 @@
                     more on delivering
                     exceptional patient care.
                 </p>
-                <div class="mt-12 uppercase">
+                <div class="lg:mt-12 mt-12 uppercase">
                     <a href="./aboutus.html"
                         class="text-white font-kumbhSans  kumbhfont  bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer leading-6 rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">Request
                         a Quote</a>
@@ -946,38 +1089,39 @@
         </div>
     </section>
     <!-- image view  -->
-    <section class="w-full h-[875px] ">
+    <section class="w-full h-[875px] mt-8">
         <!-- bg-no-repeat bg-[url('Public/assets/oproom.webp')] -->
-        <div class="mx-auto  xl:max-w-container lg:max-w-5xl h-full relative  bg-fill rounded-xl w-[98%] ">
-            <img class="absolute h-[875px] w-full object-fill rounded-xl z-0" src="./Public/assets/oproom.webp" alt="">
+        <div class="mx-auto  xl:max-w-container lg:max-w-5xl h-full bg-cover relative  sm:bg-fill rounded-xl w-[98%] ">
+            <img class="absolute h-[875px] w-full object-cover object-bottom-right sm:object-fill rounded-xl z-0"
+                src="./Public/assets/oproom.webp" alt="">
             <div
-                class="absolute w-[86px] h-[86px] hover:bg-secondary-cyan left-[313px] top-[105px] bg-primary rounded-full  flex items-center justify-center">
+                class="absolute w-[32px] h-[32px] sm:w-[86px] sm:h-[86px] hover:bg-secondary-cyan left-[62px] top-[47px] sm:left-[313px] sm:top-[105px] bg-primary rounded-full  flex items-center justify-center">
 
-                <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
+                <img class="w-[20px] h-[14px] sm:w-[40px] sm:h-[23.16px]" src="./Public/assets/scope.svg" alt="">
             </div>
             <div
-                class="absolute w-[86px] h-[86px] hover:bg-secondary-cyan lg:left-[700px] xl:left-[872px] top-[214px] bg-primary rounded-full  flex items-center justify-center">
+                class="absolute w-[32px] h-[32px] sm:w-[86px] sm:h-[86px] hover:bg-secondary-cyan lg:left-[700px] xl:left-[872px] top-[214px] bg-primary rounded-full  flex items-center justify-center">
 
-                <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
+                <img class="w-[20px] h-[14px] sm:w-[40px] sm:h-[23.16px]" src="./Public/assets/scope.svg" alt="">
             </div>
             <div
-                class="absolute w-[86px] h-[86px] hover:bg-secondary-cyan right-[114px] top-[352px] bg-primary rounded-full  flex items-center justify-center">
+                class="absolute w-[32px] h-[32px] sm:w-[86px] sm:h-[86px] hover:bg-secondary-cyan right-[114px] top-[352px] bg-primary rounded-full  flex items-center justify-center">
 
-                <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
+                <img class="w-[20px] h-[14px] sm:w-[40px] sm:h-[23.16px]" src="./Public/assets/scope.svg" alt="">
             </div>
             <div
-                class="absolute w-[86px] h-[86px] hover:bg-secondary-cyan left-[313px] top-[105px] bg-primary rounded-full  flex items-center justify-center">
+                class="absolute w-[32px] h-[32px] sm:w-[86px] sm:h-[86px] hover:bg-secondary-cyan left-[313px] top-[105px] bg-primary rounded-full  flex items-center justify-center">
 
-                <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
+                <img class="w-[20px] h-[14px] sm:w-[40px] sm:h-[23.16px]" src="./Public/assets/scope.svg" alt="">
             </div>
             <div
-                class="absolute w-[86px] h-[86px] hover:bg-secondary-cyan lg:right-[340px] xl:right-[440px] bottom-[149px] bg-primary rounded-full  flex items-center justify-center">
+                class="absolute w-[32px] h-[32px] sm:w-[86px] sm:h-[86px] hover:bg-secondary-cyan lg:right-[340px] xl:right-[440px] bottom-[149px] bg-primary rounded-full  flex items-center justify-center">
 
-                <img class="w-[40px] h-[23.16px]" src="./Public/assets/scope.svg" alt="">
+                <img class="w-[20px] h-[14px] sm:w-[40px] sm:h-[23.16px]" src="./Public/assets/scope.svg" alt="">
             </div>
-            <div class="w-full h-full flex items-end justify-between z-10">
+            <div class="w-full h-full flex items-end justify-between z-10 ">
                 <div
-                    class="  w-[55%] max-w-[70%] text-wrap  rounded-xl xl:mb-11 z-10 xl:ml-12 lg:mb-6 lg:ml-6 bg-primary/80">
+                    class="  sm:w-[55%] max-w-[75%] sm:max-w-[70%] text-wrap  rounded-xl xl:mb-11 z-10 xl:ml-12 lg:mb-6 lg:ml-6 bg-primary/80">
                     <div class=" h-full p-12 text-white">
                         <div class="inline-flex items-center   mb-3">
                             <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-white"></div>
@@ -996,7 +1140,7 @@
                             expectations. Experience the
                             quality that has made us a trusted choice in medical equipment maintenance.
                         </p>
-                        <div class="xl:my-12 lg:my-6 uppercase">
+                        <div class="xl:my-12 lg:my-6 mt-4 uppercase">
                             <a href="./aboutus.html"
                                 class="text-white font-kumbhSans  kumbhfont  bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer leading-6 rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">Find
                                 Out more</a>
@@ -1009,10 +1153,10 @@
         </div>
     </section>
     <!-- our Testimonials  -->
-    <section class="w-full py-28 " id="testimonials">
+    <section class="w-full py-4 lg:py-28 " id="testimonials">
         <div class="xl:max-w-container lg:max-w-5xl mx-auto w-[95%]">
             <!-- testimonials heading -->
-            <div class=" text-center mx-auto ">
+            <div class=" sm:text-center mx-auto ">
 
                 <div class="inline-flex items-center  mb-3 ">
                     <div class="w-2.5 h-2.5 mr-2.5 rounded-full bg-primary"></div>
@@ -1026,7 +1170,7 @@
                     Hear It From Our Clients
                 </h1>
 
-                <p class="mt-8 xl:w-3/5 mx-auto center-para ">Healthcare
+                <p class="mt-4 lg:mt-8 xl:w-3/5 sm:mx-auto center-para ">Healthcare
                     providers
                     across the UK trust <strong>Nuvionx</strong> for reliable service, fast response, and technical<br>
                     excellence. See what
@@ -1035,8 +1179,8 @@
 
             </div>
             <!-- cards-testimonials -->
-            <div class="grid grid-cols-3 gap-8 py-16">
-                <div class="text-left max-w-[416px] w-full lg:p-4 xl:p-8 relative rounded-[14px] bg-dropdown">
+            <div class="grid justify-center max-sm:grid-rows-2 sm:grid-cols-2 gap-4 lg:gap-8 py-6 lg:py-16">
+                <div class="text-left mx-auto max-w-[416px] w-full  p-4 xl:p-8 relative rounded-[14px] bg-dropdown">
                     <!-- card title  -->
                     <div class="">
 
@@ -1084,7 +1228,7 @@
                     </div>
                 </div>
                 <div
-                    class="text-left max-w-[416px] w-full lg:p-4 xl:p-8 relative min-w-[200px] rounded-[14px] bg-dropdown">
+                    class="text-left  mx-auto max-w-[416px] w-full p-4 xl:p-8 relative min-w-[200px] rounded-[14px] bg-dropdown">
                     <!-- card title  -->
                     <div class="">
 
@@ -1129,7 +1273,7 @@
                             </svg></div>
                     </div>
                 </div>
-                <div class="text-left max-w-[416px] w-full lg:p-4 xl:p-8 relative rounded-[14px] bg-dropdown">
+                <div class="text-left max-w-[416px] w-full hidden lg:p-4 xl:p-8 relative rounded-[14px] bg-dropdown">
                     <!-- card title  -->
                     <div class="">
 
@@ -1177,11 +1321,12 @@
         </div>
     </section>
     <!-- let work together  -->
-    <section class="w-full my-16 bg-lightgrey ">
+    <section class="w-full lg:my-16 bg-lightgrey ">
         <div
-            class="mx-auto rounded-xl py-[38px] w-[95%] pl-12 lg:max-w-5xl xl:max-w-container bg-center bg-[url('Public/assets/pexels-kseniachernaya-5752282.webp')] bg-no-repeat bg-cover ">
-            <div class="md:max-lg:w-4/5 lg:w-2/5 h-full">
-                <h4 class="text-white font-kumbhSans  kumbhfont  font-medium text-[32px] leading-10 ">Let's work
+            class="mx-auto sm:rounded-xl py-4 lg:py-[38px] sm:w-[95%] pl-4 sm:pl-12 lg:max-w-5xl xl:max-w-container bg-center bg-[url('Public/assets/pexels-kseniachernaya-5752282.webp')]  bg-no-repeat bg-fill sm:bg-cover ">
+            <div class=" lg:w-2/5 h-full">
+                <h4 class="text-white font-kumbhSans  kumbhfont  font-medium text-2xl lg:text-[32px] leading-10 ">Let's
+                    work
                     together
                     to enhance
                     the reliability and performance
@@ -1196,7 +1341,7 @@
         </div>
     </section>
     <!-- go up -->
-    <section id="scroll-to-top" class="w-full flex items-center bg-lightgrey justify-center py-14 bg-">
+    <section id="scroll-to-top" class="w-full my-4 flex items-center  bg-lightgrey justify-center sm:py-14 bg-">
         <div class="w-12 mx-auto ">
             <div
                 class="text-white py-4 flex items-center group justify-center px-4 font-kumbhSans  kumbhfont  bg-primary -rotate-90 hover:bg-white hover:border-0 cursor-pointer  rounded-full text-center font-semibold">
@@ -1211,10 +1356,11 @@
     <footer class="w-full  bg-white">
         <div class="xl:max-w-container md:max-w-5xl mx-auto w-[95%] bg-white">
             <!-- footer menus  -->
-            <div class="  py-16 grid grid-cols-4 gap-8 mx-auto">
+            <div
+                class="  py-16 grid max-sm:grid-rows-3 sm:max-lg:grid-cols-3 gap-10 lg:grid-cols-4 sm:max-lg:gap-8 mx-auto">
                 <!-- contact -->
-                <div class="">
-                    <h3 class="font-semibold leading-6 tracking-4px mb-8">CONTACT</h3>
+                <div class="sm:max-lg:order-4 sm:max-lg:col-span-3 sm:max-lg:mx-auto sm:max-lg:text-center">
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8 ">CONTACT</h3>
                     <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
                         <li>5 Rialto Building<br> NE1 2JR</li>
                         <li><a href="tel:07768151690 ">
@@ -1261,7 +1407,7 @@
                     </ul>
                 </div>
                 <div class="">
-                    <h3 class="font-semibold leading-6 tracking-4px mb-8">COMPANY</h3>
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8 ">COMPANY</h3>
                     <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
                         <li><a href="#">Bookings & Cancellations </a></li>
                         <li><a href="#">Website Terms</a></li>
@@ -1274,9 +1420,9 @@
             </div>
             <div class="h-[1px] bg-[#D0D0D0]  w-full"></div>
 
-            <div class="flex justify-between items-center py-10">
+            <div class="flex max-sm:flex-col justify-between items-center py-6 lg:py-10">
                 <div class="font-HindMadurai text-headdark leading-6">2025 © Nuvionx. All Rights Reserved.</div>
-                <div class="font-HindMadurai text-headdark leading-6 space-x-12">
+                <div class="font-HindMadurai text-headdark leading-6 space-x-12 max-sm:mt-6">
                     <a href="">Privacy & Policy</a>
                     <a href="">Terms & Condition</a>
                 </div>
