@@ -48,6 +48,11 @@ body {
 .kumbhfont {
   font-family: "Kumbh Sans", sans-serif !important;
 }
+
+.land-head {
+  font-family: "Kumbh Sans", sans-serif !important;
+  @apply xl:text-[4.5rem] mt-1 text-28px lg:text-4xl md:max-lg:my-4 leading-mob34  lg:leading-14 xl:leading-20   font-medium lg:my-2  xl:my-4;
+}
 .heading {
   font-family: "Kumbh Sans", sans-serif !important;
   @apply font-medium  tracking-wide text-28px lg:text-parasize leading-10;
@@ -57,10 +62,10 @@ body {
 }
 .main-heading {
   font-family: "Kumbh Sans", sans-serif !important;
-  @apply font-medium lg:text-[2.5rem] xl:text-56px text-[28px] leading-mob34 lg:leading-12 xl:leading-16 tracking-wide text-text-dark capitalize;
+  @apply font-medium lg:text-[2.5rem] xl:text-56px text-[28px] leading-mob34 lg:leading-12 xl:leading-16 tracking-wide  text-text-dark capitalize;
 }
 .main-para {
-  @apply font-HindMadurai font-normal text-base !leading-6 text-paradark max-lg:mt-4 max-lg:mb-6;
+  @apply font-HindMadurai font-normal text-base !leading-6  text-paradark max-lg:mt-4 sm:max-lg:mb-6;
 }
 .center-heading {
   font-family: "Kumbh Sans", sans-serif !important;
@@ -91,8 +96,20 @@ body {
 .feature-card p {
   @apply font-HindMadurai pt-4 lg:pt-6 text-sm lg:text-sm xl:text-sm leading-card22 lg:leading-6 mx-auto;
 }
+.our-service-card-box {
+  @apply absolute p-6  top-[54%]  sm:top-[50%] transform -translate-x-1/2 -translate-y-1/2 lg:top-[52%] left-[50%]  bg-primary rounded-xl  flex items-center justify-center;
+}
 .our-service-card {
-  @apply absolute p-8 top-[45%] sm:top-[50%] transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%]  bg-primary rounded-xl  flex items-center justify-center;
+  @apply relative text-center  h-full rounded-md w-full max-w-[416px]  bg-white;
+}
+.our-service-card h3 {
+  @apply leading-8 lg:text-2xl text-xl font-medium;
+}
+.our-service-card h4 {
+  @apply font-semibold  text-xs lg:text-sm tracking-[1.78px] leading-card22 lg:tracking-2px text-primary mt-2 uppercase;
+}
+.our-service-card p {
+  @apply font-HindMadurai max-sm:px-4 leading-6 mt-6 mb-4 lg:mt-8 lg:mb-6 text-paradark;
 }
 .dropdown-item {
   position: relative;
