@@ -97,7 +97,7 @@ body {
   @apply font-HindMadurai pt-4 lg:pt-6 text-sm lg:text-sm xl:text-sm leading-card22 lg:leading-6 mx-auto;
 }
 .our-service-card-box {
-  @apply absolute p-6  top-[54%]  sm:top-[50%] transform -translate-x-1/2 -translate-y-1/2 lg:top-[52%] left-[50%]  bg-primary rounded-xl  flex items-center justify-center;
+  @apply absolute p-6 max-sm:top-[55%]  sm:top-[50%] transform -translate-x-1/2 -translate-y-1/2 lg:top-[50%] left-[50%]  bg-primary rounded-xl  flex items-center justify-center;
 }
 .our-service-card {
   @apply relative text-center  h-full rounded-md w-full max-w-[416px]  bg-white;
@@ -109,7 +109,7 @@ body {
   @apply font-semibold  text-xs lg:text-sm tracking-[1.78px] leading-card22 lg:tracking-2px text-primary mt-2 uppercase;
 }
 .our-service-card p {
-  @apply font-HindMadurai max-sm:px-4 leading-6 mt-6 mb-4 lg:mt-8 lg:mb-6 text-paradark;
+  @apply font-HindMadurai px-8 max-sm:px-4 leading-6 mt-6 mb-4 lg:mt-8 lg:mb-6 text-paradark;
 }
 .dropdown-item {
   position: relative;
