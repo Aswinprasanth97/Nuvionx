@@ -92,7 +92,7 @@ body {
   @apply font-HindMadurai pt-4 lg:pt-6 text-sm lg:text-sm xl:text-sm leading-card22 lg:leading-6 mx-auto;
 }
 .our-service-card {
-  @apply absolute p-8 top-[50%] transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%]  bg-primary rounded-xl  flex items-center justify-center;
+  @apply absolute p-8 top-[45%] sm:top-[50%] transform -translate-x-1/2 -translate-y-1/2 lg:top-[40%] left-[50%]  bg-primary rounded-xl  flex items-center justify-center;
 }
 .dropdown-item {
   position: relative;
