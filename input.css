@@ -78,10 +78,10 @@ body {
 
 .about-card-title {
   font-family: "Kumbh Sans", sans-serif !important;
-  @apply font-semibold lg:tracking-4px leading-6 uppercase text-base  lg:text-sm;
+  @apply font-semibold lg:tracking-4px leading-6 uppercase text-base  lg:text-sm z-20;
 }
 .about-card-para {
-  @apply font-HindMadurai font-medium leading-6 text-base lg:text-sm;
+  @apply font-HindMadurai font-medium leading-6 text-base lg:text-sm z-20;
 }
 .input-choose::before {
   @apply mr-4;
