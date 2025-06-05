@@ -31,6 +31,7 @@
   --text-28px: 28px;
   --breakpoint-xl: 80rem;
   --spacing-h320: 320px;
+  --spacing-h260: 260px;
   --text-parasize: 32px;
   --spacing-servicecontainer: 976px;
   --color-dropdown-text: #1b1c21;
@@ -122,6 +123,15 @@ body {
 }
 .list-style i {
   @apply z-10;
+}
+.heading-page {
+  font-family: "Kumbh Sans", sans-serif !important;
+  @apply text-28px lg:text-56px lg:w-5/6 mt-1 lg:mt-4 lg:leading-14 xl:leading-16 font-kumbhSans   lg:tracking-wide font-medium lg:my-2  xl:my-4;
+}
+
+.head-nav {
+  font-family: "Kumbh Sans", sans-serif !important;
+  @apply lg:w-full text-white text-nowrap mt-8 mb-20 flex text-sm lg:justify-center my-auto items-center font-kumbhSans  font-semibold leading-6 tracking-4px;
 }
 .dropdown-item {
   position: relative;
