@@ -53,14 +53,14 @@
     <!-- navbar -->
     <header class=" ">
         <nav id="main-nav"
-            class="justify-between z-20 max-lg:fixed bg-transparent absolute lg:top-10 max-lg:py-4 lg:my-8 xl:top-16 w-full 2xl:my-12  ">
+            class="justify-between z-50 max-lg:fixed bg-transparent absolute lg:top-10 max-lg:py-4 lg:my-8 xl:top-16 w-full 2xl:my-12  ">
             <!-- navbar main -->
             <div class="lg:max-w-5xl xl:max-w-container mx-auto flex w-[95%] justify-between items-center ">
                 <div><img class="w-28  h-10" src="./Public/assets/Nuvonix Logo.svg" alt="Nuvonix Logo"></div>
                 <div class="hidden lg:block">
                     <ul
                         class="flex font-kumbhSans  kumbhfont  text-white gap-6 items-center justify-evenly  text-sm leading-6 tracking-2px">
-                        <li class="font-bold"><span
+                        <li class=""><span
                                 class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer">HOME</span>
                         </li>
                         <li class="">
@@ -107,7 +107,7 @@
                                 class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
                                     href="./aboutus.html">ABOUT US</a></span></li>
                         <li><span
-                                class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
+                                class="inline-block text-center font-bold transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
                                     href="./contactus.html">CONTACT</a></span>
                         </li>
                         <li>
@@ -180,99 +180,11 @@
                                 </svg></div>
                         </div>
                         <div class="">
-                            <ul
-                                class="flex hidden font-kumbhSans flex-col  kumbhfont  text-white gap-6 items-center justify-evenly  text-sm leading-6 tracking-2px">
-                                <li class="font-bold"><span
-                                        class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer">HOME</span>
-                                </li>
-                                <li class="">
-                                    <div class="relative inline-block text-center ">
-                                        <button id="service-main"
-                                            class="inline-flex cursor-pointer
-                                                                          items-center text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-sm  rounded-lg"
-                                            type="button" data-dropdown-toggle="dropdown">
-                                            OUR SERVICES
-                                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
-                                                viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M19 9l-7 7-7-7"></path>
-                                            </svg>
-                                        </button>
-                                        <div id="service-drop"
-                                            class="hidden   absolute transform -translate-x-1/4  mt-2 w-[305px] bg-white text-base z-50 list-none rounded-xl shadow"
-                                            id="dropdown">
-                                            <ul class="!text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
-                                                aria-labelledby="dropdown">
-                                                <li><a href="./our-services-medical-equipment-maintenance.html"
-                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white rounded-t-xl">Medical
-                                                        Equipment Maintenance</a></li>
-                                                <li><a href="./our-services-clinical-engineering-support.html"
-                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white ">Clinical
-                                                        Engineering Support</a></li>
-                                                <li><a href="./our-services-asset-management-audit-support.html"
-                                                        class="block dropdown-item  pl-6 py-6 text-sm hover:text-white ">Asset
-                                                        Management & Audit Support</a>
-                                                </li>
-                                                <li><a href="./our-services-ultrasound-probe-repair.html"
-                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white ">Ultrasound
-                                                        Probe Repair</a>
-                                                </li>
-                                                <li><a href="./our-services-bed-maintenance.html"
-                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white rounded-b-xl">Bed
-                                                        Maintenance</a>
-                                                </li>
 
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><span
-                                        class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
-                                            href="./aboutus.html">ABOUT US</a></span></li>
-                                <li><span
-                                        class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
-                                            href="./contactus.html">CONTACT</a></span>
-                                </li>
-                                <li>
-                                    <div class="relative inline-block text-center ">
-                                        <button id="nav-main-mobile"
-                                            class="inline-flex ring-0  items-center cursor-pointer text-white transition duration-300 ease-in-out transform hover:-translate-y-1  hover:scale-110 text-sm  rounded-lg"
-                                            type="button" data-dropdown-toggle="dropdown">
-                                            MORE
-                                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
-                                                viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M19 9l-7 7-7-7"></path>
-                                            </svg>
-                                        </button>
-                                        <div id="nav-drop-mobile "
-                                            class="absolute hidden w-full right-[50%] transform mt-2 min-w-[300px] bg-white text-base z-50 list-none rounded-xl shadow"
-                                            id="dropdown">
-                                            <ul class=" !text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
-                                                aria-labelledby="dropdown">
-
-                                                <li class=" hover:text-white"><a href="#testimonials"
-                                                        class="block  dropdown-item  box pl-6 py-6 rounded-t-xl text-sm ">Testimonials</a>
-                                                </li>
-                                                <li class="hover:text-white"><a href="./more-sectors-we-serve.html"
-                                                        class="block  dropdown-item  pl-6 py-6 text-sm ">Sectors
-                                                        We
-                                                        Serve</a></li>
-                                                <li class="hover:text-white"><a
-                                                        href="./more-Inventory-life-cycle-mangement.html"
-                                                        class="block  dropdown-item pl-6 py-6 text-sm  rounded-b-xl">Inventory
-                                                        &
-                                                        Lifecycle Management</a>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
                             <ul
                                 class="flex flex-col  kumbhfont text-white gap-8 items-center justify-evenly text-sm leading-6 tracking-2px font-kumbhSans">
-                                <li class=" cursor-pointer text-xl hover:scale-110 transition">HOME
+                                <li class=" cursor-pointer text-xl hover:scale-110 transition"><a
+                                        href="./index.html">HOME</a>
 
                                 </li>
 
@@ -428,7 +340,7 @@
         </div>
 
     </section>
-    <!-- about us-->
+    <!-- get in touch-->
     <section class=" w-full lg:py-14 py-4 ">
         <div class="lg:max-w-5xl xl:max-w-container h-full  sm:mx-auto  sm:w-[95%]">
             <div class=" w-full mb-20 h-full max-lg:flex-col flex  justify-evenly font-kumbhSans  kumbhfont ">
@@ -454,16 +366,16 @@
                     </div>
 
                     <div
-                        class="bg-primary w-full max-sm:px-4     text-white sm:rounded-xl  relative  sm:pr-4 flex items-end overflow-x-hidden">
+                        class="bg-primary w-full     text-white sm:rounded-xl  relative  sm:pr-4 flex items-end overflow-x-hidden">
                         <img class="absolute w-full h-full object-cover z-10" src="./Public/assets/clip-primar.svg"
                             alt="">
-                        <div class="w-full sm:grid grid-cols-4 items-end justify-end z-20">
+                        <div class="w-full sm:grid  max-sm:px-4 grid-cols-4 items-end justify-end z-20">
                             <div
                                 class="col-span-1  max-sm:hidden items-end justify-starts lg:w-[200px] xl:w-[320px] flex">
                                 <img class=" ml-0 object-contain h-fit " src="./Public/assets/hand-glove 2.png"
                                     alt="phone in hand">
                             </div>
-                            <div class="max-sm:col-span-4 sm:col-span-3 my-11 xl:ml-4 w-full">
+                            <div class="max-sm:col-span-4 sm:col-span-3 my-11 xl:ml-4 w-full sm:pr-2">
                                 <div class="flex justify-between w-full mb-6 ">
                                     <div class="font-kumbhSans  kumbhfont  font-medium leading-8  text-2xl">
                                         Contact
@@ -498,11 +410,11 @@
                                     Building, Newcastle Upon
                                     Tyne, NE1 2JR, UK
                                 </div>
-                                <div class="pt-4 w-full"><span
-                                        class="border-[1px] mb-4 border-dashed py-3 w-full px-3 bg-white/10 rounded-4xl font-HindMadurai text-nowrap"><i
+                                <div class="pt-4 w-full flex gap-2"><span
+                                        class="border-[1px] mb-4 border-dashed  py-3 w-full px-2 sm:px-3 bg-white/10 rounded-4xl font-HindMadurai text-nowrap"><i
                                             class="fa-solid mr-2 fa-envelope"></i>info@nuvionx.co.uk</span>
                                     <span
-                                        class="border-[1px]  mb-4 border-dashed py-3 w-full px-6 bg-white/10 rounded-4xl font-HindMadurai text-nowrap"><i
+                                        class="border-[1px]  mb-4 border-dashed py-3 w-full px-2  sm:px-6 bg-white/10 rounded-4xl font-HindMadurai text-nowrap"><i
                                             class="fa-solid mr-2 fa-phone"></i>+44 7570296821</span>
                                 </div>
                             </div>
