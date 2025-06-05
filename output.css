@@ -515,6 +515,9 @@
   .h-\[1px\] {
     height: 1px;
   }
+  .h-\[4\] {
+    height: 4;
+  }
   .h-\[14px\] {
     height: 14px;
   }
@@ -544,6 +547,9 @@
   }
   .h-\[426px\] {
     height: 426px;
+  }
+  .h-\[476px\] {
+    height: 476px;
   }
   .h-\[600px\] {
     height: 600px;
@@ -664,6 +670,9 @@
   }
   .max-w-\[426px\] {
     max-width: 426px;
+  }
+  .max-w-\[476px\] {
+    max-width: 476px;
   }
   .max-w-servicecontainer {
     max-width: var(--spacing-servicecontainer);
@@ -813,6 +822,13 @@
       --tw-space-y-reverse: 0;
       margin-block-start: calc(calc(var(--spacing) * 8) * var(--tw-space-y-reverse));
       margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-x-2 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 2) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-x-reverse)));
     }
   }
   .space-x-3 {
