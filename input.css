@@ -111,6 +111,18 @@ body {
 .our-service-card p {
   @apply font-HindMadurai px-8 max-sm:px-4 leading-6 mt-6 mb-4 lg:mt-8 lg:mb-6 text-paradark;
 }
+.list-style {
+  @apply font-normal font-HindMadurai text-lg text-headdark max-lg:text-base max-lg:leading-6 leading-grid28;
+}
+.list-style p {
+  @apply z-10;
+}
+.list-style h6 {
+  @apply z-10;
+}
+.list-style i {
+  @apply z-10;
+}
 .dropdown-item {
   position: relative;
   display: block;

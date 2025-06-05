@@ -17,7 +17,7 @@
 
 <body class="relative p-0 m-0 box-border bg-lightgrey scroll-smooth ">
     <!-- ---Topbar--- -->
-    <div class="bg-primary  h-[62px] m-auto text-sm leading-6 relative top-0 w-full ">
+    <div class="bg-primary hidden lg:block  h-[62px] m-auto text-sm leading-6 relative top-0 w-full ">
         <div
             class=" text-white  lg:max-w-5xl xl:max-w-container mx-auto   text-sm flex flex-col lg:flex-row justify-between items-center  py-5">
 
@@ -60,7 +60,8 @@
                     <ul
                         class="flex font-kumbhSans  kumbhfont  text-white gap-6 items-center justify-evenly  text-sm leading-6 tracking-2px">
                         <li class="font-bold"><span
-                                class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer">HOME</span>
+                                class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer"><a
+                                    href="./index.html">HOME</a></span>
                         </li>
                         <li class="">
                             <div class="relative inline-block text-center ">
@@ -179,103 +180,11 @@
                                 </svg></div>
                         </div>
                         <div class="">
-                            <ul
-                                class="flex hidden font-kumbhSans flex-col  kumbhfont  text-white gap-6 items-center justify-evenly  text-sm leading-6 tracking-2px">
-                                <li class="font-bold"><span
-                                        class="inline-block w-full mx-auto transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110  cursor-pointer">HOME</span>
-                                </li>
-                                <li class="">
-                                    <div class="relative inline-block text-center ">
-                                        <button id="service-main"
-                                            class="inline-flex cursor-pointer
-                                                                          items-center text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-sm  rounded-lg"
-                                            type="button" data-dropdown-toggle="dropdown">
-                                            OUR SERVICES
-                                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
-                                                viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M19 9l-7 7-7-7"></path>
-                                            </svg>
-                                        </button>
-                                        <div id="service-drop"
-                                            class="hidden   absolute transform -translate-x-1/4  mt-2 w-[305px] bg-white text-base z-50 list-none rounded-xl shadow"
-                                            id="dropdown">
-                                            <ul class="!text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
-                                                aria-labelledby="dropdown">
-                                                <li><a href="./our-services-medical-equipment-maintenance.html"
-                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white rounded-t-xl">Medical
-                                                        Equipment Maintenance</a></li>
-                                                <li><a href="./our-services-clinical-engineering-support.html"
-                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white ">Clinical
-                                                        Engineering Support</a></li>
-                                                <li><a href="./our-services-asset-management-audit-support.html"
-                                                        class="block dropdown-item  pl-6 py-6 text-sm hover:text-white ">Asset
-                                                        Management & Audit Support</a>
-                                                </li>
-                                                <li><a href="./our-services-ultrasound-probe-repair.html"
-                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white ">Ultrasound
-                                                        Probe Repair</a>
-                                                </li>
-                                                <li><a href="./our-services-bed-maintenance.html"
-                                                        class="block dropdown-item pl-6 py-6 text-sm hover:text-white rounded-b-xl">Bed
-                                                        Maintenance</a>
-                                                </li>
 
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><span
-                                        class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
-                                            href="./aboutus.html">ABOUT US</a></span></li>
-                                <li><span
-                                        class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
-                                            href="./contactus.html">CONTACT</a></span>
-                                </li>
-                                <li>
-                                    <div class="relative inline-block text-center ">
-                                        <button id="nav-main-mobile"
-                                            class="inline-flex ring-0  items-center cursor-pointer text-white transition duration-300 ease-in-out transform hover:-translate-y-1  hover:scale-110 text-sm  rounded-lg"
-                                            type="button" data-dropdown-toggle="dropdown">
-                                            MORE
-                                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
-                                                viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M19 9l-7 7-7-7"></path>
-                                            </svg>
-                                        </button>
-                                        <div id="nav-drop-mobile "
-                                            class="absolute hidden w-full right-[50%] transform mt-2 min-w-[300px] bg-white text-base z-50 list-none rounded-xl shadow"
-                                            id="dropdown">
-                                            <ul class=" !text-left text-base tracking-normal font-normal text-dropdown-text font-HindMadurai"
-                                                aria-labelledby="dropdown">
-
-                                                <li class=" hover:text-white"><a href="#testimonials"
-                                                        class="block  dropdown-item  box pl-6 py-6 rounded-t-xl text-sm ">Testimonials</a>
-                                                </li>
-                                                <li class="hover:text-white"><a href="./more-sectors-we-serve.html"
-                                                        class="block  dropdown-item  pl-6 py-6 text-sm ">Sectors
-                                                        We
-                                                        Serve</a></li>
-                                                <li class="hover:text-white"><a
-                                                        href="./more-Inventory-life-cycle-mangement.html"
-                                                        class="block  dropdown-item pl-6 py-6 text-sm  rounded-b-xl">Inventory
-                                                        &
-                                                        Lifecycle Management</a>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
                             <ul
                                 class="flex flex-col  kumbhfont text-white gap-8 items-center justify-evenly text-sm leading-6 tracking-2px font-kumbhSans">
-                                <li class="font-bold cursor-pointer text-xl hover:scale-110 transition"><span
-                                        class="inline-flex items-center my-auto">
-                                        <div class="bg-white rounded-full h-4 w-4 mr-3 ">
-                                        </div>HOME
-                                    </span>
+                                <li class="font-bold cursor-pointer text-xl hover:scale-110 transition"><a
+                                        href="./index.html">HOME</a>
 
                                 </li>
 
@@ -283,11 +192,14 @@
                                 <li class="w-full text-center">
                                     <button id="service-toggle"
                                         class="text-white font-normal text-xl  hover:scale-105 transition">
-                                        <span class="inline-flex items-center"> OUR SERVICES <svg class="w-4 h-4 ml-3 "
-                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <span class="inline-flex items-center my-auto">
+                                            <div class="bg-white rounded-full h-4 w-4 mr-3 ">
+                                            </div> OUR SERVICES <svg class="w-4 h-4 ml-3 " fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M19 9l-7 7-7-7"></path>
-                                            </svg></span>
+                                            </svg>
+                                        </span>
                                     </button>
                                     <ul id="service-dropdown"
                                         class="hidden overflow-hidden max-h-0 transition-all text-base duration-300 ease-in-out bg-white/6 rounded-xl  mx-auto uppercase  mt-2 w-[80%]">
@@ -399,13 +311,14 @@
     <!-- main-landing -->
     <!-- bg-[url('Public/assets/main-section.webp')] -->
     <section
-        class="bg-[#131313]/50  relative flex  items-end bg-[url('Public/assets/main-section-bg.webp')] justify-end bg-cover  bg-blend-overlay  bg-center bg-no-repeat h-[600px] w-full">
+        class="bg-[#131313]/50 max-lg:h-[430px] relative flex  items-end bg-[url('Public/assets/lab.webp')] justify-end bg-cover  bg-blend-overlay  bg-center bg-no-repeat h-[600px] w-full">
         <!-- Background Video -->
 
         <div
-            class="max-w-servicecontainer   mb-20  mx-auto flex-col  flex lg:items-end xl:items-center text-center justify-center    w-full">
-            <div class="w-full text-white flex flex-col items-center justify-center lg:max-xl:h-full min-w-2xl ">
-                <div class="inline-flex items-center justify-center w-full mx-auto ">
+            class="max-w-servicecontainer  max-sm:mb-28 sm:mb-44 lg:mb-20 max-lg:pl-4  mx-auto flex-col  flex lg:items-end xl:items-center lg:text-center justify-start lg:justify-center    w-full">
+            <div
+                class="lg:w-full sm:w-5/6 text-white flex flex-col lg:items-center justify-start lg:justify-center lg:max-xl:h-full lg:min-w-2xl ">
+                <div class="inline-flex lg:items-center lg:justify-center w-full mx-auto ">
                     <img class="w-8 h-[22px] lg:w-10 lg:h-7" src="./Public/assets/scope.svg" alt="nuvonix-logo">
                     <h6
                         class="text-sm font-kumbhSans  kumbhfont  tracking-2px sm:tracking-4px ml-3 font-semibold  uppercase">
@@ -413,33 +326,37 @@
                         we offer</h6>
                 </div>
                 <h6
-                    class="xl:text-[56px] w-5/6 text-56px mt-4 lg:leading-14 xl:leading-16 font-kumbhSans  kumbhfont  tracking-wide font-medium lg:my-2  xl:my-4">
+                    class="text-28px lg:text-56px lg:w-5/6 mt-4 lg:leading-14 xl:leading-16 font-kumbhSans  kumbhfont  tracking-wide font-medium lg:my-2  xl:my-4">
                     Medical Equipment Maintenance</h6>
 
 
             </div>
             <div
-                class="w-full text-white text-nowrap mt-8 flex text-sm justify-center my-auto items-center  font-kumbhSans  kumbhfont  font-semibold leading-6 tracking-4px ">
-                <ul class="flex items-center space-x-6">
-                    <li><i class="fa-solid fa-house mr-1.5 "></i><a href="./index.html">HOME</a></li>
+                class="lg:w-full text-white text-nowrap mt-8 flex text-sm justify-center my-auto items-center font-kumbhSans kumbhfont font-semibold leading-6 tracking-4px">
+                <ul class="flex flex-wrap lg:flex-nowrap items-center lg:justify-around space-x-6 text-center">
+                    <li><i class="fa-solid fa-house mr-1.5"></i><a href="./index.html">HOME</a></li>
                     <li><i class="fa-solid fa-chevron-right"></i></li>
                     <li>OUR SERVICES</li>
                     <li><i class="fa-solid fa-chevron-right"></i></li>
-                    <li>MEDICAL EQUIPMENT MAINTENANCE</li>
+                    <li class="uppercase text-left text-wrap">Medical Equipment Maintenance
+                    </li>
                 </ul>
             </div>
+
 
 
         </div>
     </section>
     <!-- 2nd page-->
-    <section class=" w-full mb-28 ">
-        <div class="sm:max-w-servicecontainer  h-full sm:w-full  px-4 sm:mx-auto "><img
-                class="sm:w-full max-sm:aspect-video   sm:h-h320 rounded-xl object-center object-cover -translate-y-1/2 transform lg:-translate-y-12"
-                src="./Public/assets/men-lab.webp" alt=""></div>
-        <div class="max-w-servicecontainer transform max-lg:-translate-y-4 lg:-translate-y-2  h-full mx-auto w-full">
+    <section class=" w-full mb-28 bg-lightgrey ">
+        <div
+            class="sm:max-w-servicecontainer  h-full sm:w-full  px-4 sm:mx-auto -translate-y-1/2 transform lg:-translate-y-12 ">
+            <img class="sm:w-full max-sm:aspect-video   sm:h-h320 rounded-xl max-sm:object-center object-cover  object-bottom "
+                src="./Public/assets/medical-main.webp" alt="">
+        </div>
+        <div class="max-w-servicecontainer transform max-lg:-translate-y-4 lg:-translate-y-2  h-full mx-auto w-full ">
 
-            <div class="w-full">
+            <div class="w-full max-lg:px-4 mb-6">
                 <h6 class="heading">Maximize Equipment Lifespan, Minimize Failures, Ensure Patient Safety</h6>
                 <p class="mt-6 paras mb-10">Our expert clinical engineers provide comprehensive maintenance for a wide
                     range
@@ -451,10 +368,12 @@
                     OEM standards, reduces downtime, and improves patient safety while delivering measurable cost
                     savings.</p>
             </div>
-            <div class="flex justify-between items-start ">
-                <div class="w-1/2">
+            <div class="flex justify-between max-sm:flex-col items-stretch gap-10 my-3 max-lg:px-4">
+                <div class="sm:w-2/3">
                     <h6 class="heading">Expert care for your medical equipment—anytime, anywhere</h6>
-                    <p class="mt-6 paras">At <strong>Nuvionx</strong>, maintenance and repair form the foundation of our
+                    <p class="mt-4 lg:mt-6 paras">At <strong>Nuvionx</strong>, maintenance and repair form the
+                        foundation of
+                        our
                         service
                         excellence. Our skilled clinical engineers are
                         trained across an extensive range of medical devices and maintain current certifications through
@@ -472,31 +391,549 @@
                         maintenance, calibration services, and fully managed maintenance contracts designed to meet your
                         specific operational needs</p>
                 </div>
-                <img class="rounded-xl  object-cover w-full h-full max-w-[426px] max-h-[379px]"
-                    src="./Public/assets/men-lab2.webp" alt="men in lab">
+                <div class="sm:w-1/2 sm:max-h-[379px] w-full overflow-hidden">
+                    <img class="rounded-xl w-full h-full max-sm:aspect-video object-fill object-top"
+                        src="./Public/assets/ot room.webp" alt="operation theatre">
+                </div>
             </div>
 
-            <div></div>
-            <div class="h-[1px] bg-[#D0D0D0]  w-full"></div>
+            <div class="w-full my-3 max-lg:px-4 ">
+                <h6 class="heading">Our Service Delivery Options</h6>
+                <p class="mt-6 paras mb-10">We offer tailored service delivery models designed to meet the unique needs
+                    of your facility. Whether you require remote
+                    support, on-site maintenance, or a fully embedded service team, our flexible and collaborative
+                    approach ensures seamless
+                    integration with your operations and minimal disruption to patient care.</p>
+            </div>
 
-            <div class="rounded-xl relative mt-10  bg-headdark w-full flex justify-around items-center">
+            <div class="flex justify-between max-sm:flex-col gap-4 lg:gap-10 items-stretch my-3 max-lg:px-4">
+                <div class="sm:w-1/2 h-full"><img src="./Public/assets/team grp.webp" class="w-full h-full rounded-xl "
+                        alt=""></div>
+                <div class="sm:w-3/4">
+                    <div class="inline-flex items-center lg:mb-1 xl:mb-3">
+                        <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-primary"></div>
+                        <h6 class="text-primary max-lg:text-xs font-semibold tracking-4px xl:leading-6 uppercase">
+                            Flexible Support Models
+                        </h6>
+                    </div>
+                    <ul class="space-y-4 mt-4 list-style">
+                        <li class="text-wrap inline-flex items-start"> <i
+                                class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                            <p>Remote diagnostic support and
+                                troubleshooting</p>
+                        </li>
+                        <li class="text-wrap inline-flex items-start"> <i
+                                class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                            <p>On-site maintenance visits
+                                scheduled to your
+                                requirements</p>
+                        </li>
+                        <li class="text-wrap inline-flex items-start"> <i
+                                class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                            <p>Dedicated on-site service centres
+                                for
+                                high-volume facilities</p>
+                        </li>
+                        <li class="text-wrap inline-flex items-start"> <i
+                                class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                            <p class="">Emergency
+                                response services with
+                                guaranteed
+                                response times</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="flex flex-row-reverse max-sm:flex-col justify-between gap-4 lg:gap-10 items-stretch my-3 max-lg:px-4">
+                <div class="sm:w-1/2  h-full ">
+                    <img src="./Public/assets/two person talking.webp"
+                        class="w-full h-full object-cover aspect-auto rounded-xl" alt="two person talking at nuvonix">
+                </div>
+                <div class="sm:w-3/4">
+                    <div class="inline-flex items-center lg:mb-1 xl:mb-3">
+                        <div class="w-2.5 mr-2.5 h-2.5 rounded-full bg-primary"></div>
+                        <h6 class="text-primary max-lg:text-xs font-semibold tracking-4px xl:leading-6 uppercase">
+                            Collaborative Approach
+                        </h6>
+                    </div>
+                    <ul class="space-y-4 mt-4 list-style">
+                        <li class="text-wrap inline-flex items-start">
+                            <i class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                            <p>Work closely with clinical and technical staff to ensure smooth integration with hospital
+                                operations
+                            </p>
+                        </li>
+                        <li class="text-wrap inline-flex items-start">
+                            <i class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                            <p>Minimise disruption to patient care during servicing and maintenance</p>
+                        </li>
+                        <li class="text-wrap inline-flex items-start">
+                            <i class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                            <p>Provide clear and comprehensive service documentation for every task</p>
+                        </li>
+                        <li class="text-wrap inline-flex items-start">
+                            <i class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                            <p>Offer training support for in-house staff to maximise equipment use and safety</p>
+                        </li>
+                        <li class="text-wrap inline-flex items-start">
+                            <i class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                            <p>Deliver regular performance reports to support informed decision-making about
+                                your equipment fleet.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full max-lg:px-4 mb-6 max-lg:px-4">
+                <h6 class="heading">Why Choose Nuvionx for Equipment Maintenance?</h6>
+                <p class="mt-6 paras mb-10">At Nuvionx, we deliver reliable equipment maintenance through comprehensive
+                    coverage, proven results, strict quality
+                    assurance, and cost optimization—ensuring your operations run smoothly and efficiently.</p>
+            </div>
+            <div class="grid max-sm:grid-row-4 sm:grid-cols-2 gap-6 max-lg:gap-4 max-lg:px-4">
+                <div class="bg-dropdown p-6 relative rounded-xl"><img src="./Public/assets/clip-primar.svg"
+                        class="absolute top-0 left-0 z-0 object-cover rounded-xl w-full h-full" alt="pattern">
+                    <div class="w-full z-20">
+
+
+
+                        <ul class="space-y-4 mt-4 list-style">
+                            <li class="text-wrap inline-flex items-start"><i
+                                    class="fa-regular fa-circle-check mr-4 text-transparent"></i>
+                                <h6
+                                    class="text-primary max-lg:text-base text-lg font-semibold tracking-2px xl:leading-6 uppercase">
+                                    Comprehensive Coverage
+                                </h6>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Support for multi-vendor equipment across all major manufacturers</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Expertise in critical care, surgical, diagnostic, and therapeutic devices</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>End-to-end lifecycle services from installation to decommissioning</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p class="">Scalable solutions tailored to diverse healthcare facility needs</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-dropdown p-6 relative rounded-xl"><img src="./Public/assets/clip-primar.svg"
+                        class="absolute top-0 left-0 z-0 object-cover rounded-xl w-full h-full" alt="pattern">
+                    <div class="w-full z-20">
+
+
+
+                        <ul class="space-y-4 mt-4 list-style">
+                            <li class="text-wrap inline-flex items-start"><i
+                                    class="fa-regular fa-circle-check mr-4 text-transparent"></i>
+                                <h6
+                                    class="text-primary max-lg:text-base text-lg font-semibold tracking-2px xl:leading-6 uppercase">
+                                    Proven Results
+                                </h6>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Reduce unplanned downtime by up to 30% with efficient, responsive servicing</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Extended equipment lifespan through proactive maintenance</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Improved regulatory compliance and audit readiness</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p class="">Enhanced patient safety through reliable equipment performance</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-dropdown p-6 relative rounded-xl"><img src="./Public/assets/clip-primar.svg"
+                        class="absolute top-0 left-0 z-0 object-cover rounded-xl w-full h-full" alt="pattern">
+                    <div class="w-full z-20">
+
+
+
+                        <ul class="space-y-4 mt-4 list-style">
+                            <li class="text-wrap inline-flex items-start"><i
+                                    class="fa-regular fa-circle-check mr-4 text-transparent"></i>
+                                <h6
+                                    class="text-primary max-lg:text-base text-lg font-semibold tracking-2px xl:leading-6 uppercase">
+                                    Quality Assurance
+                                </h6>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Maintenance procedures fully compliant with MHRA standards to ensure safe, legal
+                                    operation</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Genuine OEM parts and manufacturer-approved alternatives</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Comprehensive quality management system ensuring consistency and compliance</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p class="">Comprehensive traceability and detailed documentation for all services</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-dropdown p-6 relative rounded-xl"><img src="./Public/assets/clip-primar.svg"
+                        class="absolute top-0 left-0 z-0 object-cover rounded-xl w-full h-full" alt="pattern">
+                    <div class="w-full z-20">
+
+
+
+                        <ul class="space-y-4 mt-4 list-style">
+                            <li class="text-wrap inline-flex items-start"><i
+                                    class="fa-regular fa-circle-check mr-4 text-transparent"></i>
+                                <h6
+                                    class="text-primary max-lg:text-base text-lg font-semibold tracking-2px xl:leading-6 uppercase">
+                                    Cost Optimization
+                                </h6>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Predictable maintenance budgets through structured contracts</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Significantly reduced the total cost of ownership while improving overall efficiency
+                                </p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Optimized replacement planning and capital expenditure</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p class="">Energy efficiency improvements through proper maintenance</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full max-lg:px-4 mt-5 mb-6">
+                <h6 class="heading">Our Equipment Expertise</h6>
+                <p class="mt-6 paras mb-10">We specialize in a comprehensive range of medical equipment, including
+                    critical care systems, surgical and anaesthetic
+                    tools, diagnostic and imaging devices, and essential support systems. Our expertise ensures reliable
+                    performance and
+                    advanced solutions tailored to meet the highest standards of healthcare.</p>
+            </div>
+            <div class="grid max-sm:grid-cols-1 sm:grid-cols-2 gap-6 max-lg:gap-4 mb-5 max-lg:px-4">
+                <div class="bg-[#FFFFFF] p-6 relative rounded-xl">
+                    <svg class="absolute right-0 bottom-4" width="142" height="80" viewBox="0 0 142 80" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g style="mix-blend-mode:plus-darker">
+                            <path d="M0.482422 3.88203V12.5894L9.34808 12.5894V3.88203L0.482422 3.88203Z"
+                                fill="#EBF3FE" />
+                            <path d="M33.3324 3.96109V12.5101L42.1981 12.5101V3.96109L33.3324 3.96109Z"
+                                fill="#EBF3FE" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M329.691 17.7332C330.219 19.8441 330.482 22.1661 330.482 24.6991C330.482 27.1266 330.219 29.3958 329.691 31.5067C329.269 33.7231 328.583 35.7284 327.633 37.5226C326.683 39.4224 325.522 41.0583 324.15 42.4304C322.883 43.908 321.406 45.1218 319.717 46.0717C318.028 47.1271 316.181 47.9187 314.176 48.4464C313.437 48.6575 312.698 48.8158 311.96 48.9213C311.485 65.7027 297.711 79.1595 280.771 79.1595H49.0061C32.2247 79.1595 18.4513 65.861 17.818 49.2379C17.7125 49.2379 17.6597 49.2379 17.6597 49.2379C15.0211 49.2379 12.6464 48.7102 10.5355 47.6548C9.48011 47.2326 8.53022 46.6522 7.68587 45.9133C6.73598 45.1745 5.89162 44.3302 5.15282 43.3803C3.67521 41.4805 2.56702 39.2113 1.82821 36.5727C0.983867 33.8286 0.561688 30.7678 0.561688 27.3905V21.3745H9.26902V27.3905C9.26902 32.0344 10.2717 35.5701 12.277 37.9976C12.9103 38.8419 13.7546 39.528 14.8101 40.0557C15.1267 40.2668 15.4433 40.4251 15.7599 40.5306C16.9209 40.9528 18.2402 41.2694 19.7178 41.4805C20.2455 41.4805 20.7205 41.4805 21.1427 41.4805H21.4593C21.987 41.4805 22.4619 41.4805 22.8841 41.4805C24.3617 41.2694 25.7338 40.9528 27.0003 40.5306C27.2114 40.4251 27.4753 40.2668 27.7919 40.0557C28.8473 39.528 29.7444 38.8419 30.4832 37.9976C32.4886 35.5701 33.4912 32.0344 33.4912 27.3905V21.3745H42.0403V27.3905C42.0403 30.7678 41.6181 33.8286 40.7738 36.5727C40.035 39.2113 38.9267 41.4805 37.4491 43.3803C36.7103 44.3302 35.866 45.1745 34.9161 45.9133C34.0717 46.6522 33.1746 47.2326 32.2247 47.6548C30.4305 48.4991 28.4779 48.9741 26.3671 49.0797C27.0003 61.1116 36.9742 70.6105 49.0061 70.6105H280.771C292.962 70.6105 302.936 60.9533 303.411 48.763C302.672 48.6575 301.933 48.5519 301.194 48.4464C299.189 47.9187 297.342 47.1271 295.653 46.0717C293.964 45.1218 292.487 43.908 291.22 42.4304C289.848 41.0583 288.687 39.4224 287.737 37.5226C286.787 35.7284 286.101 33.7231 285.679 31.5067C285.152 29.3958 284.888 27.1266 284.888 24.6991C284.888 22.1661 285.152 19.8441 285.679 17.7332C286.101 15.5168 286.787 13.5115 287.737 11.7173C288.687 9.92303 289.848 8.28709 291.22 6.80949C292.487 5.33188 293.964 4.11815 295.653 3.16826C297.342 2.11282 299.189 1.32125 301.194 0.793529C303.199 0.265812 305.363 0.00195312 307.685 0.00195312C310.007 0.00195312 312.171 0.265812 314.176 0.793529C316.181 1.32125 318.028 2.11282 319.717 3.16826C321.406 4.11815 322.883 5.33188 324.15 6.80949C325.522 8.28709 326.683 9.92303 327.633 11.7173C328.583 13.5115 329.269 15.5168 329.691 17.7332ZM321.933 24.6991C321.933 22.0605 321.617 19.6858 320.984 17.5749C320.245 15.5696 319.295 13.8281 318.134 12.3505C316.867 10.8729 315.39 9.76472 313.701 9.02591C311.907 8.18156 309.901 7.75939 307.685 7.75939C305.469 7.75939 303.516 8.18156 301.827 9.02591C300.033 9.76472 298.503 10.8729 297.236 12.3505C296.075 13.8281 295.125 15.5696 294.387 17.5749C293.753 19.6858 293.437 22.0605 293.437 24.6991C293.437 27.2321 293.753 29.5541 294.387 31.665C295.125 33.7759 296.075 35.5701 297.236 37.0477C298.503 38.4198 300.033 39.528 301.827 40.3723C303.516 41.1111 305.469 41.4805 307.685 41.4805C309.901 41.4805 311.907 41.1111 313.701 40.3723C315.39 39.528 316.867 38.4198 318.134 37.0477C319.295 35.5701 320.245 33.7759 320.984 31.665C321.617 29.5541 321.933 27.2321 321.933 24.6991Z"
+                                fill="#EBF3FE" />
+                        </g>
+                    </svg>
+                    <svg class="absolute left-0" width="155" height="80" viewBox="0 0 155 80" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g style="mix-blend-mode:plus-darker">
+                            <path d="M-175.518 3.88203V12.5894L-166.652 12.5894V3.88203L-175.518 3.88203Z"
+                                fill="#EBF3FE" />
+                            <path d="M-142.668 3.96109V12.5101L-133.802 12.5101V3.96109L-142.668 3.96109Z"
+                                fill="#EBF3FE" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M153.691 17.7332C154.219 19.8441 154.482 22.1661 154.482 24.6991C154.482 27.1266 154.219 29.3958 153.691 31.5067C153.269 33.7231 152.583 35.7284 151.633 37.5226C150.683 39.4224 149.522 41.0583 148.15 42.4304C146.883 43.908 145.406 45.1218 143.717 46.0717C142.028 47.1271 140.181 47.9187 138.176 48.4464C137.437 48.6575 136.698 48.8158 135.96 48.9213C135.485 65.7027 121.711 79.1595 104.771 79.1595H-126.994C-143.775 79.1595 -157.549 65.861 -158.182 49.2379C-158.288 49.2379 -158.34 49.2379 -158.34 49.2379C-160.979 49.2379 -163.354 48.7102 -165.464 47.6548C-166.52 47.2326 -167.47 46.6522 -168.314 45.9133C-169.264 45.1745 -170.108 44.3302 -170.847 43.3803C-172.325 41.4805 -173.433 39.2113 -174.172 36.5727C-175.016 33.8286 -175.438 30.7678 -175.438 27.3905V21.3745H-166.731V27.3905C-166.731 32.0344 -165.728 35.5701 -163.723 37.9976C-163.09 38.8419 -162.245 39.528 -161.19 40.0557C-160.873 40.2668 -160.557 40.4251 -160.24 40.5306C-159.079 40.9528 -157.76 41.2694 -156.282 41.4805C-155.754 41.4805 -155.28 41.4805 -154.857 41.4805H-154.541C-154.013 41.4805 -153.538 41.4805 -153.116 41.4805C-151.638 41.2694 -150.266 40.9528 -149 40.5306C-148.789 40.4251 -148.525 40.2668 -148.208 40.0557C-147.153 39.528 -146.256 38.8419 -145.517 37.9976C-143.511 35.5701 -142.509 32.0344 -142.509 27.3905V21.3745H-133.96V27.3905C-133.96 30.7678 -134.382 33.8286 -135.226 36.5727C-135.965 39.2113 -137.073 41.4805 -138.551 43.3803C-139.29 44.3302 -140.134 45.1745 -141.084 45.9133C-141.928 46.6522 -142.825 47.2326 -143.775 47.6548C-145.57 48.4991 -147.522 48.9741 -149.633 49.0797C-149 61.1116 -139.026 70.6105 -126.994 70.6105H104.771C116.962 70.6105 126.936 60.9533 127.411 48.763C126.672 48.6575 125.933 48.5519 125.194 48.4464C123.189 47.9187 121.342 47.1271 119.653 46.0717C117.964 45.1218 116.487 43.908 115.22 42.4304C113.848 41.0583 112.687 39.4224 111.737 37.5226C110.787 35.7284 110.101 33.7231 109.679 31.5067C109.152 29.3958 108.888 27.1266 108.888 24.6991C108.888 22.1661 109.152 19.8441 109.679 17.7332C110.101 15.5168 110.787 13.5115 111.737 11.7173C112.687 9.92303 113.848 8.28709 115.22 6.80949C116.487 5.33188 117.964 4.11815 119.653 3.16826C121.342 2.11282 123.189 1.32125 125.194 0.793529C127.199 0.265812 129.363 0.00195312 131.685 0.00195312C134.007 0.00195312 136.171 0.265812 138.176 0.793529C140.181 1.32125 142.028 2.11282 143.717 3.16826C145.406 4.11815 146.883 5.33188 148.15 6.80949C149.522 8.28709 150.683 9.92303 151.633 11.7173C152.583 13.5115 153.269 15.5168 153.691 17.7332ZM145.933 24.6991C145.933 22.0605 145.617 19.6858 144.984 17.5749C144.245 15.5696 143.295 13.8281 142.134 12.3505C140.867 10.8729 139.39 9.76472 137.701 9.02591C135.907 8.18156 133.901 7.75939 131.685 7.75939C129.469 7.75939 127.516 8.18156 125.827 9.02591C124.033 9.76472 122.503 10.8729 121.236 12.3505C120.075 13.8281 119.125 15.5696 118.387 17.5749C117.753 19.6858 117.437 22.0605 117.437 24.6991C117.437 27.2321 117.753 29.5541 118.387 31.665C119.125 33.7759 120.075 35.5701 121.236 37.0477C122.503 38.4198 124.033 39.528 125.827 40.3723C127.516 41.1111 129.469 41.4805 131.685 41.4805C133.901 41.4805 135.907 41.1111 137.701 40.3723C139.39 39.528 140.867 38.4198 142.134 37.0477C143.295 35.5701 144.245 33.7759 144.984 31.665C145.617 29.5541 145.933 27.2321 145.933 24.6991Z"
+                                fill="#EBF3FE" />
+                        </g>
+                    </svg>
+
+                    <div class="w-full z-20 ">
+
+
+
+                        <ul class="space-y-4 mt-4 list-style">
+                            <li class="text-wrap inline-flex items-start"><i
+                                    class="fa-regular fa-circle-check mr-4 text-transparent"></i>
+                                <h6
+                                    class="text-headdark max-lg:text-base text-lg font-semibold tracking-2px xl:leading-6 uppercase">
+                                    Critical Care Systems
+                                </h6>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Patient monitors and telemetry systems</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Ventilators and respiratory support equipment</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Defibrillators and emergency response devices</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p class="">Infusion pumps and medication delivery systems</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white p-6 relative rounded-xl">
+                    <svg class="absolute top-0 right-5" width="81" height="195" viewBox="0 0 81 195" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g style="mix-blend-mode:plus-darker">
+                            <path
+                                d="M76.1805 -135.419L67.4731 -135.419L67.4731 -126.554L76.1805 -126.554L76.1805 -135.419Z"
+                                fill="#EBF3FE" />
+                            <path
+                                d="M76.1014 -102.569L67.5524 -102.569L67.5524 -93.7035L76.1014 -93.7035L76.1014 -102.569Z"
+                                fill="#EBF3FE" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M62.3292 193.789C60.2184 194.317 57.8964 194.581 55.3634 194.581C52.9359 194.581 50.6667 194.317 48.5558 193.789C46.3394 193.367 44.3341 192.681 42.5398 191.731C40.6401 190.781 39.0042 189.62 37.6321 188.248C36.1545 186.982 34.9407 185.504 33.9908 183.815C32.9354 182.127 32.1438 180.28 31.6161 178.274C31.405 177.536 31.2467 176.797 31.1412 176.058C14.3598 175.583 0.902956 161.81 0.902957 144.87L0.902967 -86.8955C0.902968 -103.677 14.2015 -117.45 30.8245 -118.084C30.8245 -118.189 30.8245 -118.242 30.8245 -118.242C30.8245 -120.88 31.3523 -123.255 32.4077 -125.366C32.8299 -126.421 33.4103 -127.371 34.1492 -128.216C34.888 -129.166 35.7323 -130.01 36.6822 -130.749C38.582 -132.226 40.8512 -133.335 43.4898 -134.073C46.2339 -134.918 49.2947 -135.34 52.672 -135.34L58.688 -135.34L58.688 -126.633L52.672 -126.633C48.0281 -126.633 44.4924 -125.63 42.0649 -123.625C41.2206 -122.991 40.5345 -122.147 40.0068 -121.092C39.7957 -120.775 39.6374 -120.458 39.5319 -120.142C39.1097 -118.981 38.7931 -117.661 38.582 -116.184C38.582 -115.656 38.582 -115.181 38.582 -114.759L38.582 -114.442C38.582 -113.915 38.582 -113.44 38.582 -113.018C38.7931 -111.54 39.1097 -110.168 39.5319 -108.901C39.6374 -108.69 39.7957 -108.426 40.0068 -108.11C40.5345 -107.054 41.2206 -106.157 42.0649 -105.418C44.4924 -103.413 48.0281 -102.41 52.672 -102.41L58.688 -102.41L58.688 -93.8614L52.672 -93.8614C49.2947 -93.8614 46.2339 -94.2835 43.4898 -95.1279C40.8512 -95.8667 38.582 -96.9749 36.6822 -98.4525C35.7323 -99.1913 34.888 -100.036 34.1491 -100.986C33.4103 -101.83 32.8299 -102.727 32.4077 -103.677C31.5633 -105.471 31.0884 -107.424 30.9828 -109.535C18.9509 -108.901 9.452 -98.9275 9.452 -86.8955L9.45199 144.87C9.45199 157.06 19.1092 167.034 31.2995 167.509C31.405 166.77 31.5106 166.031 31.6161 165.293C32.1438 163.287 32.9354 161.44 33.9908 159.751C34.9407 158.063 36.1545 156.585 37.6321 155.319C39.0042 153.947 40.6401 152.786 42.5399 151.836C44.3341 150.886 46.3394 150.2 48.5558 149.778C50.6667 149.25 52.9359 148.986 55.3634 148.986C57.8964 148.986 60.2184 149.25 62.3292 149.778C64.5457 150.2 66.551 150.886 68.3452 151.836C70.1395 152.786 71.7754 153.947 73.253 155.319C74.7306 156.585 75.9443 158.063 76.8942 159.751C77.9497 161.44 78.7412 163.287 79.269 165.293C79.7967 167.298 80.0605 169.461 80.0605 171.783C80.0605 174.105 79.7967 176.269 79.269 178.274C78.7412 180.28 77.9497 182.127 76.8942 183.815C75.9443 185.504 74.7306 186.982 73.253 188.248C71.7754 189.62 70.1395 190.781 68.3452 191.731C66.551 192.681 64.5457 193.367 62.3292 193.789ZM55.3634 186.032C58.002 186.032 60.3767 185.715 62.4876 185.082C64.4929 184.343 66.2344 183.393 67.712 182.232C69.1896 180.966 70.2978 179.488 71.0366 177.799C71.8809 176.005 72.3031 174 72.3031 171.783C72.3031 169.567 71.8809 167.614 71.0366 165.926C70.2978 164.131 69.1896 162.601 67.712 161.335C66.2344 160.174 64.4929 159.224 62.4876 158.485C60.3767 157.852 58.002 157.535 55.3634 157.535C52.8303 157.535 50.5084 157.852 48.3975 158.485C46.2866 159.224 44.4924 160.174 43.0148 161.335C41.6427 162.601 40.5345 164.131 39.6902 165.926C38.9514 167.614 38.582 169.567 38.582 171.783C38.582 174 38.9514 176.005 39.6902 177.799C40.5345 179.488 41.6427 180.966 43.0148 182.232C44.4924 183.393 46.2866 184.343 48.3975 185.082C50.5084 185.715 52.8303 186.032 55.3634 186.032Z"
+                                fill="#EBF3FE" />
+                        </g>
+                    </svg>
+                    <svg class="absolute top-0 left-10" width="81" height="136" viewBox="0 0 81 136" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g style="mix-blend-mode:plus-darker">
+                            <path d="M4.78242 135.581L13.4898 135.581L13.4898 126.715L4.78242 126.715L4.78242 135.581Z"
+                                fill="#EBF3FE" />
+                            <path d="M4.86148 102.731L13.4105 102.731L13.4105 93.8651L4.86148 93.8651L4.86148 102.731Z"
+                                fill="#EBF3FE" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M18.6336 -193.628C20.7445 -194.155 23.0665 -194.419 25.5995 -194.419C28.027 -194.419 30.2962 -194.155 32.4071 -193.628C34.6235 -193.205 36.6288 -192.519 38.423 -191.57C40.3228 -190.62 41.9587 -189.459 43.3308 -188.087C44.8084 -186.82 46.0222 -185.342 46.972 -183.654C48.0275 -181.965 48.8191 -180.118 49.3468 -178.113C49.5579 -177.374 49.7162 -176.635 49.8217 -175.896C66.6031 -175.421 80.0599 -161.648 80.0599 -144.708L80.0599 87.0571C80.0599 103.839 66.7614 117.612 50.1383 118.245C50.1383 118.351 50.1383 118.404 50.1383 118.404C50.1383 121.042 49.6106 123.417 48.5552 125.528C48.133 126.583 47.5525 127.533 46.8137 128.377C46.0749 129.327 45.2306 130.172 44.2807 130.91C42.3809 132.388 40.1117 133.496 37.4731 134.235C34.729 135.079 31.6682 135.502 28.2908 135.502L22.2749 135.502L22.2749 126.794L28.2908 126.794C32.9348 126.794 36.4705 125.792 38.898 123.786C39.7423 123.153 40.4283 122.309 40.9561 121.253C41.1671 120.937 41.3255 120.62 41.431 120.303C41.8532 119.142 42.1698 117.823 42.3809 116.345C42.3809 115.818 42.3809 115.343 42.3809 114.921L42.3809 114.604C42.3809 114.076 42.3809 113.601 42.3809 113.179C42.1698 111.702 41.8532 110.329 41.431 109.063C41.3255 108.852 41.1671 108.588 40.9561 108.271C40.4283 107.216 39.7423 106.319 38.898 105.58C36.4705 103.575 32.9348 102.572 28.2908 102.572L22.2749 102.572L22.2749 94.023L28.2908 94.023C31.6682 94.023 34.729 94.4451 37.4731 95.2895C40.1117 96.0283 42.3809 97.1365 44.2807 98.6141C45.2306 99.3529 46.0749 100.197 46.8137 101.147C47.5525 101.992 48.133 102.889 48.5552 103.839C49.3995 105.633 49.8745 107.585 49.98 109.696C62.012 109.063 71.5109 99.0891 71.5109 87.0571L71.5109 -144.708C71.5109 -156.899 61.8537 -166.872 49.6634 -167.347C49.5579 -166.608 49.4523 -165.87 49.3468 -165.131C48.8191 -163.126 48.0275 -161.279 46.972 -159.59C46.0222 -157.901 44.8084 -156.424 43.3308 -155.157C41.9587 -153.785 40.3228 -152.624 38.423 -151.674C36.6288 -150.724 34.6235 -150.038 32.4071 -149.616C30.2962 -149.088 28.027 -148.824 25.5995 -148.824C23.0665 -148.824 20.7445 -149.088 18.6336 -149.616C16.4172 -150.038 14.4119 -150.724 12.6177 -151.674C10.8234 -152.624 9.18749 -153.785 7.70988 -155.157C6.23227 -156.424 5.01854 -157.901 4.06865 -159.59C3.01322 -161.279 2.22164 -163.126 1.69392 -165.131C1.16621 -167.136 0.902347 -169.3 0.902347 -171.622C0.902347 -173.944 1.16621 -176.107 1.69392 -178.113C2.22164 -180.118 3.01322 -181.965 4.06865 -183.654C5.01854 -185.342 6.23227 -186.82 7.70988 -188.087C9.18749 -189.459 10.8234 -190.62 12.6177 -191.57C14.4119 -192.519 16.4172 -193.205 18.6336 -193.628ZM25.5995 -185.87C22.9609 -185.87 20.5862 -185.554 18.4753 -184.92C16.47 -184.181 14.7285 -183.232 13.2509 -182.071C11.7733 -180.804 10.6651 -179.326 9.92631 -177.638C9.08196 -175.844 8.65978 -173.838 8.65978 -171.622C8.65978 -169.405 9.08196 -167.453 9.92631 -165.764C10.6651 -163.97 11.7733 -162.44 13.2509 -161.173C14.7285 -160.012 16.47 -159.062 18.4753 -158.323C20.5862 -157.69 22.9609 -157.373 25.5995 -157.373C28.1325 -157.373 30.4545 -157.69 32.5654 -158.323C34.6763 -159.062 36.4705 -160.012 37.9481 -161.173C39.3201 -162.44 40.4284 -163.97 41.2727 -165.764C42.0115 -167.453 42.3809 -169.405 42.3809 -171.622C42.3809 -173.838 42.0115 -175.844 41.2727 -177.638C40.4284 -179.326 39.3201 -180.804 37.9481 -182.071C36.4705 -183.232 34.6763 -184.181 32.5654 -184.92C30.4545 -185.554 28.1325 -185.87 25.5995 -185.87Z"
+                                fill="#EBF3FE" />
+                        </g>
+                    </svg>
+
+                    <div class="w-full z-20">
+
+
+
+                        <ul class="space-y-4 mt-4 list-style">
+                            <li class="text-wrap inline-flex items-start"><i
+                                    class="fa-regular fa-circle-check mr-4 text-transparent"></i>
+                                <h6
+                                    class="text-headdark max-lg:text-base text-lg font-semibold tracking-2px xl:leading-6 uppercase">
+                                    Surgical & Anaesthetic Tools
+                                </h6>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Anaesthetic machines and gas delivery systems</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Surgical lights and tables</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Electrosurgical units and power systems</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p class="">Endoscopic and minimally invasive equipment</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white p-6 relative rounded-xl">
+                    <svg class="absolute top-0 right-4 z-0" width="81" height="96" viewBox="0 0 81 96" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g style="mix-blend-mode:plus-darker">
+                            <path d="M4.78242 95.5808L13.4898 95.5808L13.4898 86.7152L4.78242 86.7152L4.78242 95.5808Z"
+                                fill="#EBF3FE" />
+                            <path d="M4.86148 62.7308L13.4105 62.7308L13.4105 53.8651L4.86148 53.8651L4.86148 62.7308Z"
+                                fill="#EBF3FE" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M18.6336 -233.628C20.7445 -234.155 23.0665 -234.419 25.5995 -234.419C28.027 -234.419 30.2962 -234.155 32.4071 -233.628C34.6235 -233.205 36.6288 -232.519 38.423 -231.57C40.3228 -230.62 41.9587 -229.459 43.3308 -228.087C44.8084 -226.82 46.0222 -225.342 46.972 -223.654C48.0275 -221.965 48.8191 -220.118 49.3468 -218.113C49.5579 -217.374 49.7162 -216.635 49.8217 -215.896C66.6031 -215.421 80.0599 -201.648 80.0599 -184.708L80.0599 47.0571C80.0599 63.8385 66.7614 77.6119 50.1383 78.2452C50.1383 78.3507 50.1383 78.4035 50.1383 78.4035C50.1383 81.0421 49.6106 83.4168 48.5552 85.5277C48.133 86.5831 47.5525 87.533 46.8137 88.3774C46.0749 89.3273 45.2306 90.1716 44.2807 90.9104C42.3809 92.388 40.1117 93.4962 37.4731 94.235C34.729 95.0794 31.6682 95.5015 28.2908 95.5015L22.2749 95.5015L22.2749 86.7942L28.2908 86.7942C32.9348 86.7942 36.4705 85.7916 38.898 83.7862C39.7423 83.153 40.4283 82.3086 40.9561 81.2532C41.1671 80.9365 41.3255 80.6199 41.431 80.3033C41.8532 79.1423 42.1698 77.823 42.3809 76.3454C42.3809 75.8177 42.3809 75.3427 42.3809 74.9206L42.3809 74.6039C42.3809 74.0762 42.3809 73.6013 42.3809 73.1791C42.1698 71.7015 41.8532 70.3294 41.431 69.0629C41.3255 68.8518 41.1671 68.588 40.9561 68.2713C40.4283 67.2159 39.7423 66.3188 38.898 65.58C36.4705 63.5747 32.9348 62.572 28.2908 62.572L22.2749 62.572L22.2749 54.023L28.2908 54.023C31.6682 54.023 34.729 54.4451 37.4731 55.2895C40.1117 56.0283 42.3809 57.1365 44.2807 58.6141C45.2306 59.3529 46.0749 60.1973 46.8137 61.1472C47.5525 61.9915 48.133 62.8886 48.5552 63.8385C49.3995 65.6328 49.8745 67.5853 49.98 69.6962C62.012 69.0629 71.5109 59.0891 71.5109 47.0571L71.5109 -184.708C71.5109 -196.899 61.8537 -206.872 49.6634 -207.347C49.5579 -206.608 49.4523 -205.87 49.3468 -205.131C48.8191 -203.126 48.0275 -201.279 46.972 -199.59C46.0222 -197.901 44.8084 -196.424 43.3308 -195.157C41.9587 -193.785 40.3228 -192.624 38.423 -191.674C36.6288 -190.724 34.6235 -190.038 32.4071 -189.616C30.2962 -189.088 28.027 -188.824 25.5995 -188.824C23.0665 -188.824 20.7445 -189.088 18.6336 -189.616C16.4172 -190.038 14.4119 -190.724 12.6177 -191.674C10.8234 -192.624 9.18749 -193.785 7.70988 -195.157C6.23227 -196.424 5.01854 -197.901 4.06865 -199.59C3.01322 -201.279 2.22164 -203.126 1.69392 -205.131C1.16621 -207.136 0.902347 -209.3 0.902347 -211.622C0.902347 -213.944 1.16621 -216.107 1.69392 -218.113C2.22164 -220.118 3.01322 -221.965 4.06865 -223.654C5.01854 -225.342 6.23227 -226.82 7.70988 -228.087C9.18749 -229.459 10.8234 -230.62 12.6177 -231.57C14.4119 -232.519 16.4172 -233.205 18.6336 -233.628ZM25.5995 -225.87C22.9609 -225.87 20.5862 -225.554 18.4753 -224.92C16.47 -224.181 14.7285 -223.232 13.2509 -222.071C11.7733 -220.804 10.6651 -219.326 9.92631 -217.638C9.08196 -215.844 8.65978 -213.838 8.65978 -211.622C8.65978 -209.405 9.08196 -207.453 9.92631 -205.764C10.6651 -203.97 11.7733 -202.44 13.2509 -201.173C14.7285 -200.012 16.47 -199.062 18.4753 -198.323C20.5862 -197.69 22.9609 -197.373 25.5995 -197.373C28.1325 -197.373 30.4545 -197.69 32.5654 -198.323C34.6763 -199.062 36.4705 -200.012 37.9481 -201.173C39.3201 -202.44 40.4284 -203.97 41.2727 -205.764C42.0115 -207.453 42.3809 -209.405 42.3809 -211.622C42.3809 -213.838 42.0115 -215.844 41.2727 -217.638C40.4284 -219.326 39.3201 -220.804 37.9481 -222.071C36.4705 -223.232 34.6763 -224.181 32.5654 -224.92C30.4545 -225.554 28.1325 -225.87 25.5995 -225.87Z"
+                                fill="#EBF3FE" />
+                        </g>
+                    </svg>
+                    <svg class="absolute bottom-0 left-16 z-0" width="81" height="93" viewBox="0 0 81 93" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g style="mix-blend-mode:plus-darker">
+                            <path d="M76.1805 330.581L67.4731 330.581L67.4731 321.715L76.1805 321.715L76.1805 330.581Z"
+                                fill="#EBF3FE" />
+                            <path d="M76.1014 297.731L67.5524 297.731L67.5524 288.865L76.1014 288.865L76.1014 297.731Z"
+                                fill="#EBF3FE" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M62.3293 1.37241C60.2184 0.844696 57.8964 0.580811 55.3634 0.580811C52.9359 0.580811 50.6667 0.844696 48.5558 1.37241C46.3394 1.79459 44.3341 2.48059 42.5399 3.43048C40.6401 4.38037 39.0042 5.54138 37.6321 6.91345C36.1545 8.17996 34.9407 9.65753 33.9908 11.3462C32.9354 13.0349 32.1438 14.882 31.6161 16.8873C31.405 17.6261 31.2467 18.3649 31.1412 19.1037C14.3598 19.5786 0.902966 33.352 0.902966 50.2917L0.902969 282.057C0.902969 298.839 14.2015 312.612 30.8246 313.245C30.8246 313.351 30.8246 313.404 30.8246 313.404C30.8246 316.042 31.3523 318.417 32.4077 320.528C32.8299 321.583 33.4103 322.533 34.1492 323.377C34.888 324.327 35.7323 325.172 36.6822 325.91C38.582 327.388 40.8512 328.496 43.4898 329.235C46.2339 330.079 49.2947 330.502 52.672 330.502L58.688 330.502L58.688 321.794L52.672 321.794C48.0281 321.794 44.4924 320.792 42.0649 318.786C41.2206 318.153 40.5345 317.309 40.0068 316.253C39.7957 315.937 39.6374 315.62 39.5319 315.303C39.1097 314.142 38.7931 312.823 38.582 311.345C38.582 310.818 38.582 310.343 38.582 309.921L38.582 309.604C38.582 309.076 38.582 308.601 38.582 308.179C38.7931 306.702 39.1097 305.329 39.5319 304.063C39.6374 303.852 39.7957 303.588 40.0068 303.271C40.5345 302.216 41.2206 301.319 42.0649 300.58C44.4924 298.575 48.0281 297.572 52.672 297.572L58.688 297.572L58.688 289.023L52.672 289.023C49.2947 289.023 46.2339 289.445 43.4898 290.289C40.8512 291.028 38.582 292.137 36.6822 293.614C35.7323 294.353 34.888 295.197 34.1492 296.147C33.4103 296.992 32.8299 297.889 32.4077 298.839C31.5634 300.633 31.0884 302.585 30.9828 304.696C18.9509 304.063 9.452 294.089 9.452 282.057L9.452 50.2917C9.452 38.1015 19.1092 28.1277 31.2995 27.6527C31.405 28.3915 31.5106 29.1303 31.6161 29.8691C32.1438 31.8745 32.9354 33.7215 33.9908 35.4102C34.9407 37.0988 36.1545 38.5764 37.6321 39.843C39.0042 41.215 40.6401 42.376 42.5399 43.3259C44.3341 44.2758 46.3394 44.9618 48.5558 45.384C50.6667 45.9117 52.9359 46.1755 55.3634 46.1755C57.8964 46.1755 60.2184 45.9117 62.3293 45.384C64.5457 44.9618 66.551 44.2758 68.3452 43.3259C70.1395 42.376 71.7754 41.215 73.253 39.843C74.7306 38.5764 75.9443 37.0988 76.8942 35.4102C77.9497 33.7215 78.7413 31.8745 79.269 29.8691C79.7967 27.8638 80.0605 25.7001 80.0605 23.3782C80.0605 21.0562 79.7967 18.8926 79.269 16.8873C78.7413 14.882 77.9497 13.0349 76.8942 11.3462C75.9443 9.65753 74.7306 8.17996 73.253 6.91345C71.7754 5.54138 70.1395 4.38037 68.3452 3.43048C66.551 2.48059 64.5457 1.79459 62.3293 1.37241ZM55.3634 9.12982C58.002 9.12982 60.3767 9.44644 62.4876 10.0797C64.4929 10.8185 66.2344 11.7684 67.712 12.9294C69.1896 14.1959 70.2978 15.6736 71.0366 17.3622C71.8809 19.1565 72.3031 21.1618 72.3031 23.3782C72.3031 25.5946 71.8809 27.5472 71.0366 29.2359C70.2978 31.0301 69.1896 32.5605 67.712 33.827C66.2344 34.988 64.4929 35.9378 62.4876 36.6766C60.3767 37.3099 58.002 37.6266 55.3634 37.6266C52.8303 37.6266 50.5084 37.3099 48.3975 36.6766C46.2866 35.9378 44.4924 34.988 43.0148 33.827C41.6427 32.5605 40.5345 31.0301 39.6902 29.2359C38.9514 27.5472 38.582 25.5946 38.582 23.3782C38.582 21.1618 38.9514 19.1565 39.6902 17.3622C40.5345 15.6736 41.6427 14.1959 43.0148 12.9294C44.4924 11.7684 46.2866 10.8185 48.3975 10.0797C50.5084 9.44644 52.8303 9.12982 55.3634 9.12982Z"
+                                fill="#EBF3FE" />
+                        </g>
+                    </svg>
+
+                    <div class="w-full z-20">
+
+
+
+                        <ul class="space-y-4 mt-4 list-style z-10">
+                            <li class="text-wrap inline-flex items-start"><i
+                                    class="fa-regular fa-circle-check mr-4 text-transparent"></i>
+                                <h6
+                                    class="text-headdark max-lg:text-base text-lg font-semibold tracking-2px xl:leading-6 uppercase">
+                                    Diagnostic & Imaging
+                                </h6>
+                            </li>
+                            <li class="text-wrap z-10  inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>X-ray and radiographic systems</p>
+                            </li>
+                            <li class="text-wrap z-10 inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Ultrasound and cardiac monitoring</p>
+                            </li>
+                            <li class="text-wrap z-10 inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Laboratory analyzers and point-of-care devices</p>
+                            </li>
+                            <li class="text-wrap z-10 inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p class="z-10">Patient warming and temperature management</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white p-6 relative rounded-xl">
+                    <svg class="absolute left-0 top-16 w-11/12 " height="80" viewBox="0 0 447 80" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g style="mix-blend-mode:plus-darker">
+                            <path d="M446.48 75.2796L446.48 66.5723L437.615 66.5723L437.615 75.2796L446.48 75.2796Z"
+                                fill="#EBF3FE" />
+                            <path d="M413.63 75.2006L413.63 66.6515L404.765 66.6515L404.765 75.2006L413.63 75.2006Z"
+                                fill="#EBF3FE" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M-82.7279 61.4284C-83.2556 59.3176 -83.5195 56.9956 -83.5195 54.4626C-83.5195 52.0351 -83.2556 49.7659 -82.7279 47.655C-82.3057 45.4386 -81.6198 43.4333 -80.6699 41.639C-79.72 39.7393 -78.559 38.1033 -77.1869 36.7313C-75.9204 35.2537 -74.4428 34.0399 -72.7541 33.09C-71.0654 32.0346 -69.2184 31.243 -67.2131 30.7153C-66.4742 30.5042 -65.7355 30.3459 -64.9967 30.2403C-64.5217 13.4589 -50.7483 0.00213392 -33.8086 0.00213244L397.957 0.0020947C414.738 0.00209323 428.512 13.3006 429.145 29.9237C429.25 29.9237 429.303 29.9237 429.303 29.9237C431.942 29.9237 434.316 30.4514 436.427 31.5068C437.483 31.929 438.433 32.5095 439.277 33.2483C440.227 33.9871 441.071 34.8314 441.81 35.7813C443.288 37.6811 444.396 39.9503 445.135 42.5889C445.979 45.333 446.401 48.3938 446.401 51.7712L446.401 57.7871L437.694 57.7871L437.694 51.7712C437.694 47.1273 436.691 43.5915 434.686 41.164C434.053 40.3197 433.208 39.6337 432.153 39.106C431.836 38.8949 431.52 38.7366 431.203 38.631C430.042 38.2088 428.723 37.8922 427.245 37.6811C426.717 37.6811 426.242 37.6811 425.82 37.6811L425.504 37.6811C424.976 37.6811 424.501 37.6811 424.079 37.6811C422.601 37.8922 421.229 38.2088 419.963 38.631C419.751 38.7366 419.488 38.8949 419.171 39.106C418.116 39.6337 417.218 40.3197 416.48 41.164C414.474 43.5915 413.472 47.1273 413.472 51.7712L413.472 57.7871L404.923 57.7871L404.923 51.7712C404.923 48.3938 405.345 45.333 406.189 42.5889C406.928 39.9503 408.036 37.6811 409.514 35.7813C410.253 34.8314 411.097 33.9871 412.047 33.2483C412.891 32.5095 413.788 31.929 414.738 31.5068C416.532 30.6625 418.485 30.1875 420.596 30.082C419.963 18.05 409.989 8.55113 397.957 8.55113L-33.8086 8.55117C-45.9989 8.55117 -55.9727 18.2084 -56.4476 30.3987C-55.7088 30.5042 -54.97 30.6097 -54.2312 30.7153C-52.2259 31.243 -50.3789 32.0346 -48.6902 33.09C-47.0015 34.0399 -45.5239 35.2537 -44.2574 36.7313C-42.8853 38.1033 -41.7243 39.7392 -40.7744 41.639C-39.8246 43.4333 -39.1386 45.4386 -38.7164 47.655C-38.1887 49.7659 -37.9248 52.0351 -37.9248 54.4626C-37.9248 56.9956 -38.1887 59.3176 -38.7164 61.4284C-39.1386 63.6448 -39.8246 65.6502 -40.7744 67.4444C-41.7243 69.2386 -42.8853 70.8746 -44.2574 72.3522C-45.5239 73.8298 -47.0015 75.0435 -48.6902 75.9934C-50.3789 77.0488 -52.2259 77.8404 -54.2312 78.3681C-56.2366 78.8959 -58.4002 79.1597 -60.7222 79.1597C-63.0441 79.1597 -65.2078 78.8959 -67.2131 78.3681C-69.2184 77.8404 -71.0654 77.0488 -72.7541 75.9934C-74.4428 75.0435 -75.9203 73.8298 -77.1869 72.3522C-78.559 70.8746 -79.72 69.2386 -80.6699 67.4444C-81.6198 65.6502 -82.3057 63.6448 -82.7279 61.4284ZM-74.9705 54.4626C-74.9705 57.1011 -74.6539 59.4759 -74.0206 61.5867C-73.2818 63.5921 -72.3319 65.3335 -71.171 66.8112C-69.9044 68.2888 -68.4268 69.3969 -66.7381 70.1358C-64.9438 70.9801 -62.9386 71.4023 -60.7222 71.4023C-58.5058 71.4023 -56.5532 70.9801 -54.8645 70.1358C-53.0702 69.3969 -51.5399 68.2888 -50.2733 66.8111C-49.1124 65.3335 -48.1625 63.5921 -47.4237 61.5867C-46.7904 59.4759 -46.4738 57.1011 -46.4738 54.4626C-46.4738 51.9295 -46.7904 49.6075 -47.4237 47.4967C-48.1625 45.3858 -49.1124 43.5916 -50.2733 42.114C-51.5399 40.7419 -53.0702 39.6337 -54.8645 38.7893C-56.5532 38.0505 -58.5058 37.6811 -60.7222 37.6811C-62.9386 37.6811 -64.9439 38.0505 -66.7381 38.7893C-68.4268 39.6337 -69.9044 40.7419 -71.171 42.114C-72.3319 43.5916 -73.2818 45.3858 -74.0206 47.4967C-74.6539 49.6075 -74.9705 51.9295 -74.9705 54.4626Z"
+                                fill="#EBF3FE" />
+                        </g>
+                    </svg>
+                    <svg class="absolute right-0 bottom-3" width="73" height="80" viewBox="0 0 73 80" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g style="mix-blend-mode:plus-darker">
+                            <path d="M530.48 3.87981L530.48 12.5871L521.615 12.5871L521.615 3.87981L530.48 3.87981Z"
+                                fill="#EBF3FE" />
+                            <path d="M497.63 3.95888L497.63 12.5079L488.765 12.5079L488.765 3.95888L497.63 3.95888Z"
+                                fill="#EBF3FE" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.2721 17.7311C0.744388 19.842 0.480473 22.164 0.480473 24.697C0.480473 27.1245 0.74439 29.3937 1.2721 31.5046C1.69428 33.721 2.38026 35.7263 3.33015 37.5205C4.28004 39.4203 5.44105 41.0562 6.81312 42.4283C8.07966 43.9059 9.5572 45.1197 11.2459 46.0695C12.9346 47.125 14.7816 47.9166 16.7869 48.4443C17.5258 48.6554 18.2645 48.8137 19.0033 48.9192C19.4783 65.7006 33.2517 79.1574 50.1914 79.1574L481.957 79.1573C498.738 79.1573 512.512 65.8588 513.145 49.2358C513.25 49.2358 513.303 49.2358 513.303 49.2358C515.942 49.2358 518.316 48.708 520.427 47.6526C521.483 47.2304 522.433 46.65 523.277 45.9112C524.227 45.1723 525.071 44.328 525.81 43.3781C527.288 41.4783 528.396 39.2091 529.135 36.5705C529.979 33.8264 530.401 30.7656 530.401 27.3883L530.401 21.3723L521.694 21.3723L521.694 27.3883C521.694 32.0322 520.691 35.5679 518.686 37.9954C518.053 38.8397 517.208 39.5258 516.153 40.0535C515.836 40.2646 515.52 40.4229 515.203 40.5284C514.042 40.9506 512.723 41.2672 511.245 41.4783C510.717 41.4783 510.242 41.4783 509.82 41.4783L509.504 41.4783C508.976 41.4783 508.501 41.4783 508.079 41.4783C506.601 41.2672 505.229 40.9506 503.963 40.5284C503.751 40.4229 503.488 40.2646 503.171 40.0535C502.116 39.5258 501.218 38.8397 500.48 37.9954C498.474 35.5679 497.472 32.0322 497.472 27.3883L497.472 21.3723L488.923 21.3723L488.923 27.3883C488.923 30.7657 489.345 33.8264 490.189 36.5705C490.928 39.2091 492.036 41.4783 493.514 43.3781C494.253 44.328 495.097 45.1724 496.047 45.9112C496.891 46.65 497.788 47.2304 498.738 47.6526C500.532 48.497 502.485 48.9719 504.596 49.0775C503.963 61.1094 493.989 70.6083 481.957 70.6083L50.1914 70.6084C38.0011 70.6084 28.0273 60.9512 27.5524 48.7609C28.2912 48.6553 29.03 48.5498 29.7688 48.4443C31.7741 47.9165 33.6211 47.125 35.3098 46.0695C36.9985 45.1197 38.4761 43.9059 39.7426 42.4283C41.1147 41.0562 42.2757 39.4203 43.2256 37.5205C44.1755 35.7263 44.8615 33.721 45.2836 31.5045C45.8113 29.3937 46.0752 27.1245 46.0752 24.697C46.0752 22.1639 45.8113 19.842 45.2836 17.7311C44.8615 15.5147 44.1754 13.5094 43.2256 11.7152C42.2757 9.92092 41.1147 8.28498 39.7426 6.80737C38.4761 5.32977 36.9985 4.11604 35.3098 3.16615C33.6211 2.11071 31.7741 1.31914 29.7688 0.791419C27.7634 0.263702 25.5998 -0.000155864 23.2778 -0.000155458C20.9559 -0.000155053 18.7922 0.263704 16.7869 0.791421C14.7816 1.31914 12.9346 2.11072 11.2459 3.16615C9.55719 4.11604 8.07965 5.32977 6.81311 6.80738C5.44104 8.28499 4.28003 9.92092 3.33014 11.7152C2.38025 13.5094 1.69428 15.5147 1.2721 17.7311ZM9.02948 24.697C9.02948 22.0584 9.34613 19.6837 9.97937 17.5728C10.7182 15.5675 11.6681 13.826 12.829 12.3484C14.0956 10.8708 15.5732 9.76261 17.2619 9.0238C19.0562 8.17946 21.0614 7.75728 23.2778 7.75728C25.4942 7.75728 27.4468 8.17946 29.1355 9.0238C30.9298 9.76261 32.4601 10.8708 33.7267 12.3484C34.8876 13.826 35.8375 15.5675 36.5763 17.5728C37.2096 19.6837 37.5262 22.0584 37.5262 24.697C37.5262 27.23 37.2096 29.552 36.5763 31.6629C35.8375 33.7737 34.8876 35.568 33.7267 37.0456C32.4602 38.4176 30.9298 39.5259 29.1355 40.3702C27.4468 41.109 25.4942 41.4784 23.2778 41.4784C21.0614 41.4784 19.0562 41.109 17.2619 40.3702C15.5732 39.5259 14.0956 38.4176 12.829 37.0456C11.6681 35.568 10.7182 33.7737 9.97938 31.6629C9.34614 29.552 9.02948 27.23 9.02948 24.697Z"
+                                fill="#EBF3FE" />
+                        </g>
+                    </svg>
+
+                    <div class="w-full z-20">
+
+
+
+                        <ul class="space-y-4 mt-4 list-style">
+                            <li class="text-wrap inline-flex items-start"><i
+                                    class="fa-regular fa-circle-check mr-4 text-transparent"></i>
+                                <h6
+                                    class="text-headdark max-lg:text-base text-lg font-semibold tracking-2px xl:leading-6 uppercase">
+                                    Support Systems
+                                </h6>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Nurse call and communication systems</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Medical gas pipeline equipment
+                                </p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p>Sterilization and infection control devices</p>
+                            </li>
+                            <li class="text-wrap inline-flex items-start"> <i
+                                    class="fa-regular fa-circle-check mr-4 text-btn"></i>
+                                <p class="">Environmental monitoring systems</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between max-sm:flex-col items-stretch gap-10 my-5 max-lg:px-4">
+                <div class="sm:w-2/3">
+                    <h6 class="heading">Nationwide Coverage, Local Expertise</h6>
+                    <p class="mt-4 lg:mt-6 paras">With comprehensive coverage across the UK, <strong>Nuvionx </strong>
+                        is
+                        positioned to
+                        support healthcare facilities of any size and
+                        complexity. Our regional service teams combine local knowledge with national resources, ensuring
+                        consistent service
+                        quality while understanding the unique needs of your facility.
+
+                    </p>
+
+                </div>
+                <div class="sm:w-1/2  w-full overflow-hidden">
+                    <img class="rounded-xl w-full h-full aspect-video object-fill object-top"
+                        src="./Public/assets/ot room.webp" alt="operation theatre">
+                </div>
+            </div>
+            <div
+                class="h-full w-full  my-5  rounded-xl bg-dropdown z-10  flex items-center justify-evenly p-6 max-lg:px-4  relative lg:max-xl:p-3">
+                <img class="absolute  bottom-3 right-0 z-20 mix-blend-multiply" src="./Public/assets/s2.svg" alt="">
+                <svg class="absolute top-5 left-0  z-20 mix-blend-multiply" width="76" height="80" viewBox="0 0 76 80"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g style="mix-blend-mode:plus-darker">
+                        <path d="M75.4824 3.88154L75.4824 12.5889L66.6168 12.5889L66.6168 3.88154L75.4824 3.88154Z"
+                            fill="#EBF3FE" />
+                        <path d="M42.6324 3.96059L42.6324 12.5096L33.7667 12.5096L33.7667 3.96059L42.6324 3.96059Z"
+                            fill="#EBF3FE" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M-63.726 17.7327C-64.2537 19.8436 -64.5176 22.1655 -64.5176 24.6986C-64.5176 27.1261 -64.2537 29.3953 -63.726 31.5061C-63.3038 33.7226 -62.6178 35.7279 -61.6679 37.5221C-60.718 39.4219 -59.557 41.0578 -58.185 42.4299C-56.9184 43.9075 -55.4409 45.1213 -53.7522 46.0711C-52.0635 47.1266 -50.2165 47.9181 -48.2111 48.4459C-47.4723 48.657 -46.7335 48.8153 -45.9947 48.9208C-45.5198 65.7022 -31.7464 79.159 -14.8066 79.159L26.9587 79.159C43.7401 79.159 57.5135 65.8605 58.1468 49.2375C58.2523 49.2375 58.3051 49.2375 58.3051 49.2375C60.9437 49.2375 63.3184 48.7097 65.4293 47.6543C66.4847 47.2321 67.4346 46.6517 68.279 45.9129C69.2289 45.1741 70.0732 44.3297 70.812 43.3798C72.2896 41.48 73.3978 39.2108 74.1366 36.5723C74.981 33.8281 75.4032 30.7674 75.4032 27.39L75.4032 21.374L66.6958 21.374L66.6958 27.39C66.6958 32.0339 65.6932 35.5696 63.6878 37.9971C63.0546 38.8414 62.2102 39.5275 61.1548 40.0552C60.8382 40.2663 60.5215 40.4246 60.2049 40.5301C59.0439 40.9523 57.7246 41.2689 56.247 41.48C55.7193 41.48 55.2444 41.48 54.8222 41.48L54.5056 41.48C53.9778 41.48 53.5029 41.48 53.0807 41.48C51.6031 41.2689 50.231 40.9523 48.9645 40.5301C48.7534 40.4246 48.4896 40.2663 48.1729 40.0552C47.1175 39.5275 46.2204 38.8414 45.4816 37.9971C43.4763 35.5696 42.4736 32.0339 42.4736 27.39L42.4736 21.374L33.9246 21.374L33.9246 27.39C33.9246 30.7673 34.3467 33.8281 35.1911 36.5722C35.9299 39.2108 37.0381 41.48 38.5157 43.3798C39.2545 44.3297 40.0989 45.1741 41.0488 45.9129C41.8931 46.6517 42.7902 47.2321 43.7401 47.6543C45.5344 48.4987 47.4869 48.9736 49.5978 49.0792C48.9645 61.1111 38.9907 70.61 26.9587 70.61L-14.8066 70.61C-26.9969 70.61 -36.9707 60.9528 -37.4457 48.7625C-36.7069 48.657 -35.9681 48.5514 -35.2293 48.4459C-33.224 47.9182 -31.3769 47.1266 -29.6882 46.0711C-27.9996 45.1213 -26.522 43.9075 -25.2554 42.4299C-23.8834 41.0578 -22.7224 39.4219 -21.7725 37.5221C-20.8226 35.7279 -20.1366 33.7226 -19.7144 31.5062C-19.1867 29.3953 -18.9228 27.1261 -18.9228 24.6986C-18.9228 22.1656 -19.1867 19.8436 -19.7144 17.7327C-20.1366 15.5163 -20.8226 13.511 -21.7725 11.7168C-22.7224 9.92252 -23.8834 8.28659 -25.2554 6.80898C-26.522 5.33137 -27.9995 4.11764 -29.6882 3.16775C-31.3769 2.11232 -33.2239 1.32074 -35.2293 0.793021C-37.2346 0.265304 -39.3982 0.00144476 -41.7202 0.00144435C-44.0422 0.00144395 -46.2058 0.265302 -48.2111 0.793019C-50.2165 1.32074 -52.0635 2.11231 -53.7522 3.16775C-55.4409 4.11764 -56.9184 5.33137 -58.185 6.80897C-59.557 8.28658 -60.718 9.92251 -61.6679 11.7168C-62.6178 13.511 -63.3038 15.5163 -63.726 17.7327ZM-55.9686 24.6986C-55.9686 22.06 -55.6519 19.6853 -55.0187 17.5744C-54.2799 15.5691 -53.33 13.8276 -52.169 12.35C-50.9025 10.8724 -49.4249 9.76421 -47.7362 9.0254C-45.9419 8.18105 -43.9366 7.75888 -41.7202 7.75888C-39.5038 7.75888 -37.5512 8.18106 -35.8625 9.0254C-34.0683 9.76421 -32.5379 10.8724 -31.2714 12.35C-30.1104 13.8276 -29.1606 15.5691 -28.4217 17.5744C-27.7885 19.6853 -27.4718 22.06 -27.4718 24.6986C-27.4718 27.2316 -27.7885 29.5536 -28.4218 31.6645C-29.1606 33.7753 -30.1104 35.5696 -31.2714 37.0472C-32.5379 38.4192 -34.0683 39.5275 -35.8625 40.3718C-37.5512 41.1106 -39.5038 41.48 -41.7202 41.48C-43.9366 41.48 -45.9419 41.1106 -47.7362 40.3718C-49.4249 39.5275 -50.9025 38.4192 -52.169 37.0472C-53.33 35.5696 -54.2799 33.7753 -55.0187 31.6645C-55.6519 29.5536 -55.9686 27.2316 -55.9686 24.6986Z"
+                            fill="#EBF3FE" />
+                    </g>
+                </svg>
+
+                <div class="  w-full   lg:w-full text-center">
+                    <h3 class=" lg:py-3 font-semibold  text-xl text-text-dark">Our Commitment
+                    </h3>
+                    <p class="font-HindMadurai xl:leading-6 w-full sm:max-lg:mt-6  text-sm xl:text-base text-headdark">
+                        We offer
+                        nationwide
+                        service coverage across the UK. <br class="hidden lg:block"> No matter the type, variety, or
+                        volume of your equipment, you can count on <strong>Nuvionx</strong> for dependable, professional
+                        service
+                        that prioritizes patient care, regulatory compliance, and operational efficiency. We're not just
+                        maintaining your
+                        equipment—we're protecting your ability to deliver exceptional patient care. </p>
+
+                </div>
+            </div>
+            <div class="h-[1px] bg-[#D0D0D0]  my-10 w-full"></div>
+
+            <div
+                class="sm:rounded-xl   relative sm:max-w-servicecontainer sm:max-lg:w-[95%]   mx-auto  max-sm:flex-col  bg-headdark lg:w-full flex sm:justify-around sm:items-center">
                 <img class="absolute w-full h-full object-cover z-10" src="./Public/assets/clip-primar.svg" alt="">
-                <div>
+                <div class="max-sm:px-6 max-sm:mt-6 max-sm:w-3/4">
                     <h1 class="font-kumbhSans  kumbhfont  uppercase z-20  text-white tracking-2px text-[13px]">Find
                         out
                         more about
-                        <span class=" font-bold tracking-2px">Medical
-                            Equipment
-                            Maintenance</span>
+                        <span class=" font-bold tracking-2px">Medical Equipment Maintenance</span>
                     </h1>
                 </div>
-                <div class="z-20">
-                    <button
-                        class=" text-white  font-kumbhSans  kumbhfont  my-8 bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer leading-6 rounded-xl py-6 px-14 tracking-2px text-xs font-semibold uppercase col-span-2 ">
+                <div class="z-20 max-sm:px-6 max-sm:mb-6"><button
+                        class=" text-white max-lg:w-[160px]  font-kumbhSans  kumbhfont mt-4  sm:my-8 bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer leading-6 rounded-xl py-4 px-6 lg:px-14 tracking-2px text-xs font-semibold uppercase col-span-2 ">
                         POST REQUEST
-                    </button>
-
-                </div>
+                    </button></div>
             </div>
 
         </div>
@@ -522,10 +959,11 @@
     <footer class="w-full  bg-white">
         <div class="xl:max-w-container md:max-w-5xl mx-auto w-[95%] bg-white">
             <!-- footer menus  -->
-            <div class="  py-16 grid grid-cols-4 gap-8 mx-auto">
+            <div
+                class="  py-16 grid max-sm:grid-rows-3 sm:max-lg:grid-cols-3 gap-10 lg:grid-cols-4 sm:max-lg:gap-8 mx-auto">
                 <!-- contact -->
-                <div class="">
-                    <h3 class="font-semibold leading-6 tracking-4px mb-8">CONTACT</h3>
+                <div class="sm:max-lg:order-4 sm:max-lg:col-span-3 sm:max-lg:mx-auto sm:max-lg:text-center">
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8 ">CONTACT</h3>
                     <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
                         <li>5 Rialto Building<br> NE1 2JR</li>
                         <li><a href="tel:07768151690 ">
@@ -572,7 +1010,7 @@
                     </ul>
                 </div>
                 <div class="">
-                    <h3 class="font-semibold leading-6 tracking-4px mb-8">COMPANY</h3>
+                    <h3 class="font-semibold leading-6 tracking-4px mb-8 ">COMPANY</h3>
                     <ul class="font-HindMadurai text-paradark leading-6 space-y-8">
                         <li><a href="#">Bookings & Cancellations </a></li>
                         <li><a href="#">Website Terms</a></li>
@@ -585,9 +1023,9 @@
             </div>
             <div class="h-[1px] bg-[#D0D0D0]  w-full"></div>
 
-            <div class="flex justify-between items-center py-10">
+            <div class="flex max-sm:flex-col justify-between items-center py-6 lg:py-10">
                 <div class="font-HindMadurai text-headdark leading-6">2025 © Nuvionx. All Rights Reserved.</div>
-                <div class="font-HindMadurai text-headdark leading-6 space-x-12">
+                <div class="font-HindMadurai text-headdark leading-6 space-x-12 max-sm:mt-6">
                     <a href="">Privacy & Policy</a>
                     <a href="">Terms & Condition</a>
                 </div>
