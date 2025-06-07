@@ -1830,6 +1830,11 @@
       margin-bottom: calc(var(--spacing) * 14);
     }
   }
+  .max-sm\:block {
+    @media (width < 40rem) {
+      display: block;
+    }
+  }
   .max-sm\:hidden {
     @media (width < 40rem) {
       display: none;
@@ -1921,6 +1926,11 @@
       align-items: flex-end;
     }
   }
+  .max-sm\:justify-center {
+    @media (width < 40rem) {
+      justify-content: center;
+    }
+  }
   .max-sm\:bg-\[url\(\'Public\/assets\/pexels-kseniachernaya-\.webp\'\)\] {
     @media (width < 40rem) {
       background-image: url('Public/assets/pexels-kseniachernaya-.webp');
@@ -1931,6 +1941,11 @@
       object-position: center;
     }
   }
+  .max-sm\:px-2 {
+    @media (width < 40rem) {
+      padding-inline: calc(var(--spacing) * 2);
+    }
+  }
   .max-sm\:px-4 {
     @media (width < 40rem) {
       padding-inline: calc(var(--spacing) * 4);
@@ -1939,6 +1954,11 @@
   .max-sm\:px-6 {
     @media (width < 40rem) {
       padding-inline: calc(var(--spacing) * 6);
+    }
+  }
+  .max-sm\:text-center {
+    @media (width < 40rem) {
+      text-align: center;
     }
   }
   .max-sm\:text-xs {
@@ -2100,6 +2120,11 @@
   .sm\:grid-cols-3 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .sm\:grid-cols-4 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
   .sm\:flex-row {
