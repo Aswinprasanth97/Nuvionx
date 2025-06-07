@@ -1913,6 +1913,11 @@
       height: 640px;
     }
   }
+  .max-sm\:max-h-\[600px\] {
+    @media (width < 40rem) {
+      max-height: 600px;
+    }
+  }
   .max-sm\:w-3\/4 {
     @media (width < 40rem) {
       width: calc(3/4 * 100%);
