@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener("submit", (e) => {
             e.preventDefault();
             const formData = new FormData(form);
-            fetch("https://script.google.com/macros/s/AKfycbwF7c28J7q8qYrUJDf3y-VqqCqKN1dZ5nNQIU2GwybdMrYA4dDBD9glz9xa-vwAhzpC/exec", {
+            fetch("https://script.google.com/macros/s/AKfycbwS1UoSmfoQ5J09B5-vwGUWMG97rWgnov0BXn95nGwOT3DtF6H7rRfo9xDJTsqHvKtC/exec", {
                 method: "POST",
                 body: formData
             })
