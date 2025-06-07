@@ -310,13 +310,11 @@
     <!-- main-landing -->
     <!-- bg-[url('Public/assets/main-section.webp')] -->
     <section
-        class="bg-[#131313]/50 max-lg:h-[430px] relative flex  items-end bg-[url('Public/assets/lab.webp')] justify-end bg-cover  bg-blend-overlay  bg-center bg-no-repeat h-[600px] w-full">
+        class="bg-[#131313]/50 max-lg:h-[430px] relative flex  items-end bg-[url('Public/assets/me-main.webp')] justify-end bg-cover  bg-blend-overlay  bg-center bg-no-repeat h-[600px] w-full">
         <!-- Background Video -->
 
-        <div
-            class="max-w-servicecontainer  max-sm:mb-28 sm:mb-44 lg:mb-20 max-lg:pl-4  mx-auto flex-col  flex lg:items-end xl:items-center lg:text-center justify-start lg:justify-center    w-full">
-            <div
-                class="lg:w-full sm:w-5/6 text-white flex flex-col lg:items-center justify-start lg:justify-center lg:max-xl:h-full lg:min-w-2xl ">
+        <div class="head-div">
+            <div class="head-sub  ">
                 <div class="inline-flex lg:items-center lg:justify-center w-full mx-auto ">
                     <img class="w-8 h-[22px] lg:w-10 lg:h-7" src="./Public/assets/scope.svg" alt="nuvonix-logo">
                     <h6
@@ -324,15 +322,13 @@
                         services
                         we offer</h6>
                 </div>
-                <h6
-                    class="text-28px lg:text-56px lg:w-5/6 mt-4 lg:leading-14 xl:leading-16 font-kumbhSans  kumbhfont  tracking-wide font-medium lg:my-2  xl:my-4">
+                <h6 class="heading-page">
                     Medical Equipment Maintenance</h6>
 
 
             </div>
-            <div
-                class="lg:w-full text-white text-nowrap mt-8 flex text-sm justify-center my-auto items-center font-kumbhSans kumbhfont font-semibold leading-6 tracking-4px">
-                <ul class="flex flex-wrap lg:flex-nowrap items-center lg:justify-around space-x-6 text-center">
+            <div class="head-nav">
+                <ul class="">
                     <li><i class="fa-solid fa-house mr-1.5"></i><a href="./index.html">HOME</a></li>
                     <li><i class="fa-solid fa-chevron-right"></i></li>
                     <li>OUR SERVICES</li>
@@ -350,12 +346,12 @@
     <section class=" w-full lg:mb-28 bg-lightgrey ">
         <div
             class="sm:max-w-servicecontainer  h-full sm:w-full  px-4 sm:mx-auto -translate-y-1/2 transform lg:-translate-y-12 ">
-            <img class="sm:w-full max-sm:aspect-video   sm:h-h320 rounded-xl max-sm:object-center object-cover  object-bottom "
+            <img class="sm:w-full max-sm:aspect-video   sm:h-h260  lg:h-h320 rounded-xl max-sm:object-center object-cover  object-center "
                 src="./Public/assets/medical-main.webp" alt="">
         </div>
-        <div class="max-w-servicecontainer transform max-lg:-translate-y-4 lg:-translate-y-2  h-full mx-auto w-full ">
+        <div class="max-w-servicecontainer   h-full mx-auto w-full transform  max-lg:-translate-y-4 lg:-translate-y-2 ">
 
-            <div class="w-full max-lg:px-4  mb-6">
+            <div class="w-full max-lg:px-4  mb-6 ">
                 <h6 class="heading">Maximize Equipment Lifespan, Minimize Failures, Ensure Patient Safety</h6>
                 <p class="lg:mt-6 mt-4 paras lg:mb-10">Our expert clinical engineers provide comprehensive maintenance
                     for
@@ -372,7 +368,7 @@
             </div>
             <div
                 class="flex justify-between  max-sm:flex-col-reverse items-stretch gap-4 lg:gap-10 lg:my-3 max-lg:px-4">
-                <div class="sm:w-2/3">
+                <div class="sm:w-1/2">
                     <h6 class="heading">Expert care for your medical equipment—anytime, anywhere</h6>
                     <p class="mt-4 lg:mt-6 paras">At <strong>Nuvionx</strong>, maintenance and repair form the
                         foundation of
@@ -394,9 +390,13 @@
                         maintenance, calibration services, and fully managed maintenance contracts designed to meet your
                         specific operational needs</p>
                 </div>
-                <div class="sm:w-1/2 sm:max-h-[379px] w-full overflow-hidden">
-                    <img class="rounded-xl w-full h-full max-sm:aspect-video object-fill object-top"
-                        src="./Public/assets/ot room.webp" alt="operation theatre">
+                <div class="service-imgsubdiv sm:w-1/2">
+                    <picture class="w-full">
+
+                        <source media="(max-width: 639px)" srcset="./Public/assets/ot-room-mob.webp">
+                        <img class="rounded-xl w-full h-full object-cover object-center"
+                            src="./Public/assets/ot room.webp" alt="lady in lab with mask, PPE kit">
+                    </picture>
                 </div>
             </div>
 
@@ -450,9 +450,9 @@
             </div>
             <div
                 class="flex flex-row-reverse max-sm:flex-col justify-between gap-4 lg:gap-10 items-stretch my-3 max-lg:px-4">
-                <div class="sm:w-1/2  h-full ">
+                <div class="service-subdiv sm:w-1/2">
                     <img src="./Public/assets/two person talking.webp"
-                        class="w-full h-full object-cover aspect-auto rounded-xl" alt="two person talking at nuvonix">
+                        class="w-full h-full object-cover aspect-video rounded-xl" alt="two person talking at nuvonix">
                 </div>
                 <div class="sm:w-3/4">
                     <div class="inline-flex items-center lg:mb-1 xl:mb-3">
@@ -891,7 +891,7 @@
                 </div>
                 <div class="sm:w-1/2  w-full overflow-hidden">
                     <img class="rounded-xl w-full h-full aspect-video object-cover object-top"
-                        src="./Public/assets/ot room.webp" alt="operation theatre">
+                        src="./Public/assets/mem last.webp" alt="operation theatre">
                 </div>
             </div>
             <div class="max-lg:px-4">

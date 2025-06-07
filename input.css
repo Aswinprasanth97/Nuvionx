@@ -136,6 +136,26 @@ body {
   font-family: "Kumbh Sans", sans-serif !important;
   @apply lg:w-full text-white text-nowrap mt-8 mb-20 flex text-sm lg:justify-center my-auto items-center font-kumbhSans  font-semibold leading-6 tracking-4px;
 }
+.head-nav ul {
+  font-family: "Kumbh Sans", sans-serif !important;
+  @apply flex flex-wrap lg:flex-nowrap items-center lg:justify-around space-x-4 sm:space-x-6 text-center;
+}
+.head-div {
+  @apply max-w-servicecontainer mb-12 sm:mb-23 lg:mb-20 max-lg:pl-4  mx-auto flex-col  flex lg:items-end xl:items-center lg:text-center justify-start lg:justify-center    w-full;
+}
+.head-sub {
+  @apply lg:w-full  text-white flex flex-col lg:items-center justify-start lg:justify-center lg:max-xl:h-full lg:min-w-2xl;
+}
+.service-subdiv {
+  @apply flex max-sm:flex-col  justify-between  items-stretch max-lg:gap-4 gap-10 max-lg:mt-6 mt-10;
+}
+.service-imgsubdiv {
+  @apply sm:w-1/2 sm:max-w-[426px] w-full;
+}
+.service-imgsubdiv img {
+  @apply rounded-xl w-full h-full object-center object-cover aspect-video;
+}
+
 .dropdown-item {
   position: relative;
   display: block;

@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const isMobile = window.innerWidth <= 1024;
 
         if (isMobile && window.scrollY > 50) {
-            nav.classList.add("bg-primary", "shadow-lg");
+            nav.classList.add("!bg-primary", "shadow-lg");
             nav.classList.remove("bg-transparent");
         } else {
-            nav.classList.remove("bg-primary", "shadow-lg");
+            nav.classList.remove("!bg-primary", "shadow-lg");
             nav.classList.add("bg-transparent");
         }
     }
