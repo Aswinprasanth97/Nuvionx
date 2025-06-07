@@ -91,7 +91,7 @@ body {
   @apply mr-4;
 }
 .feature-card {
-  @apply rounded-xl  text-white p-4  lg:p-6 relative z-20;
+  @apply rounded-xl  text-white p-4  lg:p-6 relative z-20 shadow-xl;
 }
 .feature-card h3 {
   font-family: "Kumbh Sans", sans-serif !important;
@@ -104,7 +104,7 @@ body {
   @apply absolute p-6 max-sm:top-[55%]  sm:top-[50%] transform -translate-x-1/2 -translate-y-1/2 lg:top-[50%] left-[50%]  bg-primary rounded-xl  flex items-center justify-center;
 }
 .our-service-card {
-  @apply relative text-center  h-full rounded-md w-full max-w-[416px]  bg-white;
+  @apply relative text-center  h-full rounded-md w-full max-w-[416px]  bg-white shadow-xl hover:scale-110 transform hover:ease-in-out;
 }
 .our-service-card h3 {
   @apply leading-8 lg:text-2xl text-xl font-medium;
