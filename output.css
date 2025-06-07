@@ -2185,6 +2185,11 @@
       justify-content: space-around;
     }
   }
+  .sm\:gap-2 {
+    @media (width >= 40rem) {
+      gap: calc(var(--spacing) * 2);
+    }
+  }
   .sm\:gap-4 {
     @media (width >= 40rem) {
       gap: calc(var(--spacing) * 4);
@@ -3382,6 +3387,11 @@
   .xl\:justify-end {
     @media (width >= 81rem) {
       justify-content: flex-end;
+    }
+  }
+  .xl\:gap-4 {
+    @media (width >= 81rem) {
+      gap: calc(var(--spacing) * 4);
     }
   }
   .xl\:gap-8 {
