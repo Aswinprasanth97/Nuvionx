@@ -291,7 +291,7 @@
                                     </div>
 
                                 </div>
-                                <button
+                                <button onclick="openContactModal()"
                                     class="  z-0 font-kumbhSans  kumbhfont  hover:text-black  hover:bg-white text-white cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">
 
                                     BOOK NOW
@@ -941,7 +941,7 @@
                         <span class=" font-bold tracking-2px">Medical Equipment Maintenance</span>
                     </h1>
                 </div>
-                <div class="z-20 max-sm:px-6 max-sm:mb-6"><button
+                <div class="z-20 max-sm:px-6 max-sm:mb-6"><button onclick="openContactModal()"
                         class=" text-white max-lg:w-[160px]  font-kumbhSans  kumbhfont mt-4  sm:my-8 bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer leading-6 rounded-xl py-4 px-6 lg:px-14 tracking-2px text-xs font-semibold uppercase col-span-2 ">
                         POST REQUEST
                     </button></div>
@@ -1044,6 +1044,38 @@
         </div>
         <div class="py-1.5 bg-primary w-full"></div>
     </footer>
+    <div id="contactModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50">
+        <div class="bg-white w-full max-w-xl mx-4 sm:mx-auto rounded-xl p-4 sm:p-10 relative">
+
+
+            <form id="submit-form" class="h-full" action="">
+                <h3 class="font-kumbhSans kumbhfont text-black font-medium text-[32px]">We are here to help</h3>
+                <p class="text-black mt-4 mb-8">If you want to get in touch with us it couldn’t be easier. Call, Email
+                    or
+                    fill out the below contact form.</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <input
+                        class="bg-dropdown focus:ring-gray-500 col-span-2 py-[22px] px-6 rounded-xl font-HindMadurai text-paradark focus:text-black "
+                        type="text" placeholder="Name" name="name" id="name" required>
+                    <input
+                        class="bg-dropdown focus:ring-gray-500 py-[22px] px-6 rounded-xl font-HindMadurai text-paradark focus:text-black col-span-2 sm:col-span-1"
+                        type="email" placeholder="Email Address" name="email" id="email" required>
+                    <input
+                        class="bg-dropdown focus:ring-gray-500 py-[22px] px-6 rounded-xl font-HindMadurai text-paradark focus:text-black col-span-2 sm:col-span-1"
+                        type="text" placeholder="Phone Number" name="phone number" id="phonenumber" required>
+                    <input
+                        class="bg-dropdown focus:ring-gray-500 py-[22px] px-6 rounded-xl font-HindMadurai text-paradark focus:text-black col-span-2 sm:col-span-2"
+                        type="text" placeholder="Subject" name="subject">
+                    <textarea rows="6" placeholder="Message" name="message"
+                        class="bg-dropdown focus:ring-gray-500 col-span-2 rounded-xl p-4"></textarea>
+                    <input type="submit"
+                        class="text-white font-kumbhSans kumbhfont bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer leading-6 rounded-xl py-4 px-8 tracking-2px text-xs font-semibold uppercase col-span-2 w-full">
+                    <button id="closeModalBtn"
+                        class=" text-btn bg-white border-2 border-btn kumbhfont cursor-pointer leading-6 rounded-xl py-4 px-8 tracking-2px text-xs font-semibold uppercase col-span-2 w-full">CANCEL</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 <script src="./main.js"></script>
 
