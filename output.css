@@ -1374,6 +1374,12 @@
   .underline {
     text-decoration-line: underline;
   }
+  .opacity-5 {
+    opacity: 5%;
+  }
+  .opacity-10 {
+    opacity: 10%;
+  }
   .bg-blend-multiply {
     background-blend-mode: multiply;
   }
@@ -2075,6 +2081,11 @@
       margin-right: calc(var(--spacing) * 11);
     }
   }
+  .sm\:mb-8 {
+    @media (width >= 40rem) {
+      margin-bottom: calc(var(--spacing) * 8);
+    }
+  }
   .sm\:mb-9 {
     @media (width >= 40rem) {
       margin-bottom: calc(var(--spacing) * 9);
@@ -2203,6 +2214,11 @@
   .sm\:justify-around {
     @media (width >= 40rem) {
       justify-content: space-around;
+    }
+  }
+  .sm\:gap-4 {
+    @media (width >= 40rem) {
+      gap: calc(var(--spacing) * 4);
     }
   }
   .sm\:rounded-xl {
