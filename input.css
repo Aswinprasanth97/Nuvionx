@@ -104,8 +104,10 @@ body {
   @apply absolute p-6 max-sm:top-[55%]  sm:top-[50%] transform -translate-x-1/2 -translate-y-1/2 lg:top-[50%] left-[50%]  bg-primary rounded-xl  flex items-center justify-center;
 }
 .our-service-card {
-  @apply relative text-center  h-full rounded-md w-full max-w-[416px]  bg-white shadow-xl hover:scale-110 transform hover:ease-in-out;
+  @apply relative text-center h-full rounded-md w-full max-w-[416px] bg-white shadow-xl 
+         transform transition-transform duration-300 ease-in-out hover:scale-110;
 }
+
 .our-service-card h3 {
   @apply leading-8 lg:text-2xl text-xl font-medium;
 }
