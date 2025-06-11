@@ -19,8 +19,20 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.classList.add("bg-transparent");
         }
     }
-    window.addEventListener("scroll", handleNavScroll);
-    window.addEventListener("resize", handleNavScroll);
+    function throttle(fn, limit) {
+        let inThrottle;
+        return function (...args) {
+            if (!inThrottle) {
+                fn.apply(this, args);
+                inThrottle = true;
+                setTimeout(() => (inThrottle = false), limit);
+            }
+        };
+    }
+
+    const throttledNavScroll = throttle(handleNavScroll, 100);
+    window.addEventListener("scroll", throttledNavScroll);
+    window.addEventListener("resize", throttledNavScroll);
 
     // Dropdown Utility
     function toggleDropdown(dropdownId, keepOpenIds = []) {
