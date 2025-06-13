@@ -163,7 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function closeContactModal() {
-        alert("triggered")
         const modal = document.getElementById("contactModal");
         modal?.classList.remove("flex");
         modal?.classList.add("hidden");

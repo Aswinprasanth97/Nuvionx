@@ -611,15 +611,33 @@
     </footer>
     <div id="contactModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50">
         <div class="bg-white w-full max-w-xl mx-4 sm:mx-auto rounded-xl p-4 sm:p-10 relative">
-            <button id="closeModalBtn"
-                class="absolute top-4 max-sm:block hidden right-4 text-black text-2xl font-bold">&times;</button>
+            <button id="closeModalBtn" class="absolute top-4   right-4 text-black text-2xl font-bold">&times;</button>
 
             <form id="submit-form" class="h-full" action="">
                 <h3 class="font-kumbhSans kumbhfont text-black font-medium text-[32px]">We are here to help</h3>
-                <p class="text-black mt-4 mb-4 sm:mb-8">If you want to get in touch with us it couldn’t be easier. Call,
+                <p class="text-black mt-4 mb-4 ">If you want to get in touch with us it couldn’t be easier. Call,
                     Email
                     or
                     fill out the below contact form.</p>
+                <div class="flex sm:place-items-center max-sm:flex-col items-start mb-4 sm:mb-8 ">
+                    <div class="flex mr-11 space-x-3 items-center"><i class="fa-solid fa-phone font-bold "></i>
+
+                        <div class="">
+                            <p class=" font-bold">Phone :<span class="pl-3 font-normal"><a href="tel:07768151690 ">
+                                        07768151690 </a></span></p>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-3 items-center"><i class="fa-solid fa-envelope font-bold"></i>
+                        <div class=" ">
+                            <p class=" font-bold max-lg:text-center">Email :<span class="pl-3 font-normal"><a
+                                        href="mailto:info@nuvionx.co.uk">info@nuvionx.co.uk</a></span>
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
                 <div class="grid grid-cols-2 gap-2 sm:gap-4">
                     <input
                         class="bg-dropdown focus:ring-gray-500 col-span-2 py-[22px] px-6 rounded-xl font-HindMadurai text-paradark focus:text-black "
@@ -637,8 +655,8 @@
                         class="bg-dropdown focus:ring-gray-500 col-span-2 rounded-xl p-4"></textarea>
                     <input type="submit"
                         class="text-white font-kumbhSans kumbhfont bg-btn hover:bg-btn-hover hover:border-0 cursor-pointer leading-6 rounded-xl py-4 px-8 tracking-2px text-xs font-semibold uppercase col-span-2 w-full">
-                    <button id="closeModalBtn" type="button"
-                        class=" text-btn bg-white max-sm:hidden block border-2 border-btn kumbhfont cursor-pointer leading-6 rounded-xl py-4 px-8 tracking-2px text-xs font-semibold uppercase col-span-2 w-full">CANCEL</button>
+                    <!-- <button id="closeModalBtn" type="button"
+                        class=" text-btn bg-white max-sm:hidden block border-2 border-btn kumbhfont cursor-pointer leading-6 rounded-xl py-4 px-8 tracking-2px text-xs font-semibold uppercase col-span-2 w-full">CANCEL</button> -->
                 </div>
             </form>
         </div>

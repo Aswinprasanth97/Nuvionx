@@ -2147,6 +2147,11 @@
       flex-direction: row;
     }
   }
+  .sm\:place-items-center {
+    @media (width >= 40rem) {
+      place-items: center;
+    }
+  }
   .sm\:items-center {
     @media (width >= 40rem) {
       align-items: center;
