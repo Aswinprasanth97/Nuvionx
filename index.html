@@ -9,6 +9,7 @@
 
     <link href="./style.css" rel="stylesheet">
     <title>Nuvonix-Homepage</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="icon" href="./Public/assets/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./Public/assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./Public/assets/favicon-32x32.png">
@@ -32,7 +33,7 @@
 <body class="relative p-0 m-0 box-border text-base bg-lightgrey scroll-smooth ">
     <!-- ---Topbar--- -->
     <div class="bg-primary lg:block hidden h-[62px] m-auto text-sm leading-6 relative top-0 w-full ">
-        <div
+        <div data-aos="fade-down"
             class=" text-white  lg:max-w-5xl xl:max-w-container mx-auto w-[95%]  text-sm flex flex-col lg:flex-row justify-between items-center md:max-lg:py-2 py-5">
 
             <ul class="flex space-x-6 justify-between place-items-center">
@@ -68,7 +69,7 @@
     </div>
 
     <!-- navbar -->
-    <header class="z-50 ">
+    <header data-aos="fade-down" class="z-50 ">
         <nav id="main-nav" class="navbar">
             <!-- navbar main -->
             <div class="lg:max-w-5xl xl:max-w-container mx-auto flex w-[95%] justify-between items-center ">
@@ -339,15 +340,16 @@
             class="lg:max-w-5xl max-lg:items-end max-lg:h-full   xl:max-w-container lg:mb-12 mx-auto xl:mb-0 w-[95%]  flex lg:items-end xl:items-start justify-between lg:h-full xl:h-fit  ">
             <div class="xl:w-1/2 lg:w-3/5  text-white flex flex-col justify-center">
                 <div class="inline-flex items-center ">
-                    <img class="w-8 h-[22px] lg:w-10 lg:h-7" src="./Public/assets/scope.svg" alt="nuvonix-logo">
-                    <h6
+                    <img data-aos="fade-right" class="w-8 h-[22px] lg:w-10 lg:h-7" src="./Public/assets/scope.svg"
+                        alt="nuvonix-logo">
+                    <h6 data-aos="fade-right" data-aos-delay="1500"
                         class=" text-xs lg:text-sm  font-kumbhSans   kumbhfont tracking-4px ml-2 font-semibold  uppercase">
                         Precision
                         You Can
                         Rely
                         On</h6>
                 </div>
-                <h1 class=" land-head ">
+                <h1 data-aos="fade-down" data-aos-delay="500" class=" land-head ">
                     Expert
                     Calibration &
                     Maintenance for
@@ -396,7 +398,7 @@
             <div
                 class=" w-full h-full mb-4  flex max-sm:flex-col-reverse items-start justify-between font-kumbhSans  kumbhfont ">
 
-                <div class="w-full  sm:w-1/2 h-full">
+                <div data-aos="fade-right" class="w-full  sm:w-1/2 h-full ">
                     <img class="rounded-xl h-full hidden lg:block  max-sm:aspect-video w-full object-cover  sm:object-contain"
                         src="./Public/assets/lab-view.webp" alt="girl-microscope">
                     <img class="rounded-xl h-full  hidden sm:max-lg:block   w-full  object-cover   "
@@ -1434,9 +1436,13 @@
     </div>
 
 
-
+    <script src="./main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
-<script src="./main.js"></script>
+
 
 </html>
