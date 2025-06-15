@@ -176,7 +176,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Expose modal function globally if needed
     window.openContactModal = openContactModal;
     AOS.init({
-        duration: 1200,
+        duration: 1000,
+        once: true,
     })
 
 });
