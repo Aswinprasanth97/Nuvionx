@@ -1799,9 +1799,24 @@
       left: 62px;
     }
   }
+  .max-sm\:left-\[250px\] {
+    @media (width < 40rem) {
+      left: 250px;
+    }
+  }
+  .max-sm\:left-\[300px\] {
+    @media (width < 40rem) {
+      left: 300px;
+    }
+  }
   .max-sm\:left-\[313px\] {
     @media (width < 40rem) {
       left: 313px;
+    }
+  }
+  .max-sm\:left-\[px\] {
+    @media (width < 40rem) {
+      left: px;
     }
   }
   .max-sm\:order-3 {
@@ -2641,6 +2656,11 @@
   .lg\:left-\[250px\] {
     @media (width >= 64rem) {
       left: 250px;
+    }
+  }
+  .lg\:left-\[300px\] {
+    @media (width >= 64rem) {
+      left: 300px;
     }
   }
   .lg\:left-\[313px\] {
