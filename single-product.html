@@ -625,6 +625,10 @@
             </form>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("TzFpAt5D43FypVqcj");
+    </script>
     <script type="module" src="./contact-form.js"></script>
     <script src="./main.js"></script>
     <script type="module" src="./productFetch.js"></script>
@@ -798,15 +802,16 @@
 
         window.openEnquiryModalWithProduct = function () {
             if (currentProduct) {
-                const subjectInput = document.querySelector('input[name="subject"]');
-                if (subjectInput) {
-                    subjectInput.value = "Enquiry about: " + currentProduct.name + " (Ref: " + currentProduct.id + ")";
-                }
+                const subject = "Enquiry about: " + currentProduct.name + " (Ref: " + currentProduct.id + ")";
 
                 if (typeof window.openContactModal === 'function') {
-                    window.openContactModal();
+                    window.openContactModal(subject);
                 } else {
+                    // Fallback if global function missing (unlikely)
                     const modal = document.getElementById("contactModal");
+                    const subjectInput = document.querySelector('input[name="subject"]');
+                    if (subjectInput) subjectInput.value = subject;
+
                     if (modal) {
                         modal.classList.remove("hidden");
                         modal.classList.add("flex");

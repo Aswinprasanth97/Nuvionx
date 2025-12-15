@@ -56,15 +56,70 @@ forms.forEach(form => {
             createdAt: serverTimestamp()
         };
 
+        const submitBtn = submittedForm.querySelector('input[type="submit"], button[type="submit"]');
+        let isInput = false;
+        let originalBtnText = "SUBMIT";
+
+        if (submitBtn) {
+            isInput = submitBtn.tagName === "INPUT";
+            // Capture original text
+            originalBtnText = isInput ? submitBtn.value : submitBtn.innerText;
+            if (!originalBtnText || !originalBtnText.trim()) originalBtnText = "SUBMIT";
+
+            // Set loading state
+            if (isInput) {
+                submitBtn.value = "Sending...";
+            } else {
+                submitBtn.innerText = "Sending...";
+            }
+            submitBtn.disabled = true;
+            submitBtn.style.cursor = "not-allowed";
+        }
+
         try {
             await addDoc(collection(db, "contact_messages"), data);
+            await sendAdminEmail(data);
 
             alert("Form submitted successfully");
             submittedForm.reset();
 
+            // Close modal if it's the modal form
+            if (submittedForm.id === "contact-modal-form") {
+                const modal = document.getElementById("contactModal");
+                if (modal) {
+                    modal.classList.remove("flex");
+                    modal.classList.add("hidden");
+                }
+            }
+
         } catch (error) {
             console.error("Error adding document: ", error);
             alert("Something went wrong. Please try again.");
+        } finally {
+            if (submitBtn) {
+                // Restore original text
+                if (isInput) {
+                    submitBtn.value = originalBtnText;
+                } else {
+                    submitBtn.innerText = originalBtnText;
+                }
+                submitBtn.disabled = false;
+                submitBtn.style.cursor = "pointer";
+            }
         }
     });
 });
+function sendAdminEmail(data) {
+    return emailjs.send(
+        "service_5mcsbng",        // SMTP service ID
+        "template_5g28u7k",  // EmailJS template ID
+        {
+            name: data.name,
+            email: data.email,
+            phone: data.phone,
+            subject: data.subject,
+            message: data.message
+        }
+    );
+}
+

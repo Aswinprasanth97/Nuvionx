@@ -157,7 +157,7 @@ function renderProducts(products) {
             Buy Now
           </a>` : ''}
 
-          <button onclick="openEnquiryModal('${product.name}')"
+          <button onclick="openEnquiryModal('${product.name}', '${product.id}')"
              class="block w-full text-center border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-lg transition">
             Enquiry
           </button>
@@ -202,13 +202,9 @@ window.changeSlide = function (productId, direction) {
     }
 };
 
-window.openEnquiryModal = function (productName) {
-    const subjectInput = document.querySelector('input[name="subject"]');
-    if (subjectInput) {
-        subjectInput.value = "Enquiry about: " + productName;
-    }
-
+window.openEnquiryModal = function (productName, productId) {
+    const subject = `Enquiry for ${productName} (ID: ${productId})`;
     if (window.openContactModal) {
-        openContactModal();
+        openContactModal(subject);
     }
 };
