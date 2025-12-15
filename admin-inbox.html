@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Inbox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <!-- Login Section -->
+    <div id="login-section" class="flex items-center justify-center min-h-screen">
+        <div class="bg-white p-8 rounded shadow-md w-full max-w-sm">
+            <h2 class="text-2xl font-bold mb-4 text-center">Admin Login</h2>
+            <form id="loginForm" class="space-y-4">
+                <input type="email" id="login-email" placeholder="Email" class="w-full p-2 border rounded" required>
+                <input type="password" id="login-password" placeholder="Password" class="w-full p-2 border rounded"
+                    required>
+                <div id="login-error" class="text-red-500 text-sm hidden"></div>
+                <button type="submit"
+                    class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Inbox Section (Hidden by default) -->
+    <div id="inbox-container" class="hidden max-w-5xl mx-auto p-6">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold">📥 Contact Messages</h1>
+            <button id="logoutBtn" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900">Logout</button>
+        </div>
+
+        <div id="inbox" class="space-y-4"></div>
+    </div>
+
+    <!-- Reply Modal -->
+    <div id="replyModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50">
+        <div class="bg-white w-full max-w-lg mx-4 rounded-xl p-6 relative">
+            <button id="closeReplyBtn"
+                class="absolute top-4 right-4 text-gray-500 hover:text-black text-xl font-bold">&times;</button>
+            <h3 class="text-xl font-bold mb-4">Reply to Message</h3>
+
+            <form id="replyForm" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">To</label>
+                    <input type="email" id="reply-to" class="w-full p-2 border rounded bg-gray-100" readonly>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Subject</label>
+                    <input type="text" id="reply-subject" class="w-full p-2 border rounded bg-gray-100">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Message</label>
+                    <textarea id="reply-message" rows="5" class="w-full p-2 border rounded"
+                        placeholder="Type your reply here..." required></textarea>
+                </div>
+                <button type="submit" id="sendReplyBtn"
+                    class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 font-semibold">Send
+                    Reply</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="module" src="admin_inbox.js"></script>
+</body>
+
+</html>
