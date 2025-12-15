@@ -124,42 +124,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Form Submission
-    const form = document.getElementById("submit-form");
-    form?.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const formData = new FormData(form);
-        let hasData = false;
+    // const form = document.getElementById("submit-form");
+    // form?.addEventListener("submit", (e) => {
+    //     e.preventDefault();
+    //     const formData = new FormData(form);
+    //     let hasData = false;
 
-        for (const [key, value] of formData.entries()) {
-            if (value.trim() !== "") {
-                hasData = true;
-                break;
-            }
-        }
+    //     for (const [key, value] of formData.entries()) {
+    //         if (value.trim() !== "") {
+    //             hasData = true;
+    //             break;
+    //         }
+    //     }
 
-        if (!hasData) {
-            alert("Please fill out at least one field before submitting.");
-            return;
-        }
+    //     if (!hasData) {
+    //         alert("Please fill out at least one field before submitting.");
+    //         return;
+    //     }
 
-        fetch("https://script.google.com/macros/s/AKfycbwS1UoSmfoQ5J09B5-vwGUWMG97rWgnov0BXn95nGwOT3DtF6H7rRfo9xDJTsqHvKtC/exec", {
-            method: "POST",
-            body: formData
-        })
-            .then(() => {
-                alert("Form submitted successfully");
-                window.location.reload();
-            })
-            .catch(() => {
-                alert("Something went wrong");
-            });
-    });
+    //     fetch("https://script.google.com/macros/s/AKfycbwS1UoSmfoQ5J09B5-vwGUWMG97rWgnov0BXn95nGwOT3DtF6H7rRfo9xDJTsqHvKtC/exec", {
+    //         method: "POST",
+    //         body: formData
+    //     })
+    //         .then(() => {
+    //             alert("Form submitted successfully");
+    //             window.location.reload();
+    //         })
+    //         .catch(() => {
+    //             alert("Something went wrong");
+    //         });
+    // });
 
     // Modal Logic
-    function openContactModal() {
+    function openContactModal(subject = '') {
         const modal = document.getElementById("contactModal");
         modal?.classList.remove("hidden");
         modal?.classList.add("flex");
+
+        const subjectInput = document.querySelector('#contact-modal-form input[name="subject"]');
+        if (subjectInput) {
+            subjectInput.value = subject;
+        }
     }
 
     function closeContactModal() {

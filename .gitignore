@@ -1,0 +1,11 @@
+# # Ignore everything
+# *
+
+# # But not these files
+# !*.html
+# !main.js
+# !*.css
+
+# # Optional: Ignore all JS except main.js
+# *.js
+# !main.js

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Product Listing</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Optional: custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0f766e"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <div class="max-w-6xl mx-auto p-6">
+
+        <!-- LOGOUT BUTTON (Hidden by default) -->
+        <div id="logout-container" class="hidden flex justify-end mb-4">
+            <button id="logoutBtn"
+                class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded transition">
+                Logout
+            </button>
+        </div>
+
+        <!-- LOGIN SECTION -->
+        <div id="login-section" class="max-w-md mx-auto bg-white rounded-xl shadow-lg p-8 mt-20">
+            <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Admin Login</h2>
+            <form id="loginForm" class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                    <input type="email" id="login-email" required
+                        class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary"
+                        placeholder="admin@example.com">
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+                    <input type="password" id="login-password" required
+                        class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary"
+                        placeholder="********">
+                </div>
+                <button type="submit"
+                    class="w-full bg-primary hover:bg-teal-700 text-white font-bold py-3 rounded-lg transition duration-200">
+                    Login
+                </button>
+                <p id="login-error" class="text-red-500 text-center text-sm hidden"></p>
+            </form>
+        </div>
+
+        <!-- ADMIN CONTENT (Hidden by default) -->
+        <div id="admin-content" class="hidden">
+            <!-- ADD PRODUCT -->
+            <div class="bg-white rounded-xl shadow p-6 mb-10">
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">Add Product</h2>
+
+                <form id="productForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                    <input type="text" id="name" placeholder="Product name" required
+                        class="border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" />
+
+                    <input type="url" id="link" placeholder="eBay link"
+                        class="border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" />
+
+                    <textarea id="description" placeholder="Product description" rows="3"
+                        class="md:col-span-2 border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+
+                    <textarea id="specs" placeholder="Product specifications (optional)" rows="3"
+                        class="md:col-span-2 border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+
+                    <input type="file" id="images" accept="image/*" multiple required
+                        class="md:col-span-2 border rounded-lg px-4 py-3 bg-white" />
+
+                    <button type="submit"
+                        class="md:col-span-2 bg-primary hover:bg-teal-700 text-white font-semibold py-3 rounded-lg transition">
+                        Add Product
+                    </button>
+
+                </form>
+            </div>
+
+            <!-- PRODUCT LIST -->
+            <h2 class="text-2xl font-bold mb-6 text-gray-800">Products</h2>
+
+            <!-- IMPORTANT: must match JS -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+
+    </div>
+
+    <!-- Product logic -->
+    <script type="module" src="product_list.js"></script>
+</body>
+
+</html>

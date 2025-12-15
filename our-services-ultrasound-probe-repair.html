@@ -126,7 +126,7 @@
                                     href="./aboutus.html">ABOUT US</a></span></li>
                         <li><span
                                 class="inline-block text-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"><a
-                                    href="./contactus.html">CONTACT</a></span>
+                                    href="./product-view.html">PRODUCTS</a></span>
                         </li>
                         <li>
                             <div class="relative inline-block text-center ">
@@ -168,11 +168,11 @@
                 </div>
                 <div class="hidden  lg:block">
 
-                    <button onclick="openContactModal()"
+                    <a href="./contactus.html"
                         class="  z-0 font-kumbhSans  kumbhfont  hover:text-black  hover:bg-white text-white cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">
 
                         CONTACT US
-                    </button>
+                    </a>
                 </div>
                 <div class="mob-nav  lg:hidden">
                     <svg id="mob-nav" width="40" height="40" viewBox="0 0 40 40" fill="none"
@@ -247,7 +247,8 @@
                                 </li>
 
                                 <!-- CONTACT -->
-                                <li class="hover:scale-110 transition text-xl"><a href="./contactus.html">CONTACT</a>
+                                <li class="hover:scale-110 transition text-xl"><a
+                                        href="./product-view.html">PRODUCTS</a>
                                 </li>
 
                                 <!-- MORE Dropdown -->
@@ -315,11 +316,11 @@
                                     </div>
 
                                 </div>
-                                <button onclick="openContactModal()"
+                                <a href="./contactus.html"
                                     class="  z-0 font-kumbhSans  kumbhfont  hover:text-black  hover:bg-white text-white cursor-pointer leading-6 border-white border rounded-xl py-4 px-8 tracking-2px text-xs font-semibold">
 
                                     CONTACT US
-                                </button>
+                                </a>
                             </div>
 
                         </div>
@@ -717,7 +718,7 @@
         <div class="bg-white w-full max-w-xl mx-4 sm:mx-auto rounded-xl p-4 sm:p-10 relative">
             <button id="closeModalBtn" class="absolute top-4  right-4 text-black text-2xl font-bold">&times;</button>
 
-            <form id="submit-form" class="h-full" action="">
+            <form id="contact-modal-form" class="h-full" action="">
                 <h3 class="font-kumbhSans kumbhfont text-black font-medium text-[32px]">We are here to help</h3>
                 <p class="text-black mt-4 mb-4 ">If you want to get in touch with us it couldn’t be easier. Call,
                     Email
@@ -751,7 +752,7 @@
                         type="email" placeholder="Email Address" name="email" id="email">
                     <input
                         class="bg-dropdown focus:ring-gray-500 py-[22px] px-6 rounded-xl font-HindMadurai text-paradark focus:text-black col-span-2 sm:col-span-1"
-                        type="text" placeholder="Phone Number" name="phone number" id="phonenumber">
+                        type="text" placeholder="Phone Number" name="phone" id="phonenumber">
                     <input
                         class="bg-dropdown focus:ring-gray-500 py-[22px] px-6 rounded-xl font-HindMadurai text-paradark focus:text-black col-span-2 sm:col-span-2"
                         type="text" placeholder="Subject" name="subject">
@@ -765,6 +766,7 @@
             </form>
         </div>
     </div>
+    <script type="module" src="./contact-form.js"></script>
     <script src="./main.js"></script>
 </body>
 
