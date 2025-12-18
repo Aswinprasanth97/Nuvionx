@@ -32,7 +32,7 @@ const db = getFirestore(app);
 const auth = getAuth(app);
 
 /* Cloudinary config */
-const CLOUD_NAME = "dtdlqo0wd";
+const CLOUD_NAME = "dtmsihmxc";
 const UPLOAD_PRESET = "product_upload";
 
 // --- AUTH STATE MANAGEMENT ---
