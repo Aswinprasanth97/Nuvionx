@@ -86,7 +86,7 @@ if (logoutBtn) {
 }
 
 /* EmailJS Init */
-emailjs.init("TzFpAt5D43FypVqcj");
+emailjs.init("4R6iAwpwyUaGKdAkW");
 
 /* Reply Logic */
 const replyModal = document.getElementById("replyModal");

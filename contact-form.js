@@ -111,8 +111,8 @@ forms.forEach(form => {
 });
 function sendAdminEmail(data) {
     return emailjs.send(
-        "service_5mcsbng",        // SMTP service ID
-        "template_5g28u7k",  // EmailJS template ID
+        "service_kn2ktlc",        // SMTP service ID
+        "template_kxdtesd",  // EmailJS template ID
         {
             name: data.name,
             email: data.email,
