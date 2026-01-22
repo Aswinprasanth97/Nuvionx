@@ -20,6 +20,9 @@
             }
         }
     </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="bg-gray-100 min-h-screen">
@@ -69,6 +72,20 @@
                     <input type="text" id="name" placeholder="Product name" required
                         class="border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" />
 
+                    <div class="grid grid-cols-2 gap-4">
+                        <select id="category" required
+                            class="border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary bg-white">
+                            <option value="" disabled selected>Primary Category (Required)</option>
+                            <!-- Options injected by JS -->
+                        </select>
+
+                        <select id="category2"
+                            class="border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary bg-white text-gray-700">
+                            <option value="" selected>Secondary Category (Optional)</option>
+                            <!-- Options injected by JS -->
+                        </select>
+                    </div>
+
                     <input type="url" id="link" placeholder="eBay link"
                         class="border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" />
 
@@ -87,6 +104,25 @@
                     </button>
 
                 </form>
+                </form>
+            </div>
+
+            <!-- MANAGE CATEGORIES -->
+            <div class="bg-white rounded-xl shadow p-6 mb-10">
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">Manage Categories</h2>
+
+                <div class="flex gap-4 mb-6">
+                    <input type="text" id="new-category-name" placeholder="New Category Name"
+                        class="flex-grow border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" />
+                    <button id="addCategoryBtn"
+                        class="bg-primary hover:bg-teal-700 text-white font-semibold py-3 px-6 rounded-lg transition">
+                        Add
+                    </button>
+                </div>
+
+                <div id="category-list" class="flex flex-wrap gap-3">
+                    <!-- Categories injected here -->
+                </div>
             </div>
 
             <!-- PRODUCT LIST -->

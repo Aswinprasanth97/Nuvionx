@@ -42,6 +42,8 @@ export async function getProducts() {
         products.push({
             id: doc.id,
             name: data.name,
+            categories: data.categories || (data.category ? [data.category] : []),
+            category: data.category || "Uncategorized",
             description: data.description || "",
             ebayLink: data.ebayLink,
             images: Array.isArray(data.images) && data.images.length
@@ -67,6 +69,8 @@ export async function getProductById(id) {
         return {
             id: docSnap.id,
             name: data.name,
+            categories: data.categories || (data.category ? [data.category] : []),
+            category: data.category || "Uncategorized",
             description: data.description || "",
             ebayLink: data.ebayLink,
             images: Array.isArray(data.images) && data.images.length
@@ -82,14 +86,16 @@ export async function getProductById(id) {
 /* =================================
    LOAD & RENDER (For Listing Page)
 ================================= */
+let allProductsData = [];
+
 if (document.getElementById("product-grid")) {
     loadProductsFromFirebase();
 }
 
 async function loadProductsFromFirebase() {
     try {
-        const products = await getProducts();
-        renderProducts(products);
+        allProductsData = await getProducts();
+        renderCategorizedSections(allProductsData);
     } catch (error) {
         console.error("Error loading products:", error);
     } finally {
@@ -101,70 +107,100 @@ async function loadProductsFromFirebase() {
     }
 }
 
-function renderProducts(products) {
-    const grid = document.getElementById("product-grid");
-    if (!grid) return;
+function renderCategorizedSections(products) {
+    const container = document.getElementById("product-grid");
+    if (!container) return;
 
     if (!products.length) {
-        grid.innerHTML = `<p class="text-gray-500">No products available</p>`;
+        container.innerHTML = `<p class="text-gray-500 text-center">No products available</p>`;
         return;
     }
 
-    grid.innerHTML = products.map(product => `
-    <div class="bg-white rounded-xl shadow border border-gray-100 overflow-hidden flex flex-col h-full transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+    // Get unique categories sorted alphabetically
+    const allCats = products.flatMap(p => p.categories);
+    const uniqueCategories = [...new Set(allCats.filter(c => c))].sort();
 
-      <div class="relative overflow-hidden bg-white aspect-square group" id="carousel-${product.id}">
-        <!-- Link Image to Single Product -->
-        <a href="./single-product.html?id=${product.id}" class="block w-full h-full relative cursor-pointer">
-            ${product.images.map((img, index) => `
-            <img src="${img}"
-                class="carousel-slide w-full h-full object-contain  ${index === 0 ? 'block' : 'hidden'}"
-                data-index="${index}"
-                alt="${product.name}">
-            `).join("")}
-        </a>
+    let contentHTML = "";
 
-        ${product.images.length > 1 ? `
-          <button onclick="changeSlide('${product.id}', -1)"
-            class="absolute top-1/2 -translate-y-1/2 left-2 bg-white/70 rounded-full w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10">
-            <i class="fa-solid fa-chevron-left text-gray-700"></i>
-          </button>
+    uniqueCategories.forEach(category => {
+        // Filter products for this category
+        const categoryProducts = products.filter(p => p.categories.includes(category));
 
-          <button onclick="changeSlide('${product.id}', 1)"
-            class="absolute top-1/2 -translate-y-1/2 right-2 bg-white/70 rounded-full w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10">
-            <i class="fa-solid fa-chevron-right text-gray-700"></i>
-          </button>
+        if (categoryProducts.length > 0) {
+            contentHTML += `
+                    <div class="category-section">
+                        <h2 class="text-4xl font-semibold text-gray-800 mb-6 font-kumbhSans uppercase kumbhfont  border-b pb-2 border-gray-200 text-center">${category}</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                            ${categoryProducts.map(product => createProductCard(product)).join("")}
+                        </div>
+                    </div>
+                `;
+        }
+    });
 
-          <div class="absolute bottom-2 w-full flex justify-center gap-1 z-10">
-            ${product.images.map((_, i) => `
-              <div class="dot w-1.5 h-1.5 rounded-full cursor-pointer ${i === 0 ? 'bg-primary' : 'bg-gray-300'}"></div>
-            `).join("")}
+    // Handle "Uncategorized" if any product has NO categories 
+    // (Though our logic defaults to "Uncategorized", strictly speaking checking explicit uncategorized might be needed if data is messy, 
+    // but 'Uncategorized' should be in uniqueCategories if it exists)
+
+    container.innerHTML = contentHTML;
+}
+
+function createProductCard(product) {
+    return `
+        <div class="bg-white rounded-xl shadow border border-gray-100 overflow-hidden flex flex-col h-full transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+    
+          <div class="relative overflow-hidden bg-white aspect-square group" id="carousel-${product.id}">
+            <!-- Link Image to Single Product -->
+            <a href="./single-product.html?id=${product.id}" class="block w-full h-full relative cursor-pointer">
+                ${product.images.map((img, index) => `
+                <img src="${img}"
+                    class="carousel-slide w-full h-full object-contain  ${index === 0 ? 'block' : 'hidden'}"
+                    data-index="${index}"
+                    alt="${product.name}">
+                `).join("")}
+            </a>
+    
+            ${product.images.length > 1 ? `
+              <button onclick="changeSlide('${product.id}', -1)"
+                class="absolute top-1/2 -translate-y-1/2 left-2 bg-white/70 rounded-full w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10">
+                <i class="fa-solid fa-chevron-left text-gray-700"></i>
+              </button>
+    
+              <button onclick="changeSlide('${product.id}', 1)"
+                class="absolute top-1/2 -translate-y-1/2 right-2 bg-white/70 rounded-full w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10">
+                <i class="fa-solid fa-chevron-right text-gray-700"></i>
+              </button>
+    
+              <div class="absolute bottom-2 w-full flex justify-center gap-1 z-10">
+                ${product.images.map((_, i) => `
+                  <div class="dot w-1.5 h-1.5 rounded-full cursor-pointer ${i === 0 ? 'bg-primary' : 'bg-gray-300'}"></div>
+                `).join("")}
+              </div>
+            ` : ""}
           </div>
-        ` : ""}
-      </div>
-
-      <div class="p-6 flex flex-col flex-grow">
-        <!-- Link Title -->
-        <a href="./single-product.html?id=${product.id}" class="block">
-            <h3 class="font-kumbhSans font-bold text-xl text-text-dark mb-2 text-primary hover:text-secondary-cyan transition-colors cursor-pointer">${product.name}</h3>
-        </a>
-        <p class="font-HindMadurai text-textpara-dark text-sm mb-4 line-clamp-3 flex-grow">${product.description}</p>
-
-        <div class="mt-auto space-y-3">
-          ${product.ebayLink && product.ebayLink.trim() !== "" ? `
-          <a href="${product.ebayLink}" target="_blank"
-             class="block w-full text-center bg-[#ffcc00] hover:bg-[#ffdb4d] text-black font-semibold py-3 rounded-lg transition shadow-sm hover:shadow-md">
-            Buy Now
-          </a>` : ''}
-
-          <button onclick="openEnquiryModal('${product.name}', '${product.id}')"
-             class="block w-full text-center border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-lg transition">
-            Enquiry
-          </button>
+    
+          <div class="p-6 flex flex-col flex-grow">
+            <!-- Link Title -->
+            <a href="./single-product.html?id=${product.id}" class="block">
+                <h3 class="font-kumbhSans kumbhfont font-bold text-xl text-text-dark mb-2 text-primary hover:text-secondary-cyan transition-colors cursor-pointer">${product.name}</h3>
+            </a>
+    
+    
+            <div class="mt-auto space-y-3">
+              ${product.ebayLink && product.ebayLink.trim() !== "" ? `
+              <a href="${product.ebayLink}" target="_blank"
+                 class="block w-full text-center bg-[#ffcc00] hover:bg-[#ffdb4d] text-black font-semibold py-3 rounded-lg transition shadow-sm hover:shadow-md">
+                Buy Now
+              </a>` : ''}
+    
+              <button onclick="openEnquiryModal('${product.name}', '${product.id}')"
+                 class="block w-full text-center border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-lg transition">
+                Enquiry
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  `).join("");
+      `;
 }
 
 window.changeSlide = function (productId, direction) {

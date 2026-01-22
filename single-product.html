@@ -349,7 +349,7 @@
                         Products
                     </h6>
                 </div>
-                <h6 class="text-4xl lg:text-6xl font-bold font-kumbhSans mt-4 leading-tight">
+                <h6 class="text-4xl lg:text-6xl land-head font-bold font-kumbhSans mt-4 leading-tight">
                     Medical Equipment <span class="">&</span> Services</h6>
 
 
@@ -407,7 +407,11 @@
                 <!-- Right: Details -->
                 <div class="product-info flex flex-col h-full">
                     <h1 id="product-name"
-                        class="font-kumbhSans font-bold text-3xl lg:text-4xl text-text-dark mb-4 text-primary"></h1>
+                        class="font-kumbhSans main-heading font-bold text-3xl lg:text-4xl text-text-dark text-primary">
+                    </h1>
+                    <p id="product-category"
+                        class="font-kumbhSans inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full font-medium text-sm mb-6 w-fit">
+                    </p>
 
                     <div class="flex items-center gap-4 mb-6">
                         <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">In
@@ -420,7 +424,7 @@
                     <div class="mb-6 border-b border-gray-200">
                         <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab"
                             data-tabs-toggle="#myTabContent" role="tablist">
-                            <li class="mr-2" role="presentation">
+                            <li class="mr-2 main-para " role="presentation">
                                 <button
                                     class="inline-block p-4 border-b-2 rounded-t-lg hover:text-primary hover:border-primary border-primary text-primary"
                                     id="description-tab" data-tabs-target="#description" type="button" role="tab"
@@ -441,8 +445,8 @@
                     <div id="tabContent" class="flex-grow mb-8">
                         <div class="p-4 rounded-lg bg-gray-50" id="description-content" role="tabpanel"
                             aria-labelledby="description-tab">
-                            <p id="product-description"
-                                class="font-HindMadurai text-textpara-dark text-base leading-relaxed"></p>
+                            <div id="product-description"
+                                class="font-HindMadurai text-textpara-dark text-base leading-relaxed"></div>
                         </div>
                         <div class="hidden p-4 rounded-lg bg-gray-50" id="specification-content" role="tabpanel"
                             aria-labelledby="specification-tab">
@@ -686,8 +690,25 @@
             // Text Content
             document.getElementById('breadcrumb-name').textContent = product.name;
             document.getElementById('product-name').textContent = product.name;
+            document.getElementById('product-category').textContent = (product.categories && product.categories.length) ? product.categories.join(", ") : product.category;
             document.getElementById('product-id-display').textContent = product.id;
-            document.getElementById('product-description').textContent = product.description;
+            document.getElementById('product-id-display').textContent = product.id;
+
+            // Format description as list
+            const descContainer = document.getElementById('product-description');
+            if (product.description) {
+                const lines = product.description.split('\n').filter(line => line.trim() !== '');
+                if (lines.length > 0) {
+                    descContainer.innerHTML = `<ul class="main-para list-disc pl-5 space-y-2">
+                        ${lines.map(line => `<li>${line}</li>`).join('')}
+                     </ul>`;
+                } else {
+                    descContainer.textContent = product.description;
+                }
+            } else {
+                descContainer.textContent = "";
+            }
+
             const specsContent = document.getElementById('specification-content');
 
             if (product.specs) {
@@ -704,8 +725,15 @@
                             </tbody>
                         </table>`;
                 } else {
-                    // New: String format
-                    specsContent.innerHTML = `<p class="font-HindMadurai text-textpara-dark text-base leading-relaxed whitespace-pre-wrap">${product.specs}</p>`;
+                    // New: List format (split by newline)
+                    const lines = product.specs.split('\n').filter(line => line.trim() !== '');
+                    if (lines.length > 0) {
+                        specsContent.innerHTML = `<ul class="main-para list-disc pl-5 space-y-2 font-HindMadurai text-textpara-dark text-base leading-relaxed">
+                            ${lines.map(line => `<li>${line}</li>`).join('')}
+                        </ul>`;
+                    } else {
+                        specsContent.innerHTML = `<p class="font-HindMadurai text-textpara-dark text-base leading-relaxed">${product.specs}</p>`;
+                    }
                 }
             } else {
                 specsContent.innerHTML = '<p class="text-gray-500 font-HindMadurai">No specifications available.</p>';

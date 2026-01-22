@@ -95,14 +95,21 @@ if (logoutBtn) {
 
 // Global state for products and editing
 let allProducts = [];
+let allCategories = [];
 let editingProductId = null;
 let currentProductImageUrls = [];
 
 /* =================================
    UPLOAD IMAGES (Cloudinary)
 ================================= */
-async function uploadImagesToCloudinary(files) {
-    const uploads = []
+async function uploadImagesToCloudinary(fileList) {
+    // Convert to array and sort by name (Natural Sort) to ensure deterministic order
+    // This fixes issues where '1.jpg', '10.jpg', '2.jpg' sort incorrectly
+    const files = Array.from(fileList).sort((a, b) => {
+        return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' });
+    });
+
+    const uploads = [];
 
     for (const file of files) {
         if (file.size > 5 * 1024 * 1024) { // 5MB limit example
@@ -145,6 +152,7 @@ async function getProducts() {
         products.push({
             id: doc.id,
             name: data.name,
+            category: data.category || "",
             description: data.description || "",
             specs: data.specs || "",
             ebayLink: data.ebayLink,
@@ -158,10 +166,118 @@ async function getProducts() {
 }
 
 /* =================================
+   FETCH CATEGORIES
+================================= */
+async function getCategories() {
+    const q = query(
+        collection(db, "categories"),
+        orderBy("createdAt", "desc")
+    );
+
+    const snapshot = await getDocs(q);
+    const categories = [];
+
+    snapshot.forEach(doc => {
+        categories.push({ id: doc.id, ...doc.data() });
+    });
+
+    return categories;
+}
+
+async function loadCategories() {
+    try {
+        allCategories = await getCategories();
+        renderCategoryList();
+        populateCategoryDropdown();
+    } catch (error) {
+        console.error("Error loading categories:", error);
+    }
+}
+
+function renderCategoryList() {
+    const list = document.getElementById("category-list");
+    if (!list) return;
+
+    list.innerHTML = allCategories.map(cat => `
+        <div class="bg-gray-100 rounded-full px-4 py-2 flex items-center gap-3">
+            <span class="font-medium text-gray-700">${cat.name}</span>
+            <button onclick="deleteCategory('${cat.id}')" class="text-red-500 hover:text-red-700">
+                <i class="fa-solid fa-times"></i>
+            </button>
+        </div>
+    `).join("");
+}
+
+function populateCategoryDropdown() {
+    const dropdown = document.getElementById("category");
+    if (!dropdown) return;
+
+    // Preserve selected value if any
+    const currentValue = dropdown.value;
+
+    dropdown.innerHTML = `
+        <option value="" disabled selected>Select Category</option>
+        ${allCategories.map(cat => `<option value="${cat.name}">${cat.name}</option>`).join("")}
+    `;
+
+    if (currentValue) {
+        dropdown.value = currentValue;
+    }
+
+    // Populate Secondary Dropdown
+    const dropdown2 = document.getElementById("category2");
+    if (dropdown2) {
+        const currentVal2 = dropdown2.value;
+        dropdown2.innerHTML = `
+            <option value="" selected>Secondary Category (Optional)</option>
+            ${allCategories.map(cat => `<option value="${cat.name}">${cat.name}</option>`).join("")}
+        `;
+        if (currentVal2) dropdown2.value = currentVal2;
+    }
+}
+
+/* =================================
+   ADD / DELETE CATEGORY
+================================= */
+const addCategoryBtn = document.getElementById("addCategoryBtn");
+if (addCategoryBtn) {
+    addCategoryBtn.addEventListener("click", async () => {
+        const input = document.getElementById("new-category-name");
+        const name = input.value.trim();
+        if (!name) return;
+
+        try {
+            await addDoc(collection(db, "categories"), {
+                name: name,
+                createdAt: serverTimestamp()
+            });
+            input.value = "";
+            loadCategories(); // Refresh
+        } catch (error) {
+            console.error("Error adding category:", error);
+            alert("Error adding category: " + error.message);
+        }
+    });
+}
+
+window.deleteCategory = async function (id) {
+    if (confirm("Delete this category?")) {
+        try {
+            await deleteDoc(doc(db, "categories", id));
+            loadCategories();
+        } catch (error) {
+            console.error("Error deleting category:", error);
+        }
+    }
+}
+
+/* =================================
    LOAD & RENDER (For Listing Page)
 ================================= */
 async function loadProductsFromFirebase() {
     try {
+        // Load both products and categories
+        await loadCategories();
         allProducts = await getProducts();
         renderProducts(allProducts);
     } catch (error) {
@@ -216,6 +332,11 @@ function renderProducts(products) {
         <a href="./single-product.html?id=${product.id}" class="block group-hover:text-secondary-cyan">
             <h3 class="font-kumbhSans font-bold text-xl text-text-dark mb-2 text-primary hover:text-secondary-cyan transition-colors cursor-pointer">${product.name}</h3>
         </a>
+        <div class="flex flex-wrap gap-2 mb-2">
+            ${(product.categories || [product.category]).filter(c => c).map(cat =>
+        `<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">${cat}</span>`
+    ).join("")}
+        </div>
         <p class="font-HindMadurai text-textpara-dark text-sm mb-4 line-clamp-3 flex-grow">${product.description}</p>
 
         <div class="mt-auto space-y-3">
@@ -305,6 +426,13 @@ window.startEditing = function (id) {
 
     // Populate form
     document.getElementById('name').value = product.name;
+
+    // Handle Categories (Array or Legacy String)
+    const categories = Array.isArray(product.categories) ? product.categories : (product.category ? [product.category] : []);
+
+    document.getElementById('category').value = categories[0] || "";
+    document.getElementById('category2').value = categories[1] || "";
+
     document.getElementById('link').value = product.ebayLink || "";
     document.getElementById('description').value = product.description;
     document.getElementById('specs').value = product.specs || "";
@@ -346,10 +474,18 @@ if (productForm) {
         }
 
         const name = document.getElementById('name').value;
+        const category1 = document.getElementById('category').value;
+        const category2 = document.getElementById('category2').value;
         const link = document.getElementById('link').value;
         const description = document.getElementById('description').value;
         const specs = document.getElementById('specs').value;
         const imageFiles = document.getElementById('images').files;
+
+        // Combine categories
+        const categoriesToSave = [category1];
+        if (category2 && category2 !== category1) {
+            categoriesToSave.push(category2);
+        }
 
         // Validation for Add Mode
         if (!editingProductId && imageFiles.length === 0) {
@@ -373,6 +509,8 @@ if (productForm) {
 
             const productData = {
                 name: name,
+                categories: categoriesToSave,
+                category: categoriesToSave[0], // Keep for backward compatibility
                 ebayLink: link,
                 description: description,
                 specs: specs,
