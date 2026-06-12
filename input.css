@@ -227,3 +227,7 @@ body {
 .animated-button:hover svg {
   stroke-dashoffset: 0;
 }
+
+.certificatebyqms {
+  @apply max-w-xs sm:max-w-sm;
+}
